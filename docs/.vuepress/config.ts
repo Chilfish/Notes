@@ -1,5 +1,4 @@
 import { defineUserConfig } from 'vuepress';
-import { viteBundler } from '@vuepress/bundler-vite';
 import { hopeTheme } from 'vuepress-theme-hope';
 
 export default defineUserConfig({
@@ -23,21 +22,12 @@ export default defineUserConfig({
     sidebar: 'heading',
     navbar: [],
 
-    logo: '/1.png',
     darkmode: 'toggle',
     themeColor: {
       blue: '#2196f3',
       red: '#f26d6d',
       green: '#3eaf7c',
       orange: '#fb9b5f',
-    },
-  }),
-
-  bundler: viteBundler({
-    viteOptions: {
-      build: {
-        outDir: '../Notes_Dist',
-      },
     },
   }),
 });
