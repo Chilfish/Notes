@@ -5,31 +5,38 @@
 
 **当然，杂而水**
 
-## 前端
+- **前端：**
 
-- Web 的 [README.md](./Web/README.md)
-- HTTP 协议 及 [HTTP.md](./Web/Computer_Networks.md)
-- HTML [HTML.md](./Web/HTML.md)
-- CSS [CSS](./Web/CSS.md)
-- JS [JavaScript.md](./Web/JavaScript/JavaScript.md)
-- Node.js [Node.md](./Web/Node.js/Node.js.md)
-- Vue.js [Vue.md](./Web/Vue.js/Vue.js.md)
+  - Web 的 [README](./Web/README.md)
+  - [HTML](./Web/HTML.md)
+  - [CSS](./Web/CSS.md)
+  - [JavaScript](./Web/JavaScript/JavaScript.md)
+  - [TypeScript](Web/TypeScript.md)
+  - [Vue.js](./Web/Vue.js/Vue.js.md)
 
-## 后端
+- **后端：**
 
-- C++ [cpp.md](./Cpp.md)
-- Java [JavaSE.md](./Java/JavaSE.md)
-- Python [Python.md](./Python.md)
-- PHP [PHP.md](./Web/PHP.md)
-- MySQL [MySQL.md](./MySQL.md)
-- C# [C#.md](./CSharp.md)
+  - [cpp](./Cpp.md)
+  - [JavaSE](./Java/JavaSE.md)
+  - [Python](./Python.md)
+  - [PHP](./Web/PHP.md)
+  - [MySQL](./MySQL.md)
+  - [C#](./CSharp.md)
 
-## 其他一些......
+- **课程：**
 
-- [Github](https://github.com/Organic-Fish/FishCode)
-- 算 法 [Algorithm](./Algorithm/README.md)
-- [一堆奇怪的......](./balabala/)
-- $\LaTeX$ [LaTeX.md](./LaTeX.md)
-- 正则表达式 [Regex.md](./Regex.md)
-- 数学 [HyperMath.md](./HyperMath/README.md)
-- **(\* ﾟ ∇ ﾟ)**
+  - [计算机网络](CSBase/Computer_Networks/README.md)
+  - [数字电路](CSBase/Digital_Electronics/README.md)
+  - [操作系统](CSBase/Operation_System/README.md)
+  - [Linux](CSBase/Operation_System/Linux.md)
+
+- **其他一些：**
+
+  - 日常的 Codes：[Github](https://github.com/Organic-Fish/FishCode) | [Gitee](https://gitee.com/OrganicFish/FishCode)
+  - ACM 算 法：[Algorithm](./Algorithm/README.md)
+  - [一堆奇怪的......](./balabala/README.md)
+  - 《计算机科学补全计划》：[SCBase](CSBase/README.md)
+  - [$\LaTeX$](./LaTeX.md)
+  - 正则表达式：[Regex](./Regex.md)
+  - 数学：[HyperMath](./HyperMath/README.md)
+  - **(\* ﾟ ∇ ﾟ)**

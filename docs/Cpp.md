@@ -44,27 +44,23 @@
 
   ```cpp {.line-numbers}
   template <class T>  //单个类型
-  T big(T x, T y)
-  {
-      return x > y ? x : y;
+  T big(T x, T y){
+    return x > y ? x : y;
   }
   template <class T1, class T2>  //不同类型
-  inline const T2 Max(const T1 a, const T2 b)
-  {
-      return a > b ? a : b;
+  inline const T2 Max(const T1 a, const T2 b){
+    return a > b ? a : b;
   }
   ```
 
   ```cpp {.line-numbers}
   template <class out_type, class in_value>
-  out_type transf(const in_value &t)
-  {
+  out_type transf(const in_value &t){
     stringstream stream; out_type result;
     stream << t, stream >> result, stream.sync();
     return result;
   }
-  int main()
-  {
+  int main(){
     string s = "532";
     double t = transf<double>(s); // <>里的是要转换的类型名，()里的是被转换的变量名
   }
@@ -93,8 +89,7 @@
 
 - **构造函数：** 是指在定义类的时候就运行了。带参数时即给变量赋值。用法：
   ```cpp {.line-numbers}
-  class mie
-  {
+  class mie {
   private:
       int aha;
   public:
@@ -109,8 +104,7 @@
 - **拷贝构造函数：** 即为在初定义时赋值。与定义后再赋值不同，那时需要 **重载** 等于号才能赋值。
 
   ```cpp {.line-numbers}
-  class mie
-  {
+  class mie {
   public:
       int num;
       mie(int x) : num(x){};
@@ -133,7 +127,7 @@
 - **概念：** 在定义一个新的类 B 时，如果该类与某个已有的类 A 相似（指的是 B 拥有 A 的全部特点），那么就可以把 A 作为一个基类，而把 B 作为基类的一个派生类（也称子类）。
 - **格式：**
   ```cpp {.line-numbers}
-  class son : public | private | protected father{};
+  class son : public | private | protected father {};
   ```
 - **权限：** 继承方式 是用来指明父类成员在子类中的 **最高访问权限** 的
 - 一个派生类继承了所有的基类方法，但下列情况除外：
@@ -149,8 +143,7 @@
   - ![img](./img/cpp_overload.png)
 - **一元运算符：** 如负号、自增自减
   ```cpp {.line-numbers}
-  Stu operator++() // 前缀自增：++mie;
-  {
+  Stu operator++() { // 前缀自增：++mie; 
       score++;
       return *this;
   }

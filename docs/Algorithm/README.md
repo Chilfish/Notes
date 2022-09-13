@@ -78,50 +78,41 @@
 
 - 一维：
   ```cpp {.line-numbers}
-  for (i = 1; i <= n; i++){
-          cin >> a[i];
-          sum[i] = sum[i - 1] + a[i];
-      }
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i];
+    sum[i] = sum[i - 1] + a[i];
+  }
   ```
 - 差分：如给数组 `[l, r]` 之间加上 c
-
   ```cpp {.line-numbers}
   int n, m;
   scanf("%d%d", &n, &m);
-  for (int i = 1; i <= n; i++)
-  {
-      scanf("%d", &a[i]);
-      b[i] = a[i] - a[i - 1]; //构建差分数组
+  for (int i = 1; i <= n; i++) {
+    scanf("%d", &a[i]);
+    b[i] = a[i] - a[i - 1]; //构建差分数组
   }
   int l, r, c;
-  while (m--)
-  {
-      scanf("%d%d%d", &l, &r, &c);
-      b[l] += c, b[r + 1] -= c;
+  while (m--) {
+    scanf("%d%d%d", &l, &r, &c);
+    b[l] += c, b[r + 1] -= c;
   }
-  for (int i = 1; i <= n; i++)
-  {
-      b[i] += b[i - 1]; //求前缀和运算
-      printf("%d ", b[i]);
+  for (int i = 1; i <= n; i++) {
+    b[i] += b[i - 1]; //求前缀和运算
+    printf("%d ", b[i]);
   }
   ```
-
 - 二维：
-
   - 求表
     ![](./img/cpp_2.png)
-
     ```cpp {.line-numbers}
     for (i = 1; i <= n; i++)  //打表
-            for (j = 1; j <= m; j++) {
-                cin >> mpa[i][j];
-                sum[i][j] = mpa[i][j] + sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1];
-            }
+      for (j = 1; j <= m; j++) {
+        cin >> mpa[i][j];
+        sum[i][j] = mpa[i][j] + sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1];
+      }
     ```
-
   - 还原：
     ![](./img/cpp_3.png)
-
     ```cpp {.line-numbers}
     cin >> x1 >> y1 >> x2 >> y2;   //求表
     cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1];

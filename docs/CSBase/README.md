@@ -13,15 +13,15 @@
 
 ## 目录
 
-- **操作系统 OS**
+- **[操作系统 OS](Operation_System/README.md)**
   - [ ] [Windows]()
-  - [ ] [Linux]()
+  - [ ] [Linux](Operation_System/Linux.md)
   - [ ] [Android]()
-- **软件使用**
+- **[软件使用](Software/README.md)**
   - [ ] [VsCode]()
   - [ ] [Git 及 GitHub]()
   - [ ] [JetBrains 全家桶]()
   - [ ] [Android Studio]()
-- **硬件**
+- **[硬件](Hardware/README.md)**
   - [ ] [芯片]()
   - [ ] [CPU、GPU | 偏数码]()

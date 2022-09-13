@@ -1,7 +1,7 @@
 # Web 技术
 
+- [计算机网络](../CSBase/Computer_Networks/README.md)
 - [HTML](HTML.md)
-- [HTTP](Computer_Networks.md)
 - [CSS](CSS.md)
 - **JavaScript**
   - [JavaScript](JavaScript/JavaScript.md)

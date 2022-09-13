@@ -40,29 +40,26 @@
   bool used[10];
   int n; //要全局
 
-  void dfs(int x)
+  void dfs(int x) {
+  if (x == n) // 到了边界
   {
-      if (x == n) // 到了边界
-      {
-          for (int i = 1; i <= n; i++)
-              cout << a[i] << " ";
-          cout << endl;
-          return; //回溯，到used[i] = false;
-      }
       for (int i = 1; i <= n; i++)
-          if (used[i] == false)
-          {
-              a[x + 1] = i;       //放进去
-              used[i] = true; //标记已经放的位置
-              dfs(x + 1);
-              used[i] = false; //回退，撤销标记
-          }
+        cout << a[i] << " ";
+        cout << endl;
+      return; //回溯，到used[i] = false;
   }
-  int main()
-  {
-      cin >> n;
-      dfs(0);
-      return 0;
+  for (int i = 1; i <= n; i++)
+      if (used[i] == false) {
+        a[x + 1] = i;       //放进去
+        used[i] = true; //标记已经放的位置
+        dfs(x + 1);
+        used[i] = false; //回退，撤销标记
+      }
+  }
+  int main() {
+    cin >> n;
+    dfs(0);
+    return 0;
   }
   ```
 
