@@ -1,8 +1,7 @@
- # DOM | Events
+# DOM | Events
 
 - [JavaScript.md](JavaScript.md)
 - [DOM.md](DOM.md)
-
 
 [TOC]
 
@@ -233,6 +232,6 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 <br>
 
-# 参考
+## 参考
 
 1.  [DOM 事件 参考](https://www.runoob.com/jsref/dom-obj-event.html)

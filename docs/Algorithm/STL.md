@@ -1,8 +1,46 @@
 # 标准容器库 (STL)
 
+<br>
+
 - [STL 详解](https://blog.csdn.net/u010183728/article/details/81913729)
+- [string 容器详解](https://blog.csdn.net/wzh1378008099/article/details/105687998)
 
 [TOC]
+
+<br>
+&emsp;
+
+### std::string 字符串
+
+<br>
+
+- **互转：**
+  - **数字转 string：** `string s = to_string(整数 | 小数)`;
+  - **string 转数字：** `int a = stoi(s); double b = stod(s);`
+- **大小写转换：**
+  ```cpp {.line-numbers}
+  transform(all(str), str.begin(), ::tolower);
+  ```
+- 不用带转译的**纯文本格式**，保持缩进：
+  ```cpp {.line-numbers}
+  string str = R"(233
+      asd\n
+      asd
+  233)";
+  // cout:
+  233
+      asd\n
+      asd
+    233
+  ```
+- **STL 函数：**
+  - **替换：** `c.replace(a, b, "xxx")`，a：替换的初始位置，b：替换的长度
+  - **查找：**
+    - `b.find(c, a)` ：从位置 a 开始，在 b 中找 c
+    - `str.find_first_of(str1)` ：找第一次出现的位置，找不到就返回 -1
+    - `find` 需要子串和父串全部匹配，`find_first_of` 只需匹配一个字符就可以
+  - **删除：** `c.erase(a, b)` a：删除的初始位置，b：删除的个数。仅有 a 的话，则删除位置 a 后面的字符
+  - **截取：** `string s = c.substr(a, b);`，a：截取的初始位置，b：截取的长度
 
 <br>
 &emsp;
@@ -214,61 +252,59 @@
 
 ### 队列
 
-#### queue
+- **`queue`：**
 
-- **属性方法：**
-  - `queue<int> q`：定义队列
-  - `q.empty()： bool`：判断队列是否为空
-  - `q.size()： int`：返回队列中的元素个数
-  - `q.pop()： void`：删除队列中的顶部元素
-  - `q.push(item)： void`：往队列尾部压入元素
-  - `q.front()： type`：返回队首元素的值
-  - `q.back()： type`：返回队尾元素的值
+  - **属性方法：**
+    - `queue<int> q`：定义队列
+    - `q.empty()： bool`：判断队列是否为空
+    - `q.size()： int`：返回队列中的元素个数
+    - `q.pop()： void`：删除队列中的顶部元素
+    - `q.push(item)： void`：往队列尾部压入元素
+    - `q.front()： type`：返回队首元素的值
+    - `q.back()： type`：返回队尾元素的值
 
-#### priority_queue
+- **`priority_queue`：**
 
-和 queue 不同的就在于，可以自定义其中数据的优先级，让优先级高的排在队列前面，优先出队
+  - 和 `queue` 不同的就在于，可以自定义其中数据的优先级，让优先级高的排在队列前面，优先出队
+    &emsp; 优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个**堆**实现的
+  - **定义：**`priority_queue<元素类型，基础序列的类型，比较的类型> name;`
+    &emsp; 基础序列必须是由数组实现的容器，默认为 `vector`；比较类型默认为 `less<value_type>`
+    ```cpp {.line-numbers}
+    priority_queue <PII, vector<PII>, cmp> q;
+    priority_queue <int, vector<int>, greater<int> > q;
+    ```
+  - **栗子：** 当然，也可以用 `struct` 代替 `pair`
 
-优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个堆实现的
+    ```cpp {.line-numbers}
+    void Priority_Struct() {
+      struct Student {
+        string name;
+        int score;
+      };
+      struct cmp {
+        bool operator()(const Student& a, const Student& b) const {
+          return a.score < b.score || (
+            a.score == b.score &&
+            a.name + b.name > b.name + a.name);
+        } // 先按 score 降序，再按 name 字典序升序
+      };
 
-- **定义：**`priority_queue<元素类型，基础序列的类型，比较的类型> name;`
-  基础序列必须是由数组实现的容器，默认为 `vector`；比较类型默认为 `less<value_type>`
-  ```cpp {.line-numbers}
-  priority_queue <PII, vector<PII>, cmp> q;
-  priority_queue <int, vector<int>, greater<int> > q;
-  ```
-- **栗子：** 当然，也可以用 `struct` 代替 `pair`
+      vector<Student> a{ {"fish", 233}, {"mie", 123}, {"haha", 100}, {"ohh", 233}};
 
-  ```cpp {.line-numbers}
-  void Priority_Struct() {
-    struct Student {
-      string name;
-      int score;
-    };
-    struct cmp {
-      bool operator()(const Student& a, const Student& b) const {
-        return a.score < b.score || (
-          a.score == b.score &&
-          a.name + b.name > b.name + a.name);
-      } // 先按 score 降序，再按 name 字典序升序
-    };
+      priority_queue <Student, vector<Student>, cmp> pq;
+      for (auto ele ： a) pq.push(ele);
 
-    vector<Student> a{ {"fish", 233}, {"mie", 123}, {"haha", 100}, {"ohh", 233}};
-
-    priority_queue <Student, vector<Student>, cmp> pq;
-    for (auto ele ： a) pq.push(ele);
-
-    while (!pq.empty()) {
-      auto ele = pq.top();
-      cout << "name： " << ele.name
-        << "\tscore： " << ele.score << endl;
-      pq.pop();
+      while (!pq.empty()) {
+        auto ele = pq.top();
+        cout << "name： " << ele.name
+          << "\tscore： " << ele.score << endl;
+        pq.pop();
+      }
     }
-  }
-  ```
+    ```
 
-&emsp;&emsp;
 <br>
+&emsp;
 
 ## 迭代器
 
@@ -277,8 +313,8 @@
   - `list` 双向，`set` 双向， `multiset` 双向 ， `map` 双向， `multimap` 双向
 - 范围总是 $[begin, end)$
 
-<br> 
-&emsp;&emsp;
+<br>
+&emsp;
 
 ## STL 函数
 

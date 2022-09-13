@@ -4,6 +4,7 @@
 
 - 外链：
   - [阮一峰 ES6](https://es6.ruanyifeng.com)
+  - [JavaScript](JavaScript.md)
 
 <br>
 
@@ -13,19 +14,21 @@
   只要位置、嵌套方式匹配即可，没有值则是 undefined
   ```js {.line-numbers}
   // 从
-  const a = 1, b = 2, c = 3;
+  const a = 1,
+    b = 2,
+    c = 3;
   // 变成
   const [a, b, c] = [1, 2, 3];
-  const [a, ...arr] = [1, 2, 3, 4]
+  const [a, ...arr] = [1, 2, 3, 4];
   // a -> 1; arr -> [2, 3, 4]
   ```
 - **对象：**
   必须要同名才行
   ```js {.line-numbers}
-  const mie = {id: 233, name:"mie"},
-    {id, name} = mie,
-    {id: uid, name: uname} = mie, //别名
-    {sin} = Math;
+  const mie = { id: 233, name: 'mie' },
+    { id, name } = mie,
+    { id: uid, name: uname } = mie, //别名
+    { sin } = Math;
   ```
   所以交换就成了：`[a b] = [b, a];`
 

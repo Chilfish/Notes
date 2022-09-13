@@ -9,8 +9,9 @@
 
 ### 其他
 
-1. `exp(a)` 是指 $e^a$ , 精度比自定义 $e = 2.71828182\dots$ 再 pow 要高
-2. $\pi$ 定义：$\pi = \arccos(-1)$ : `#define PI acos(-1) `
+1. `exp(a)` 是指 $e^a$ , 精度比自定义 $e = 2.71828182\dots$ 再 `pow` 要高
+2. $\pi$ 定义：$\pi = \arccos(-1)$ : `#define PI acos(-1)`
+3. **数字的位数：** `int(log10(a)) + 1`
 
 ### 位运算
 

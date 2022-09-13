@@ -1,7 +1,6 @@
 # Express 框架
 
 - **外链**
-  
   - [Node.js](Node.js.md)
 
 [TOC]
@@ -18,14 +17,14 @@
 
 - **如：**
   ```ts {.line-numbers}
-  import express from "express";
+  import express from 'express';
   export const app = express(); // 以下默认已经创建了 app
   app // 当浏览器发送了 GET /mie 请求(req)时
-    .get("/mie", (req, res) => {
-      res.send("data"); // 服务器就发送响应(res)数据
+    .get('/mie', (req, res) => {
+      res.send('data'); // 服务器就发送响应(res)数据
     })
-    .listen("1023", () => {
-      console.log("open on http://localhost:1023/mie");
+    .listen('1023', () => {
+      console.log('open on http://localhost:1023/mie');
     });
   ```
 - **方法：**
@@ -39,7 +38,7 @@
 - `app.route(path)`：即对同一个路径不同 HTTP 方法时：
   ```ts {.line-numbers}
   // 这样就不用在每个方法前都加路由地址了
-  app.route("user/").get(fn).post(fn);
+  app.route('user/').get(fn).post(fn);
   ```
 - `app.use([path,] fn)`：
 
@@ -70,7 +69,7 @@
   - `req.query`：返回 URL ?后的参数，json 类型
   - `req.params`：返回 URL 中的自定义参数，json 类型。如：
     ```ts {.line-numbers}
-    app.get("/home/:uid/:pages");
+    app.get('/home/:uid/:pages');
     // URL: "/home/2333/fish"
     // 返回：{ uid: 2333, pages: "fish" }
     ```

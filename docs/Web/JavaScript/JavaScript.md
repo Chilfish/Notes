@@ -1,13 +1,13 @@
- <h1 align="center">JavaScript</h1>
+# JavaScript
 
 - **外链**
   - [README.md](../README.md)
   - [现代 JavaScript 教程](https://zh.javascript.info/)
   - [MDN 官方文档](https://developer.mozilla.org/zh-CN/)
   - [阮一峰 - ES6](https://es6.ruanyifeng.com)
-  - [HTML.md](../HTML.md)
   - [DOM](DOM.md)
   - [Evens](Evens.md)
+  - [ES6.js](ES6.js.md)
 
 [TOC]
 

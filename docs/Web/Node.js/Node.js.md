@@ -1,7 +1,6 @@
 # Node.js
 
 - **外链**
-  
   - [JavaScript](../JavaScript/JavaScript.md)
   - [Express 框架](Express.md)
 
@@ -9,9 +8,9 @@
 
 <br>
 
-# Node 项目
+## Node 项目
 
-## 初始化
+### 初始化
 
 - cd 到项目文件夹并运行 ↓ 后，按提示填写项目信息，就会生成 `package.json` 文件
   ```shell {.line-numbers}
@@ -29,9 +28,9 @@
 
 <br>
 
-# 模块
+## 模块
 
-## Common JS | ES Modules
+### Common JS | ES Modules
 
 - **`CommonJS`：**
   - **导出：** CJS 使用 `module.exports = {}` 语法导出模块，可以导出任意合法的 `JavaScript` 类型，例如：字符串、布尔值、对象、数组、函数等等
@@ -41,9 +40,9 @@
   - **导入：** `import {} from './module'`，重命名：`{mie as miemie}`
   - 但这样运行时要加上 `node --experimental-specifier-resolution=node \file_dir` 才能忽略后缀名地使用 ES 模块
 
-## node 模块
+### node 模块
 
-### Buffer 缓冲区
+#### Buffer 缓冲区
 
 `Buffer` 是 `Node.js` 的内置类型，它是用来表示内存中一块区域的，用以保存二进制数据。内容是以将二进制文件流表现为十六进制的 Buffer 数组
 
@@ -54,7 +53,7 @@
   - `Buffer.from(x)`：将字符串或数组转为 `Buffer` 对象，范围为 `00 ~ 0xff`
   - `Buffer.toString(decode)`：将 `buffer` 对象转换为指定编码字符串，默认为 `utf8`
 
-### fs 文件读写
+#### fs 文件读写
 
 - **文件写入：** 如果不存在这个文件名，这会创建文件
   - **简单写入**
@@ -89,9 +88,9 @@
 
 <br>
 
-## 第三方模块
+### 第三方模块
 
-### Express 框架
+#### Express 框架
 
 `Node` 本身并不支持其它常见的 `web` 开发任务。如果需要进行一些具体的处理，比如运行其它 `HTTP` 动词（比如 `GET、POST、DELETE` 等）、分别处理不同 `URL` 路径的请求（“路由”）、托管静态文件，或用模板来动态创建响应，那么可能就要自己编写代码了，亦或使用 `web` 框架，以避免重新发明轮子
 

@@ -1,8 +1,10 @@
 # C / C++
 
-- **[算 法](Algorithm/README.md)**
+- **[算法 (C++ 描述)](Algorithm/README.md)**
 
-<br><br>
+[TOC]
+
+<br>
 
 ## 一些小语法
 
@@ -25,6 +27,15 @@
   stringstream ss;
   ss << s;
   while (ss >> s >> m)  guo[s] += m;
+  ```
+- `C++11` 前，没有 `to_string`：
+  ```cpp {.line-numbers}
+  string Itos(int x)  //int Stoi(string x)
+  {
+    string t; stringstream ss;  // stringstream ss; int t;
+    ss << x, ss >> t, ss.clear();   //ss << x, ss >> t, ss.clear();
+    return t;
+  }
   ```
 
 ### 模板 template
@@ -294,36 +305,48 @@
 
 ## C 語言中に
 
-1.  数组长度：
+<br>
+&emsp;
 
+- **数组长度：**
+  ```cpp {.line-numbers}
+  int len = sizeof(b)/sizeof(int);
+  ```
+- **`memset`：** 批量赋值只能是 `char` 用，`int` 只能给 -1 或 0， 而：
+  ```cpp {.line-numbers}
+  memset(a, 127, sizeof(a))   //赋值无穷大
+  memset(a, 128, sizeof(a))   //赋值无穷小
+  ```
+- **`ctime`：**
+  - 时间戳获取与转换
     ```cpp {.line-numbers}
-    int len = sizeof(b)/sizeof(int);
+    time_t t = time(0);
+    // cin >> t; //当然，也能输入时间戳（秒）
+    char tmp[32] = {}, form[] = "%Y-%m-%d %H:%M:%S";
+    strftime(tmp, sizeof(tmp), form, localtime(&t));
+    cout << tmp << endl;
     ```
-
-2.  `memset` 批量赋值只能是 `char` 用，`int` 只能给 -1 或 0， 而：
-
+  - 当前时间
     ```cpp {.line-numbers}
-    memset(a, 127, sizeof(a))   //赋值无穷大
-    memset(a, 128, sizeof(a))   //赋值无穷小
+    time_t t = time(&t);
+    string s = ctime(&t);
+    cout << s << endl;
     ```
-
-3.  `ctime`
-
-    - 时间戳获取与转换
-      ```cpp {.line-numbers}
-      time_t t = time(0);
-      // cin >> t; //当然，也能输入时间戳（秒）
-      char tmp[32] = {}, form[] = "%Y-%m-%d %H:%M:%S";
-      strftime(tmp, sizeof(tmp), form, localtime(&t));
-      cout << tmp << endl;
-      ```
-    - 当前时间
-      ```cpp {.line-numbers}
-      time_t t = time(&t);
-      string s = ctime(&t);
-      cout << s << endl;
-      ```
-
-4.  符号优先级
-
-    - ![](./img/cpp_priority.png)
+- **`cctype`：**
+  ```cpp {.line-numbers}
+  //只能用在单个字符
+  isalnum(c) //-->是否为字母或者数字
+  isalpha(c) //-->是否为字母
+  isblank(c) //-->是否为空格或者 tab
+  isdigit(c) //-->是否为数字
+  ispunct(c) //-->是否为符号
+  isupper(c) //-->是否为大写字母
+  isspace(c) //-->是否为空格
+  ```
+- **`sprintf`：**
+  ```cpp {.line-numbers}
+  sprintf(ans, "%d+%d=%d", x, y, x + y);
+  // →同时还把 + = 也存进去了
+  ```
+- **符号优先级：**
+  ![](./img/cpp_priority.png)
