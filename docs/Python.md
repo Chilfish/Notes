@@ -1,19 +1,19 @@
-  <h1 align="center"><b>Python.note</b></h1>
+# Python
 
 - [README.md](../README.md)
   [TOC]
 
-# 一些语法
+## 一些语法
 
-# 库
+## 库
 
-# 其他
+## 其他
 
-## 打包 exe
+### 打包 exe
 
 若需将 `xxx.py` 文件打包，只需在 `xxx.py` 文件所在目录下终端执行：
 
-```powershell
+```sh
 pyinstaller xxx.py
 ```
 

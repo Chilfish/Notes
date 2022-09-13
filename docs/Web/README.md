@@ -1,6 +1,6 @@
-  <h1 align="center"><b>Web 技术</b></h1><br>
+# Web 技术
 
-- [HTML](HTML.md.md)
+- [HTML](HTML.md)
 - [HTTP](Computer_Networks.md)
 - [CSS](CSS.md)
 - **JavaScript**

@@ -1,4 +1,4 @@
- <h1 align="center"><b>DOM | Events</b></h1><br>
+ # DOM | Events
 
 - [JavaScript.md](JavaScript.md)
 - [DOM.md](DOM.md)

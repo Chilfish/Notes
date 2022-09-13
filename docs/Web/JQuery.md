@@ -1,4 +1,4 @@
- <h1 align="center"><b>JQuery</b></h1><br>
+ # JQuery
 
 
 - [JavaScript](JavaScript/JavaScript.md)

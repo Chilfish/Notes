@@ -1,8 +1,8 @@
- <h1 align="center"><b>正则表达式</b></h1><br>
+# 正则表达式
 
 - [README.md](../README.md)
 
-  [TOC]
+[TOC]
 
 <br><br>
 

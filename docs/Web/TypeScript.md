@@ -1,4 +1,4 @@
-<h1 align="center"><b>TypeScript</b></h1><br>
+# TypeScript
 
 [TOC]
 

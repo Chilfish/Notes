@@ -1,4 +1,4 @@
-<h1 align="center"><b>ShoppingCart.demo</b></h1><br>
+# ShoppingCart.demo
 
 [TOC]
 

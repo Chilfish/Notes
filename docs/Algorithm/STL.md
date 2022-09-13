@@ -1,7 +1,6 @@
-<h1 align="center"><b>标准容器库 (STL)</b></h1><br>
+# 标准容器库 (STL)
 
 - [STL 详解](https://blog.csdn.net/u010183728/article/details/81913729)
-
 
 [TOC]
 

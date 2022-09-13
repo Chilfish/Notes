@@ -1,4 +1,4 @@
-<h1 align="center"><b>Vue.js</b></h1><br>
+# Vue.js
 
 [TOC]
 

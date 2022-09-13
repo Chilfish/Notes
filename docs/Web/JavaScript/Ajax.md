@@ -1,4 +1,4 @@
-  <h1 align="center"><b>Ajax | Axios | Fetch</b></h1><br>
+  # Ajax | Axios | Fetch
 
 - **外链：**
   

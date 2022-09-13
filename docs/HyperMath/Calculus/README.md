@@ -1,4 +1,4 @@
-  <h1 align="center"><b>初等微积分</b></h1><br>
+# 初等微积分
 
 ---
 
@@ -14,4 +14,3 @@ $ \LaTeX$\还没怎么学，所以就用 $ Markdown$写写啦。
 - [微积分基础](BasicCalculus.md)
 - [积分](Integral.md)
 - [级数](Series.md)
-

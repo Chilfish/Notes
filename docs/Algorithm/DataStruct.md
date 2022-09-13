@@ -1,6 +1,4 @@
-<h1 align="center" style="font-size:2.3rem"><b>数据结构(C++ 描述)</b></h1><br>
-
-
+# 数据结构 (C++ 描述)
 
 [TOC]
 

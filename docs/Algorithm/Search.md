@@ -1,29 +1,35 @@
 # 搜索
 
-[README](README.md)
 [TOC]
+
+<br>
+&emsp;
 
 ## 二分搜索
 
-- 数组要放在全局
+&emsp;&emsp;
 
+- 传统的二分搜索，要求数组已序， $O(\log n)$
   ```cpp {.line-numbers}
-  bool mids(int n, int x)   //n为数组的长度， x为要找的数
-  {
-      int rit = n, lef = 0, mid;
-      while (rit > lef)
-      {
-          mid = (rit + lef) / 2;
-          if (a[mid] == x)
-              return true;
-          if (x > a[mid])
-              lef = mid + 1; // 往后半部分搜
-          else
-              rit = mid;  //前半部分搜
-      }
-      return false;
+  bool big(int a, int b) {
+    return a > b; // 或是别的情况
+  }
+  int binary_search(vector<int> arr, int x) {
+    int l = 0, r = arr.size(), mid;
+    while (l <= r) {
+      mid = l + (r - l) / 2;
+      if (big(x, arr[mid]))
+        l = mid + 1;
+      else if (big(arr[mid], x))
+        r = mid - 1;
+      else return mid;
+  }
+    return -1;
   }
   ```
+
+<br>
+&emsp;
 
 ## 深搜
 

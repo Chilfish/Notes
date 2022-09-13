@@ -1,4 +1,4 @@
-<h1 align="center"><b>C / C++</b></h1>
+# C / C++
 
 - **[算 法](Algorithm/README.md)**
 

@@ -1,4 +1,4 @@
- <h1 align="center"><b>JavaSE</b></h1><br>
+# JavaSE
 
 [TOC]
 
@@ -15,7 +15,7 @@
 
 Java 是完全面向对象的语言，文件名与类名相同，且首字母通常大写。用 `javac *.java` 将 `*.java` 文件编译后得到二进制文件 `*.class`
 
-```Java {.line-numbers}
+```java {.line-numbers}
 import java.util.Scanner;
 
 public class Fish {
@@ -46,7 +46,7 @@ public class Fish {
   - 16 位 Unicode 字符集，编码方式为 **UTF-16BE**
   - `UTF-16` 使用 2 或者 4 字节表示一个字符，在 65536 以内的占两个字节，而基本上所有汉字的 `Unicode` 编码 [在 19968 到 40869 之间](http://www.chi2ko.com/tool/CJK.htm)，所以一个 char 类型可以存储一个汉字
   - 使用 `''` 括起来
-  ```Java {.line-numbers}
+  ```java {.line-numbers}
   char c1 = 'A'; // 使用单个字符
   char c2 = 65; // 使用十进制的整数（Unicode 值），[0, 65535]
   char c3 = '\u0061'; // 使用十六进制的整数，格式'\uXXXX'，('\u0000'~'\u00FF')
@@ -61,7 +61,7 @@ public class Fish {
 #### 数组
 
 - **创建：**
-  ```Java {.line-numbers}
+  ```java {.line-numbers}
   int[] arr = new int[len];        //指定长度但不能初始化
   int[] arr = new int[]{233, 455}; // 初始化并推断长度
   // 或直接地：
@@ -88,7 +88,7 @@ public class Fish {
 #### 字符串
 
 - **多行字符串：** 其中共同的前置空格会被去掉
-  ```Java {.line-numbers}
+  ```java {.line-numbers}
   String str = """
           |  mie |
           |  Fish|
@@ -96,7 +96,7 @@ public class Fish {
           """
   ```
 - **格式化 | 模板字符串：** 可以用类似 _C 语言_ 的`printf`，也能用 `String.format("", xx)`：
-  ```Java {.line-numbers}
+  ```java {.line-numbers}
   public static String fun(String key, int value) {
       return String.format("""
               {
@@ -145,7 +145,7 @@ public class Fish {
 ## 函数方法
 
 - **可变参数列表：** 传入的参数个数可变，可为数组，参数最终体现的是**数组**类型
-  ```Java {.line-numbers}
+  ```java {.line-numbers}
   public static int add(int... numbers) {
     int sum = 0;
     for (int num : numbers) {
@@ -178,7 +178,7 @@ public class Fish {
     - **`private` 方法和 `protected` 方法**：前者是因为被 `private` 修饰的方法对子类不可见。后者是因为尽管被 `protected` 修饰的方法可以被子类见到，也可以被子类重写，但是它是无法被外部所引用的
   - **变量不能被重写**（覆盖），"重写" 的概念只针对方法，如果在子类中"重写"了父类中的变量，那么在编译时会报错
 - **例：**
-  ```Java {.line-numbers}
+  ```java {.line-numbers}
   class Father {
       void func1() {
           func2();
@@ -225,7 +225,7 @@ public class Fish {
 ### Object 类
 
 - **克隆方法：** 要重写 clone 函数才能实现深拷贝
-  ```Java {.line-numbers}
+  ```java {.line-numbers}
   class Goldfish implements Cloneable {
       @Override
       public Goldfish clone() {

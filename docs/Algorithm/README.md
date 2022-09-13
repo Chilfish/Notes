@@ -1,4 +1,4 @@
-  <h1 align="center"><b>算 法</b></h1><br>
+# 算 法
 
 - [cpp.md](../Cpp.md)
 

@@ -1,4 +1,4 @@
-  <h1 align="center"><b>HTML</b></h1>
+  # HTML
 
 
 - [CSS | Less](CSS.md)

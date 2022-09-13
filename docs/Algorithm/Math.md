@@ -1,4 +1,4 @@
-  <h1 align="center"><b>数学</b></h1>
+# 数学
 
 [README](README.md)
 [TOC]
@@ -396,9 +396,9 @@ a.push_back(n);
 - 用于判断某年的某一日是星期几
 - 公式： $week=(y+ \left [ \frac{y}{4}\right ] + \left [ \frac{c}{4} \right ] - 2c +
   \left[\frac{26 \times (m+1)}{10} \right ] + d -1) \bmod 7$
-- 符号意义： 
-  - $week$：以周日为第一天 
-  - $c$：世纪 
+- 符号意义：
+  - $week$：以周日为第一天
+  - $c$：世纪
   - $\left [ x \right]$ ：对 $x$ 取整
 - 且：在 **蔡勒公式** 中，某年的 1、2 月要看作 **上一年** 的 13、14 月来计算。比如 2003 年 1 月 1 日要看作 2002 年的 13 月 1 日来计算
 - 码：

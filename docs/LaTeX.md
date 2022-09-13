@@ -1,4 +1,4 @@
- <h1 align="center"><b>LaTeX</b></h1><br>
+# LaTeX
 
 - [README.md](../README.md)
 

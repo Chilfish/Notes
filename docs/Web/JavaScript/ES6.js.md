@@ -1,4 +1,4 @@
-<h1 align="center"><b>ES6</b></h1><br>
+# ES6
 
 [TOC]
 
