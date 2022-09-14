@@ -2,9 +2,9 @@
 
 - **外链：**
   - [HTTP1、2、3](https://juejin.cn/post/6995109407545622542)
-  - [菜鸟 content-type](HTTPS://www.runoob.com/HTTP/HTTP-content-type.html)
-  - [菜鸟 状态码](HTTPS://www.runoob.com/HTTP/HTTP-status-codes.html)
-  - [阮一峰 cors](HTTPS://www.ruanyifeng.com/blog/2016/04/cors.html)
+  - [菜鸟 content-type](https://www.runoob.com/HTTP/HTTP-content-type.html)
+  - [菜鸟 状态码](https://www.runoob.com/HTTP/HTTP-status-codes.html)
+  - [阮一峰 cors](https://www.ruanyifeng.com/blog/2016/04/cors.html)
 
 [TOC]
 

@@ -70,6 +70,11 @@
 
 ### Class 类
 
+**Ref:**
+
+- [简书\_继承方式](https://www.jianshu.com/p/1b661fbc8fb4)
+- [拷贝构造函数\_知乎](https://zhuanlan.zhihu.com/p/157833251)
+
 #### 定义类
 
 - **访问权限：**
@@ -114,8 +119,6 @@
   mie m(123);  mie mm = m;
   ```
 
-  > Ref：[拷贝构造函数\_知乎](https://zhuanlan.zhihu.com/p/157833251)
-
 - **友元：** 需要事先在类内定义，然后 加上 `friend` 就可以有权访问 **任何** 成员。且能防止什么都放到 `public` 里，还能节省开支。**但是：**
   1. 友元关系 **不能被继承**；
   2. 友元关系是 **单向的**，不具有交换性。即类 B 是类 A 的友元，则类 A 不一定是类 B 的友元，需要看类中是否有相应的声明；
@@ -135,15 +138,13 @@
   - 基类的重载运算符
   - 基类的友元函数
 
-> Ref: [C++ 继承\_简书](https://www.jianshu.com/p/1b661fbc8fb4)
-
 #### 重载
 
 - **重载运算符：**
   - ![img](./img/cpp_overload.png)
 - **一元运算符：** 如负号、自增自减
   ```cpp {.line-numbers}
-  Stu operator++() { // 前缀自增：++mie; 
+  Stu operator++() { // 前缀自增：++mie;
       score++;
       return *this;
   }
