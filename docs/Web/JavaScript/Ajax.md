@@ -1,18 +1,48 @@
-  # Ajax | Axios | Fetch
+---
+title: Ajax | Axios | Fetch
+---
 
-- **外链：**
-  
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+- **参考：**
   - [万字 Ajax\_掘金](https://juejin.cn/post/6844903469896171533)
   - [你真的会 Ajax 吗？](https://segmentfault.com/a/1190000004322487)
   - [入门 Ajax](https://segmentfault.com/a/1190000013286987)
   - [Axios 文档](https://www.axios-http.cn/docs/intro)
   - [阮一峰 Fetch](https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
 
-[TOC]
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
-&emsp;&emsp;
+<!-- code_chunk_output -->
+
+- [原理](#原理)
+- [基础 —— XMLHttpRequest](#基础-xmlhttprequest)
+  - [创建](#创建)
+  - [发送请求](#发送请求)
+  - [获取 response 数据](#获取-response-数据)
+  - [发送过程的状态](#发送过程的状态)
+  - [设置请求的超时时间](#设置请求的超时时间)
+  - [事件](#事件)
+    - [事件触发条件](#事件触发条件)
+    - [事件触发顺序](#事件触发顺序)
+    - [异常处理](#异常处理)
+    - [在哪个 xhr 事件中注册成功回调？](#在哪个-xhr-事件中注册成功回调)
+- [Axios 模块](#axios-模块)
+  - [请求](#请求)
+  - [响应](#响应)
+  - [拦截器](#拦截器)
+- [fetch 请求](#fetch-请求)
+  - [请求配置](#请求配置)
+  - [Response 响应](#response-响应)
+    - [属性](#属性)
+    - [方法](#方法)
+
+<!-- /code_chunk_output -->
 
 <br>
+&emsp;
 
 ## 原理
 

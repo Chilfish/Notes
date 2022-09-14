@@ -1,6 +1,52 @@
-# MySQL
+---
+title: MySQL
+---
 
-[TOC]
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+ 
+
+<!-- code_chunk_output -->
+
+- [](#)
+  - [基础语句](#基础语句)
+    - [Create](#create)
+    - [Drop](#drop)
+    - [Insert into](#insert-into)
+    - [Select](#select)
+    - [Where](#where)
+    - [Order by](#order-by)
+    - [update](#update)
+    - [Delete](#delete)
+  - [高级语句](#高级语句)
+    - [匹配](#匹配)
+    - [子查询](#子查询)
+    - [Join](#join)
+    - [As 别名](#as-别名)
+    - [Limit | Offset](#limit-offset)
+    - [Group by](#group-by)
+    - [Delimiter](#delimiter)
+  - [SQL 函数](#sql-函数)
+    - [数字函数](#数字函数)
+    - [字符串函数](#字符串函数)
+    - [日期函数](#日期函数)
+    - [高级函数](#高级函数)
+  - [存储过程](#存储过程)
+    - [一些......](#一些)
+    - [语句](#语句)
+  - [事务](#事务)
+  - [自救救](#自救救)
+    - [密码失败](#密码失败)
+    - [无法 启动 | 关闭 MySQL 服务](#无法-启动-关闭-mysql-服务)
+
+<!-- /code_chunk_output -->
+
+<br> 
+&emsp;
 
 ## 基础语句
 
@@ -255,9 +301,8 @@
   ```
 - **结果：** 分隔符，表示在这之间的分号不再当做程序的结束符，而只是语句之间的分隔符。
 
-###
-
-<br><br>
+<br>
+&emsp;
 
 ## SQL 函数
 
@@ -350,7 +395,8 @@
   ```
 - **Conv(x, a, b)：** 将 a 进制的 x 转为 b 进制
 
-  <br><br>
+<br>
+&emsp;
 
 ## 存储过程
 
@@ -464,6 +510,9 @@
     end loop;
     ```
 
+<br>
+&emsp;
+
 ## 事务
 
 &emsp;&emsp; 事务有一个最显著的特征，就是它包含的所有 SQL 语句作为一个整体向数据库提交，只有所有的 SQL 语句都执行完成，整个事务才算成功，一旦某个 SQL 语句执行失败，整个事务就失败了。事务失败后需要回滚所有的 SQL 语句
@@ -480,13 +529,12 @@
 &emsp;&emsp; 一个事务要么提交，要么回滚，提交意味着成功，回滚意味着失败。编写事务代码时，以 **BEGIN** 命令开头，后跟一条或者多条 SQL 语句，最后书写 **COMMIT** 或者 **ROLLBACK** 命令
 &emsp;&emsp; 事务控制命令仅能与 DML 类别的 SQL 命令一起使用，包括 INSERT、UPDATE、DELETE 和 SELECT，在创建或者删除表时不能使用事务，因为这些操作在数据库中是自动提交的。
 
-<br><br>
+<br>
+&emsp;
 
----
+## 自救救
 
-# 自救救
-
-## 密码失败
+### 密码失败
 
 - 管理员 cmd `cd` 到 `bin`：
   ```shell {.line-numbers}
@@ -511,7 +559,7 @@
 
 <br>
 
-## 无法 启动 | 关闭 MySQL 服务
+### 无法 启动 | 关闭 MySQL 服务
 
 - 查找端口占用
   ```shell {.line-numbers}

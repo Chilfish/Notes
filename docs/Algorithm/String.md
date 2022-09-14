@@ -1,6 +1,12 @@
-# 字符串
+---
+title: 字符串
+---
 
-[TOC]
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
 <br>
 &emsp;

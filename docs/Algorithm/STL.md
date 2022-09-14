@@ -1,16 +1,48 @@
-# 标准容器库 (STL)
+---
+title: 标准容器库 (STL)
+---
 
-<br>
+# {{ $frontmatter.title }}
 
-- [STL 详解](https://blog.csdn.net/u010183728/article/details/81913729)
-- [string 容器详解](https://blog.csdn.net/wzh1378008099/article/details/105687998)
+<p style="font-size: 32px; font-weight: bold;">目录</p>
 
-[TOC]
+- **外链**
+  - [STL 详解](https://blog.csdn.net/u010183728/article/details/81913729)
+  - [string 容器详解](https://blog.csdn.net/wzh1378008099/article/details/105687998)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [std::string 字符串](#stdstring-字符串)
+- [序列式容器（可序）](#序列式容器可序)
+  - [Vector](#vector)
+  - [deque](#deque)
+  - [List](#list)
+- [关联式容器 （已序）](#关联式容器-已序)
+  - [Map、multimap](#map-multimap)
+  - [Set、multiset](#set-multiset)
+- [容器适配器](#容器适配器)
+  - [Stack](#stack)
+  - [队列](#队列)
+- [迭代器](#迭代器)
+- [STL 函数](#stl-函数)
+  - [查找算法](#查找算法)
+  - [修改序列的操作](#修改序列的操作)
+  - [删除和替换算法](#删除和替换算法)
+  - [排列组合算法](#排列组合算法)
+  - [算术算法](#算术算法)
+  - [生成和异变算法](#生成和异变算法)
+  - [关系算法](#关系算法)
+  - [集合算法](#集合算法)
+  - [堆算法](#堆算法)
+
+<!-- /code_chunk_output -->
 
 <br>
 &emsp;
 
-### std::string 字符串
+## std::string 字符串
 
 <br>
 

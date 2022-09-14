@@ -1,8 +1,23 @@
-# LaTeX
+---
+title: LaTeX
+---
 
-- [README.md](../README.md)
+# {{ $frontmatter.title }}
 
-[TOC]
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [配置](#配置)
+  - [宏包安装](#宏包安装)
+- [语法](#语法)
+
+<!-- /code_chunk_output -->
+
+<br>
+&emsp;
 
 ## 配置
 

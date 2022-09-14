@@ -1,11 +1,43 @@
-# Vue.js
+---
+title: Vue.js
+---
 
-[TOC]
+# {{ $frontmatter.title }}
 
-- 外链
-  - [vite 初体验](ShoppingCart.demo.md)
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+- [vite 初体验](ShoppingCart.demo.md)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [创建](#创建)
+  - [引用 vue.js 文件](#引用-vuejs-文件)
+  - [VUe 项目](#vue-项目)
+    - [构建项目 | vue-cli](#构建项目-vue-cli)
+    - [运行](#运行)
+- [基本语法](#基本语法)
+  - [模板语法 | 指令](#模板语法-指令)
+  - [事件绑定](#事件绑定)
+  - [表单输入绑定](#表单输入绑定)
+  - [生命周期](#生命周期)
+  - [响应式数据](#响应式数据)
+  - [监听数据](#监听数据)
+  - [数据的计算](#数据的计算)
+- [路由](#路由)
+  - [引入路由 | 配置](#引入路由-配置)
+  - [路由的跳转](#路由的跳转)
+- [多组件](#多组件)
+  - [引入](#引入)
+  - [组件之间的通信](#组件之间的通信)
+    - [父子组件之间](#父子组件之间)
+- [Store](#store)
+
+<!-- /code_chunk_output -->
 
 <br>
+&emsp;
 
 ## 创建
 

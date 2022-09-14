@@ -7,10 +7,7 @@ export default defineUserConfig({
   description: '基于 Vuepress 的笔记 blog',
   base: '/Notes/',
 
-  head: [
-    ['link', { rel: 'icon', href: '/Notes/logo.png' }],
-    ['link', { rel: 'modulepreload', href: '/Notes/scripts/export-helper.js' }],
-  ],
+  head: [['link', { rel: 'icon', href: '/Notes/logo.png' }]],
   theme: hopeTheme({
     plugins: {
       mdEnhance: {

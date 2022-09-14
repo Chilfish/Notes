@@ -1,10 +1,15 @@
-# 算 法 (C++ 描述)
+---
+title: 算 法 (C++ 描述)
+---
+
+# {{$frontmatter.title}}
+
+<p style="font-size: 2rem; font-weight: bold;">目录</p>
 
 - [C++ 小语法](../Cpp.md)
-- **数据结构**
-  - [STL](STL.md)
-  - [手写实现](DataStruct.md)
-  - [树、图](Tree_Graph.md)
+- [STL](STL.md)
+- [数据结构](DataStruct.md)
+- [树、图](Tree_Graph.md)
 - [排序算法](Sort.md)
 - [动态规划 DP](DP.md)
 - [搜索](Search.md)
@@ -12,7 +17,19 @@
 - [数学](Math.md)
 - [喵啊的一些解法](miao.md)
 
-[TOC]
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [小算法](#小算法)
+  - [ACM](#acm)
+  - [复杂度](#复杂度)
+  - [前缀和 / 区间和](#前缀和-区间和)
+
+<!-- /code_chunk_output -->
+
+<br> 
+&emsp;
 
 ## 小算法
 

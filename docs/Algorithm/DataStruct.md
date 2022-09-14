@@ -1,9 +1,31 @@
-# 数据结构 (C++ 描述)
+---
+title: 数据结构 (C++ 描述)
+---
 
-[TOC]
+# {{ frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [线性结构](#线性结构)
+  - [线性表](#线性表)
+    - [顺序表](#顺序表)
+    - [链表](#链表)
+      - [单链表](#单链表)
+      - [循环单链表](#循环单链表)
+      - [双向链表](#双向链表)
+      - [循环双向链表](#循环双向链表)
+- [树状结构](#树状结构)
+- [图形结构](#图形结构)
+- [集合结构](#集合结构)
+- [参考](#参考)
+
+<!-- /code_chunk_output -->
 
 <br>
-
 &emsp;
 
 ## 线性结构

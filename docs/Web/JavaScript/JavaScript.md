@@ -1,31 +1,70 @@
-# JavaScript
+---
+title: JavaScript
+---
+
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **外链**
-  - [README.md](../README.md)
   - [现代 JavaScript 教程](https://zh.javascript.info/)
   - [MDN 官方文档](https://developer.mozilla.org/zh-CN/)
   - [阮一峰 - ES6](https://es6.ruanyifeng.com)
   - [DOM](DOM.md)
   - [Evens](Evens.md)
   - [ES6.js](ES6.js.md)
+ 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
-[TOC]
+<!-- code_chunk_output -->
 
-<br/>
+- [基本语法](#基本语法)
+  - [循环迭代](#循环迭代)
+  - [字符串](#字符串)
+  - [表达式与运算符](#表达式与运算符)
+  - [类型转换](#类型转换)
+  - [错误抛出](#错误抛出)
+  - [函数](#函数)
+    - [箭头函数](#箭头函数)
+    - [自执行函数](#自执行函数)
+    - [函数作用域](#函数作用域)
+    - [call, apply, bind](#call-apply-bind)
+- [对象](#对象)
+  - [对象和属性](#对象和属性)
+    - [创建对象](#创建对象)
+    - [for 遍历](#for-遍历)
+    - [this](#this)
+  - [标准内置对象](#标准内置对象)
+    - [Array 数组](#array-数组)
+    - [Date 对象](#date-对象)
+    - [Math 对象](#math-对象)
+    - [Map 对象](#map-对象)
+    - [Set 对象](#set-对象)
+    - [正则表达式](#正则表达式)
+  - [迭代器 iterator](#迭代器-iterator)
+  - [arguments 对象](#arguments-对象)
+- [API](#api)
+  - [DOM](#dom)
+  - [BOM](#bom)
+    - [window 对象](#window-对象)
+  - [浏览器事件](#浏览器事件)
+  - [第三方 API](#第三方-api)
+
+<!-- /code_chunk_output -->
+
+<br>
+&emsp;
 
 ## 基本语法
 
 ### 循环迭代
 
 - **for (.. in ..)** 用下标遍历对象
-
   ```js {.line-numbers}
   let a = ['12', 34, 'avb'];
   for (let i in a) console.log(a[i]);
   ```
-
 - **for (.. of ..)** 直接遍历对象, 甚至生成器函数
-
   ```js {.line-numbers}
   let a = ['12', 34, 'avb'];
   for (let i of a) console.log(i);

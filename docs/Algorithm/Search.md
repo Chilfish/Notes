@@ -1,10 +1,27 @@
-# 搜索
+---
+title: 搜索
+---
 
-[TOC]
+# {{$frontmatter.title}}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [二分搜索](#二分搜索)
+- [深搜](#深搜)
+- [广搜](#广搜)
+  - [方向数组](#方向数组)
+  - [例题](#例题)
+
+<!-- /code_chunk_output -->
 
 <br>
 &emsp;
 
+ 
 ## 二分搜索
 
 &emsp;&emsp;

@@ -1,12 +1,29 @@
-# 动态规划 DP
+---
+title: 动态规划 DP
+---
 
-[README](README.md)
+# {{ $frontmatter.title }}
 
-[TOC]
+<p style="font-size: 32px; font-weight: bold;">目录</p>
 
-### 普通 DP
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
-##### 斐波那契数列
+<!-- code_chunk_output -->
+
+- [普通 DP](#普通-dp)
+  - [斐波那契数列](#斐波那契数列)
+  - [使用硬币的个数](#使用硬币的个数)
+- [背包](#背包)
+  - [01 背包](#01-背包)
+
+<!-- /code_chunk_output -->
+
+<br>
+&emsp;
+
+## 普通 DP
+
+### 斐波那契数列
 
 ```cpp {.line-numbers}
 int dp[50] = {0};
@@ -31,7 +48,7 @@ int main()
 }
 ```
 
-##### 使用硬币的个数
+### 使用硬币的个数
 
 ```cpp {.line-numbers}
 const int MAXM = 1000;
@@ -50,9 +67,9 @@ void solve()
 }
 ```
 
-# 背包
+## 背包
 
-## 01 背包
+### 01 背包
 
 ```cpp {.line-numbers}
 void solve()

@@ -1,11 +1,33 @@
- # JQuery
+---
+title: JQuery
+---
 
+# {{ $frontmatter.title }}
 
-- [JavaScript](JavaScript/JavaScript.md)
+<p style="font-size: 32px; font-weight: bold;">目录</p>
 
-[TOC]
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [函数入口](#函数入口)
+- [选择器](#选择器)
+  - [过滤器](#过滤器)
+  - [方法](#方法)
+- [节点](#节点)
+  - [节点操作](#节点操作)
+  - [attr 属性](#attr-属性)
+  - [CSS 样式](#css-样式)
+  - [事件](#事件)
+  - [取值](#取值)
+- [动画](#动画)
+- [Ajax](#ajax)
+- [参考](#参考)
+
+<!-- /code_chunk_output -->
 
 <br>
+&emsp;
 
 ## 函数入口
 
@@ -14,17 +36,17 @@
 但是就会有个问题，当获取图片宽高的时候，可能获取不到。不过 jQ 中单独提出了一个页面加载的方法——`load()` 方法，如果这个处理函数绑定给 `window` 对象则会在所有内容加载完毕之后触发，且不会被覆盖：
 
 ```js {.line-numbers}
-$(window).load(function(){
-   // 执行代码
+$(window).load(function () {
+  // 执行代码
 });
 ```
 
 上面的代码，等同于 js 中的：
 
 ```js {.line-numbers}
-window.onload = function(){
-    // 执行代码
-}
+window.onload = function () {
+  // 执行代码
+};
 ```
 
 ## 选择器

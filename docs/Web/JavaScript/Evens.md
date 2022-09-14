@@ -1,11 +1,32 @@
-# DOM | Events
+---
+title: DOM | Events
+---
 
-- [JavaScript.md](JavaScript.md)
-- [DOM.md](DOM.md)
+# {{ $frontmatter.title }}
 
-[TOC]
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [分配事件处理程序的方式](#分配事件处理程序的方式)
+  - [Event](#event)
+  - [EventTarget](#eventtarget)
+  - [封装后的 addEventListener](#封装后的-addeventlistener)
+- [默认的浏览器行为](#默认的浏览器行为)
+- [UI 事件](#ui-事件)
+  - [鼠标事件](#鼠标事件)
+  - [键盘事件](#键盘事件)
+- [表单事件](#表单事件)
+- [框架/对象（Frame/Object）事件](#框架对象frameobject事件)
+- [数据更改事件](#数据更改事件)
+- [参考](#参考)
+
+<!-- /code_chunk_output -->
 
 <br>
+&emsp;
 
 事件 是某事发生的信号。所有的 DOM 节点都生成这样的信号（但事件不仅限于 DOM）。
 

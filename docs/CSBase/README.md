@@ -1,4 +1,8 @@
-# 计算机科学与技术及其基础
+---
+title: 计算机科学与技术及其基础
+---
+
+# {{ $frontmatter.title }}
 
 <br>
 &emsp;
@@ -14,14 +18,19 @@
 ## 目录
 
 - **[操作系统 OS](Operation_System/README.md)**
-  - [ ] [Windows]()
-  - [ ] [Linux](Operation_System/Linux.md)
-  - [ ] [Android]()
+  - :white_large_square: [Windows]()
+  - :white_large_square: [Linux](Operation_System/Linux.md)
+  - :white_large_square: [Android]()
 - **[软件使用](Software/README.md)**
-  - [ ] [VsCode]()
-  - [ ] [Git 及 GitHub]()
-  - [ ] [JetBrains 全家桶]()
-  - [ ] [Android Studio]()
+  - :white_large_square: [VsCode]()
+  - :white_large_square: [Git 及 GitHub]()
+  - :white_large_square: [JetBrains 全家桶]()
+  - :white_large_square: [Android Studio]()
 - **[硬件](Hardware/README.md)**
-  - [ ] [芯片]()
-  - [ ] [CPU、GPU | 偏数码]()
+  - :white_large_square: [芯片]()
+  - :white_large_square: [CPU、GPU | 偏数码]()
+
+<!--
+:white_check_mark:
+:white_large_square:
+-->

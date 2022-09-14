@@ -1,12 +1,38 @@
-# 排序算法 (C++ 描述)
+---
+title: 排序算法 (C++ 描述)
+---
+
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - [图解排序](https://www.cnblogs.com/onepixel/p/7674659.html)
-- [sorter.cpp](../../CPP/Sorter.cpp)
 
-[TOC]
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [分类](#分类)
+  - [复杂度](#复杂度)
+- [比较类排序](#比较类排序)
+  - [交换排序](#交换排序)
+    - [冒泡排序](#冒泡排序)
+    - [快速排序](#快速排序)
+  - [插入排序](#插入排序)
+    - [简单插入排序](#简单插入排序)
+    - [希尔排序](#希尔排序)
+  - [选择排序](#选择排序)
+    - [简单选择排序](#简单选择排序)
+    - [堆排序](#堆排序)
+  - [归并排序](#归并排序)
+- [非比较排序](#非比较排序)
+  - [计数排序](#计数排序)
+  - [桶排序](#桶排序)
+  - [基数排序](#基数排序)
+
+<!-- /code_chunk_output -->
 
 <br>
-
 &emsp;
 
 ## 分类

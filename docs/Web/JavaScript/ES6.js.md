@@ -1,12 +1,31 @@
-# ES6
+---
+title: ES6.js
+---
 
-[TOC]
+# {{ $frontmatter.title }}
 
-- 外链：
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+- **外链：**
   - [阮一峰 ES6](https://es6.ruanyifeng.com)
   - [JavaScript](JavaScript.md)
 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [变量的解构赋值](#变量的解构赋值)
+- [Promise 对象](#promise-对象)
+  - [特点](#特点)
+  - [用法](#用法)
+- [异步 async 函数](#异步-async-函数)
+- [Generator 迭代函数](#generator-迭代函数)
+- [Class 类](#class-类)
+
+<!-- /code_chunk_output -->
+
 <br>
+&emsp;
 
 ## 变量的解构赋值
 

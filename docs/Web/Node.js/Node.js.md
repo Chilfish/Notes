@@ -1,13 +1,33 @@
-# Node.js
+---
+title: Node.js
+---
 
-- **外链**
-  - [JavaScript](../JavaScript/JavaScript.md)
-  - [Express 框架](Express.md)
+# {{ $frontmatter.title }}
 
-[TOC]
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+- [JavaScript](../JavaScript/JavaScript.md)
+- [Express 框架](Express.md)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Node 项目](#node-项目)
+  - [初始化](#初始化)
+- [模块](#模块)
+  - [Common JS | ES Modules](#common-js-es-modules)
+  - [node 模块](#node-模块)
+    - [Buffer 缓冲区](#buffer-缓冲区)
+    - [fs 文件读写](#fs-文件读写)
+  - [第三方模块](#第三方模块)
+    - [Express 框架](#express-框架)
+
+<!-- /code_chunk_output -->
 
 <br>
-
+&emsp;
+ 
 ## Node 项目
 
 ### 初始化
@@ -15,7 +35,7 @@
 - cd 到项目文件夹并运行 ↓ 后，按提示填写项目信息，就会生成 `package.json` 文件
   ```shell {.line-numbers}
   pnpm init
-  rem // 选默认值则是:
+  # 选默认值则是:
   pnpm init -y
   ```
 - `package.json` 文件包含的信息：
@@ -104,7 +124,3 @@
 这些库可以实现 cookie、会话、用户登录、URL 参数、POST 数据、安全头等功能
 
 > 详见： [Express.md](Express.md)
-
-###
-
-#

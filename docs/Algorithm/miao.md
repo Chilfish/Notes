@@ -1,10 +1,25 @@
-# 喵 啊
+---
+title: 喵啊 的解法
+---
 
-[TOC]
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [周期循环](#周期循环)
+- [拼接数字取模](#拼接数字取模)
+- [幂运算 ->快速幂思想](#幂运算-快速幂思想)
+
+<!-- /code_chunk_output -->
 
 <br>
+&emsp;
 
-## 周期循环(观察到) --> 打表
+## 周期循环
 
 - **[题目链接](https://ac.nowcoder.com/acm/contest/22672/B)**
 - ![](./img/miao_1.png)

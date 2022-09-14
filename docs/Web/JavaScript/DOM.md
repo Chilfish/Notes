@@ -1,13 +1,42 @@
-  # DOM
+---
+title: DOM
+---
 
-- **外链**
-  
-  - [JavaScript](JavaScript.md)
-  - [Events](Evens.md)
+# {{ $frontmatter.title }}
 
-[TOC]
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+- [JavaScript](JavaScript.md)
+- [Events](Evens.md)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [DOM 树](#dom-树)
+  - [概述](#概述)
+  - [DOM 的自动修正](#dom-的自动修正)
+  - [访问 DOM](#访问-dom)
+  - [主要的 DOM 节点属性](#主要的-dom-节点属性)
+  - [NodeList 与 HTMLCollection](#nodelist-与-htmlcollection)
+- [DOM 对象](#dom-对象)
+  - [Document](#document)
+    - [方法](#方法)
+      - [节点查询型](#节点查询型)
+      - [页面修改型](#页面修改型)
+      - [节点创造型](#节点创造型)
+    - [属性](#属性)
+    - [参考](#参考)
+  - [Element](#element)
+    - [方法](#方法-1)
+    - [属性](#属性-1)
+  - [DOM 事件](#dom-事件)
+  - [Image 对象](#image-对象)
+
+<!-- /code_chunk_output -->
 
 <br>
+&emsp;
 
 ## DOM 树
 

@@ -1,9 +1,37 @@
-# JavaSE
+---
+title: JavaSE
+---
 
-[TOC]
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [基础语法](#基础语法)
+  - [Java 概述](#java-概述)
+    - [工作原理](#工作原理)
+    - [第一行 Java](#第一行-java)
+  - [数据类型](#数据类型)
+    - [基本类型](#基本类型)
+    - [引用数据类型](#引用数据类型)
+      - [数组](#数组)
+      - [字符串](#字符串)
+  - [修饰符](#修饰符)
+  - [函数方法](#函数方法)
+- [面向对象](#面向对象)
+    - [多态](#多态)
+    - [抽象类 | 接口](#抽象类-接口)
+    - [内部类](#内部类)
+  - [常见类](#常见类)
+    - [Object 类](#object-类)
+
+<!-- /code_chunk_output -->
 
 <br>
-&emsp;&emsp;
+&emsp;
 
 ## 基础语法
 

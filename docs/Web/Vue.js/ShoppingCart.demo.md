@@ -1,12 +1,37 @@
-# ShoppingCart.demo
+---
+title: ShoppingCart.demo
+---
 
-[TOC]
+# {{ $frontmatter.title }}
 
-- 外链
-  - [Vue.md](Vue.js.md)
-  - [demo 源码](../../../Web/vue/ts-vite/src/App.vue)
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+- [Vue.md](Vue.js.md)
+- [demo 源码](https://github.com/Organic-Fish/FishCode/tree/master/Web/vue/ts-vite/src)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [介绍](#介绍)
+  - [技术栈](#技术栈)
+  - [预览](#预览)
+- [创建项目](#创建项目)
+  - [初始化](#初始化)
+  - [完善目录结构](#完善目录结构)
+- [添加路由](#添加路由)
+- [添加 Vuex](#添加-vuex)
+- [添加 Api](#添加-api)
+- [界面设计](#界面设计)
+- [Vue3 语法](#vue3-语法)
+  - [Products.vue](#productsvue)
+  - [Shopping.vue](#shoppingvue)
+- [Vuex](#vuex)
+
+<!-- /code_chunk_output -->
 
 <br>
+&emsp;
 
 ## 介绍
 
@@ -18,7 +43,7 @@
 
 - Vue 3.2
 - Vue-router 4.0
-- Vuex 4.0  //看了眼，觉得还是学 pinia好点.？
+- Vuex 4.0 //看了眼，觉得还是学 pinia 好点.？
 - Vite 2.9
 - Typescript 4.5
 
@@ -26,7 +51,7 @@
 
 &emsp;&emsp;
 
- ![](./img/CartDemo_0.png)
+![](./img/CartDemo_0.png)
 
 ## 创建项目
 
@@ -69,19 +94,19 @@ pnpm install
 - 编辑路由出口 `router/index.ts`
 
   ```ts {.line-numbers}
-  import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-  import Home from "pages/Products/index.vue";
+  import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+  import Home from 'pages/Products/index.vue';
 
   const routes: Array<RouteRecordRaw> = [
     {
-      path: "/",
-      name: "home",
+      path: '/',
+      name: 'home',
       component: Home, // 默认主界面
     },
     {
-      path: "/shopping", // domain/shopping
-      name: "shopping",
-      component: () => import("pages/ShoppingCart/index.vue"), // 引用自pages
+      path: '/shopping', // domain/shopping
+      name: 'shopping',
+      component: () => import('pages/ShoppingCart/index.vue'), // 引用自pages
     },
   ];
 
@@ -128,8 +153,8 @@ pnpm install
 - 在 `api/index.ts` 中请求 api
 
   ```ts {.line-numbers}
-  import data from "./data";
-  import { Product } from "src/interface";
+  import data from './data';
+  import { Product } from 'src/interface';
 
   // 异步 get Products list
   export const apiGetProducts = () => {

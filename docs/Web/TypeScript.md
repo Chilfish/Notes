@@ -1,11 +1,25 @@
-# TypeScript
+---
+title: TypeScript
+---
 
-[TOC]
+# {{ $frontmatter.title }}
 
-- [Node.js](Node.js/Node.js.md)
+<p style="font-size: 32px; font-weight: bold;">目录</p>
 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
 
-<br>
+<!-- code_chunk_output -->
+
+- [语法](#语法)
+- [项目构建](#项目构建)
+  - [初始化](#初始化)
+  - [代码规范](#代码规范)
+- [参考](#参考)
+
+<!-- /code_chunk_output -->
+
+<br> 
+&emsp;
 
 ## 语法
 

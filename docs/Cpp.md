@@ -1,10 +1,37 @@
-# C / C++
+---
+title: C / C++
+---
+
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **[算法 (C++ 描述)](Algorithm/README.md)**
 
-[TOC]
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [](#)
+  - [一些小语法](#一些小语法)
+    - [命名规范](#命名规范)
+    - [缓冲区](#缓冲区)
+    - [stringstream](#stringstream)
+    - [模板 template](#模板-template)
+    - [Class 类](#class-类)
+      - [定义类](#定义类)
+      - [构造类](#构造类)
+      - [继承](#继承)
+      - [重载](#重载)
+      - [explicit](#explicit)
+    - [initializer_list &lt;T&gt; 列表初始化](#initializer_list-lttgt-列表初始化)
+    - [Lambda 匿名函数](#lambda-匿名函数)
+  - [C 語言中に](#c-語言中に)
+
+<!-- /code_chunk_output -->
 
 <br>
+&emsp;
 
 ## 一些小语法
 
