@@ -21,7 +21,6 @@ title: 搜索
 <br>
 &emsp;
 
- 
 ## 二分搜索
 
 &emsp;&emsp;
@@ -44,6 +43,23 @@ title: 搜索
     return -1;
   }
   ```
+- `upper_bound` 和 `lower_bound` 只要在相等时再找找下标有没有 _更大|小_ 的
+  ```cpp {.line-numbers}
+  int binary_bound(vector<int> arr, int x) {
+    int l = 0, r = arr.size(), ans = -1;
+    while (l <= r) {
+      int m = l + (r - l) / 2;
+      if (arr[m] > x)
+        r = m - 1;
+      else if (arr[m] < x)
+        l = m + 1;
+      else
+        ans = m, l = m + 1; // lower 则是向右找： r = m - 1;
+    }
+    return ans;
+  }
+  ```
+- 求出现的次数只要 $upper\_bound - lower\_bound$ 即可
 
 <br>
 &emsp;
@@ -58,14 +74,13 @@ title: 搜索
   int n; //要全局
 
   void dfs(int x) {
-  if (x == n) // 到了边界
-  {
+    if (x == n) { // 到了边界
       for (int i = 1; i <= n; i++)
         cout << a[i] << " ";
-        cout << endl;
+      cout << endl;
       return; //回溯，到used[i] = false;
-  }
-  for (int i = 1; i <= n; i++)
+    }
+    for (int i = 1; i <= n; i++)
       if (used[i] == false) {
         a[x + 1] = i;       //放进去
         used[i] = true; //标记已经放的位置
@@ -73,6 +88,7 @@ title: 搜索
         used[i] = false; //回退，撤销标记
       }
   }
+
   int main() {
     cin >> n;
     dfs(0);

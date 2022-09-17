@@ -1,3 +1,7 @@
+---
+date: 2022-01-20
+---
+
 # 导航
 
 <br>
@@ -37,7 +41,7 @@
   - ACM 算 法：[Algorithm](./Algorithm/README.md)
   - [一堆奇怪的......](./balabala/README.md)
   - 《计算机科学补全计划》：[SCBase](CSBase/README.md)
-  - [$\LaTeX$](./LaTeX.md)
+  - [$\LaTeX$ 与 $\KaTeX$](./LaTeX.md)
   - 正则表达式：[Regex](./Regex.md)
   - 数学：[HyperMath](./HyperMath/README.md)
   - **(\* ﾟ ∇ ﾟ)**

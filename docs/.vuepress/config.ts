@@ -11,9 +11,7 @@ export default defineUserConfig({
   theme: hopeTheme({
     plugins: {
       mdEnhance: {
-        tex: true,
-        imageMark: true,
-        imageSize: true,
+        tex: true, 
         footnote: true,
       },
       copyCode: {},

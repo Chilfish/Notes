@@ -1,5 +1,6 @@
 ---
 title: MySQL
+date: 2022-03-12
 ---
 
 # {{ $frontmatter.title }}

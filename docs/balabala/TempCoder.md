@@ -1,9 +1,34 @@
-# 只是一些没地方放的 Temp 码
+---
+title: 只是一些没地方放的 Temp 码
+date: 2020-06-20
+---
 
-[TOC]
+# {{ $frontmatter.title }}
+
+<p style="font-size: 32px; font-weight: bold;">目录</p>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [C++](#c)
+  - [欢迎各位滚动屏的莅临指导](#欢迎各位滚动屏的莅临指导)
+- [JavaScript](#javascript)
+  - [UP 的新动态](#up-的新动态)
+  - [浏览器 UA](#浏览器-ua)
+  - [表格排序](#表格排序)
+  - [模糊查询](#模糊查询)
+  - [获取系统 IPV4](#获取系统-ipv4)
+  - [大眼仔，你坏事干净！](#大眼仔你坏事干净)
+- [TypeScript](#typescript)
+  - [ES 模块下的 dirname](#es-模块下的-dirname)
+- [Python](#python)
+
+<!-- /code_chunk_output -->
 
 <br>
-
+&emsp;
+ 
 ## C++
 
 ### 欢迎各位滚动屏的莅临指导
@@ -29,6 +54,8 @@ void welcome()
 
 ### UP 的新动态
 
+> 超早期写的，但 B 站的 class 一直在变......
+
 ```js {.line-numbers}
 var upname = document.getElementsByClassName('bili-dyn-title'),
   up = new Set();
@@ -44,6 +71,8 @@ up.forEach((element) => {
 ```
 
 ### 浏览器 UA
+
+> 下次再改成 ES6 好了
 
 ```js {.line-numbers}
 class getVersion {
@@ -96,6 +125,8 @@ version.browserVersion();
 ```
 
 ### 表格排序
+
+> 感觉不如......
 
 ```js {.line-numbers}
 const sort_table = () => {
@@ -151,6 +182,8 @@ function getIPV4() {
 ```
 
 ### 大眼仔，你坏事干净！
+
+> 但并不能总是成功诶......
 
 ```js {.line-numbers}
 const axios = require('axios'),

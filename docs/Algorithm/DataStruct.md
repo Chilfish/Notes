@@ -1,8 +1,9 @@
 ---
 title: 数据结构 (C++ 描述)
+date: 2022-07-30
 ---
 
-# {{ frontmatter.title }}
+# {{ $frontmatter.title }}
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 

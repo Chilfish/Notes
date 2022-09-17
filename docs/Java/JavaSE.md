@@ -1,5 +1,6 @@
 ---
 title: JavaSE
+date: 2022-07-24
 ---
 
 # {{ $frontmatter.title }}

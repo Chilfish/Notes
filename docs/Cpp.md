@@ -1,5 +1,6 @@
 ---
 title: C / C++
+date: 2022-04-14
 ---
 
 # {{ $frontmatter.title }}

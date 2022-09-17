@@ -1,9 +1,5 @@
-#!/bin/bash
-
-pnpm build
-
 cd docs/.vuepress/dist
-touch .nojekyll
+echo.>.nojekyll
 
 git init
 git remote add origin "https://github.com/Organic-Fish/Notes.git"
