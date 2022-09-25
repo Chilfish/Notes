@@ -96,7 +96,7 @@ date: 2022-07-31
 
 - $n \le 30$： 指数级别， dfs+剪枝，状态压缩 dp
 - $n \le 100  \to  O(n^3)$：floyd，dp，高斯消元
-- $n \le 1000  \to  O(n^2), O(n^2\log_2n)$ ，dp，二分，朴素版 Dijkstra、朴素版 Prim、Bellman-Ford
+- $n \le 1000  \to  O(n^2), O(n^2 \times \log_2n)$ ，dp，二分，朴素版 Dijkstra、朴素版 Prim、Bellman-Ford
 - $n \le 10^4  \to  O(n \times \sqrt n)$：块状链表、分块、莫队
 - $n \le 10^5  \to  O(n\log_2n)$： 各种 `sort`，线段树、树状数组、`set/map`、`heap`、拓扑排序、`dijkstra+heap`、`prim+heap`、`Kruskal`、`spfa`、求凸包、求半平面交、二分、`CDQ` 分治、整体二分、后缀数组、树链剖分、动态树
 - $n \le 10^6  \to  O(n)$： 以及常数较小的 $O(n\log_2n)$ 算法 $\to$ 单调队列、 `hash`、双指针扫描、并查集，`kmp`、AC 自动机，sort、树状数组、heap、dijkstra、spfa

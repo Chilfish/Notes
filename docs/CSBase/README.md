@@ -22,13 +22,15 @@ title: 计算机科学与技术及其基础
   - :white_large_square: [Linux](Operation_System/Linux.md)
   - :white_large_square: [Android]()
 - **[软件使用](Software/README.md)**
+  - :white_large_square: [浏览器及其工作原理](Software/Browser.md)
   - :white_large_square: [VsCode]()
   - :white_large_square: [Git 及 GitHub]()
   - :white_large_square: [JetBrains 全家桶]()
   - :white_large_square: [Android Studio]()
 - **[硬件](Hardware/README.md)**
-  - :white_large_square: [芯片]()
+  - :white_large_square: [数字电路]()
   - :white_large_square: [CPU、GPU | 偏数码]()
+  - :white_large_square: [一堆接口及其标准]()
 
 <!--
 :white_check_mark:
