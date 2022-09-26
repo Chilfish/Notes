@@ -1,5 +1,6 @@
 ---
-title: 计算机网咯
+title: 计算机网络
+date: 2022-09-26
 ---
 
 # {{ $frontmatter.title }}
@@ -7,39 +8,29 @@ title: 计算机网咯
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **章节目录：**
+  - [概述](Summary/README.md)
   - [应用层 —— HTTP 到 DNS](HTTP.md)
   - [传输层 —— UDP 到 TCP](TCP.md)
   - [网络层(数据层面) —— IP](IP.md)
   - [网络层(控制层面) —— 路由](Router.md)
   - [链路层与局域网](Link.md)
   - [物理层与服务器](Server.md)
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
-
-<!-- code_chunk_output -->
-
-- [绪论](#绪论)
-- [大总结](#大总结)
-  - [](#-1)
-  - [从输入 URL 到页面加载的全过程](#从输入-url-到页面加载的全过程)
-
-<!-- /code_chunk_output -->
-
-<br>
-&emsp;
-
-## 绪论
+- **参考：**
+  - [湖科大计算机网络](https://www.bilibili.com/video/BV1c4411d7jb)
 
 <br>
 &emsp;
 
 ## 大总结
 
-###
-
 ### 从输入 URL 到页面加载的全过程
 
-![](./img/HTTP_url.png)
+&emsp;&emsp;
+
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="70%"
+  src="./img/HTTP_url.png"/><br><div style="color: #999;padding: 0.4rem;">
+  URL 到页面加载
+</div></div>
 
 1. 首先在浏览器中输入 `URL`
 2. **查找缓存**：浏览器先查看浏览器缓存-系统缓存-路由缓存中是否有该地址页面，如果有则显示页面内容。如果没有则进行下一步。

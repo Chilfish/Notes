@@ -6,7 +6,39 @@ title: CSS | Scss
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [](#)
+  - [CSS](#css)
+    - [文本字体](#文本字体)
+    - [单位](#单位)
+    - [background 背景](#background-背景)
+    - [图片](#图片)
+    - [盒子](#盒子)
+    - [列表](#列表)
+    - [选择器](#选择器)
+      - [组合选择与继承](#组合选择与继承)
+      - [伪类](#伪类)
+      - [伪元素](#伪元素)
+    - [布局方式](#布局方式)
+      - [flex 弹性](#flex-弹性)
+      - [grid 网格](#grid-网格)
+      - [float 浮动](#float-浮动)
+      - [position 定位](#position-定位)
+      - [column 多列布局](#column-多列布局)
+    - [transition 过渡](#transition-过渡)
+      - [可过渡的样式](#可过渡的样式)
+      - [过渡函数](#过渡函数)
+    - [animation 动画](#animation-动画)
+      - [关键帧 @keyframes + name](#关键帧-keyframes-name)
+  - [Scss](#scss)
+    - [基础](#基础)
+    - [继承 | 复用 | 导入](#继承-复用-导入)
+    - [语句](#语句)
+
+<!-- /code_chunk_output -->
 
 - **外链：**
   - [HTML](HTML.md)
@@ -14,32 +46,33 @@ title: CSS | Scss
 
 <!-- code_chunk_output -->
 
-- [CSS](#css)
-  - [文本字体](#文本字体)
-  - [单位](#单位)
-  - [background 背景](#background-背景)
-  - [图片](#图片)
-  - [盒子](#盒子)
-  - [列表](#列表)
-  - [选择器](#选择器)
-    - [组合选择与继承](#组合选择与继承)
-    - [伪类](#伪类)
-    - [伪元素](#伪元素)
-  - [布局方式](#布局方式)
-    - [flex 弹性](#flex-弹性)
-    - [grid 网格](#grid-网格)
-    - [float 浮动](#float-浮动)
-    - [position 定位](#position-定位)
-    - [column 多列布局](#column-多列布局)
-  - [transition 过渡](#transition-过渡)
-    - [可过渡的样式](#可过渡的样式)
-    - [过渡函数](#过渡函数)
-  - [animation 动画](#animation-动画)
-    - [关键帧 @keyframes + name](#关键帧-keyframes-name)
-- [Scss](#scss)
-  - [基础](#基础)
-  - [继承 | 复用 | 导入](#继承-复用-导入)
-  - [语句](#语句)
+- [{{ $frontmatter.title }}](#-frontmattertitle-)
+  - [CSS](#css)
+    - [文本字体](#文本字体)
+    - [单位](#单位)
+    - [background 背景](#background-背景)
+    - [图片](#图片)
+    - [盒子](#盒子)
+    - [列表](#列表)
+    - [选择器](#选择器)
+      - [组合选择与继承](#组合选择与继承)
+      - [伪类](#伪类)
+      - [伪元素](#伪元素)
+    - [布局方式](#布局方式)
+      - [flex 弹性](#flex-弹性)
+      - [grid 网格](#grid-网格)
+      - [float 浮动](#float-浮动)
+      - [position 定位](#position-定位)
+      - [column 多列布局](#column-多列布局)
+    - [transition 过渡](#transition-过渡)
+      - [可过渡的样式](#可过渡的样式)
+      - [过渡函数](#过渡函数)
+    - [animation 动画](#animation-动画)
+      - [关键帧 @keyframes + name](#关键帧-keyframes--name)
+  - [Scss](#scss)
+    - [基础](#基础)
+    - [继承 | 复用 | 导入](#继承--复用--导入)
+    - [语句](#语句)
 
 <!-- /code_chunk_output -->
 
@@ -64,7 +97,10 @@ title: CSS | Scss
   - `lowercase` 将所有字母小写
   - `ful-width` 全角
 - `write-mode` 文字书写方向
-  - ![](./img/CSS_write_mode.png)
+  <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="30%"
+    src="./img/CSS_write_mode.png"/><br><div style="color: #999;padding: 0.4rem;">
+    书写方向
+  </div></div>
 - `white-space`：对文本的**换行操作**进行控制
   - 默认值是 `normal`，设置文本到达父元素的边界就自动换行
   - `nowrap` 设置文本不换行，意思是文本到达边界依然会继续的由左向右平铺
@@ -87,30 +123,45 @@ title: CSS | Scss
 ### 单位
 
 - **绝对长度:**
+
   - 绝对长度单位是固定的，用任何一个绝对长度表示的长度都将恰好显示为这个尺寸
   - 不建议在屏幕上使用绝对长度单位，因为屏幕尺寸变化很大。但是，如果已知输出介质，则可以使用它们，例如用于打印布局（print layout）
-    | 单位 | 描述 |
-    | :--- | :--------- |
-    | `cm` | 厘米 |
-    | `mm` | 毫米 |
-    | `in` | 英寸 (1in = 96px = 2.54cm) |
-    | `px` | 像素 (1px = 1/96th of 1in) |
-    | `pt` | 点 (1pt = 1/72 of 1in) |
+  <div style="text-align: center;margin: 1rem;">
+
+  <span></span>
+  | 单位 | 描述 |
+  | :--- | :--------- |
+  | `cm` | 厘米 |
+  | `mm` | 毫米 |
+  | `in` | 英寸 (1in = 96px = 2.54cm) |
+  | `px` | 像素 (1px = 1/96th of 1in) |
+  | `pt` | 点 (1pt = 1/72 of 1in) |
+  </div>
+
   - **像素（px）** 是相对于观看设备的。对于低 dpi 的设备，1px 是显示器的一个设备像素（点）。对于打印机和高分辨率屏幕，1px 表示多个设备像素
+
 - **相对长度:**
+
   - 相对长度单位规定相对于另一个长度属性的长度。相对长度单位在不同渲染介质之间缩放表现得更好
-    | 单位 | 描述 |
-    | :----- | :--- |
-    | `em` | 相对于元素的字体大小（font-size）（2em 表示当前字体大小的 2 倍） |
-    | `ex` | 相对于当前字体的 x-height(极少使用) |
-    | `ch` | 相对于 "0"（零）的宽度 |
-    | `rem` | 相对于根元素的字体大小（font-size） |
-    | `vw` | 相对于视口\*宽度的 1% |
-    | `vh` | 相对于视口\*高度的 1% |
-    | `vmin` | 相对于视口\*较小尺寸的 1％ |
-    | `vmax` | 相对于视口\*较大尺寸的 1％ |
-    | `%` | 相对于父元素 |
-  - 视口（Viewport）= 浏览器窗口的尺寸。如果视口宽 50 里面，则 1vw = 0.5cm
+
+  <div style="text-align: center;margin: 1rem;">
+
+  <span></span>
+  | 单位 | 描述 |
+  | :----- | :--- |
+  | `em` | 相对于元素的字体大小（font-size）（2em 表示当前字体大小的 2 倍） |
+  | `ex` | 相对于当前字体的 x-height(极少使用) |
+  | `ch` | 相对于 "0"（零）的宽度 |
+  | `rem` | 相对于根元素的字体大小（font-size） |
+  | `vw` | 相对于视口\*宽度的 1% |
+  | `vh` | 相对于视口\*高度的 1% |
+  | `vmin` | 相对于视口\*较小尺寸的 1％ |
+  | `vmax` | 相对于视口\*较大尺寸的 1％ |
+  | `%` | 相对于父元素 |
+
+  </div>
+
+- 视口（Viewport）= 浏览器窗口的尺寸。如果视口宽 50 里面，则 1vw = 0.5cm
 
 <br>
 
@@ -280,7 +331,7 @@ title: CSS | Scss
   }
   .child {
     width: xx;
-    width: xx;
+    height: xx;
     margin: auto;
   }
   ```

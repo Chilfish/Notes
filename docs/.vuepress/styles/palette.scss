@@ -1,34 +1,6 @@
 $theme-color: #945281;
 $code-light-theme: 'atom-dark';
 
-// 来自 MPE
-
-hr {
-  display: block;
-  border: 1px solid #485e7386;
-}
-
-em {
-  color: black;
-}
-
-p,
-h1,
-h2,
-h3 {
-  color: #2c3e50;
-}
-h1 {
-  text-align: center;
-}
-code {
-  background-color: #f1f1f1;
-  padding: 0.15em 0.5em;
-  border-radius: 4px;
-  color: #4e6e8e;
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
 blockquote {
   background-color: #f9f9f9;
   border-color: $theme-color !important;
@@ -36,42 +8,4 @@ blockquote {
   color: #858585;
   margin: 2em 0;
   padding-left: 20px;
-}
-
-li {
-  margin-bottom: 5px;
-}
-
-//
-
-table {
-  margin: 2rem 0;
-  font-size: 0.8rem;
-  border-collapse: collapse;
-  text-align: center;
-}
-caption {
-  font-weight: bold;
-  padding: 10px;
-}
-td,
-th {
-  border: 1px solid #ddd;
-  height: 2.5rem;
-  padding: 0.5rem;
-}
-th {
-  background-color: #eff3f5;
-}
-
-tbody tr {
-  &:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  &:nth-child(odd) {
-    background-color: #fff;
-  }
-  &:hover {
-    background-color: #f0f1f2;
-  }
 }

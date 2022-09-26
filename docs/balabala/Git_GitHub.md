@@ -32,6 +32,10 @@ date: 2022-07-10
 ## Git config
 
 使用 git config 命令尽心 git 的配置，常用命令如下：
+
+<div style="text-align: center;margin: 1rem;">
+
+<span></span>
 命令 | 作用
 | :-: | :-: |
 `git config --list` | 打印出当前环境的 git 配置信息，接 `--global` 可以打印全局配置
@@ -40,6 +44,8 @@ date: 2022-07-10
 `git config --global core.autocrlf false` | windows 总提示 `CR/LF` 的警告，设置后可去除
 `git config --global credential.helper store `| 终端环境保存 `https` 的密钥，避免每次都要密码
 `git config --global core.quotepath false` | 用来解决 _git status_ 显示中文乱码的问题 <br> `git-bash`，找到`选项->文本->本地 Locale` <br> 设置为 `zh_CN`，而旁边的字符集选框选为 `UTF-8`
+
+</div>
 
 当然，除了命令行配置，还可以直接编辑文件 `~/.gitconfig` 文件，但是请清楚修改的具体含义，避免出现 git 后续使用的不必要的错误。
 

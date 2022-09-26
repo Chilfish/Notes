@@ -1,6 +1,5 @@
 ---
 title: 浏览器及其工作原理
-date:
 ---
 
 # {{ $frontmatter.title }}

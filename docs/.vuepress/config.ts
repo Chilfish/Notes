@@ -11,15 +11,20 @@ export default defineUserConfig({
   theme: hopeTheme({
     plugins: {
       mdEnhance: {
-        tex: true, 
+        tex: true,
         footnote: true,
       },
       copyCode: {},
       activeHeaderLinks: false,
     },
 
+    repo: 'Organic-Fish/Notes',
+    repoDisplay: true,
+    repoLabel: 'GitHub',
+
     sidebar: 'heading',
     navbar: [],
+    logo: '/logo.png',
 
     darkmode: 'toggle',
     themeColor: {

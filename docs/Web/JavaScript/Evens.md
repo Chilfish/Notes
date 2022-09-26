@@ -6,26 +6,27 @@ title: DOM | Events
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [分配事件处理程序的方式](#分配事件处理程序的方式)
-  - [Event](#event)
-  - [EventTarget](#eventtarget)
-  - [封装后的 addEventListener](#封装后的-addeventlistener)
-- [默认的浏览器行为](#默认的浏览器行为)
-- [UI 事件](#ui-事件)
-  - [鼠标事件](#鼠标事件)
-  - [键盘事件](#键盘事件)
-- [表单事件](#表单事件)
-- [框架/对象（Frame/Object）事件](#框架对象frameobject事件)
-- [数据更改事件](#数据更改事件)
-- [参考](#参考)
+- [](#)
+  - [分配事件处理程序的方式](#分配事件处理程序的方式)
+    - [Event](#event)
+    - [EventTarget](#eventtarget)
+    - [封装后的 addEventListener](#封装后的-addeventlistener)
+  - [默认的浏览器行为](#默认的浏览器行为)
+  - [UI 事件](#ui-事件)
+    - [鼠标事件](#鼠标事件)
+    - [键盘事件](#键盘事件)
+  - [表单事件](#表单事件)
+  - [框架/对象（Frame/Object）事件](#框架对象frameobject事件)
+  - [数据更改事件](#数据更改事件)
+  - [参考](#参考)
 
 <!-- /code_chunk_output -->
 
-<br>
+<br> 
 &emsp;
 
 事件 是某事发生的信号。所有的 DOM 节点都生成这样的信号（但事件不仅限于 DOM）。
@@ -151,18 +152,23 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 ### 鼠标事件
 
-|     属性      | 描述                               |
+<div style="text-align: center;margin: 1rem;">
+
+<span></span>
+| 属性 | 描述 |
 | :-----------: | :--------------------------------- |
-|    `click`    | 当点击某个对象时调用的事件句柄。   |
+| `click` | 当点击某个对象时调用的事件句柄。 |
 | `contextmenu` | 在点击鼠标右键打开上下文菜单时触发 |
-|  `dblclick`   | 当双击某个对象时调用的事件句柄。   |
-|  `mousedown`  | 鼠标按钮被按下。                   |
-| `mouseenter`  | 当鼠标指针移动到元素上时触发。     |
-| `mouseleave`  | 当鼠标指针移出元素时触发           |
-|  `mousemove`  | 鼠标被移动。                       |
-|  `mouseover`  | 鼠标移到某元素之上。               |
-|  `mouseout`   | 鼠标从某元素移开。                 |
-|   `mouseup`   | 鼠标按键被松开。                   |
+| `dblclick` | 当双击某个对象时调用的事件句柄。 |
+| `mousedown` | 鼠标按钮被按下。 |
+| `mouseenter` | 当鼠标指针移动到元素上时触发。 |
+| `mouseleave` | 当鼠标指针移出元素时触发 |
+| `mousemove` | 鼠标被移动。 |
+| `mouseover` | 鼠标移到某元素之上。 |
+| `mouseout` | 鼠标从某元素移开。 |
+| `mouseup` | 鼠标按键被松开。 |
+
+</div>
 
 - **顺序：**
   当点击左键时，遵循 mousedown → mouseup → click 的顺序调用处理程序
@@ -206,18 +212,23 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 ## 表单事件
 
-|    属性    | 描述                                                                            |
+<div style="text-align: center;margin: 1rem;">
+
+<span></span>
+| 属性 | 描述 |
 | :--------: | :------------------------------------------------------------------------------ |
-|   `blur`   | 元素失去焦点时触发                                                              |
-|  `change`  | 在表单元素的内容改变时触发( `<input>`, `<keygen>`, `<select>`, 和 `<textarea>`) |
-|  `focus`   | 元素获取焦点时触发                                                              |
-| `focusin`  | 元素即将获取焦点时触发                                                          |
-| `focusout` | 元素即将失去焦点时触发                                                          |
-|  `input`   | 元素获取输入时触发                                                              |
-|  `reset`   | 表单重置时触发                                                                  |
-|  `search`  | 向搜索域输入文本时触发 ( `<input="search">`)                                    |
-|  `select`  | 选取文本时触发 ( `<input>` 和`textarea>`)                                       |
-|  `submit`  | 表单提交时触发                                                                  |
+| `blur` | 元素失去焦点时触发 |
+| `change` | 在表单元素的内容改变时触发( `<input>`, `<keygen>`, `<select>`, 和 `<textarea>`) |
+| `focus` | 元素获取焦点时触发 |
+| `focusin` | 元素即将获取焦点时触发 |
+| `focusout` | 元素即将失去焦点时触发 |
+| `input` | 元素获取输入时触发 |
+| `reset` | 表单重置时触发 |
+| `search` | 向搜索域输入文本时触发 ( `<input="search">`) |
+| `select` | 选取文本时触发 ( `<input>` 和`textarea>`) |
+| `submit` | 表单提交时触发 |
+
+</div>
 
 **访问：**
 
@@ -232,18 +243,23 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 ## 框架/对象（Frame/Object）事件
 
-|      属性      | 描述                                                                |
+<div style="text-align: center;margin: 1rem;">
+
+<span></span>
+| 属性 | 描述 |
 | :------------: | :------------------------------------------------------------------ |
-|    `abort`     | 图像的加载被中断。 ( `<object>`)                                    |
-| `beforeunload` | 在即将离开页面（刷新或关闭）时触发                                  |
-|    `error`     | 在加载文档或图像时发生错误。 ( `<object>`, `<body>`和 `<frameset>`) |
-|  `hashchange`  | 在当前 URL 的锚部分发生修改时触发。                                 |
-|     `load`     | 一张页面或一幅图像完成加载。                                        |
-|   `pageshow`   | 在访问页面时触发                                                    |
-|   `pagehide`   | 在离开当前网页跳转到另外一个页面时触发                              |
-|    `resize`    | 窗口或框架被重新调整大小。                                          |
-|    `scroll`    | 当文档被滚动时发生的事件。                                          |
-|    `unload`    | 退出页面。 ( `<body>` 和 `<frameset>`)                              |
+| `abort` | 图像的加载被中断。 ( `<object>`) |
+| `beforeunload` | 在即将离开页面（刷新或关闭）时触发 |
+| `error` | 在加载文档或图像时发生错误。 ( `<object>`, `<body>`和 `<frameset>`) |
+| `hashchange` | 在当前 URL 的锚部分发生修改时触发。 |
+| `load` | 一张页面或一幅图像完成加载。 |
+| `pageshow` | 在访问页面时触发 |
+| `pagehide` | 在离开当前网页跳转到另外一个页面时触发 |
+| `resize` | 窗口或框架被重新调整大小。 |
+| `scroll` | 当文档被滚动时发生的事件。 |
+| `unload` | 退出页面。 ( `<body>` 和 `<frameset>`) |
+
+</div>
 
 ## 数据更改事件
 
