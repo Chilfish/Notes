@@ -14,7 +14,7 @@ date: 2022-01-20
   - Web 的 [README](./Web/README.md)
   - [HTML](./Web/HTML.md)
   - [CSS](./Web/CSS.md)
-  - [JavaScript](./Web/JavaScript/JavaScript.md)
+  - [JavaScript](./Web/JavaScript/README.md)
   - [TypeScript](Web/TypeScript.md)
   - [Vue.js](./Web/Vue.js/Vue.js.md)
 

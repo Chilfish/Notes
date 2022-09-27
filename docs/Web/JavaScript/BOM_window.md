@@ -6,7 +6,7 @@ title: BOM_window 对象
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-- [JavaScript.md](JavaScript.md)
+- [JavaScript.md](README.md)
 - [window 对象](https://www.jianshu.com/p/7c796f4ff810)
 - [图解：window 与 BOM 的关系](https://www.jianshu.com/p/f5409202a835)
 

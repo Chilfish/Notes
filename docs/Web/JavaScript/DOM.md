@@ -6,7 +6,7 @@ title: DOM
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-- [JavaScript](JavaScript.md)
+- [JavaScript](README.md)
 - [Events](Evens.md)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->

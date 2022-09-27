@@ -6,7 +6,7 @@ title: Node.js
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-- [JavaScript](../JavaScript/JavaScript.md)
+- [JavaScript](./../JavaScript/README.md)
 - [Express 框架](Express.md)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->

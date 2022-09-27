@@ -8,7 +8,7 @@ title: ES6.js
 
 - **外链：**
   - [阮一峰 ES6](https://es6.ruanyifeng.com)
-  - [JavaScript](JavaScript.md)
+  - [JavaScript](README.md)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 

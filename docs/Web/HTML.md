@@ -7,7 +7,7 @@ title: HTML
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - [CSS | Less](CSS.md)
-- [JavaScript.md](JavaScript/JavaScript.md)
+- [JavaScript.md](JavaScript/README.md)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 

@@ -1,5 +1,6 @@
 import { defineUserConfig } from 'vuepress';
 import { hopeTheme } from 'vuepress-theme-hope';
+import { SidebarConfig } from './sidebar';
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -8,6 +9,12 @@ export default defineUserConfig({
   base: '/Notes/',
 
   head: [['link', { rel: 'icon', href: '/Notes/logo.png' }]],
+  markdown: {
+    headers: {
+      level: [2, 3, 4],
+    },
+  },
+
   theme: hopeTheme({
     plugins: {
       mdEnhance: {
@@ -21,9 +28,15 @@ export default defineUserConfig({
     repo: 'Organic-Fish/Notes',
     repoDisplay: true,
     repoLabel: 'GitHub',
+    docsDir: './docs/',
 
+    displayFooter: true,
     sidebar: 'heading',
+    headerDepth: 3,
     navbar: [],
+    // navbarAutoHide: 'always',
+
+    toc: false,
     logo: '/logo.png',
 
     darkmode: 'toggle',
