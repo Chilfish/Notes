@@ -1,5 +1,6 @@
 ---
 title: 计算机科学与技术及其基础
+sidebar: false
 ---
 
 # {{ $frontmatter.title }}
@@ -17,6 +18,7 @@ title: 计算机科学与技术及其基础
 
 ## 目录
 
+- :construction: [计算机网络](Computer_Networks/README.md)
 - **[操作系统 OS](Operation_System/README.md)**
   - :white_large_square: [Windows]()
   - :white_large_square: [Linux](Operation_System/Linux.md)
@@ -24,7 +26,7 @@ title: 计算机科学与技术及其基础
 - **[软件使用](Software/README.md)**
   - :white_large_square: [浏览器及其工作原理](Software/Browser.md)
   - :white_large_square: [VsCode]()
-  - :white_large_square: [Git 及 GitHub]()
+  - :construction: [Git 及 GitHub](Software/Git_GitHub.md)
   - :white_large_square: [JetBrains 全家桶]()
   - :white_large_square: [Android Studio]()
 - **[硬件](Hardware/README.md)**
@@ -35,4 +37,5 @@ title: 计算机科学与技术及其基础
 <!--
 :white_check_mark:
 :white_large_square:
+:construction:
 -->

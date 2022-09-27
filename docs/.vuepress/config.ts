@@ -14,6 +14,7 @@ export default defineUserConfig({
       level: [2, 3, 4],
     },
   },
+  dest: 'dist/Notes/',
 
   theme: hopeTheme({
     plugins: {

@@ -1,4 +1,4 @@
-cd docs/.vuepress/dist
+cd dist/Notes
 echo.>.nojekyll
 
 git init
@@ -9,4 +9,3 @@ git add .
 git commit -m deploy
 
 git push -f origin build
-

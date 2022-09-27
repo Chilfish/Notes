@@ -11,7 +11,6 @@ date: 2022-07-07
   - [Daily Surfing](happenedWhat.md)
   - [临时堆起的 Coder](TempCoder.md)
   - [Coding 之外](not_JustCode.md)
-  - [Git 与 GitHub](Git_GitHub.md)
   - [挖坑 ToDo](ToDo.md)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
