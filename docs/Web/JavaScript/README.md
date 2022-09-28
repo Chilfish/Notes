@@ -250,7 +250,7 @@ console.log(fish.money);
 
 **即：** `fun.[call | bind | apply](obj, [args])`。区别在于， bind 的参数必须是数组类型，bind 是返回函数但不立即执行
 
-<br><hr>
+<br>
 
 ## 对象
 
@@ -299,9 +299,7 @@ console.log(fish.money);
   console.log(car1.owner.name); // Rand McKinnon
   ```
 
-- **使用 Object.create( ) 方法**
-
-  &emsp;&emsp; 对象也可以用 `Object.create()` 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。
+- **使用 Object.create( ) 方法** <br> &emsp;&emsp; 对象也可以用 `Object.create()` 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。
 
   ```js {.line-numbers}
   let Animal = {
@@ -376,8 +374,7 @@ console.log(fish.money);
 
 **函数方法：**
 
-- `arr.splice(pos, len, ...[array])`：增删元素，无返回值
-  &emsp;&emsp;在 `pos` 处删除 `len` 长的元素，并插入新元素(可选)
+- `arr.splice(pos, len, ...[array])`：增删元素，无返回值。在 `pos` 处删除 `len` 长的元素，并插入新元素(可选)
 - `arr.slice(start, end)`：数组切片，返回 从 [`start`, `end`) 之间的元素的数组，无参数则复制整个数组
 - `array.concat(array | value)` : 合并拼接数组
   ```js {.line-numbers}
@@ -431,8 +428,7 @@ console.log(fish.money);
 
 - **遍历数组：** 方法的**参数**都一样： `arr.fun(function(item, index, arr))` ：当前值、值的下标、数组本身
 
-  - `forEach` :
-    无返回值，通常只用于 只调用数组数据的情况
+  - `forEach` : 无返回值，通常只用于 只调用数组数据的情况
     ```js {.line-numbers}
     let a = [1, 2, 3];
     a.forEach((i) => {
@@ -440,8 +436,7 @@ console.log(fish.money);
     });
     // 1 2 3
     ```
-  - `map`：
-    处理器，返回处理后的新数组
+  - `map`： 处理器，返回处理后的新数组
     ```js {.line-numbers}
     let arr = [1, 2, 3, 4];
     let ans = arr.map((item) => {
@@ -449,8 +444,7 @@ console.log(fish.money);
     });
     ans; //-> [2 4 6 8]
     ```
-  - `reduce`：
-    归并器，多带一个参数：`arr.reduce(function(prev, curr, index, arr))`
+  - `reduce`： 归并器，多带一个参数：`arr.reduce(function(prev, curr, index, arr))`
 
 >
 
@@ -537,9 +531,7 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
 
 #### Map 对象
 
-- **定义**
-
-  &emsp;&emsp;一个 Map 的键可以是任意值，包括函数、对象或任意基本类型。且 Map 中的 key 是有序的。因此当迭代的时候以插入的顺序返回键值。
+- **定义** <br> &emsp;&emsp; 一个 Map 的键可以是任意值，包括函数、对象或任意基本类型。且 Map 中的 key 是有序的。因此当迭代的时候以插入的顺序返回键值。
 
 - **属性**
 
@@ -574,8 +566,7 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
 
 #### Set 对象
 
-- **定义**
-  &emsp;&emsp;Set 对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set 中的元素只会出现一次，即 Set 中的元素是唯一的。
+- **定义** <br> &emsp;&emsp; Set 对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set 中的元素只会出现一次，即 Set 中的元素是唯一的。
 
 - **属性**
 
@@ -605,8 +596,7 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
 
 &emsp;&emsp;所有的迭代器对象都有一个 `next()` 方法，每次调用都返回一个结果对象。结果对象有两个属性：一个是 **`value`**，表示下一个将要返回的值；另一个是 **`done`**，它是一个布尔类型的值，当没有更多可返回数据时返回 true。
 
-- **可被迭代的对象**
-  &emsp;&emsp; 目前所有的内置可迭代对象如下：String、Array、TypedArray、Map 、 Set 和 NodeList 对象
+- **可被迭代的对象** 目前所有的内置可迭代对象如下：String、Array、TypedArray、Map 、 Set 和 NodeList 对象
 
 <br>
 

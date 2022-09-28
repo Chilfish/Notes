@@ -169,7 +169,11 @@ date: 2022-04-14
 #### 重载
 
 - **重载运算符：**
-  - ![img](./img/cpp_overload.png)
+
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="90%"
+  src="./img/cpp_overload.png"/><br><div style="color: #999;padding: 0.4rem;">
+</div></div>
+
 - **一元运算符：** 如负号、自增自减
   ```cpp {.line-numbers}
   Stu operator++() { // 前缀自增：++mie;
@@ -371,4 +375,8 @@ date: 2022-04-14
   // →同时还把 + = 也存进去了
   ```
 - **符号优先级：**
-  ![](./img/cpp_priority.png)
+
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="90%"
+  src="./img/cpp_priority.png"/><br><div style="color: #999;padding: 0.4rem;">
+  符号优先级
+</div></div>

@@ -6,6 +6,10 @@ title: CSS | Scss
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
+- **外链：**
+  - [HTML](HTML.md)
+  - [Scss 教程](https://juejin.cn/post/7055101823442485255)
+
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
@@ -36,42 +40,6 @@ title: CSS | Scss
   - [Scss](#scss)
     - [基础](#基础)
     - [继承 | 复用 | 导入](#继承-复用-导入)
-    - [语句](#语句)
-
-<!-- /code_chunk_output -->
-
-- **外链：**
-  - [HTML](HTML.md)
-  - [Scss 教程](https://juejin.cn/post/7055101823442485255)
-
-<!-- code_chunk_output -->
-
-- [{{ $frontmatter.title }}](#-frontmattertitle-)
-  - [CSS](#css)
-    - [文本字体](#文本字体)
-    - [单位](#单位)
-    - [background 背景](#background-背景)
-    - [图片](#图片)
-    - [盒子](#盒子)
-    - [列表](#列表)
-    - [选择器](#选择器)
-      - [组合选择与继承](#组合选择与继承)
-      - [伪类](#伪类)
-      - [伪元素](#伪元素)
-    - [布局方式](#布局方式)
-      - [flex 弹性](#flex-弹性)
-      - [grid 网格](#grid-网格)
-      - [float 浮动](#float-浮动)
-      - [position 定位](#position-定位)
-      - [column 多列布局](#column-多列布局)
-    - [transition 过渡](#transition-过渡)
-      - [可过渡的样式](#可过渡的样式)
-      - [过渡函数](#过渡函数)
-    - [animation 动画](#animation-动画)
-      - [关键帧 @keyframes + name](#关键帧-keyframes--name)
-  - [Scss](#scss)
-    - [基础](#基础)
-    - [继承 | 复用 | 导入](#继承--复用--导入)
     - [语句](#语句)
 
 <!-- /code_chunk_output -->

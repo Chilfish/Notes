@@ -372,3 +372,19 @@ $$
 </div></div>
 
 > 当处理时延忽略不计时，发送时延和传播时延谁占主导要是情况分析
+
+### 往返时间
+
+互联网上的信息不仅仅单方向传输而是双向交互的。因此，我们有时很需要知道双向交互一次所需的时间。
+
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+  src="./img/RTT.png"/><br><div style="color: #999;padding: 0.4rem;">
+  往返时间
+</div></div>
+
+### 利用率
+
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+  src="./img/Utilization.png"/><br><div style="color: #999;padding: 0.4rem;">
+  利用率
+</div></div>
