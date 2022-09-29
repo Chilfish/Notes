@@ -1,5 +1,6 @@
 {
   "name": "fish-notes",
+  "type": "module",
   "version": "0.1.0",
   "description": "Fish's Notes by Vuepress",
   "main": "index.js",
@@ -12,8 +13,13 @@
   "license": "ISC",
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.51",
+    "@vuepress/core": "2.0.0-beta.51",
+    "@vuepress/plugin-register-components": "2.0.0-beta.51",
     "vue": "^3.2.39",
     "vuepress": "2.0.0-beta.51",
     "vuepress-theme-hope": "2.0.0-beta.97"
+  },
+  "dependencies": {
+    "sakana-widget": "^2.3.2"
   }
 }

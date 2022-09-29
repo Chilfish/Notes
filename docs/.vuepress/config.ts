@@ -1,6 +1,8 @@
 import { defineUserConfig } from 'vuepress';
 import { hopeTheme } from 'vuepress-theme-hope';
-import { SidebarConfig } from './sidebar';
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { path } from '@vuepress/utils';
+
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -15,6 +17,12 @@ export default defineUserConfig({
     },
   },
   dest: 'dist/Notes/',
+
+  plugins: [
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),
+    }),
+  ],
 
   theme: hopeTheme({
     plugins: {
