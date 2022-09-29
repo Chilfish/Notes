@@ -2,21 +2,17 @@
   <div id="sakana-widget"></div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import SakanaWidget from 'sakana-widget';
-import { defineComponent, onMounted } from 'vue';
+import { onMounted } from 'vue';
 
-export default defineComponent({
-  setup() {
-    onMounted(() => {
-      new SakanaWidget().mount('#sakana-widget');
-      console.log('Sakana~');
-    });
-  },
+onMounted(() => {
+  new SakanaWidget().mount('#sakana-widget');
+  console.log('Sakana~');
 });
 </script>
 
-<style>
+<style scoped>
 #sakana-widget {
   position: fixed;
   right: 3rem;

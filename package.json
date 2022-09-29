@@ -1,14 +1,12 @@
 {
   "name": "fish-notes",
-  "type": "module",
   "version": "0.1.0",
+  "type": "module",
   "description": "Fish's Notes by Vuepress",
-  "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "keywords": [],
   "author": "Fish",
   "license": "ISC",
   "devDependencies": {

@@ -49,4 +49,6 @@ date: 2022-01-20
 <br>
 &emsp;
 
-<Sakana/>
+<ClientOnly>
+  <Sakana/>
+</ClientOnly>
