@@ -295,7 +295,10 @@ date: 2022-04-14
 
 - **定义：**
 
-  - ![](./img/cpp_lambda.png)
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+  src="./img/cpp_lambda.png"/><br> </div>
+  &emsp;&emsp;
+  
   - **捕获**
     - 当为默认的 `[]` 时，lambda 内是不能访问当前作用域中的变量的（除了全局）
     - 而 `[&]` 表示按引用访问，`[=]` 表示按值访问，多变量见用逗号分隔

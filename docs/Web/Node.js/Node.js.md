@@ -9,19 +9,20 @@ title: Node.js
 - [JavaScript](./../JavaScript/README.md)
 - [Express 框架](Express.md)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [Node 项目](#node-项目)
-  - [初始化](#初始化)
-- [模块](#模块)
-  - [Common JS | ES Modules](#common-js-es-modules)
-  - [node 模块](#node-模块)
-    - [Buffer 缓冲区](#buffer-缓冲区)
-    - [fs 文件读写](#fs-文件读写)
-  - [第三方模块](#第三方模块)
-    - [Express 框架](#express-框架)
+- [](#)
+  - [Node 项目](#node-项目)
+    - [初始化](#初始化)
+  - [模块](#模块)
+    - [Common JS | ES Modules](#common-js-es-modules)
+    - [node 模块](#node-模块)
+      - [Buffer 缓冲区](#buffer-缓冲区)
+      - [fs 文件读写](#fs-文件读写)
+    - [第三方模块](#第三方模块)
+      - [Express 框架](#express-框架)
 
 <!-- /code_chunk_output -->
 
@@ -39,7 +40,11 @@ title: Node.js
   pnpm init -y
   ```
 - `package.json` 文件包含的信息：
-- ![](./../img/Node_package.png)
+
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+  src="./../img/Node_package.png"/><br><div style="color: #999;padding: 0.4rem;">
+  配置信息
+</div></div>
 
 - 其中最后的 `type` 字段是涉及到模块规范的支持，它有两个可选值： `commonjs` 和 `module` ，其默认值为 `commonjs` 。
   > 关于 `package.json` 的完整的选项可以在 [npm Docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)上查阅。

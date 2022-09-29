@@ -174,7 +174,11 @@ title: CSS | Scss
 - `padding` , 内边距
 - `height`、`width` , 宽高
 - 但是，如图 完整的框是指 长：`width + 2\*(margin + padding + border)`
-  ![](./img/CSS_border.png)
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+  src="./img/CSS_border.png"/><br><div style="color: #999;padding: 0.4rem;">
+  Border
+</div></div>
+
 - 而用了 **`box-sizing: border-box;`** 后，边距不影响宽度了（放全局）
 
 <br>
@@ -322,7 +326,10 @@ title: CSS | Scss
 - `absolute` : **绝对定位**，往上冒泡地找定位方式**不是 `static`**的祖先(父)元素，并相对于该元素绝对定位
 - `fixed` : 相对于浏览器窗口固定
 - `sticky` : **粘性定位**，当元素(滚动条)移动到预设位置时固定
-- ![](./img/CSS_position.png)
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+  src="./img/CSS_position.png"/><br><div style="color: #999;padding: 0.4rem;">
+  position
+</div></div>
 
 #### column 多列布局
 

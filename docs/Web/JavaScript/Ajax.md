@@ -13,31 +13,32 @@ title: Ajax | Axios | Fetch
   - [Axios 文档](https://www.axios-http.cn/docs/intro)
   - [阮一峰 Fetch](https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [原理](#原理)
-- [基础 —— XMLHttpRequest](#基础-xmlhttprequest)
-  - [创建](#创建)
-  - [发送请求](#发送请求)
-  - [获取 response 数据](#获取-response-数据)
-  - [发送过程的状态](#发送过程的状态)
-  - [设置请求的超时时间](#设置请求的超时时间)
-  - [事件](#事件)
-    - [事件触发条件](#事件触发条件)
-    - [事件触发顺序](#事件触发顺序)
-    - [异常处理](#异常处理)
-    - [在哪个 xhr 事件中注册成功回调？](#在哪个-xhr-事件中注册成功回调)
-- [Axios 模块](#axios-模块)
-  - [请求](#请求)
-  - [响应](#响应)
-  - [拦截器](#拦截器)
-- [fetch 请求](#fetch-请求)
-  - [请求配置](#请求配置)
-  - [Response 响应](#response-响应)
-    - [属性](#属性)
-    - [方法](#方法)
+- [](#)
+  - [原理](#原理)
+  - [基础 —— XMLHttpRequest](#基础-xmlhttprequest)
+    - [创建](#创建)
+    - [发送请求](#发送请求)
+    - [获取 response 数据](#获取-response-数据)
+    - [发送过程的状态](#发送过程的状态)
+    - [设置请求的超时时间](#设置请求的超时时间)
+    - [事件](#事件)
+      - [事件触发条件](#事件触发条件)
+      - [事件触发顺序](#事件触发顺序)
+      - [异常处理](#异常处理)
+      - [在哪个 xhr 事件中注册成功回调？](#在哪个-xhr-事件中注册成功回调)
+  - [Axios 模块](#axios-模块)
+    - [请求](#请求)
+    - [响应](#响应)
+    - [拦截器](#拦截器)
+  - [fetch 请求](#fetch-请求)
+    - [请求配置](#请求配置)
+    - [Response 响应](#response-响应)
+      - [属性](#属性)
+      - [方法](#方法)
 
 <!-- /code_chunk_output -->
 
@@ -109,7 +110,10 @@ xhr 提供了 3 个属性来获取请求返回的数据，分别是：`xhr.respo
 
 ### 发送过程的状态
 
-- ![](../img/Ajax_onreadystate.png)
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+  src="../img/Ajax_onreadystate.png"/><br><div style="color: #999;padding: 0.4rem;">
+  发送过程的状态
+</div></div>
 
 ### 设置请求的超时时间
 
@@ -135,7 +139,10 @@ xhr 提供了 3 个属性来获取请求返回的数据，分别是：`xhr.respo
 
 #### 事件触发条件
 
-- ![](../img/Ajax_onxxx.png)
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="90%"
+  src="../img/Ajax_onxxx.png"/><br><div style="color: #999;padding: 0.4rem;">
+事件触发条件
+</div></div>
 
 #### 事件触发顺序
 

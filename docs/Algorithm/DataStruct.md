@@ -7,21 +7,22 @@ date: 2022-07-30
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [线性结构](#线性结构)
-  - [顺序表](#顺序表)
-  - [链表](#链表)
-    - [单链表](#单链表)
-    - [循环单链表](#循环单链表)
-    - [双向链表](#双向链表)
-    - [循环双向链表](#循环双向链表)
-- [树状结构](#树状结构)
-- [图形结构](#图形结构)
-- [集合结构](#集合结构)
-- [参考](#参考)
+- [](#)
+  - [线性结构](#线性结构)
+    - [顺序表](#顺序表)
+    - [链表](#链表)
+      - [单链表](#单链表)
+      - [循环单链表](#循环单链表)
+      - [双向链表](#双向链表)
+      - [循环双向链表](#循环双向链表)
+  - [树状结构](#树状结构)
+  - [图形结构](#图形结构)
+  - [集合结构](#集合结构)
+  - [参考](#参考)
 
 <!-- /code_chunk_output -->
 
@@ -58,7 +59,7 @@ date: 2022-07-30
     - 只要确定好了存储线性表的起始位置，线性表中任一数据元素都可以随机存取，所以线性表的顺序存储结构是一种随机存取的储存结构
     - 因为高级语言中的数组类型也是有随机存取的特性，所以通常我们都使用数组来描述数据结构中的顺序储存结构，用**动态分配的一维数组表示线性表**
   - **复杂度：** 支持随机访问，为 $O(1)$。但在插入和删除时，要整体移动部分数组，最坏的情况为 $O(n)$
-- **主要属性、方法：** 详见： [Vecotr.hpp](../../CPP/DataStruct/Vector.hpp)
+- **主要属性、方法：** 详见： [Vecotr.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/Vector/Vector.hpp)
   ```cpp {.line-numbers}
   template<class T>
   class Vector{
@@ -102,14 +103,18 @@ date: 2022-07-30
 
 - **定义：** 由一系列结点（链表中每一个元素称为结点）组成，每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域
 - **结构：**
-  ![](./img/DS_list_0.png)
+
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+  src="./img/DS_list_0.png"/><br></div>
+
+- &emsp;&emsp;
   - **头指针：** 一个指向第一个节点地址的指针变量。头指针具有标识单链表的作用，所以经常用头指针代表单链表的名字
   - **头结点：** 在单链表的第一个结点之前附设一个结点，它没有直接前驱，称之为头结点。可不存信息，也可以作为监视哨，或用于存放线性表的长度等附加信息指针域中存放首元结点的地址
   - **首元结点：** 存储第一个元素的节点
 - 其中，**头结点的作用：**
   - 链表如果为空的情况下，如果单链表没有头结点，那么头指针就会指向 `null`
   - 如果加上头结点，无论单链表是否为空，头指针都会指向头结点，这样使得空链表与非空链表处理一致，使首元结点前插入或删除元素的时候，与后面操作相同，不需要额外的判断分支
-- **主要属性方法：** 详见： [List.hpp#List](../../CPP/DataStruct/List.hpp#L4)
+- **主要属性方法：** 详见： [List.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/List.hpp)
 
   ```cpp {.line-numbers}
   template<class T> class List {

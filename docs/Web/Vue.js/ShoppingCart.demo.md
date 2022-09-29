@@ -9,24 +9,25 @@ title: ShoppingCart.demo
 - [Vue.md](Vue.js.md)
 - [demo 源码](https://github.com/Organic-Fish/FishCode/tree/master/Web/vue/ts-vite/src)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [介绍](#介绍)
-  - [技术栈](#技术栈)
-  - [预览](#预览)
-- [创建项目](#创建项目)
-  - [初始化](#初始化)
-  - [完善目录结构](#完善目录结构)
-- [添加路由](#添加路由)
-- [添加 Vuex](#添加-vuex)
-- [添加 Api](#添加-api)
-- [界面设计](#界面设计)
-- [Vue3 语法](#vue3-语法)
-  - [Products.vue](#productsvue)
-  - [Shopping.vue](#shoppingvue)
-- [Vuex](#vuex)
+- [](#)
+  - [介绍](#介绍)
+    - [技术栈](#技术栈)
+    - [预览](#预览)
+  - [创建项目](#创建项目)
+    - [初始化](#初始化)
+    - [完善目录结构](#完善目录结构)
+  - [添加路由](#添加路由)
+  - [添加 Vuex](#添加-vuex)
+  - [添加 Api](#添加-api)
+  - [界面设计](#界面设计)
+  - [Vue3 语法](#vue3-语法)
+    - [Products.vue](#productsvue)
+    - [Shopping.vue](#shoppingvue)
+  - [Vuex](#vuex)
 
 <!-- /code_chunk_output -->
 
@@ -51,7 +52,10 @@ title: ShoppingCart.demo
 
 &emsp;&emsp;
 
-![](./img/CartDemo_0.png)
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+  src="./img/CartDemo_0.png"/><br><div style="color: #999;padding: 0.4rem;">
+  预览图
+</div></div>
 
 ## 创建项目
 
@@ -70,7 +74,11 @@ pnpm install
 ### 完善目录结构
 
 - 添加文件：
-  ![](./img/CartDemo_1.png)
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+  src="./img/CartDemo_1.png"/><br><div style="color: #999;padding: 0.4rem;">
+  文件树
+</div></div>
+
 - 修改 `tsconfig.json`，添加以下配置，才能在 `Typescript` 的 `import` 中省略后缀名，直接是：`import xx from "src/api"`
   ```js {.line-numbers}
   "compilerOptions": {
@@ -81,8 +89,12 @@ pnpm install
     }
   }
   ```
-- 修改 `vite.config.ts`，添加别名等设置 <a href="../../../Web/vue/ts-vite/vite.config.ts">demo 中的 vite.config.ts</a>。参考 [vite 官方的配置文件](https://cn.vitejs.dev/config/)
-  ![](./img/CartDemo_2.png)
+- 修改 `vite.config.ts`，添加别名等设置 [demo 中的 vite.config.ts](https://github.com/Organic-Fish/FishCode/blob/master/Web/vue/ts-vite/vite.config.ts)。参考 [vite 官方的配置文件](https://cn.vitejs.dev/config/)
+
+<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+  src="./img/CartDemo_2.png"/><br><div style="color: #999;padding: 0.4rem;">
+  vite.config.ts
+</div></div>
 
 ## 添加路由
 
