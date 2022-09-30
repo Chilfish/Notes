@@ -20,9 +20,6 @@ title: BOM_window 对象
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
- 
 ## window 对象
 
 ### setTimeout

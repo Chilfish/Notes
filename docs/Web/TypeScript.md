@@ -42,8 +42,6 @@ title: TypeScript
     当没有定义`value`时，默认从 0 开始递增下标
   - \*\*
 
-<br>
-
 ## 项目构建
 
 ### 初始化
@@ -99,8 +97,6 @@ title: TypeScript
   ```shell {.line-numbers}
   eslint --init
   ```
-
-<br>
 
 ## 参考
 

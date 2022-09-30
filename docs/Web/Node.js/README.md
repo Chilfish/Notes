@@ -6,7 +6,7 @@ title: Node.js
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-- [JavaScript](./../JavaScript/README.md)
+- [JavaScript](../JavaScript/README.md)
 - [Express 框架](Express.md)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
@@ -18,17 +18,12 @@ title: Node.js
     - [初始化](#初始化)
   - [模块](#模块)
     - [Common JS | ES Modules](#common-js-es-modules)
-    - [node 模块](#node-模块)
-      - [Buffer 缓冲区](#buffer-缓冲区)
-      - [fs 文件读写](#fs-文件读写)
-    - [第三方模块](#第三方模块)
-      - [Express 框架](#express-框架)
+    - [Buffer 缓冲区](#buffer-缓冲区)
+    - [fs 文件读写](#fs-文件读写)
+    - [Express 框架](#express-框架)
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
- 
 ## Node 项目
 
 ### 初始化
@@ -49,9 +44,11 @@ title: Node.js
 - 其中最后的 `type` 字段是涉及到模块规范的支持，它有两个可选值： `commonjs` 和 `module` ，其默认值为 `commonjs` 。
   > 关于 `package.json` 的完整的选项可以在 [npm Docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)上查阅。
 
-> Ref： [Node 项目如何使用 ES 模块](https://blog.csdn.net/sayUonly/article/details/122885171) &emsp; | [tsconfig.json 的配置](https://blog.csdn.net/muguli2008/article/details/122246623) &emsp; | [Node 为什么用不了 ES 模块](https://segmentfault.com/q/1010000039917414)
-
 <br>
+
+- 监视 node 文件更改的 `nodemon`：[官网](https://nodemon.io/) 、 [配置说明](https://www.jianshu.com/p/a35dfc72c6e6)
+
+> Ref： [Node 项目如何使用 ES 模块](https://blog.csdn.net/sayUonly/article/details/122885171) 、 [tsconfig.json 的配置](https://blog.csdn.net/muguli2008/article/details/122246623) 、 [Node 为什么用不了 ES 模块](https://segmentfault.com/q/1010000039917414)
 
 ## 模块
 
@@ -63,11 +60,24 @@ title: Node.js
 - **`ESModules`：** 要引入 `package.json` 并设置 `"type": "module"`
   - **导出：** 在要导出的 js 类型前加 `export`
   - **导入：** `import {} from './module'`，重命名：`{mie as miemie}`
-  - 但这样运行时要加上 `node --experimental-specifier-resolution=node \file_dir` 才能忽略后缀名地使用 ES 模块
+  - **但这样运行时要加上** `node --experimental-specifier-resolution=node dir` 才能忽略后缀名地使用 ES 模块
+- **在 ES 模块下的 `__dirname`：**
 
-### node 模块
+  ```js {.line-numbers}
+  import { fileURLToPath } from 'url';
+  import path from 'path';
 
-#### Buffer 缓冲区
+  /**
+   * @param {string}  metaUrl import.meta.url
+   * @returns {string} the path
+   */
+  export const dirname = (metaUrl) => path.dirname(fileURLToPath(metaUrl));
+
+  // to use (after import):
+  const __dirname = dirname(import.meta.url);
+  ```
+
+### Buffer 缓冲区
 
 `Buffer` 是 `Node.js` 的内置类型，它是用来表示内存中一块区域的，用以保存二进制数据。内容是以将二进制文件流表现为十六进制的 Buffer 数组
 
@@ -78,7 +88,7 @@ title: Node.js
   - `Buffer.from(x)`：将字符串或数组转为 `Buffer` 对象，范围为 `00 ~ 0xff`
   - `Buffer.toString(decode)`：将 `buffer` 对象转换为指定编码字符串，默认为 `utf8`
 
-#### fs 文件读写
+### fs 文件读写
 
 - **文件写入：** 如果不存在这个文件名，这会创建文件
   - **简单写入**
@@ -111,11 +121,7 @@ title: Node.js
   - `readdir` 读取文件夹
 - **获取文件信息：** `fs.statSync(file)`
 
-<br>
-
-### 第三方模块
-
-#### Express 框架
+### Express 框架
 
 `Node` 本身并不支持其它常见的 `web` 开发任务。如果需要进行一些具体的处理，比如运行其它 `HTTP` 动词（比如 `GET、POST、DELETE` 等）、分别处理不同 `URL` 路径的请求（“路由”）、托管静态文件，或用模板来动态创建响应，那么可能就要自己编写代码了，亦或使用 `web` 框架，以避免重新发明轮子
 

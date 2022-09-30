@@ -20,8 +20,7 @@ title: 搜索
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
+
 
 ## 二分搜索
 
@@ -72,8 +71,7 @@ title: 搜索
   ```
 - 求出现的次数只要 $upper\_bound - lower\_bound$ 即可
 
-<br>
-&emsp;
+
 
 ## 深搜
 

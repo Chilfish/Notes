@@ -10,23 +10,21 @@ title: PHP
 
 <!-- code_chunk_output -->
 
-- [基础语法](#基础语法)
-  - [一些......](#一些)
-  - [Array 数组](#array-数组)
-  - [Cookie 与 Session](#cookie-与-session)
-  - [文件操作](#文件操作)
-  - [服务器环境信息](#服务器环境信息)
-- [表单](#表单)
-  - [创建表单](#创建表单)
-  - [处理登录](#处理登录)
-- [连接 MySQL](#连接-mysql)
-  - [PDO 类](#pdo-类)
-  - [PDOstatement 类](#pdostatement-类)
+- [{{ $frontmatter.title }}](#-frontmattertitle-)
+  - [基础语法](#基础语法)
+    - [一些......](#一些)
+    - [Array 数组](#array-数组)
+    - [Cookie 与 Session](#cookie-与-session)
+    - [文件操作](#文件操作)
+    - [服务器环境信息](#服务器环境信息)
+  - [表单](#表单)
+    - [创建表单](#创建表单)
+    - [处理登录](#处理登录)
+  - [连接 MySQL](#连接-mysql)
+    - [PDO 类](#pdo-类)
+    - [PDOstatement 类](#pdostatement-类)
 
 <!-- /code_chunk_output -->
-
-<br>
-&emsp;
 
 ## 基础语法
 
@@ -77,8 +75,6 @@ title: PHP
   - `sort`、`asort`：按值升序
   - `ksort`：按键升序
 
-<br><br>
-
 ### Cookie 与 Session
 
 - **Cookie:**
@@ -102,8 +98,6 @@ title: PHP
     $_SESSION = array();
     session_destroy();
     ```
-
-<br>
 
 ### 文件操作
 
@@ -152,8 +146,6 @@ title: PHP
 - **读写模式：**
 - ![](./img/php_file.png)
 
-<br>
-
 ### 服务器环境信息
 
 ```php {.line-numbers}
@@ -161,8 +153,6 @@ print_r($_SERVER);
 ```
 
 [文档](https://www.php.net/manual/zh/reserved.variables.server.php)
-
-<br>
 
 ## 表单
 
@@ -243,11 +233,9 @@ print_r($_SERVER);
 
 - mie
 
-<br>
-
 ## 连接 MySQL
 
-&emsp;&emsp; PHP 数据对象 （PDO） 扩展为 PHP 访问数据库定义了一个轻量级的一致接口。实现 PDO 接口的每个数据库驱动可以公开具体数据库的特性作为标准扩展功能
+PHP 数据对象 （PDO） 扩展为 PHP 访问数据库定义了一个轻量级的一致接口。实现 PDO 接口的每个数据库驱动可以公开具体数据库的特性作为标准扩展功能
 
 > 字典：[PHP_PDO](https://www.runoob.com/php/php-pdo.html)
 

@@ -9,8 +9,6 @@ date: 2022-03-12
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
- 
-
 <!-- code_chunk_output -->
 
 - [](#)
@@ -125,7 +123,9 @@ date: 2022-03-12
 
 - **`operator` 运算符：**
 
-    <table class="reference"><tbody><tr><th width="20%">运算符</th><th width="80%">描述</th></tr><tr><td>=</td><td>等于</td></tr><tr><td>&lt;&gt;</td><td>不等于</td></tr><tr><td>&gt;</td><td>大于</td></tr><tr><td>&lt;</td><td>小于</td></tr><tr><td>&gt;=</td><td>大于等于</td></tr><tr><td>&lt;=</td><td>小于等于</td></tr><tr><td>BETWEEN</td><td>在某个范围内</td></tr><tr><td>Like</td><td>搜索某种模式 | 模糊判断</td></tr><tr><td>in</td><td>指定针对某个列的多个可能值</td></tr></tbody></table><br>
+<div style="text-align: center;margin: 1rem;">
+<table class="reference"><tbody><tr><th width="20%">运算符</th><th width="80%">描述</th></tr><tr><td>=</td><td>等于</td></tr><tr><td>&lt;&gt;</td><td>不等于</td></tr><tr><td> > </td><td>大于</td></tr><tr><td>&lt;</td><td>小于</td></tr><tr><td>&gt;=</td><td>大于等于</td></tr><tr><td>&lt;=</td><td>小于等于</td></tr><tr><td>BETWEEN</td><td>在某个范围内</td></tr><tr><td>Like</td><td>搜索某种模式 | 模糊判断</td></tr><tr><td>in</td><td>指定针对某个列的多个可能值</td></tr></tbody></table><br>
+</div>
 
 - **逻辑运算符：** `()` 、`and` 、`not` 、`or`
 
@@ -180,8 +180,6 @@ date: 2022-03-12
 - 令：别的删除
   - `Drop table1`：将表完全删除
   - `TRUNCATE table1`：仅删除内容并释放空间，表的结构还在
-
-<br><br>
 
 ## 高级语句
 
@@ -302,9 +300,6 @@ date: 2022-03-12
   ```
 - **结果：** 分隔符，表示在这之间的分号不再当做程序的结束符，而只是语句之间的分隔符。
 
-<br>
-&emsp;
-
 ## SQL 函数
 
 ### 数字函数
@@ -395,9 +390,6 @@ date: 2022-03-12
                 Datetime Time);
   ```
 - **Conv(x, a, b)：** 将 a 进制的 x 转为 b 进制
-
-<br>
-&emsp;
 
 ## 存储过程
 
@@ -511,13 +503,9 @@ date: 2022-03-12
     end loop;
     ```
 
-<br>
-&emsp;
-
 ## 事务
 
-&emsp;&emsp; 事务有一个最显著的特征，就是它包含的所有 SQL 语句作为一个整体向数据库提交，只有所有的 SQL 语句都执行完成，整个事务才算成功，一旦某个 SQL 语句执行失败，整个事务就失败了。事务失败后需要回滚所有的 SQL 语句
-&emsp;&emsp; 事务中的所有 SQL 语句是一个整体，要么全部执行成功，要么全部执行失败
+事务有一个最显著的特征，就是它包含的所有 SQL 语句作为一个整体向数据库提交，只有所有的 SQL 语句都执行完成，整个事务才算成功，一旦某个 SQL 语句执行失败，整个事务就失败了。事务失败后需要回滚所有的 SQL 语句 事务中的所有 SQL 语句是一个整体，要么全部执行成功，要么全部执行失败
 
 - 与事务控制有关的 SQL 命令包括：
   - BEGIN 或者 START TRANSACTION：开始事务
@@ -526,12 +514,7 @@ date: 2022-03-12
   - SAVEPOINT：在事务内部设置回滚标记点
   - RELEASE SAVEPOINT：删除回滚标记点
   - ROLLBACK TO：将事务回滚到标记点（ROLLBACK 命令的一种变形写法）
-
-&emsp;&emsp; 一个事务要么提交，要么回滚，提交意味着成功，回滚意味着失败。编写事务代码时，以 **BEGIN** 命令开头，后跟一条或者多条 SQL 语句，最后书写 **COMMIT** 或者 **ROLLBACK** 命令
-&emsp;&emsp; 事务控制命令仅能与 DML 类别的 SQL 命令一起使用，包括 INSERT、UPDATE、DELETE 和 SELECT，在创建或者删除表时不能使用事务，因为这些操作在数据库中是自动提交的。
-
-<br>
-&emsp;
+    一个事务要么提交，要么回滚，提交意味着成功，回滚意味着失败。编写事务代码时，以 **BEGIN** 命令开头，后跟一条或者多条 SQL 语句，最后书写 **COMMIT** 或者 **ROLLBACK** 命令 事务控制命令仅能与 DML 类别的 SQL 命令一起使用，包括 INSERT、UPDATE、DELETE 和 SELECT，在创建或者删除表时不能使用事务，因为这些操作在数据库中是自动提交的。
 
 ## 自救救
 
@@ -557,8 +540,6 @@ date: 2022-03-12
   alter user 'root' @'localhost' IDENTifIED BY '新密码';
   ```
   > REF: [MySQL8 root 密码](https://blog.csdn.net/weixin_42359480/article/details/89931700)
-
-<br>
 
 ### 无法 启动 | 关闭 MySQL 服务
 

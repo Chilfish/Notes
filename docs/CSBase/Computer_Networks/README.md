@@ -19,14 +19,12 @@ sidebar: false
 - **参考：**
   - [湖科大计算机网络](https://www.bilibili.com/video/BV1c4411d7jb)
 
-<br>
-&emsp;
+
 
 ## 大总结
 
 ### 从输入 URL 到页面加载的全过程
 
-&emsp;&emsp;
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="70%"
   src="./img/HTTP_url.png"/><br><div style="color: #999;padding: 0.4rem;">

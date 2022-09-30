@@ -17,8 +17,7 @@ title: 喵啊 的解法
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
+
 
 ## 周期循环
 
@@ -55,8 +54,6 @@ title: 喵啊 的解法
   }
   ```
 
-<br>
-
 ## 拼接数字取模
 
 - **[题目链接](https://ac.nowcoder.com/acm/contest/23846/D)**
@@ -81,8 +78,6 @@ title: 喵啊 的解法
       }
   }
   ```
-
-<br>
 
 ## 幂运算 ->快速幂思想
 

@@ -22,8 +22,7 @@ title: 动态规划 DP
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
+
 
 ## 普通 DP
 
@@ -117,8 +116,7 @@ title: 动态规划 DP
 
 > 参考：[最长上升子序列 (LIS) 详解+例题模板 (全)](https://blog.csdn.net/lxt_Lucia/article/details/81206439)
 
-<br>
-&emsp;
+
 
 ### 使用硬币的个数
 
@@ -139,8 +137,7 @@ void solve()
 }
 ```
 
-<br>
-&emsp;
+
 
 ## 背包
 

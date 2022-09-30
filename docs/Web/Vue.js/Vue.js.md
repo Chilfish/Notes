@@ -8,18 +8,18 @@ title: Vue.js
 
 - [vite 初体验](ShoppingCart.demo.md)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [{{ $frontmatter.title }}](#-frontmattertitle-)
+- [](#)
   - [创建](#创建)
     - [引用 vue.js 文件](#引用-vuejs-文件)
     - [VUe 项目](#vue-项目)
-      - [构建项目 | vue-cli](#构建项目--vue-cli)
+      - [构建项目 | vue-cli](#构建项目-vue-cli)
       - [运行](#运行)
   - [基本语法](#基本语法)
-    - [模板语法 | 指令](#模板语法--指令)
+    - [模板语法 | 指令](#模板语法-指令)
     - [事件绑定](#事件绑定)
     - [表单输入绑定](#表单输入绑定)
     - [生命周期](#生命周期)
@@ -27,7 +27,7 @@ title: Vue.js
     - [监听数据](#监听数据)
     - [数据的计算](#数据的计算)
   - [路由](#路由)
-    - [引入路由 | 配置](#引入路由--配置)
+    - [引入路由 | 配置](#引入路由-配置)
     - [路由的跳转](#路由的跳转)
   - [多组件](#多组件)
     - [引入](#引入)
@@ -36,9 +36,6 @@ title: Vue.js
   - [Store](#store)
 
 <!-- /code_chunk_output -->
-
-<br>
-&emsp;
 
 ## 创建
 
@@ -97,8 +94,6 @@ title: Vue.js
   文件结构
 </div></div>
 
-<br>
-
 #### 运行
 
 **入口：**
@@ -139,8 +134,6 @@ export default defineComponent({
     <div @click="log">{{ msg }}</div>
   </template>
   ```
-
-<br>
 
 ## 基本语法
 
@@ -223,8 +216,6 @@ export default defineComponent({
   </p>
   ```
 
-<br>
-
 ### 事件绑定
 
 通过由点 `.` 表示的指令后缀来调用修饰符:
@@ -303,8 +294,6 @@ export default defineComponent({
 > PS： 使用`<keep-alive>` 组件会将数据保留在内存中，比如我们不想每次看到一个页面都重新加载数据，就可以使用`<keep-alive>` 组件解决。
 > 在 Vue3 里， 每个生命周期函数都要先导入才可以使用，并且所有生命周期函数统一放在 `setup` 里运行。
 
-<br>
-
 ### 响应式数据
 
 从返回的数据实时更新
@@ -344,8 +333,6 @@ export default defineComponent({
   - `toRefs` 创建一个新的对象，它的每个字段都是 `reactive` 对象各个字段的 `ref` 变量。本身是个普通对象，但是它的每个字段，都是与原来关联的 `ref` 变量
 
 > 一般是，先用 `ref` 定义一个响应式数据，再转为 `reactive` 进行使用
-
-<br>
 
 ### 监听数据
 
@@ -401,8 +388,6 @@ export default defineComponent({
     - 而且不支持 `deep` 和 `immediate`
   - 同时，操作 `reactive` 的引用类型的数据时，要转换下：`{ ...userInfo }`
 
-<br>
-
 ### 数据的计算
 
 只要原始数据没有发生改变，多次访问 `computed` ，都是会立即返回之前的计算结果，而不是再次执行函数；而普通的 function 调用多少次就执行多少次，每调用一次就计算一次。
@@ -431,15 +416,11 @@ export default defineComponent({
   ```
   **而且：** `computed` 只支持 `get()` 和 `set()` 函数
 
-<br>
-
 ## 路由
 
 像 Vue 工程，可以通过配置一个生态组件，来实现只用一个 html ，却能够完成多个站内页面渲染、跳转的功能。这个生态组件，就是**路由**。
 
 ### 引入路由 | 配置
-
-&emsp;&emsp;
 
 ```ts {.line-numbers}
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
@@ -463,8 +444,6 @@ export default router;
 
 ### 路由的跳转
 
-&emsp;&emsp;
-
 ```html {.line-numbers}
 <!-- 解析成 <a href="/home"></a> -->
 <router-link to="/home">首页</router-link>
@@ -476,8 +455,6 @@ export default router;
   Register
 </router-link>
 ```
-
-<br>
 
 ## 多组件
 
@@ -503,7 +480,6 @@ export default router;
 
 ### 组件之间的通信
 
-&emsp;&emsp;
 通信是指组之间的数据联系
 
 #### 父子组件之间
@@ -514,7 +490,5 @@ export default router;
 - `props` / `emits`：这是 Vue 跨组件通信最常用，也是基础的一个方案，它的通信过程是：
   - `Father.vue` 通过 `prop` 向 `Child.vue` 传值（可包含父级定义好的函数）
   - `Child.vue` 通过 `emit` 向 `Father.vue` 触发父组件的事件执行
-
-<br>
 
 ## Store

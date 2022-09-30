@@ -44,9 +44,6 @@ title: CSS | Scss
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
-
 ## CSS
 
 ### 文本字体
@@ -85,8 +82,6 @@ title: CSS | Scss
 - **对齐：**
   - ` vertical-align: middle | baseline | top | ...`： 仅对设置 **内联元素** 的**上下对齐方式**。在父元素设置此样式时，会对 `inline-block` 和 `inline` 类型的**子元素**都有用，这个样式一般用做图片和文字的对齐
   - - `text-align: left | right | center | justify (文字向两侧对齐)` , 文字的**水平对齐方式**
-
-<br>
 
 ### 单位
 
@@ -131,8 +126,6 @@ title: CSS | Scss
 
 - 视口（Viewport）= 浏览器窗口的尺寸。如果视口宽 50 里面，则 1vw = 0.5cm
 
-<br>
-
 ### background 背景
 
 简写：`background: color | image | origin | position | repeat | size | attachment`
@@ -146,8 +139,6 @@ title: CSS | Scss
   - `fixed`：不随任何滚动
   - `local`：随图片内容而滚动
 
-<br>
-
 ### 图片
 
 - `opacity` , 透明度
@@ -157,8 +148,6 @@ title: CSS | Scss
   - `cover` - 调整替换内容的大小，以在填充元素的整个内容框时保持其长宽比。该对象将被裁剪以适应
   - `none` - 不对替换的内容调整大小
   - `scale-down` - 调整内容大小就像没有指定内容或包含内容一样（将导致较小的具体对象尺寸）
-
-<br>
 
 ### 盒子
 
@@ -181,8 +170,6 @@ title: CSS | Scss
 
 - 而用了 **`box-sizing: border-box;`** 后，边距不影响宽度了（放全局）
 
-<br>
-
 ### 列表
 
 - **`list-style-type`：**
@@ -201,8 +188,6 @@ title: CSS | Scss
 - **`list-style-position`：**属性用来设置对象的列表序号的位置
   - `outside`：默认值,让列表符号与文字分离开
   - `inside`：使得列表序号在文本内，可以通过控制文本来控制
-
-<br>
 
 ### 选择器
 
@@ -271,8 +256,6 @@ title: CSS | Scss
 
 > Ref: [伪类与伪元素](http://www.alloyteam.com/2016/05/summary-of-pseudo-classes-and-pseudo-elements/)
 
-<br>
-
 ### 布局方式
 
 #### flex 弹性
@@ -308,11 +291,7 @@ title: CSS | Scss
   }
   ```
 
-<br>
-
 #### grid 网格
-
-<br>
 
 #### float 浮动
 
@@ -339,8 +318,6 @@ title: CSS | Scss
 - `column-width: number`：列宽
 
 > Ref: [flex 与 grid 区别](https://juejin.cn/post/6940627375537258527#heading-9) 、 [CSS flex 布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
-
-<br>
 
 ### transition 过渡
 
@@ -379,8 +356,6 @@ title: CSS | Scss
 
 - `scale(value)` : 用于修改元素的大小。可以通过向量形式定义的缩放值来放大或缩小元素，同时可以在不同的方向设置不同的缩放值
 
-<br>
-
 ### animation 动画
 
 - `animation-name`：none 为默认值，将没有任何动画效果，其可以用来覆盖任何动画
@@ -403,9 +378,7 @@ title: CSS | Scss
 
 #### 关键帧 @keyframes + name
 
-&emsp;&emsp;在 animation 申明 name 后，再另写关键帧动画样式
-
-<br><br>
+在 animation 申明 name 后，再另写关键帧动画样式
 
 ## Scss
 
@@ -476,8 +449,6 @@ title: CSS | Scss
   }
   ```
 
-<br>
-
 ### 继承 | 复用 | 导入
 
 - **`@mixin`：** 类比于函数，还可以传入参数。按顺序传入或指定参数名
@@ -498,8 +469,6 @@ title: CSS | Scss
 - **`@Partials`：** 忽略编译的文件，在文件名前加一个下划线。主要是用来定义**公共样式**的，专门用于被其他的 scss 文件 import 进行使用的
 - **`@function`：** 主要用于计算，带返回值 `@return`
 - **也就是：** `@function` 用来计算，`@mixin` 用来封装样式，`@import` 用来抽离他们为一个模块
-
-<br>
 
 ### 语句
 

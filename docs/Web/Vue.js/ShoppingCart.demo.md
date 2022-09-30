@@ -31,9 +31,6 @@ title: ShoppingCart.demo
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
-
 ## 介绍
 
 主要是搭建 demo 项目时踩得亿些坑，仿造着 [掘金](https://juejin.cn/post/6918672538646102029#heading-0) 的这一篇文章开始边尝试边学习 vue3。
@@ -49,8 +46,6 @@ title: ShoppingCart.demo
 - Typescript 4.5
 
 ### 预览
-
-&emsp;&emsp;
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
   src="./img/CartDemo_0.png"/><br><div style="color: #999;padding: 0.4rem;">
@@ -133,8 +128,6 @@ pnpm install
 - 在 `<template>` 中显示路由界面： `<router-view />`
 
 ## 添加 Vuex
-
-&emsp;&emsp;
 
 - ```shell {.line-numbers}
   pnpm install vuex@next --save

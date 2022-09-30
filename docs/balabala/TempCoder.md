@@ -6,29 +6,26 @@ date: 2020-06-20
 # {{ $frontmatter.title }}
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+ 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [C++](#c)
-  - [欢迎各位滚动屏的莅临指导](#欢迎各位滚动屏的莅临指导)
-- [JavaScript](#javascript)
-  - [UP 的新动态](#up-的新动态)
-  - [浏览器 UA](#浏览器-ua)
-  - [表格排序](#表格排序)
-  - [模糊查询](#模糊查询)
-  - [获取系统 IPV4](#获取系统-ipv4)
-  - [大眼仔，你坏事干净！](#大眼仔你坏事干净)
-- [TypeScript](#typescript)
-  - [ES 模块下的 dirname](#es-模块下的-dirname)
-- [Python](#python)
+- [](#)
+  - [C++](#c)
+    - [欢迎各位滚动屏的莅临指导](#欢迎各位滚动屏的莅临指导)
+  - [JavaScript](#javascript)
+    - [UP 的新动态](#up-的新动态)
+    - [浏览器 UA](#浏览器-ua)
+    - [表格排序](#表格排序)
+    - [模糊查询](#模糊查询)
+    - [获取系统 IPV4](#获取系统-ipv4)
+    - [大眼仔，你坏事干净！](#大眼仔你坏事干净)
+  - [TypeScript](#typescript)
+  - [Python](#python)
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
- 
 ## C++
 
 ### 欢迎各位滚动屏的莅临指导
@@ -47,8 +44,6 @@ void welcome()
     }
 }
 ```
-
-<br>
 
 ## JavaScript
 
@@ -232,20 +227,6 @@ getImg(weibo).then((res) => {
 });
 ```
 
-<br>
-
 ## TypeScript
-
-### ES 模块下的 dirname
-
-```ts {.line-numbers}
-import url from 'url';
-import path from 'path';
-
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-```
-
-<br>
 
 ## Python

@@ -10,22 +10,20 @@ title: ES6.js
   - [阮一峰 ES6](https://es6.ruanyifeng.com)
   - [JavaScript](README.md)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [变量的解构赋值](#变量的解构赋值)
-- [Promise 对象](#promise-对象)
-  - [特点](#特点)
-  - [用法](#用法)
-- [异步 async 函数](#异步-async-函数)
-- [Generator 迭代函数](#generator-迭代函数)
-- [Class 类](#class-类)
+- [](#)
+  - [变量的解构赋值](#变量的解构赋值)
+  - [Promise 对象](#promise-对象)
+    - [特点](#特点)
+    - [用法](#用法)
+  - [异步 async 函数](#异步-async-函数)
+  - [Generator 迭代函数](#generator-迭代函数)
+  - [Class 类](#class-类)
 
 <!-- /code_chunk_output -->
-
-<br>
-&emsp;
 
 ## 变量的解构赋值
 
@@ -42,7 +40,7 @@ title: ES6.js
   // a -> 1; arr -> [2, 3, 4]
   ```
 - **对象：**
-  必须要同名才行
+  键的名称必须要同名才行
   ```js {.line-numbers}
   const mie = { id: 233, name: 'mie' },
     { id, name } = mie,
@@ -51,8 +49,6 @@ title: ES6.js
   ```
   所以交换就成了：`[a b] = [b, a];`
 
-<br>
-
 ## Promise 对象
 
 所谓 `Promise`，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。**也就是** 有了 Promise 对象，就可以将异步操作以**同步**操作的流程表达出来，避免了层层嵌套的回调函数
@@ -60,9 +56,9 @@ title: ES6.js
 ### 特点
 
 - **对象的状态不受外界影响。** `Promise` 对象代表一个异步操作，有三种状态：`pending`（进行中）、`fulfilled`（已成功）和 `rejected`（已失败）
-  &emsp; 只有异步操作的结果可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是 `Promise` 这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变
+  - 只有异步操作的结果可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是 `Promise` 这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变
 - **一旦状态改变，就不会再变，任何时候都可以得到这个结果。** `Promise` 对象的状态改变，只有两种可能：从 `pending` 变为 `fulfilled` 和从 `pending` 变为 `rejected`。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果，这时就称为 `resolved`（已定型）
-  &emsp; 如果改变已经发生了，你再对 `Promise` 对象添加回调函数，也会立即得到这个结果。这与事件（`Event`）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的
+  - 如果改变已经发生了，你再对 `Promise` 对象添加回调函数，也会立即得到这个结果。这与事件（`Event`）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的
 
 ### 用法
 
@@ -106,8 +102,6 @@ title: ES6.js
   ```
 - **`any`：** 与 `race` 不同的是，只有所有的变为 `reject` 才 `catch`
 
-<br>
-
 ## 异步 async 函数
 
 `async` 函数返回一个 `Promise` 对象，可以使用 `then` 方法添加回调函数。当函数执行的时候，一旦遇到 `await` 就会先返回，只有 `async` 函数内部的异步操作执行完，才会执行 `then` 方法指定的回调函数。
@@ -150,8 +144,6 @@ title: ES6.js
     }, 1000);
   })();
   ```
-
-<br>
 
 ## Generator 迭代函数
 

@@ -10,18 +10,16 @@ date: 2022-02-25
 - **可参考：**
   - [常用数学公式排版 KaTex 语法总结](https://kissingfire123.github.io/2022/02/18_%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8Fkatex%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [前言](#前言)
-- [基本公式使用](#基本公式使用)
-  - [插入公式](#插入公式)
+- [](#)
+  - [前言](#前言)
+  - [基本公式使用](#基本公式使用)
+    - [插入公式](#插入公式)
 
 <!-- /code_chunk_output -->
-
-<br>
-&emsp;
 
 ## 前言
 

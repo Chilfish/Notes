@@ -5,16 +5,13 @@ date: 2022-06-20
 
 # {{ $frontmatter.title }}
 
-<br>
-&emsp;
+
 
 ## 22-06
 
 ### 在这之前...
 
 - **文章：** <br> [Canvas 资源](https://github.com/chinaBerg/awesome-canvas) 、 [MDN 伪类和伪元素](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#%E5%8F%82%E8%80%83%E8%8A%82) 、 [隼鸟 2 号：首次发现地外氨基酸？](https://weibo.com/ttarticle/p/show?id=2309404781329462984737)
-
-<br>
 
 ### 06-20
 
@@ -31,8 +28,6 @@ date: 2022-06-20
 [06-20_1]: https://www.axios-http.cn/
 [06-20_2]: https://segmentfault.com/a/1190000007574276
 
-<br>
-
 ### 06-21
 
 - **dashboard:**
@@ -45,8 +40,6 @@ date: 2022-06-20
   src="./img/22-06-21.png"/><br><div style="color: #999;padding: 0.4rem;">
   来自：差评君
 </div></div>
-
-<br>
 
 ### 06-22
 
@@ -61,8 +54,6 @@ date: 2022-06-20
     - 项目先是一个后台管理系统，差不多时再接上网易云的 API，和网易云的静态界面
     - 最后才上 `Vue` 框架补齐
 
-<br>
-
 ### 06-23
 
 - **dashboard:**
@@ -71,8 +62,7 @@ date: 2022-06-20
 - **流水：**
   - 主要还是用着 `Express + ts` 写了个 `api` 服务器，对本地 `json` 文件增删改查似乎都可以用，`PostMan` 还挺好诶
 
-<br>
-&emsp;
+
 
 ## 22-07
 
@@ -81,8 +71,6 @@ date: 2022-06-20
 - **dashboard:**
   - VsCode：
 - **文章 | 文档：** <br> [VsCode 中使用 Eslint](https://www.cnblogs.com/Jamie1032797633/p/11125786.html) 、 [从零开始配置 TypeScript 项目](https://juejin.cn/post/6856410900577026061) 、 [Eslint 中文文档](http://eslint.cn/docs/user-guide/configuring) 、 [tsconfig 的一些配置](https://yesifang.com/zh/TypeScript%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/c2fff071/)
-
-<br>
 
 ### 07-10 ~ 11
 
@@ -99,8 +87,7 @@ date: 2022-06-20
     - 用 axios 请求到微博详情的 Api：`https://weibo.com/ajax/statuses/show?id=`，其中 id 值为微博原链接 `https://weibo.com/用户id/博文id` 中的 `博文 id`。再把获取到的原图链接再请求下来转存成本地文件就好。码：[一些 Temp.md](TempCoder.md#大眼仔，你坏事干净！)
   - 学了点 Sass，好玩诶，并且终于上了 `Bootstarp` 和 `font-awesome`，开始筹备起聚合音乐了
 
-<br>
-&emsp;
+
 
 ## 22-08
 
@@ -109,8 +96,7 @@ date: 2022-06-20
 - **dashboard:** `WakaTime Error`
 - **文章 | 文档：** <br> [C++ 右值引用 && 与 move](https://zhuanlan.zhihu.com/p/335994370)
 
-<br>
-&emsp;
+
 
 ## 22-09
 
@@ -121,8 +107,6 @@ date: 2022-06-20
   - [希望从这个视频开始，你能理解色彩科学【差评君】][09-15-01]
 
 [09-15-01]: https://www.bilibili.com/video/BV1kD4y1v77R
-
-<br>
 
 ### 九月底
 

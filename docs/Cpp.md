@@ -31,9 +31,6 @@ date: 2022-04-14
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
-
 ## 一些小语法
 
 ### 命名规范
@@ -93,8 +90,6 @@ date: 2022-04-14
     double t = transf<double>(s); // <>里的是要转换的类型名，()里的是被转换的变量名
   }
   ```
-
-<br>
 
 ### Class 类
 
@@ -171,7 +166,7 @@ date: 2022-04-14
 - **重载运算符：**
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="90%"
-  src="./img/cpp_overload.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/cpp_overload.png"/><div style="color: #999;padding: 0.4rem;">
 </div></div>
 
 - **一元运算符：** 如负号、自增自减
@@ -264,9 +259,6 @@ date: 2022-04-14
 
 > **注：** `explicit` 关键字只需用于类内的**单参数构造函数**前面。由于无参数的构造函数和多参数的构造函数总是显示调用，这种情况在构造函数前加 `explicit` 无意义
 
-<br>
-&emsp;
-
 ### initializer_list &lt;T&gt; 列表初始化
 
 - 列表初始化常见于，使用 `{}` 序列来初始化：
@@ -288,15 +280,12 @@ date: 2022-04-14
   print({2, 3, 4});
   ```
 
-<br>
-&emsp;
-
 ### Lambda 匿名函数
 
 - **定义：**
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
-  src="./img/cpp_lambda.png"/><br> </div>
+  src="./img/cpp_lambda.png"/> </div>
   &emsp;&emsp;
   
   - **捕获**
@@ -326,16 +315,9 @@ date: 2022-04-14
   count_if(all(s), Lambda(c));
   ```
 
-<br>
-
 > REF: [C ++ Lambda 表达式详解](https://blog.csdn.net/A1138474382/article/details/111149792)
 
-<br><br>
-
 ## C 語言中に
-
-<br>
-&emsp;
 
 - **数组长度：**
   ```cpp {.line-numbers}
@@ -380,6 +362,6 @@ date: 2022-04-14
 - **符号优先级：**
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="90%"
-  src="./img/cpp_priority.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/cpp_priority.png"/><div style="color: #999;padding: 0.4rem;">
   符号优先级
 </div></div>

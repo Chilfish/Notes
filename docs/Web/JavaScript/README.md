@@ -34,6 +34,7 @@ title: JavaScript
     - [对象和属性](#对象和属性)
       - [创建对象](#创建对象)
       - [for 遍历](#for-遍历)
+      - [对象的克隆](#对象的克隆)
       - [this](#this)
     - [标准内置对象](#标准内置对象)
       - [Array 数组](#array-数组)
@@ -53,9 +54,6 @@ title: JavaScript
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
-
 ## 基本语法
 
 ### 循环迭代
@@ -70,8 +68,6 @@ title: JavaScript
   let a = ['12', 34, 'avb'];
   for (let i of a) console.log(i);
   ```
-
-<br>
 
 ### 字符串
 
@@ -105,11 +101,7 @@ title: JavaScript
 
 > 参考：[String 对象方法总结](https://www.jianshu.com/p/1bc145627572)
 
-<br>
-
 ### 表达式与运算符
-
-<br>
 
 ### 类型转换
 
@@ -117,8 +109,6 @@ title: JavaScript
 - 转为字符串：`xx.toString()`, `String(xx)`, `xx + ''`
 - 转为布尔：`Boolean(xx)`
 - 转为对象：`new Number()`...
-
-<br>
 
 ### 错误抛出
 
@@ -134,13 +124,11 @@ title: JavaScript
   }
   ```
 
-<br>
-
 ### 函数
 
 #### 箭头函数
 
-&emsp;&emsp; 箭头函数表达式的语法比函数表达式**更简洁**，并且没有自己的 `this`，`arguments`，`super` 或 `new.target`，而是指向了 **父作用域**。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数(new)。
+箭头函数表达式的语法比函数表达式**更简洁**，并且没有自己的 `this`，`arguments`，`super` 或 `new.target`，而是指向了 **父作用域**。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数(new)。
 
 **构造：**
 
@@ -171,8 +159,6 @@ title: JavaScript
   ```
 
 > ! 箭头函数只适合干简单事啦，尽量不用来定义函数
-
-<br>
 
 #### 自执行函数
 
@@ -206,15 +192,11 @@ title: JavaScript
   }
   ```
 
-<br>
-
 > 参考：[浅谈自执行函数（立即调用的函数表达式）](https://www.jianshu.com/p/c64bfbcd34c3)
-
-<br>
 
 #### 函数作用域
 
-&emsp;&emsp; 所谓作用域就是：变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。父对象的所有变量，对子对象都是可见的，反之则不成立。
+所谓作用域就是：变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。父对象的所有变量，对子对象都是可见的，反之则不成立。
 
 - 在 javascript 中，`if`、`while`、`for` 等代码块不能形成独立的作用域。因此，javascript 中没有块级作用域，**只有函数作用域**。
 
@@ -223,8 +205,6 @@ title: JavaScript
 - 如果一个变量没有使用 **`var`** 声明，window 便拥有了该属性，因此这个变量的作用域不属于某一个函数体,而是 window 对象(全局)。
 
   > 即：没有 var 的变量可在函数外调用
-
-<br>
 
 #### call, apply, bind
 
@@ -249,8 +229,6 @@ console.log(fish.money);
 ```
 
 **即：** `fun.[call | bind | apply](obj, [args])`。区别在于， bind 的参数必须是数组类型，bind 是返回函数但不立即执行
-
-<br>
 
 ## 对象
 
@@ -299,7 +277,7 @@ console.log(fish.money);
   console.log(car1.owner.name); // Rand McKinnon
   ```
 
-- **使用 Object.create( ) 方法** <br> &emsp;&emsp; 对象也可以用 `Object.create()` 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。
+- **使用 Object.create( ) 方法** &emsp;&emsp; 对象也可以用 `Object.create()` 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。
 
   ```js {.line-numbers}
   let Animal = {
@@ -320,8 +298,6 @@ console.log(fish.money);
   let len = Object.keys(oo).length;
   ```
 
-<br>
-
 #### for 遍历
 
 - 纯对象是不能用 `for of` 遍历的(`myObj is not iterable`)，需要制定遍历的对象（值或键）
@@ -339,9 +315,23 @@ console.log(fish.money);
   });
   ```
 
+#### 对象的克隆
+
+对象是属于引用型数据，直接用等号赋值时会把原对象的地址也赋值过去了。这时候就要用到对象的克隆：
+
+```js {.line-numbers}
+const a = {
+  name: 'fish',
+  data: {
+    value: 2333,
+  },
+};
+const b = Object.assign(a);
+```
+
 #### this
 
-&emsp;&emsp;在 `JavaScript` 中 `this` 不是固定不变的，它会随着执行环境的改变而改变。
+在 `JavaScript` 中 `this` 不是固定不变的，它会随着执行环境的改变而改变。
 
 - 在**对象方法**中， this 指向调用它所在方法的对象。
 - **单独**使用 this，它指向全局(Global)对象。
@@ -365,8 +355,6 @@ console.log(fish.money);
   f(); // 单独执行, window 环境 // 1
   obj.ff(); // obj 环境执行  // 2
   ```
-
-<br>
 
 ### 标准内置对象
 
@@ -460,8 +448,6 @@ console.log(fish.money);
 
 > 参考：[MDN Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#%E6%8F%8F%E8%BF%B0) 、 [数组方法](https://zh.javascript.info/array-methods)
 
-<br>
-
 #### Date 对象
 
 - **属性**
@@ -492,8 +478,6 @@ console.log(fish.money);
 </div>
 
 > 设置则将 get 改为 set ，时间前加上 UTC 代表 UTC 时
-
-<br>
 
 #### Math 对象
 
@@ -527,11 +511,9 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
   - `Math.round(x)` : 返回 x 四舍五入后的值
   - `Math.trunc(x)` : 返回 x 的整数部分
 
-<br>
-
 #### Map 对象
 
-- **定义** <br> &emsp;&emsp; 一个 Map 的键可以是任意值，包括函数、对象或任意基本类型。且 Map 中的 key 是有序的。因此当迭代的时候以插入的顺序返回键值。
+- **定义** &emsp;&emsp; 一个 Map 的键可以是任意值，包括函数、对象或任意基本类型。且 Map 中的 key 是有序的。因此当迭代的时候以插入的顺序返回键值。
 
 - **属性**
 
@@ -562,11 +544,9 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
   - `mpa.get(key)` : 返回 key 下的 value
   - `mpa.entries()` : 返回一个新的包含 `[key, value]` 对的 `Iterator` 对象，返回的迭代器的迭代顺序与 Map 对象的**插入顺序**相同。
 
-<br>
-
 #### Set 对象
 
-- **定义** <br> &emsp;&emsp; Set 对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set 中的元素只会出现一次，即 Set 中的元素是唯一的。
+- **定义** &emsp;&emsp; Set 对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set 中的元素只会出现一次，即 Set 中的元素是唯一的。
 
 - **属性**
 
@@ -582,23 +562,17 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
   - `set.add(value)` : 添加值
   - 其他的和 map 类似
 
-<br>
-
 #### 正则表达式
 
 -
 
 > Ref: [MDN 中的正则](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-<br>
-
 ### 迭代器 iterator
 
-&emsp;&emsp;所有的迭代器对象都有一个 `next()` 方法，每次调用都返回一个结果对象。结果对象有两个属性：一个是 **`value`**，表示下一个将要返回的值；另一个是 **`done`**，它是一个布尔类型的值，当没有更多可返回数据时返回 true。
+所有的迭代器对象都有一个 `next()` 方法，每次调用都返回一个结果对象。结果对象有两个属性：一个是 **`value`**，表示下一个将要返回的值；另一个是 **`done`**，它是一个布尔类型的值，当没有更多可返回数据时返回 true。
 
 - **可被迭代的对象** 目前所有的内置可迭代对象如下：String、Array、TypedArray、Map 、 Set 和 NodeList 对象
-
-<br>
 
 ### arguments 对象
 
@@ -622,37 +596,27 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
 
   > 其实就是将函数传入的参数列到 `arguments` 数组中，但又不同于 `Array`
 
-<br>
-
 ## API
 
 ### DOM
 
-&emsp;&emsp;文档对象模型（DOM）是用来表达 HTML、XHTML 及 XML 文档中的对象或与其进行交互的约定，它是跨平台的，并且与编程语言无关。通过调用 DOM 树上对象的方法可以操纵这些对象。
+文档对象模型（DOM）是用来表达 HTML、XHTML 及 XML 文档中的对象或与其进行交互的约定，它是跨平台的，并且与编程语言无关。通过调用 DOM 树上对象的方法可以操纵这些对象。
 
 **详见：** [DOM](DOM.md)
 
-<br>
-
 ### BOM
 
-&emsp;&emsp; **BOM**：**Browser Object Model** 是浏览器对象模型，浏览器对象模型提供了独立与内容的、可以与浏览器窗口进行互动的对象结构。 BOM 由多个对象构成，其中代表浏览器窗口的 window 对象是 BOM 的顶层对象，其他对象都是该对象的子对象。
-
-<br>
+**BOM**：**Browser Object Model** 是浏览器对象模型，浏览器对象模型提供了独立与内容的、可以与浏览器窗口进行互动的对象结构。 BOM 由多个对象构成，其中代表浏览器窗口的 window 对象是 BOM 的顶层对象，其他对象都是该对象的子对象。
 
 #### window 对象
 
-&emsp;&emsp; 浏览器里面，window 对象指当前的浏览器窗口。它也是当前页面的**顶层对象**，即最高一层的对象，所有其他对象都是它的下属。一个变量如果未声明，那么默认就是顶层对象的属性。
+浏览器里面，window 对象指当前的浏览器窗口。它也是当前页面的**顶层对象**，即最高一层的对象，所有其他对象都是它的下属。一个变量如果未声明，那么默认就是顶层对象的属性。
 
 **详见：**[BOM window](BOM_window.md)
 
-<br>
-
 ### 浏览器事件
 
-&emsp;&emsp; **事件** 是某事发生的信号。所有的 DOM 节点都生成这样的信号（但事件不仅限于 DOM）。
-&emsp;&emsp; 为了对事件作出响应，我们可以分配一个 处理程序（handler）—— 一个在事件发生时运行的**函数**。
-&emsp;&emsp; 处理程序是在发生用户行为（action）时运行 JavaScript 代码的一种方式。
+**事件** 是某事发生的信号。所有的 DOM 节点都生成这样的信号（但事件不仅限于 DOM）。 为了对事件作出响应，我们可以分配一个 处理程序（handler）—— 一个在事件发生时运行的**函数**。 处理程序是在发生用户行为（action）时运行 JavaScript 代码的一种方式。
 
 **详见：**[Evens.md](Evens.md)
 

@@ -32,8 +32,7 @@ title: 数学
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
+
 
 ## 基础数学
 
@@ -387,7 +386,6 @@ title: 数学
   }
   ```
 
-<br><br>
 
 ## 高阶数学（数论）
 
@@ -414,8 +412,6 @@ title: 数学
       return week[(w + 7) % 7];
   }
   ```
-
-<br>
 
 ### Miller-Robin 的素数判断
 

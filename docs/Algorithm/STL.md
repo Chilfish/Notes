@@ -11,37 +11,35 @@ date: 2022-04-14
   - [STL 详解](https://blog.csdn.net/u010183728/article/details/81913729)
   - [string 容器详解](https://blog.csdn.net/wzh1378008099/article/details/105687998)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [std::string 字符串](#stdstring-字符串)
-- [序列式容器（可序）](#序列式容器可序)
-  - [Vector](#vector)
-  - [deque](#deque)
-  - [List](#list)
-- [关联式容器 （已序）](#关联式容器-已序)
-  - [Map、multimap](#map-multimap)
-  - [Set、multiset](#set-multiset)
-- [容器适配器](#容器适配器)
-  - [Stack](#stack)
-  - [队列](#队列)
-- [迭代器](#迭代器)
-- [STL 函数](#stl-函数)
-  - [查找算法](#查找算法)
-  - [修改序列的操作](#修改序列的操作)
-  - [删除和替换算法](#删除和替换算法)
-  - [排列组合算法](#排列组合算法)
-  - [算术算法](#算术算法)
-  - [生成和异变算法](#生成和异变算法)
-  - [关系算法](#关系算法)
-  - [集合算法](#集合算法)
-  - [堆算法](#堆算法)
+- [](#)
+  - [std::string 字符串](#stdstring-字符串)
+  - [序列式容器（可序）](#序列式容器可序)
+    - [Vector](#vector)
+    - [deque](#deque)
+    - [List](#list)
+  - [关联式容器 （已序）](#关联式容器-已序)
+    - [Map、multimap](#map-multimap)
+    - [Set、multiset](#set-multiset)
+  - [容器适配器](#容器适配器)
+    - [Stack](#stack)
+    - [队列](#队列)
+  - [迭代器](#迭代器)
+  - [STL 函数](#stl-函数)
+    - [查找算法](#查找算法)
+    - [修改序列的操作](#修改序列的操作)
+    - [删除和替换算法](#删除和替换算法)
+    - [排列组合算法](#排列组合算法)
+    - [算术算法](#算术算法)
+    - [生成和异变算法](#生成和异变算法)
+    - [关系算法](#关系算法)
+    - [集合算法](#集合算法)
+    - [堆算法](#堆算法)
 
 <!-- /code_chunk_output -->
-
-<br>
-&emsp;
 
 ## std::string 字符串
 
@@ -74,9 +72,6 @@ date: 2022-04-14
     - `find` 需要子串和父串全部匹配，`find_first_of` 只需匹配一个字符就可以
   - **删除：** `c.erase(a, b)` a：删除的初始位置，b：删除的个数。仅有 a 的话，则删除位置 a 后面的字符
   - **截取：** `string s = c.substr(a, b);`，a：截取的初始位置，b：截取的长度
-
-<br>
-&emsp;
 
 ## 序列式容器（可序）
 
@@ -122,7 +117,6 @@ date: 2022-04-14
   }
   ```
 
-&emsp;&emsp;
 
 ### deque
 
@@ -147,15 +141,11 @@ date: 2022-04-14
   - 而序列式场景中，可能需要经常遍历，因此在实际中，需要线性结构时，大多数情况下优先考虑 `vector` 和 `list`
   - `deque` 的应用并不多，而目前能看到的一个应用就是，`STL` 用其作为 `stack` 和 `queue` 的底层数据结构
 
-&emsp;&emsp;
 
 ### List
 
 - `List` 是 STL 实现的双向链表，与`vectors`相比，它允许快速的插入和删除，但是随机访问却比较慢
 - 可以直接` s.sort();` 或 `s.sort(greater<name>());`
-
-&emsp;&emsp;
-<br>
 
 ## 关联式容器 （已序）
 
@@ -238,7 +228,6 @@ date: 2022-04-14
   - **缺点：** 哈希表的建立比较耗费时间
   - **适用处：** 对于查找问题，`unordered_map` 会更加高效一些，因此遇到查找问题，常会考虑一下用 `unordered_map`
 
-&emsp;&emsp;
 
 ### Set、multiset
 
@@ -262,9 +251,6 @@ date: 2022-04-14
   ```
 - 其实道理和 `map` 差不多 hh
 
-<br>
-&emsp;
-
 ## 容器适配器
 
 本质上就是使用 STL 容器来封装成另外的 API，来满足对某种数据结构的需求
@@ -281,7 +267,6 @@ date: 2022-04-14
   - `s.top()： type`：返回栈中的顶部元素
   - `s.push(item)： void`：往栈顶压入元素
 
-&emsp;&emsp;
 
 ### 队列
 
@@ -336,18 +321,12 @@ date: 2022-04-14
     }
     ```
 
-<br>
-&emsp;
-
 ## 迭代器
 
 - 迭代器要遍历，随机访问是指用下标或 at()
   - `vector` 随机访问， `deque` 随机访问， `stack` 不支持， `queue` 不支持， `priority_queue` 不支持
   - `list` 双向，`set` 双向， `multiset` 双向 ， `map` 双向， `multimap` 双向
 - 范围总是 $[begin, end)$
-
-<br>
-&emsp;
 
 ## STL 函数
 
@@ -392,7 +371,6 @@ date: 2022-04-14
   - **`partial_sort_copy`：** 与 `partial_sort` 类似，不过将经过排序的序列复制到另一个容器
   - **`nth_element`：** 将范围内的序列重新排序，使所有小于第 `n` 个元素的元素都出现在它前面，而大于它的都出现在后面。重 载版本使用自定义的比较操作
 
-&emsp;&emsp;
 
 ### 删除和替换算法
 

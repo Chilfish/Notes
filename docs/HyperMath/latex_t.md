@@ -1,7 +1,6 @@
 # 临时的 $\LaTeX$ 码
 
-<br>
-&emsp;
+
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
@@ -10,13 +9,13 @@
 - [临时的 $\LaTeX$ 码](#临时的-latex-码)
   - [三角函数](#三角函数)
   - [第一次离散数学作业](#第一次离散数学作业)
+  - [还是离散作业](#还是离散作业)
 
 <!-- /code_chunk_output -->
 
 ## 三角函数
 
-<br>
-&emsp;
+
 
 $$
 % 三角函数_定义
@@ -40,13 +39,11 @@ $$
 \end{align*}
 $$
 
-<br>
-&emsp;
+
 
 ## 第一次离散数学作业
 
-<br>
-&emsp;
+
 
 $\textbf{1.\; 证明：} \mathbf{p \to (q \to r) \Leftrightarrow p \wedge q \to r}$
 
@@ -110,5 +107,39 @@ $$
 \end{align*}
 $$
 
+
+
+## 还是离散作业
+
+$\textbf{1. 用主范式判断下述公式的类型：}\; (p\wedge q \to r)\to(p\to r)\wedge(q\to r)$
+
+$$
+\begin{align*}
+  \text{证： 原式\;} &\Leftrightarrow \lnot(\lnot(p\wedge q)\vee r)\vee(\lnot p\vee r)\wedge(\lnot q \vee r) \\
+  &\Leftrightarrow (p\wedge q\wedge \lnot r)\vee(\lnot p\wedge\lnot q)\vee r \\
+  &\Leftrightarrow (p\wedge q\wedge \lnot r)\vee(\lnot q\wedge \lnot p)\wedge(r\vee\lnot r)\vee(q\vee\lnot q)\wedge(p\vee\lnot p)\wedge r \\
+  &\Leftrightarrow(p\wedge q\wedge \lnot r)\vee(\lnot p\wedge\lnot q\wedge \lnot r)\vee(p\wedge q\wedge r)\\ &\;\;\;\;\;\vee(p\wedge\lnot q\wedge r)\vee(\lnot p\wedge q\wedge r)\vee(\lnot p\wedge\lnot q\wedge r) \\
+  &\text{由此主析取范式可知：} 6 < 2^3 \;\text{，即为} \textbf{可满足式}
+\end{align*}
+$$
+
+$\textbf{2. 判断：} \mathbf{(p\wedge q)\vee(\lnot p\wedge r)\vee(q\wedge r)} \textbf{\;与\;} \mathbf{(p\wedge q)\vee(\lnot p\wedge r)} \textbf{是否等值}$
+
+$$
+\begin{align*}
+  \text{解：由对偶式互等值可得，}\text{原命题可转化为} \\
+  \text{证明：} (p\vee q)\wedge(\lnot p\vee r)\wedge(q\vee r)\Leftrightarrow (p\vee q)\wedge(\lnot p\vee r)\\
+\end{align*}
+$$
+
 <br>
-&emsp;
+
+$\textbf{3. 应用题：}$
+
+$$
+\begin{align*}
+  \text{解：\; 设派他们去时的}&\text{命题分别为\;} a,b,c,d,e \text{，则由题意得：} \\
+  \text{设最终的情况为：\;} A&= (a\to b)\wedge\lnot(d\wedge e)\wedge(b\vee c)\wedge(c\oplus d)\wedge(e\to a\wedge b) \\
+  &\Leftrightarrow (\lnot a\vee b)\wedge(\lnot b\vee\lnot e)\wedge(b\wedge c)\wedge(c\wedge\lnot d\vee\lnot c\wedge d)\wedge(\lnot e\vee a\wedge b)
+\end{align*}
+$$

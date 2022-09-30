@@ -57,11 +57,17 @@ h2,
 h3,
 h4,
 h5 {
+  margin: 60px 0 30px;
   font-weight: bold;
   color: $main-color;
 }
 h1 {
   text-align: center;
+}
+h2,
+h3 {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eaecef;
 }
 code {
   background-color: #f1f1f1;

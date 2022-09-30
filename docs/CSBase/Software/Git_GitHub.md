@@ -26,9 +26,6 @@ date: 2022-07-10
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
-
 ## Git config
 
 使用 git config 命令尽心 git 的配置，常用命令如下：
@@ -52,8 +49,7 @@ date: 2022-07-10
 ## Git 初始化
 
 ### git init
-
-&emsp;&emsp; 如果不依赖任何远端仓库，而是自行本地新建仓库并初始化，使用 `git init` 即可。示例如下，创建一个名为 MyGitRepo 的仓库：
+ 如果不依赖任何远端仓库，而是自行本地新建仓库并初始化，使用 `git init` 即可。示例如下，创建一个名为 MyGitRepo 的仓库：
 
 ```shell {.line-numbers}
 mkdir MyGitRepo
@@ -64,8 +60,7 @@ git init
 在 `git init` 执行后，执行 `ls -a` 可以看到多了一个 `.git` 文件夹，这就是 git 的主干文件了。
 
 ### git clone
-
-&emsp;&emsp; 然而大多数时候，我们并不需要自己新建，而是需要从远端 Git 仓库获取已经有的仓库。通常的流程大都是，先在例如 GitHub 的平台上新建仓库，再克隆这个仓库来开发
+ 然而大多数时候，我们并不需要自己新建，而是需要从远端 Git 仓库获取已经有的仓库。通常的流程大都是，先在例如 GitHub 的平台上新建仓库，再克隆这个仓库来开发
 
 假如现在想克隆本仓库 https://github.com/Organic-Fish/Notes.git ，则在命令行执行：
 
@@ -79,9 +74,6 @@ git clone https://github.com/Organic-Fish/Notes.git
 >
 > - **Github 的镜像站进行加速：** 只需要把 `https://github.com` 替换成 `https://hub.fastgit.org` 即可
 > - Git 加速工具 **Dev-SideCar**，地址：[Dev-SideCar](https://github.com/docmirror/dev-sidecar)(鸡生蛋生鸡了\doge)
-
-<br>
-&emsp;
 
 ## 编辑到提交
 
@@ -98,28 +90,13 @@ Git 操作一个新文件的流程为：工作区(也就是本地文件)–> 暂
 
 ### git remote
 
-<br>
-&emsp;
-
 ## 分支与标签管理
-
-<br>
-&emsp;
 
 ## 提交历史
 
-<br>
-&emsp;
-
 ## 推送到远程仓库
 
-<br>
-&emsp;
-
 ## 合并与重置
-
-<br>
-&emsp;
 
 <!-- - **git 的一些：**
   - `git remote`： 查看是否有远程仓库

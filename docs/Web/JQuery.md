@@ -6,28 +6,26 @@ title: JQuery
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [函数入口](#函数入口)
-- [选择器](#选择器)
-  - [过滤器](#过滤器)
-  - [方法](#方法)
-- [节点](#节点)
-  - [节点操作](#节点操作)
-  - [attr 属性](#attr-属性)
-  - [CSS 样式](#css-样式)
-  - [事件](#事件)
-  - [取值](#取值)
-- [动画](#动画)
-- [Ajax](#ajax)
-- [参考](#参考)
+- [](#)
+  - [函数入口](#函数入口)
+  - [选择器](#选择器)
+    - [过滤器](#过滤器)
+    - [方法](#方法)
+  - [节点](#节点)
+    - [节点操作](#节点操作)
+    - [attr 属性](#attr-属性)
+    - [CSS 样式](#css-样式)
+    - [事件](#事件)
+    - [取值](#取值)
+  - [动画](#动画)
+  - [Ajax](#ajax)
+  - [参考](#参考)
 
 <!-- /code_chunk_output -->
-
-<br>
-&emsp;
 
 ## 函数入口
 
@@ -78,8 +76,6 @@ window.onload = function () {
 
 ![](./../Web/img/JQuery-4.png)
 
-<br>
-
 ## 节点
 
 ### 节点操作
@@ -129,8 +125,6 @@ window.onload = function () {
 - `$().text()`：相当于 innerText，带参数则为设置
 - `$().val()`：相当于 value，带参数则为设置
 
-<br>
-
 ## 动画
 
 - **显示 | 隐藏：**
@@ -143,11 +137,7 @@ window.onload = function () {
   - `way`：表示过度使用哪种缓动函数(默认 `swing`，jQ 内部还支持一个 `linear`)
   - `callback`：在动画执行完之后，执行的函数(可选)。
 
-<br>
-
 ## Ajax
-
-<br><hr>
 
 ## 参考
 

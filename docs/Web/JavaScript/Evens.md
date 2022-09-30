@@ -129,8 +129,6 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
   on(user, 'click', fn, { option: true }); // 同默认，但是 捕获
   ```
 
-<br>
-
 ## 默认的浏览器行为
 
 一些常见的：
@@ -140,13 +138,7 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 - `submit` —— 点击 `<input type="submit">` 或者在表单字段中按下 Enter 键会触发该事件，之后浏览器将提交表单。
 - `keydown` —— 按下一个按键会导致将字符添加到字段，或者触发其他行为。
 - `contextmenu` —— 事件发生在鼠标右键单击时，触发的行为是显示浏览器上下文菜单。
-
-&emsp;&emsp; 如果我们只想通过 JavaScript 来处理事件，那么所有默认行为都是可以被阻止的。
-&emsp;&emsp; 想要阻止默认行为 —— 可以使用` event.preventDefault()` 或` return false`。第二个方法只适用于通过 `on<event>` 分配的处理程序。
-&emsp;&emsp; `addEventListener` 的 `passive: true` 选项告诉浏览器该行为不会被阻止。这对于某些移动端的事件（像 `touchstart` 和 `touchmove`）很有用，用以告诉浏览器在滚动之前不应等待所有处理程序完成。
-&emsp;&emsp; 如果默认行为被阻止，`event.defaultPrevented` 的值会变成 `true`，否则为 false。
-
-<br>
+  如果我们只想通过 JavaScript 来处理事件，那么所有默认行为都是可以被阻止的。 想要阻止默认行为 —— 可以使用` event.preventDefault()` 或` return false`。第二个方法只适用于通过 `on<event>` 分配的处理程序。 `addEventListener` 的 `passive: true` 选项告诉浏览器该行为不会被阻止。这对于某些移动端的事件（像 `touchstart` 和 `touchmove`）很有用，用以告诉浏览器在滚动之前不应等待所有处理程序完成。 如果默认行为被阻止，`event.defaultPrevented` 的值会变成 `true`，否则为 false。
 
 ## UI 事件
 
@@ -192,8 +184,6 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 - **元素拖拽：**
 
-<br>
-
 ### 键盘事件
 
 按一个按键总是会产生一个键盘事件，无论是符号键，还是例如 Shift 或 Ctrl 等特殊按键
@@ -207,8 +197,6 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 - `code` —— “按键代码”（"KeyA"，"ArrowLeft" 等），特定于键盘上按键的物理位置。
 - k`ey —— 字符（"A"，"a" 等），对于非字符（non-character）的按键，通常具有与 code 相同的值。
-
-<br>
 
 ## 表单事件
 
@@ -239,8 +227,6 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
   - 对于单选按钮（radio button）和复选框（checkbox），可以使用 `input.checked` 来确定是否选择了一个值。
   - 对于 `<select>`，可以通过索引 `select.selectedIndex` 来获取它的 value，也可以通过 `<option>` 集合 `select.options` 来获取它的 value
 
-<br>
-
 ## 框架/对象（Frame/Object）事件
 
 <div style="text-align: center;margin: 1rem;">
@@ -266,8 +252,6 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 - `change` 值被改变 => 对于文本输入，当失去焦点时触发
 - `input` 文本输入的每次更改 => 立即触发，与 `change` 不同
 - `cut | copy | paste` 剪贴/拷贝/粘贴行为 => 行为可以被阻止。`event.clipboardData` 属性可以用于访问剪贴板
-
-<br>
 
 ## 参考
 

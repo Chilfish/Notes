@@ -28,17 +28,12 @@ title: HTML
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
-
 ## 关键字缩写
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="90%"
   src="./img/html_label.png"/><br> </div>
 
 > 参考字典：[HTML 元素参考\_MDN ](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)
-
-<br>
 
 ## \<meta\> 文档级元数据元素
 

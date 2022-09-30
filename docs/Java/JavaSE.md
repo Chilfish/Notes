@@ -31,8 +31,7 @@ date: 2022-07-24
 
 <!-- /code_chunk_output -->
 
-<br>
-&emsp;
+
 
 ## 基础语法
 
@@ -56,8 +55,6 @@ public class Fish {
 }
 ```
 
-<br>
-
 ### 数据类型
 
 #### 基本类型
@@ -80,8 +77,6 @@ public class Fish {
   char c2 = 65; // 使用十进制的整数（Unicode 值），[0, 65535]
   char c3 = '\u0061'; // 使用十六进制的整数，格式'\uXXXX'，('\u0000'~'\u00FF')
   ```
-
-<br>
 
 #### 引用数据类型
 
@@ -112,8 +107,6 @@ public class Fish {
   - `Object[] copyOf(Object[] original, int newLength)`：复制 `original` 数组，截取或用 `0`（数值类型）、`false`（布尔类型）或者 `null`（引用类型）填充，以使新数组的长度为 `newLength`
   - `List<T> asList(T... a)`：把一个引用类型的数组或指定个数的对象转换成固定长度的 List（`Arrays.ArrayList`），只能遍历访问该集合里的元素，不可增加、删除该集合里的元素，否则会引发 `UnsupportedOperationException` 异常（对数组元素的修改，会影响转化过来的集合）
 
-<br>
-
 ##### 字符串
 
 - **多行字符串：** 其中共同的前置空格会被去掉
@@ -134,8 +127,6 @@ public class Fish {
               }""", key, value);
   }
   ```
-
-<br>
 
 ### 修饰符
 
@@ -169,8 +160,6 @@ public class Fish {
 - **`super`：** 和 `this` 差不多，但指向了被继承的父类。且：调用 `super()` 必须写在子类构造方法的第一行，否则编译不通过
 - **`abstract`：** 抽象类
 
-<br>
-
 ### 函数方法
 
 - **可变参数列表：** 传入的参数个数可变，可为数组，参数最终体现的是**数组**类型
@@ -186,8 +175,7 @@ public class Fish {
   ```
 
 &emsp;
-<br>
-&emsp;
+
 
 ## 面向对象
 
@@ -246,8 +234,6 @@ public class Fish {
 - 抽象类主要用来 定义父类的整体属性方法，接口是用来 拓展一些有部分共用但不是全部的新方法
 
 #### 内部类
-
-<br>
 
 ### 常见类
 
