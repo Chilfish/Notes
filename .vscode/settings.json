@@ -1,6 +1,8 @@
 {
   "cSpell.words": [
+    "alloc",
     "cout",
+    "extname",
     "getchar",
     "getline",
     "isdigit",
@@ -12,6 +14,7 @@
     "miao",
     "ostream",
     "putchar",
+    "readdir",
     "rgba",
     "sakana",
     "Sakana",

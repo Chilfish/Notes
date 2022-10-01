@@ -19,10 +19,17 @@ title: Node.js
   - [模块](#模块)
     - [Common JS | ES Modules](#common-js-es-modules)
     - [Buffer 缓冲区](#buffer-缓冲区)
+    - [Path 路径](#path-路径)
     - [fs 文件读写](#fs-文件读写)
     - [Express 框架](#express-框架)
 
 <!-- /code_chunk_output -->
+
+<br>
+
+> **一些默认的约定：** 下文的 js 文件的工作目录（即 IDE 或命令行打开的目录）为 `D:\Node`，文件路径为`D:\Node\src\index.js`，若无说明，代码的单行注释为该行的输出
+
+<br>
 
 ## Node 项目
 
@@ -41,14 +48,15 @@ title: Node.js
   配置信息
 </div></div>
 
-- 其中最后的 `type` 字段是涉及到模块规范的支持，它有两个可选值： `commonjs` 和 `module` ，其默认值为 `commonjs` 。
-  > 关于 `package.json` 的完整的选项可以在 [npm Docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)上查阅。
+- 其中最后的 `type` 字段是涉及到模块规范的支持，它有两个可选值： `commonjs` 和 `module` ，其默认值为 `commonjs`
 
-<br>
+  > 关于 `package.json` 的完整的选项可以在 [npm Docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)上查阅
 
 - 监视 node 文件更改的 `nodemon`：[官网](https://nodemon.io/) 、 [配置说明](https://www.jianshu.com/p/a35dfc72c6e6)
 
 > Ref： [Node 项目如何使用 ES 模块](https://blog.csdn.net/sayUonly/article/details/122885171) 、 [tsconfig.json 的配置](https://blog.csdn.net/muguli2008/article/details/122246623) 、 [Node 为什么用不了 ES 模块](https://segmentfault.com/q/1010000039917414)
+
+<br>
 
 ## 模块
 
@@ -74,8 +82,10 @@ title: Node.js
   export const dirname = (metaUrl) => path.dirname(fileURLToPath(metaUrl));
 
   // to use (after import):
-  const __dirname = dirname(import.meta.url);
+  dirname(import.meta.url); // D:\Node\src
   ```
+
+<br>
 
 ### Buffer 缓冲区
 
@@ -88,38 +98,124 @@ title: Node.js
   - `Buffer.from(x)`：将字符串或数组转为 `Buffer` 对象，范围为 `00 ~ 0xff`
   - `Buffer.toString(decode)`：将 `buffer` 对象转换为指定编码字符串，默认为 `utf8`
 
+<br>
+
+### Path 路径
+
+path 模块包含了一些列处理和转换文件路径的工具集。其中，在 Windows 下，目录的分隔符为 `\`，UNIX 下，分隔符为 `/`
+
+**方法：**
+
+- `path.resolve([path1], [path2], ...)`： 按照顺序依次拼接，返回的是 **绝对路径**，路径末尾的不会带有路径分隔符。若合并后的路径没有构成一个绝对路径，则会默认使用 **当前工作目录的绝对路径**
+  ```js {.line-numbers}
+  path.resolve(); // D:\Node
+  path.resolve('path1', 'path2/'); // D:\Node\path1\path2
+  path.resolve('F:\\path1', 'path2'); // F:\path1\path2
+  ```
+- `path.join([path1], [path2], ...)`：与 `resolve` 的区别在于，仅是拼接路径，不会强制转换成绝对路径，末尾可带路径分隔符
+  ```js {.line-numbers}
+  path.join(); // .
+  path.join('path1', 'path2/'); // path1\path2\
+  ```
+- `path.relative(from, to)`：返回两个路径的相对关系
+  ```js {.line-numbers}
+  path.join('mie/mie/', 'haha'); // ..\..\haha
+  ```
+- `path.parse(path)`：返回该路径的路径对象，包括根目录、到该目录（文件）的目录，目录（文件）名、文件后缀、文件名
+  ```js {.line-numbers}
+  path.parse(__filename);
+  /*path:  {
+    root: 'D:\\',
+    dir: 'D:\\Node\\src',
+    base: 'index.js',
+    ext: '.js',
+    name: 'index'
+  }*/
+  ```
+- `path.dirname(path)`：返回该文件（夹）的路径
+  ```js {.line-numbers}
+  path.dirname(__filename); // D:\Node\src
+  ```
+- `path.basename(path)`：返回该文件（夹）的名称（不含路径）
+- `path.extname(path)`：返回文件的后缀，无后缀则返回 `''`
+
+<br>
+
 ### fs 文件读写
 
-- **文件写入：** 如果不存在这个文件名，这会创建文件
-  - **简单写入**
-    - `fs.writeFile(file, data, [,options], callback);`
-    - `fs.writeFileSync(file, data);`
-    - `options` 选项
-      1.  `encoding` 默认值: `'utf8'`
-      2.  `mode` 默认值: `0o666`
-      3.  `flag` 默认值: `'w'`
-  - **流式写入** `fs.createWriteStream(path[, options])`
-    - 事件监听 `open | close` eg: `ws.on('open', function(){});`
-- **文件读取：** 返回的 data 为 Buffer 类型
-  - `fs.readFile(file, function(err, data){})`
-  - `fs.readFileSync(file, [,options])`
-  - 大文件用流式读取： `fs.createReadStream(file)`
-- **文件删除：**
-  - `fs.unlink('./test.log', function(err){});`
-  - `fs.unlinkSync('./move.txt');`
-- **移动文件 + 重命名：**
-  - `fs.rename('./1.log', '2.log', function(err){})`
-  - `fs.renameSync('1.log','2.log')`
-- **文件夹操作：**
-  - `mkdir` 创建文件夹
-    - `path`
-    - `options`
-      1.  `recursive` 是否递归调用
-      2.  `mode` 权限 默认为 0o777
-    - `callback`
-  - `rmdir` 删除文件夹
-  - `readdir` 读取文件夹
-- **获取文件信息：** `fs.statSync(file)`
+**文件写入：** 如果不存在这个文件名，这会创建文件
+
+- **简单写入：**
+  - `fs.writeFile(file, data, [,options], callback);`，存在该文件时会覆盖原内容
+  - `options` 选项
+    1.  `encoding` 默认值: `'utf8'`
+    2.  `mode` 默认值: `0o666`
+    3.  `flag` 默认值: `'w'`
+- **流式写入：** `fs.createWriteStream(path[, options])`
+  - 事件监听 `open | close` eg: `ws.on('open', callback(err));`
+- **追加写入：** `fs.appendFile(path, data, callback(err))`
+
+**文件读取：** 返回的 data 为 Buffer 类型
+
+- `fs.readFile(file, callback(err, data))`
+- 大文件用流式读取： `fs.createReadStream(file)`
+
+**文件删除和复制：**
+
+- `fs.unlink(path, callback(err));`：删除文件或符号链接
+- `fs.rm(path[, options], callback(err))`：删除目录和文件，其中 `options: {recursive: true}` 执行递归删除嵌套目录
+- `fs.copyFile(from, to[, mode], callback(err))`：复制文件，但：
+  - 只能复制文件，不能复制目录
+  - 目标目录不存在则不会创建并报错
+  - 文件类型可以不一致
+
+**重命名：**
+
+- `fs.rename(oldPath, newPath, callback(err))`，重命名，但：
+  - 不能重命名目录，只能重命名文件
+  - 如果重命名文件已存在将被覆盖
+
+**文件夹操作：**
+
+- `fs.mkdir(path[, options], callback(err, path))`：创建文件夹
+  - 其中的 `options` 有两个参数：
+    1. `recursive` 是否以递归的方式创建目录（**创建嵌套目录**），默认为 `false`
+    2. `mode` 设置目录权限权限 默认为 0777（**WIndows 不支持**）
+  ```js {.line-numbers}
+  fs.mkdir('./mie/fish', { recursive: true }, (err, path) => {
+    if (err) console.error(err);
+    else console.log(path); // D:\Node\mie
+  });
+  ```
+- `fs.readdir(path[, options], callback(err, files))`：读取文件夹
+  - `options` 可以是指定编码格式的字符串，也可以是具有以下属性的对象
+    - `encoding`：：指定编码格式，默认值： `utf-8`
+    - `withFileTypes`： files 数组是否包含 `<fs.Dirent>` 对象，默认值： false
+  ```js {.line-numbers}
+  fs.readdir(__dirname, (err, files) => {
+    if (err) throw err;
+    else console.log(files); // ['index.js', 'mie']
+  });
+  ```
+
+**获取文件信息：** `fs.stat(file)`
+
+<br>
+
+**以上均为带回调函数的异步写法**，换成同步写法只需在方法名后加 `Sync`，回调的数据通过 `return` 的形式返回出去，同时必须带上 **异常处理**，免得整个程序宕机了
+
+- **如：**
+  ```js {.line-numbers}
+  try {
+    const p = path.resolve(__dirname, '../static/data.json');
+    const data = fs.readFileSync(p).toString();
+    console.log(data);
+  } catch (error) {
+    throw error;
+  }
+  ```
+
+<br>
 
 ### Express 框架
 
