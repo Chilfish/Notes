@@ -3,11 +3,9 @@ title: 算 法 (C++ 描述)
 date: 2022-07-31
 ---
 
-# {{$frontmatter.title}}
+<br><p style="font-size: 2rem; font-weight: bold;">目录</p>
 
-<p style="font-size: 2rem; font-weight: bold;">目录</p>
-
-- [C++ 小语法](../Cpp.md)
+- [C++ 小语法](../Language/Cpp.md)
 - [STL](STL.md)
 - [数据结构](DataStruct.md)
 - [树、图](Tree_Graph.md)
@@ -25,7 +23,7 @@ date: 2022-07-31
 - [小算法](#小算法)
   - [ACM](#acm)
   - [复杂度](#复杂度)
-  - [前缀和 / 区间和](#前缀和-区间和)
+  - [前缀和 区间和](#前缀和-区间和)
 
 <!-- /code_chunk_output -->
 
@@ -77,6 +75,8 @@ date: 2022-07-31
   }
   ```
 
+<br>
+
 ### 复杂度
 
 **复杂度限制：**
@@ -106,9 +106,9 @@ date: 2022-07-31
 - $n \le 10^{1000}  \to  O((\log_2n)^2)$：高精度加减乘除
 - $n \le 10^{100000}  \to  O(\log_2k \times \log_2(\log_2k)$：k 表示位数，高精度加减、FFT/NTT
 
+<br>
 
-
-### 前缀和 / 区间和
+### 前缀和 区间和
 
 - 一维：
   ```cpp {.line-numbers}

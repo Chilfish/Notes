@@ -2,8 +2,7 @@
 title: 动态规划 DP
 ---
 
-# {{ $frontmatter.title }}
-
+<br>
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
@@ -15,14 +14,14 @@ title: 动态规划 DP
   - [MIS 最大子段和](#mis-最大子段和)
   - [LIS 最长上升子序列](#lis-最长上升子序列)
     - [DP 方法](#dp-方法)
-    - [贪心 + 二分](#贪心-二分)
+    - [贪心 二分](#贪心-二分)
   - [使用硬币的个数](#使用硬币的个数)
 - [背包](#背包)
   - [01 背包](#01-背包)
 
 <!-- /code_chunk_output -->
 
-
+<br>
 
 ## 普通 DP
 
@@ -38,10 +37,12 @@ title: 动态规划 DP
   }
   ```
 
+<br>
+
 ### MIS 最大子段和
 
 - [洛谷 P1115](https://www.luogu.com.cn/problem/P1115)： 给出一个长度为 $n$ 的序列 $a$，选出其中连续且非空的一段使得这段和最大。
-- 数据范围： $1 \leq n \leq 2 \times 10^5$，$-10^4 \leq a_i \leq 10^4$
+- 数据范围： $1 \leq n \leq 2 \times 10^5$ ， $-10^4 \leq a_i \leq 10^4$
 - 样例：
   ```txt
   input:
@@ -62,6 +63,8 @@ title: 动态规划 DP
     cout << ans << endl;
   }
   ```
+
+<br>
 
 ### LIS 最长上升子序列
 
@@ -90,7 +93,9 @@ title: 动态规划 DP
   }
   ```
 
-#### 贪心 + 二分
+<br>
+
+#### 贪心 二分
 
 - 对于一个上升子序列，显然其结尾元素越小，越有利于在后面接其他的元素，也就越可能变得更长
 
@@ -116,7 +121,7 @@ title: 动态规划 DP
 
 > 参考：[最长上升子序列 (LIS) 详解+例题模板 (全)](https://blog.csdn.net/lxt_Lucia/article/details/81206439)
 
-
+<br>
 
 ### 使用硬币的个数
 
@@ -137,7 +142,7 @@ void solve()
 }
 ```
 
-
+<br>
 
 ## 背包
 

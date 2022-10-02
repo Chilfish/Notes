@@ -3,23 +3,21 @@ title: 常见接口及其通信协议
 date: 2022-09-28
 ---
 
-# {{ $frontmatter.title }}
-
+<br>
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [](#)
-  - [USB 接口](#usb-接口)
-    - [物理接口](#物理接口)
-      - [Type C 接口](#type-c-接口)
-    - [协议](#协议)
-      - [数据传输](#数据传输)
-      - [充电标准](#充电标准)
-    - [参考](#参考)
-  - [视频接口](#视频接口)
+- [USB 接口](#usb-接口)
+  - [物理接口](#物理接口)
+    - [Type C 接口](#type-c-接口)
+  - [协议](#协议)
+    - [数据传输](#数据传输)
+    - [充电标准](#充电标准)
+  - [参考](#参考)
+- [视频接口](#视频接口)
 
 <!-- /code_chunk_output -->
 
@@ -43,8 +41,6 @@ date: 2022-09-28
   src="./img/USB_History.jpg"/><br><div style="color: #999;padding: 0.4rem;">
   USB 的发展史
 </div></div>
- 
-
 
 #### Type C 接口
 
@@ -71,7 +67,7 @@ date: 2022-09-28
 > 可以很明显看出，插口内的 Pin 功能相对于中心对称。公头插入母头，无论正反插，引脚功能都完美契合。而且电源 `VBUS/GND` 都拥有 4 个 Pin，最大支持 5A 电流，在保证高速数据传输的同时也提高了电流承载能力
 
 <br>
-
+ 
 **接口的功能：**
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
@@ -89,8 +85,6 @@ date: 2022-09-28
 
 - CC1、CC2 用于 PD 设备识别，承载 USB-PD 的通信，以向供电端请求电源供给。在传输电力的同时，USB 数据传输不会受到影响
 
-
-
 ### 协议
 
 #### 数据传输
@@ -99,8 +93,6 @@ date: 2022-09-28
   src="./img/USB_protocol.png"/><br><div style="color: #999;padding: 0.4rem;">
   其中，USB-PD是基于 <code>USB3.2 Gen2</code> 的传输协议
 </div></div>
-
-
 
 #### 充电标准
 
@@ -113,7 +105,6 @@ date: 2022-09-28
   只是设想
 </div></div>
 
-
 **USB DP 2.0：** 改用了 `USB Type-C` 口 (USB3.1)
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="35%"
@@ -121,19 +112,15 @@ date: 2022-09-28
   注：60W 以上必须用 6A 电线
 </div></div>
 
-
 **USB DP 3.0：** 相较于 DP 2.0，加入可编程电源供应，可兼容各家快充协议，最新可支持 `QC4+` 快充
-
 
 **USB DP 3.1：** 把原先 PD 3.0 的内容归纳至标准功率范围，最大功率维持原本的 100 瓦，并同时增加扩展功率范围最大功率为 **240 瓦**
 
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%"
   src="./img/USB_PD3.1.png"/><br></div>
 
-
-
 **雷电协议：**
- **Thunderbolt**（又称“雷电”，苹果中国译为“雷雳”）是由英特尔发表的**连接器标准**，目的在于当作电脑与其他设备之间的通用总线，第一代与第二代接口是与 Mini DisplayPort 集成，较新的第三代开始改为与 USB Type-C 结合，并能提供电源。 早期由英特尔独立研发，使用光纤传输；后来在一次科技展示会场上，苹果公司看到了早期光纤传输的原型后，主动对英特尔表示兴趣并给予开发上的建议，致使正式发表的第一代从光纤改用铜线和苹果的 **Mini DP** 外形
+**Thunderbolt**（又称“雷电”，苹果中国译为“雷雳”）是由英特尔发表的**连接器标准**，目的在于当作电脑与其他设备之间的通用总线，第一代与第二代接口是与 Mini DisplayPort 集成，较新的第三代开始改为与 USB Type-C 结合，并能提供电源。 早期由英特尔独立研发，使用光纤传输；后来在一次科技展示会场上，苹果公司看到了早期光纤传输的原型后，主动对英特尔表示兴趣并给予开发上的建议，致使正式发表的第一代从光纤改用铜线和苹果的 **Mini DP** 外形
 
 &emsp;&emsp; 第三代改为使用 **USB Type-C 接口**。继续延伸多合一的集成特点，因此它既能以双向 $40 Gbit/s$ 传输数据，又能兼容` Mini DP` 设备直接连接 Thunderbolt 接口传输视频与声音信号
 
@@ -156,15 +143,11 @@ date: 2022-09-28
 <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="75%"
   src="./img/USB_DP_CompareWithOther.png"/><br></div>
 
-
-
 ### 参考
 
 - [少数派\_翻旧账讲新史 —— USB 协议](https://sspai.com/post/72867)
 - **维基百科**
 - [CSDN\_一文读懂 USB TypeC 与 USB-PD](https://blog.csdn.net/Mark_md/article/details/114578359)
 - [酷安\_图解 USB 充电史系列](https://www.coolapk.com/feed/34580957?shareKey=MmU4YjIxZjJkNWYwNjMzNDcxZDg)
-
-
 
 ## 视频接口

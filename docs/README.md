@@ -1,48 +1,54 @@
 ---
+home: true
+title: Fish's Notes
 date: 2022-01-20
+heroImage: /hero.jpg
+footer: MIT Licensed | Copyright © 2022-present OrganicFish
+
+features:
+  - title: 编程语言
+    icon: code
+    details: 为什么我学了这么多语言啊……
+    link: /Language
+
+  - title: 算法
+    icon: strong
+    details: 以 C++ 为主的算法，果然 ACM 还是玩不下去了嘛……
+    link: /Algorithm
+
+  - title: 前端技术
+    icon: html
+    details: 果然还得是大前端
+    link: /FrontEnd
+
+  - title: 计算机基础
+    icon: computer
+    details: 又称 《计算机科学知识补全计划》 \doge
+    link: /CSBase
+
+  - title: 日常？
+    icon: article
+    details: 算是日常吧，以及别的不好分类的东西
+    link: /balabala
 ---
 
-# 导航
+<br>
 
-**当然，杂而水**
-
-- **前端：**
-
-  - Web 的 [README](./Web/README.md)
-  - [HTML](./Web/HTML.md)
-  - [CSS](./Web/CSS.md)
-  - [JavaScript](./Web/JavaScript/README.md)
-  - [TypeScript](Web/TypeScript.md)
-  - [Vue.js](./Web/Vue.js/Vue.js.md)
-
-- **后端：**
-
-  - [cpp](./Cpp.md)
-  - [JavaSE](./Java/JavaSE.md)
-  - [Python](./Python.md)
-  - [PHP](./Web/PHP.md)
-  - [MySQL](./MySQL.md)
-  - [C#](./CSharp.md)
-
-- **课程：**
-
-  - [数据结构与算法 (C++ 描述)](Algorithm/DataStruct.md)
-  - [计算机网络](CSBase/Computer_Networks/README.md)
-  - [数字电路](CSBase/Digital_Electronics/README.md)
-  - [操作系统](CSBase/Operation_System/README.md)
-  - [Linux](CSBase/Operation_System/Linux.md)
-
-- **其他一些：**
-
-  - 日常的 Codes：[Github](https://github.com/Organic-Fish/FishCode) | [Gitee](https://gitee.com/OrganicFish/FishCode)
-  - ACM 算 法：[Algorithm](./Algorithm/README.md)
-  - [一堆奇怪的......](./balabala/README.md)
-  - 《计算机科学补全计划》：[SCBase](CSBase/README.md)
-  - [$\LaTeX$ 与 $\KaTeX$](./LaTeX.md)
-  - 正则表达式：[Regex](./Regex.md)
-  - 数学：[HyperMath](./HyperMath/README.md)
-  - **(\* ﾟ ∇ ﾟ)**
+:::tip
+不是教程…… 纯纯写着玩的
+:::
 
 <ClientOnly>
   <Sakana/>
 </ClientOnly>
+
+<style lang="scss">
+.hero {
+  margin: 3rem auto;
+  & > img{
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),
+      0 2px 10px 0 rgba(34,36,38,.08);
+  }
+}
+</style>

@@ -3,30 +3,29 @@ title: Chaos 不好分类的杂在一起
 date: 2022-07-07
 ---
 
-# {{ $frontmatter.title }}
+<br>
 
 <p style="font-size: 32px; font-weight: bold;">目录</p>
-
+ 
 - **外链：**
-  - [Daily Surfing](happenedWhat.md)
+  - [Daily Surfing](DailySurfing.md)
   - [临时堆起的 Coder](TempCoder.md)
   - [Coding 之外](not_JustCode.md)
   - [挖坑 ToDo](ToDo.md)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [](#)
-  - [npm | pnpm ...](#npm-pnpm)
-  - [复制粘贴](#复制粘贴)
-    - [狗头保命](#狗头保命)
+- [npm 包管理器](#npm-包管理器)
+- [复制粘贴](#复制粘贴)
+  - [狗头保命](#狗头保命)
 
 <!-- /code_chunk_output -->
 
+<br>
 
-
-## npm | pnpm ...
+## npm 包管理器
 
 - **切换下载源：** `npm config set registry https://registry.npmmirror.com/`
 - **发布：**
@@ -34,8 +33,6 @@ date: 2022-07-07
   - **发布：** `npm publish`
   - **同步到淘宝源：** 到 https://npmmirror.com 搜索包，再同步
 - pnpm 对模块包主要是利用了 **符号链接**(软链接)：
-
-
 
 ## 复制粘贴
 
@@ -57,5 +54,3 @@ date: 2022-07-07
 若你使用了本项目，将代表你接受以上协议。
 
 音乐平台不易，请尊重版权，支持正版。
-
-

@@ -2,9 +2,7 @@
 title: Math
 ---
 
-# {{ $frontmatter.title }}
-
-
+<br>
 
 巨坑......但还是会尽量地去填吧，弥补一下......
 

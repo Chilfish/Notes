@@ -2,8 +2,6 @@
 title: 搜索
 ---
 
-# {{$frontmatter.title}}
-
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
@@ -19,8 +17,6 @@ title: 搜索
   - [例题](#例题)
 
 <!-- /code_chunk_output -->
-
-
 
 ## 二分搜索
 
@@ -70,8 +66,6 @@ title: 搜索
   }
   ```
 - 求出现的次数只要 $upper\_bound - lower\_bound$ 即可
-
-
 
 ## 深搜
 

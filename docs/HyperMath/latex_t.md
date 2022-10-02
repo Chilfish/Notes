@@ -1,7 +1,5 @@
 # 临时的 $\LaTeX$ 码
 
-
-
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
@@ -14,8 +12,6 @@
 <!-- /code_chunk_output -->
 
 ## 三角函数
-
-
 
 $$
 % 三角函数_定义
@@ -39,11 +35,7 @@ $$
 \end{align*}
 $$
 
-
-
 ## 第一次离散数学作业
-
-
 
 $\textbf{1.\; 证明：} \mathbf{p \to (q \to r) \Leftrightarrow p \wedge q \to r}$
 
@@ -106,8 +98,6 @@ $$
   \therefore A \Leftrightarrow B &\text{原命题得证}
 \end{align*}
 $$
-
-
 
 ## 还是离散作业
 

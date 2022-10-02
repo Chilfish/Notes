@@ -3,26 +3,24 @@ title: Git & GitHub
 date: 2022-07-10
 ---
 
-# {{ $frontmatter.title }}
-
+<br>
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [](#)
-  - [Git config](#git-config)
-  - [Git 初始化](#git-初始化)
-    - [git init](#git-init)
-    - [git clone](#git-clone)
-  - [编辑到提交](#编辑到提交)
-    - [git add/restore](#git-addrestore)
-    - [git remote](#git-remote)
-  - [分支与标签管理](#分支与标签管理)
-  - [提交历史](#提交历史)
-  - [推送到远程仓库](#推送到远程仓库)
-  - [合并与重置](#合并与重置)
+- [Git config](#git-config)
+- [Git 初始化](#git-初始化)
+  - [git init](#git-init)
+  - [git clone](#git-clone)
+- [编辑到提交](#编辑到提交)
+  - [git add/restore](#git-addrestore)
+  - [git remote](#git-remote)
+- [分支与标签管理](#分支与标签管理)
+- [提交历史](#提交历史)
+- [推送到远程仓库](#推送到远程仓库)
+- [合并与重置](#合并与重置)
 
 <!-- /code_chunk_output -->
 
@@ -49,7 +47,8 @@ date: 2022-07-10
 ## Git 初始化
 
 ### git init
- 如果不依赖任何远端仓库，而是自行本地新建仓库并初始化，使用 `git init` 即可。示例如下，创建一个名为 MyGitRepo 的仓库：
+
+如果不依赖任何远端仓库，而是自行本地新建仓库并初始化，使用 `git init` 即可。示例如下，创建一个名为 MyGitRepo 的仓库：
 
 ```shell {.line-numbers}
 mkdir MyGitRepo
@@ -60,7 +59,8 @@ git init
 在 `git init` 执行后，执行 `ls -a` 可以看到多了一个 `.git` 文件夹，这就是 git 的主干文件了。
 
 ### git clone
- 然而大多数时候，我们并不需要自己新建，而是需要从远端 Git 仓库获取已经有的仓库。通常的流程大都是，先在例如 GitHub 的平台上新建仓库，再克隆这个仓库来开发
+
+然而大多数时候，我们并不需要自己新建，而是需要从远端 Git 仓库获取已经有的仓库。通常的流程大都是，先在例如 GitHub 的平台上新建仓库，再克隆这个仓库来开发
 
 假如现在想克隆本仓库 https://github.com/Organic-Fish/Notes.git ，则在命令行执行：
 

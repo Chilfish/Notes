@@ -1,7 +1,9 @@
-import { defineUserConfig } from 'vuepress';
-import { hopeTheme } from 'vuepress-theme-hope';
+import { defineUserConfig, NavbarConfig } from 'vuepress';
+import { hopeTheme, navbar } from 'vuepress-theme-hope';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 import { path } from '@vuepress/utils';
+
+import { navbarConfig } from './navBar';
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -28,10 +30,14 @@ export default defineUserConfig({
       mdEnhance: {
         tex: true,
         footnote: true,
+        container: true,
       },
       copyCode: {},
       activeHeaderLinks: false,
+      comment: {},
     },
+
+    iconAssets: 'iconfont',
 
     repo: 'Organic-Fish/Notes',
     repoDisplay: true,
@@ -41,7 +47,7 @@ export default defineUserConfig({
     displayFooter: true,
     sidebar: 'heading',
     headerDepth: 3,
-    navbar: [],
+    navbar: navbarConfig,
     // navbarAutoHide: 'always',
 
     toc: false,

@@ -15,7 +15,7 @@ onMounted(() => {
 <style scoped>
 #sakana-widget {
   position: fixed;
-  right: 3rem;
-  bottom: 3rem;
+  right: 0rem;
+  bottom: 1rem;
 }
 </style>

@@ -3,26 +3,24 @@ title: 只是一些没地方放的 Temp 码
 date: 2020-06-20
 ---
 
-# {{ $frontmatter.title }}
-
+<br>
 <p style="font-size: 32px; font-weight: bold;">目录</p>
  
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
-
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
+ 
 <!-- code_chunk_output -->
 
-- [](#)
-  - [C++](#c)
-    - [欢迎各位滚动屏的莅临指导](#欢迎各位滚动屏的莅临指导)
-  - [JavaScript](#javascript)
-    - [UP 的新动态](#up-的新动态)
-    - [浏览器 UA](#浏览器-ua)
-    - [表格排序](#表格排序)
-    - [模糊查询](#模糊查询)
-    - [获取系统 IPV4](#获取系统-ipv4)
-    - [大眼仔，你坏事干净！](#大眼仔你坏事干净)
-  - [TypeScript](#typescript)
-  - [Python](#python)
+- [C++](#c)
+  - [欢迎各位滚动屏的莅临指导](#欢迎各位滚动屏的莅临指导)
+- [JavaScript](#javascript)
+  - [UP 的新动态](#up-的新动态)
+  - [浏览器 UA](#浏览器-ua)
+  - [表格排序](#表格排序)
+  - [模糊查询](#模糊查询)
+  - [获取系统 IPV4](#获取系统-ipv4)
+  - [大眼仔，你坏事干净！](#大眼仔你坏事干净)
+- [TypeScript](#typescript)
+- [Python](#python)
 
 <!-- /code_chunk_output -->
 

@@ -2,22 +2,20 @@
 title: 喵啊 的解法
 ---
 
-# {{ $frontmatter.title }}
-
+<br>
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [{{ $frontmatter.title }}](#-frontmattertitle-)
-  - [周期循环](#周期循环)
-  - [拼接数字取模](#拼接数字取模)
-  - [幂运算 ->快速幂思想](#幂运算--快速幂思想)
+- [周期循环](#周期循环)
+- [拼接数字取模](#拼接数字取模)
+- [幂运算 快速幂思想](#幂运算-快速幂思想)
 
 <!-- /code_chunk_output -->
 
-
+<br>
 
 ## 周期循环
 
@@ -54,6 +52,8 @@ title: 喵啊 的解法
   }
   ```
 
+<br>
+
 ## 拼接数字取模
 
 - **[题目链接](https://ac.nowcoder.com/acm/contest/23846/D)**
@@ -79,7 +79,9 @@ title: 喵啊 的解法
   }
   ```
 
-## 幂运算 ->快速幂思想
+<br>
+
+## 幂运算 快速幂思想
 
 - **[题目链接](https://ac.nowcoder.com/acm/contest/30532/D)**
 - ![](./img/miao_3.png)

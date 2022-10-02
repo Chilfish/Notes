@@ -3,36 +3,36 @@ title: 第一章 逻辑与证明
 date: 2022-09-26
 ---
 
-# {{ $frontmatter.title }}
-
+<br>
 <p style="font-size: 32px; font-weight: bold;">目录</p>
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=5 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [](#)
-  - [本章概述](#本章概述)
-  - [命题逻辑（Propositional Logic）](#命题逻辑propositional-logic)
-    - [命题及其表示法](#命题及其表示法)
-    - [联结词（Connectives、Logical Operator）](#联结词connectives-logical-operator)
-      - [真值表](#真值表)
-      - [优先级](#优先级)
-    - [真值表与等价命题](#真值表与等价命题)
-    - [逻辑等价式](#逻辑等价式)
-    - [公式定律](#公式定律)
-  - [谓词逻辑（Predicate）](#谓词逻辑predicate)
-    - [谓词的概念与表示](#谓词的概念与表示)
-    - [命题函数（Propositional Function）与量词（Quantifiers）](#命题函数propositional-function与量词quantifiers)
+- [本章概述](#本章概述)
+- [命题逻辑（Propositional Logic）](#命题逻辑propositional-logic)
+  - [命题及其表示法](#命题及其表示法)
+  - [联结词（Connectives Logical Operator）](#联结词connectives-logical-operator)
+    - [真值表](#真值表)
+    - [优先级](#优先级)
+  - [真值表与等价命题](#真值表与等价命题)
+  - [逻辑等价式](#逻辑等价式)
+  - [公式定律](#公式定律)
+- [谓词逻辑（Predicate）](#谓词逻辑predicate)
+  - [谓词的概念与表示](#谓词的概念与表示)
+  - [命题函数（Propositional Function）与量词（Quantifiers）](#命题函数propositional-function与量词quantifiers)
 
 <!-- /code_chunk_output -->
 
 <br> 
 &emsp;
-
+ 
 ## 本章概述
 
 命题、连接词、等价命题、逻辑等价式、命题逻辑、谓词、量词、谓词逻辑、逻辑证明
+
+<br>
 
 ## 命题逻辑（Propositional Logic）
 
@@ -43,11 +43,9 @@ date: 2022-09-26
 - 不能分解为更简单的陈述语句的称为**原子命题（Atomic Proposition）**
 - 由联结词，标点符号和原子命题复合构成的命题称为**复合命题（Compound Proposition）**
 
-命题常用大写字母或带下标的大写字母或数字表示，如 $A$，$B_i$​，$[12]$ 等,这些符号称为命题标识符
+命题常用大写字母或带下标的大写字母或数字表示，如 $A$ ， $B_i$ ​， $[12]$ 等,这些符号称为命题标识符
 
-
-
-### 联结词（Connectives、Logical Operator）
+### 联结词（Connectives Logical Operator）
 
 - $\neg$：否定、非（Negation）
 - $\wedge$：合取、且（Conjunction）
@@ -74,16 +72,14 @@ date: 2022-09-26
 
 $$\lnot \;>\; \wedge \;>\; \vee \;>\; \to \;>\; \Leftrightarrow$$
 
-
-
 ### 真值表与等价命题
 
 **定义 1**
- 在命题公式中，对于分量指派真值的各种可能组合，就确定了这个命题公式的各种真值情况，把它汇列成表，就是命题公式的真值表
+在命题公式中，对于分量指派真值的各种可能组合，就确定了这个命题公式的各种真值情况，把它汇列成表，就是命题公式的真值表
 &emsp;&emsp; n 个原子命题，真值表有 $2^n$ 行，每个原子命题都有 $T$ or $F$ 两种指派
 
 **定义 2**
- 给定两个命题公式 $A$ 和 $B$ ，设 $P_1,P_2,\cdots,P_n$​ 为所有出现于 $A$ 和 $B$ 中的原子变元，若给 $P_1,P_2,\cdots,P_n$​ 任一组真值指派， $A$ 和 $B$ 的真值都相同，则称 $A$ 和 $B$ 是等价的或逻辑相等的。记作 $A\equiv B$
+给定两个命题公式 $A$ 和 $B$ ，设 $P_1,P_2,\cdots,P_n$​ 为所有出现于 $A$ 和 $B$ 中的原子变元，若给 $P_1,P_2,\cdots,P_n$​ 任一组真值指派， $A$ 和 $B$ 的真值都相同，则称 $A$ 和 $B$ 是等价的或逻辑相等的。记作 $A\equiv B$
 &emsp;&emsp; 注意： $\equiv$ 不是逻辑连接词，所以 $A\equiv B $ 不是一个命题，而一个 statement，它表明 A、B 逻辑等价
 
 ### 逻辑等价式
@@ -132,13 +128,15 @@ $$\lnot \;>\; \wedge \;>\; \vee \;>\; \to \;>\; \Leftrightarrow$$
 - $P \leftrightarrow Q \equiv(P \rightarrow Q) \wedge(Q \rightarrow P)$
 - $P \leftrightarrow Q \equiv(P \wedge Q) \vee(\neg P \wedge \neg Q)$
 
-
+<br>
 
 ## 谓词逻辑（Predicate）
 
 ### 谓词的概念与表示
- 我们用大写字母表示谓词，用小写字母表示客体名称，如 $A(b)、$B(a,b)$、$L(a,b,c)$ 等，表示客体是否具有谓词所表述的那个性质。
-&emsp;&emsp; 单独一个谓词不是完整的命题（谓词没有真假值），我们把谓词字母后填以客体所得的式子称为谓词填式，如果 $A$ 为 $n$ 元谓词，$a_1,a_2,\cdots,a_n$​ 是客体的名称，则 $A(a_1,a_2,\cdots,a_n)$ 就可成为命题。
+
+我们用大写字母表示谓词，用小写字母表示客体名称，如 $A(b) 、 $B(a,b)$ 、 $L(a,b,c)$ 等，表示客体是否具有谓词所表述的那个性质
+
+单独一个谓词不是完整的命题（谓词没有真假值），我们把谓词字母后填以客体所得的式子称为谓词填式，如果 $A$ 为 $n$ 元谓词， $a_1,a_2 ,\cdots,a _n$​ 是客体的名称，则 $A(a_1,a_2,\cdots,a_n)$ 就可成为命题。
 
 ### 命题函数（Propositional Function）与量词（Quantifiers）
 
