@@ -9,33 +9,33 @@ features:
   - title: 编程语言
     icon: code
     details: 为什么我学了这么多语言啊……
-    link: /Language
+    link: Language/
 
   - title: 算法
     icon: strong
-    details: 以 C++ 为主的算法，果然 ACM 还是玩不下去了嘛……
-    link: /Algorithm
+    details: 以 C++ 为主的算法，ACM 时代的遗产……
+    link: Algorithm/
 
   - title: 前端技术
     icon: html
     details: 果然还得是大前端
-    link: /FrontEnd
+    link: FrontEnd/
 
   - title: 计算机基础
     icon: computer
     details: 又称 《计算机科学知识补全计划》 \doge
-    link: /CSBase
+    link: CSBase/
 
   - title: 日常？
     icon: article
     details: 算是日常吧，以及别的不好分类的东西
-    link: /balabala
+    link: balabala/
 ---
 
 <br>
 
 :::tip
-不是教程…… 纯纯写着玩的
+不是教程…… 纯纯只是为了防忘写着玩的
 :::
 
 <ClientOnly>
