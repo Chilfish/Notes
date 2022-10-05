@@ -11,6 +11,8 @@ date: 2022-06-20
 
 - **文章：** <br> [Canvas 资源](https://github.com/chinaBerg/awesome-canvas) 、 [MDN 伪类和伪元素](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#%E5%8F%82%E8%80%83%E8%8A%82) 、 [隼鸟 2 号：首次发现地外氨基酸？](https://weibo.com/ttarticle/p/show?id=2309404781329462984737)
 
+<br>
+
 ### 06-20
 
 - **dashboard：**
@@ -26,6 +28,8 @@ date: 2022-06-20
 [06-20_1]: https://www.axios-http.cn/
 [06-20_2]: https://segmentfault.com/a/1190000007574276
 
+<br>
+
 ### 06-21
 
 - **dashboard:**
@@ -39,6 +43,8 @@ date: 2022-06-20
   来自：差评君
 </div></div>
 
+<br>
+
 ### 06-22
 
 - **dashboard:**
@@ -51,6 +57,8 @@ date: 2022-06-20
     - 前端先是 `html` 加上 `sass` 和 `css` 框架、ts 代替 js
     - 项目先是一个后台管理系统，差不多时再接上网易云的 API，和网易云的静态界面
     - 最后才上 `Vue` 框架补齐
+
+<br>
 
 ### 06-23
 
@@ -69,6 +77,8 @@ date: 2022-06-20
 - **dashboard:**
   - VsCode：
 - **文章 | 文档：** <br> [VsCode 中使用 Eslint](https://www.cnblogs.com/Jamie1032797633/p/11125786.html) 、 [从零开始配置 TypeScript 项目](https://juejin.cn/post/6856410900577026061) 、 [Eslint 中文文档](http://eslint.cn/docs/user-guide/configuring) 、 [tsconfig 的一些配置](https://yesifang.com/zh/TypeScript%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/c2fff071/)
+
+<br>
 
 ### 07-10 ~ 11
 
@@ -94,6 +104,8 @@ date: 2022-06-20
 - **dashboard:** `WakaTime Error`
 - **文章 | 文档：** <br> [C++ 右值引用 && 与 move](https://zhuanlan.zhihu.com/p/335994370)
 
+<br>
+
 ## 22-09
 
 ### 09-15
@@ -104,12 +116,14 @@ date: 2022-06-20
 
 [09-15-01]: https://www.bilibili.com/video/BV1kD4y1v77R
 
+<br>
+
 ### 九月底
 
 - **dashboard:** VsCode： `7h`
 - **文章 | 文档：** <br> [Sakana Widget](https://github.com/dsrkafuu/sakana-widget)
 - **流水：**
-  - 最近在补一些硬件插口的知识了，像是一直以来都在略略看的 USB、PD、DP 之类的和他们的协议，再就是音视频的一些规格和一些计算： [一些接口及协议](../CSBase/Hardware/Interface_Protocol/README.md)
+  - 最近在补一些硬件插口的知识了，像是一直以来都在略略看的 USB、PD、DP 之类的和他们的协议，再就是音视频的一些规格和一些计算： [一些接口及协议](../../CSBase/Hardware/Interface_Protocol/README.md)
   - 再者就是突然想把 _Sakana~_ 给搬到首页上，但好像不小心忘得太多了，导致最终整了六七个小时
   - 首先是作者有发 NPM 包： `pnpm install --save sakana-widget`，然后发现好像不能直接插到 md 里。**那是因为：** Vuepress 先是转为 Vue 再打包到 HTML 的，而 md 的内容就被编译到 Vue 的 `<Template>` 里了，那看起来是要么把 md 当 Vue 写，要么引入 Vue 组件了
   - 比较舒服优雅的方式当然是选择 _引入组件_ 啦）但就此掉大坑里了。先是 ts 忘太多了，然后 Vue 的写法又不大记得…… 磨蹭了好久…… 最开始被绊倒的居然还是 ts 的 `__dirname`，但虽然翻了源码，但还是没想到带的 `@vuepress/utils` 就把这个给封装好了，但一开始库然既没查 API 又没输出试探……
@@ -130,3 +144,29 @@ date: 2022-06-20
 - **流水：**
   - 嗨虽然就不该跳着做的，但还是用 el-vue3 整了个 [Hash 密码生成器](https://organicfish.top/HashPW/)，但也不大对，像是特殊字符大小写都没整上，没有浏览器推荐的有内味，但又想整出 Hash 的感觉……
   - 那还是重新从 JavaScript 开始吧
+
+<br>
+
+### 10-045
+
+- **dashboard:** VsCode： ``
+- **文章 | 文档：** <br> [localtunnel 内网穿透](https://github.com/localtunnel/localtunnel)
+- **流水：**
+
+  - 内网穿透……如果早知道……但那时候连 Node 都还不知道吧……害，还得是先观望观望
+  <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%" src="./img/22-10-05-01.png"/><br><div style="color: #999;padding: 0.4rem;">
+    还得是GitHub
+  </div></div>
+
+  - 但有个新发现诶，为什么 `live-server` 更胜一筹呢，那就得挖坑去看看网络 WiFi 方面了诶
+  <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%" src="./img/22-10-05-02.png"/><br><div style="color: #999;padding: 0.4rem;">
+    <code>live-server</code>与<code>LanDrop</code>的对比
+  </div></div>
+
+  - 感觉感觉……还是记不住啊
+  <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%" src="./img/22-10-05.png"/><br><div style="color: #999;padding: 0.4rem;">
+    放语雀上了
+  </div></div>
+
+  - 但又是摸了又摸……大都是在 _逛街_ 找找该怎么干上了，反正就是被一堆信息填满了
+  - 那就明天开始吧））

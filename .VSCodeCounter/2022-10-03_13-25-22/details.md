@@ -84,7 +84,7 @@ Total : 78 files,  7745 codes, 185 comments, 2172 blanks, all 10102 lines
 | [docs/Language/README.md](/docs/Language/README.md) | Markdown | 17 | 0 | 5 | 22 |
 | [docs/Language/Regex.md](/docs/Language/Regex.md) | Markdown | 79 | 3 | 38 | 120 |
 | [docs/README.md](/docs/README.md) | Markdown | 45 | 0 | 10 | 55 |
-| [docs/balabala/DailySurfing.md](/docs/balabala/DailySurfing.md) | Markdown | 98 | 0 | 35 | 133 |
+| [docs/balabala/DailySurfing.md](/docs/balabala/DailySurfing/README.md) | Markdown | 98 | 0 | 35 | 133 |
 | [docs/balabala/README.md](/docs/balabala/README.md) | Markdown | 35 | 3 | 19 | 57 |
 | [docs/balabala/TempCoder.md](/docs/balabala/TempCoder.md) | Markdown | 187 | 3 | 41 | 231 |
 | [docs/balabala/ToDo.md](/docs/balabala/ToDo.md) | Markdown | 28 | 3 | 12 | 43 |

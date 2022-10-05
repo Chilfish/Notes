@@ -8,7 +8,7 @@ date: 2022-07-07
 <p style="font-size: 32px; font-weight: bold;">目录</p>
  
 - **外链：**
-  - [Daily Surfing](DailySurfing.md)
+  - [Daily Surfing](DailySurfing/README.md)
   - [临时堆起的 Coder](TempCoder.md)
   - [Coding 之外](not_JustCode.md)
   - [挖坑 ToDo](ToDo.md)
