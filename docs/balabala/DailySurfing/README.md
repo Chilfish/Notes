@@ -92,7 +92,7 @@ date: 2022-06-20
   - 忘记原因地要找回微博的裂图，然后发现它的原理应该是检测到是“违规图片”后，将链接重定向到 [裂图](https://ww4.sinaimg.cn/images/default_s_large.gif)。但原图还在图床上，改改图床链接就好：
     - 挂图链接（可在 F12 看到）：`https://wx2.sinaimg.cn/orj360/xxx.jpg`
     - 只要将 `/wx(\d)/gm` 改为 `ww$1`，`orj360` 改为原图大小的 `large` 就行。
-    - 用 axios 请求到微博详情的 Api：`https://weibo.com/ajax/statuses/show?id=`，其中 id 值为微博原链接 `https://weibo.com/用户id/博文id` 中的 `博文 id`。再把获取到的原图链接再请求下来转存成本地文件就好。码：[一些 Temp.md](TempCoder.md#大眼仔，你坏事干净！)
+    - 用 axios 请求到微博详情的 Api：`https://weibo.com/ajax/statuses/show?id=`，其中 id 值为微博原链接 `https://weibo.com/用户id/博文id` 中的 `博文 id`。再把获取到的原图链接再请求下来转存成本地文件就好。码：[一些 Temp.md](../TempCoder.md#大眼仔，你坏事干净！)
   - 学了点 Sass，好玩诶，并且终于上了 `Bootstarp` 和 `font-awesome`，开始筹备起聚合音乐了
 
 <br>
@@ -170,3 +170,15 @@ date: 2022-06-20
 
   - 但又是摸了又摸……大都是在 _逛街_ 找找该怎么干上了，反正就是被一堆信息填满了
   - 那就明天开始吧））
+
+<br>
+
+### 10-06
+
+- **dashboard:** VsCode： ``
+- **文章 | 文档：** <br> [State of JS](https://2021.stateofjs.com/zh-Hans/)、 [Tailwind.css](https://tailwindcss.com/) 、[蓝湖](https://lanhuapp.com/)、 [Svelte.js](https://www.sveltejs.cn/)、 [Lodash.js](https://www.lodashjs.com/)
+- **流水：**
+  - 噢噢补完了久仰大名的 **ReLIFE**，以及 **24 小时核酸常态化**，然后又只是在逛街了……
+  - 感觉还是好多东西，_Tailwind CSS_ 看着是有些强，但感觉现在还是先观望看看以及补完基础部分先，不着急……）是吧
+  - 果然是有从 _UI 设计图到代码_ 的工具 —— 蓝湖，但还是先收藏看看先把
+  - 突然又有一个前端的框架 —— `Svelte.js`，似乎挺受欢迎……？
