@@ -81,7 +81,7 @@ git clone https://github.com/Organic-Fish/Notes.git
 
 Git 操作一个新文件的流程为：工作区(也就是本地文件)–> 暂存区(staged) –> 仓库，如下图所示：
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/Git_add.png"/><br><div style="color: #999;padding: 0.4rem;">
   Git 新增文件流程
 </div></div>

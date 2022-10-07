@@ -101,7 +101,7 @@ date: 2022-07-30
 - **定义：** 由一系列结点（链表中每一个元素称为结点）组成，每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域
 - **结构：**
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+<div align="center"><img width="80%"
   src="./img/DS_list_0.png"/><br></div>
 
 - &emsp;&emsp;

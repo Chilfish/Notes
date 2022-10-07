@@ -60,7 +60,7 @@ title: CSS | Scss
   - `lowercase` 将所有字母小写
   - `ful-width` 全角
 - `write-mode` 文字书写方向
-  <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="30%"
+  <div align="center"><img width="30%"
     src="./img/CSS_write_mode.png"/><br><div style="color: #999;padding: 0.4rem;">
     书写方向
   </div></div>
@@ -161,7 +161,7 @@ title: CSS | Scss
 - `padding` , 内边距
 - `height`、`width` , 宽高
 - 但是，如图 完整的框是指 长：`width + 2\*(margin + padding + border)`
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/CSS_border.png"/><br><div style="color: #999;padding: 0.4rem;">
   Border
 </div></div>
@@ -303,7 +303,7 @@ title: CSS | Scss
 - `absolute` : **绝对定位**，往上冒泡地找定位方式**不是 `static`**的祖先(父)元素，并相对于该元素绝对定位
 - `fixed` : 相对于浏览器窗口固定
 - `sticky` : **粘性定位**，当元素(滚动条)移动到预设位置时固定
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+<div align="center"><img width="80%"
   src="./img/CSS_position.png"/><br><div style="color: #999;padding: 0.4rem;">
   position
 </div></div>

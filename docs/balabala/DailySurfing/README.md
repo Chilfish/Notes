@@ -38,7 +38,7 @@ date: 2022-06-20
 - **社交平台**
   - B 站果然整付费视频了...... 之前爬到的视频 APi：`GET https://api.bilibili.com/x/player/v2?cid=xx&aid=xx&bvid=xx`，中就有一个莫名的返回结果：`preview_toast "为创作付费，购买观看完整视频|购买观看"`
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/22-06-21.png"/><br><div style="color: #999;padding: 0.4rem;">
   来自：差评君
 </div></div>
@@ -154,17 +154,18 @@ date: 2022-06-20
 - **流水：**
 
   - 内网穿透……如果早知道……但那时候连 Node 都还不知道吧……害，还得是先观望观望
-  <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%" src="./img/22-10-05-01.png"/><br><div style="color: #999;padding: 0.4rem;">
-    还得是GitHub
+  <div align="center"><img width="50%" src="./img/22-10-05-01.png"/>
+  <br><div style="color: #999;padding: 0.4rem;">
+   还得是GitHub
   </div></div>
 
   - 但有个新发现诶，为什么 `live-server` 更胜一筹呢，那就得挖坑去看看网络 WiFi 方面了诶
-  <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%" src="./img/22-10-05-02.png"/><br><div style="color: #999;padding: 0.4rem;">
+  <div align="center"><img width="80%" src="./img/22-10-05-02.png"/><br><div style="color: #999;padding: 0.4rem;">
     <code>live-server</code>与<code>LanDrop</code>的对比
   </div></div>
 
   - 感觉感觉……还是记不住啊
-  <div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%" src="./img/22-10-05.png"/><br><div style="color: #999;padding: 0.4rem;">
+  <div align="center"><img width="80%" src="./img/22-10-05.png"/><br><div style="color: #999;padding: 0.4rem;">
     放语雀上了
   </div></div>
 

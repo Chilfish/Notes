@@ -28,7 +28,7 @@ title: HTML
 
 ## 关键字缩写
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="90%"
+<div align="center"><img width="90%"
   src="./img/html_label.png"/><br> </div>
 
 > 参考字典：[HTML 元素参考\_MDN ](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)
@@ -42,7 +42,7 @@ title: HTML
 ### 概述
 
 - 表单的属性和方法
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="70%"
+<div align="center"><img width="70%"
   src="./img/html_form.png"/><br><div style="color: #999;padding: 0.4rem;">
   表单
 </div></div>
@@ -65,12 +65,12 @@ title: HTML
 ### input
 
 - **定义：**
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+<div align="center"><img width="80%"
   src="./img/html_input.png"/><br> </div>
 
 - **type** 的类型
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+<div align="center"><img width="80%"
   src="./img/html_input_type.png"/><br> 
 </div>
 

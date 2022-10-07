@@ -85,7 +85,7 @@ date: 2022-07-31
 - 在全局变量中，一维数组大小不超过 1e8，二维数组大小不超过 1e4
 - 对于 1s 的时间限制，需要保证程序的所有语句的总执行次数不超过 1e8.
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/cpp_1.png"/><br><div style="color: #999;padding: 0.4rem;">
   复杂度限制
 </div></div>

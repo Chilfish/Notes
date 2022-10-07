@@ -91,7 +91,7 @@ title: Vue.js
   vue ui
   ```
 - 项目文件结构
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/Vue_proj.png"/><br><div style="color: #999;padding: 0.4rem;">
   文件结构
 </div></div>

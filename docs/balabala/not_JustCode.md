@@ -24,7 +24,7 @@ date: 2022-09-17
 
 国内
 
-<div align="center" style="margin:1rem auto"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center" style="margin:1rem auto"><img width="60%"
   src="./img/aerography_WindRate.png"/><br><div style="color: #999;padding: 0.4rem;">
   来源：中国气象局 <a href="http://www.cma.gov.cn/2011xzt/20120816/2012081601/201208160101/201407/t20140717_252607.html">风力等级划分</a>
 </div></div>

@@ -24,7 +24,7 @@ title: ShoppingCart.demo
 
 ### 预览
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/CartDemo_0.png"/><br><div style="color: #999;padding: 0.4rem;">
   预览图
 </div></div>
@@ -46,7 +46,7 @@ pnpm install
 ### 完善目录结构
 
 - 添加文件：
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/CartDemo_1.png"/><br><div style="color: #999;padding: 0.4rem;">
   文件树
 </div></div>
@@ -63,7 +63,7 @@ pnpm install
   ```
 - 修改 `vite.config.ts`，添加别名等设置 [demo 中的 vite.config.ts](https://github.com/Organic-Fish/FishCode/blob/master/Web/vue/ts-vite/vite.config.ts)。参考 [vite 官方的配置文件](https://cn.vitejs.dev/config/)
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/CartDemo_2.png"/><br><div style="color: #999;padding: 0.4rem;">
   vite.config.ts
 </div></div>

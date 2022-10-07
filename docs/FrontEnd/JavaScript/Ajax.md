@@ -103,7 +103,7 @@ xhr 提供了 3 个属性来获取请求返回的数据，分别是：`xhr.respo
 
 ### 发送过程的状态
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
+<div align="center"><img width="80%"
   src="./img/Ajax_onreadystate.png"/><br><div style="color: #999;padding: 0.4rem;">
   发送过程的状态
 </div></div>
@@ -130,7 +130,7 @@ xhr 提供了 3 个属性来获取请求返回的数据，分别是：`xhr.respo
 
 #### 事件触发条件
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="90%"
+<div align="center"><img width="90%"
   src="./img/Ajax_onxxx.png"/><br><div style="color: #999;padding: 0.4rem;">
 事件触发条件
 </div></div>

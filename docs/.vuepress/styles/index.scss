@@ -1,5 +1,12 @@
 $main-color: #2c3e50;
-$theme-color: #945281;
+$theme-color: #7d426c;
+
+// 圆角与阴影
+@mixin Fish-Box {
+  border-radius: 0.5rem;
+  box-shadow: 2.9px 4.5px 2.5px -6px rgba(0, 0, 0, 0.05),
+    11px 17px 20px -6px rgba(0, 0, 0, 0.1);
+}
 
 table {
   display: inline-table;
@@ -48,10 +55,6 @@ strong {
   font-weight: bold; // 移动端居然显示 600
 }
 
-p {
-  color: $main-color;
-}
-
 h1,
 h2,
 h3,
@@ -59,7 +62,7 @@ h4,
 h5 {
   margin: 50px 0 30px;
   font-weight: bold;
-  color: $main-color;
+  // color: $main-color;
 }
 h1 {
   text-align: center;
@@ -81,10 +84,26 @@ li {
   margin-bottom: 5px;
 }
 blockquote {
-  background-color: #f9f9f9;
+  // background-color: #f9f9f9;
   border-color: $theme-color !important;
   border-left: 4px solid $theme-color !important;
-  color: #858585;
+  // color: #858585;
   // margin: 2em 0;
   padding-left: 20px;
+}
+
+// 代码块，但居然不是pre，class里也没有类似code或pre……
+html[data-theme='light'] .token.class-name {
+  text-decoration: none;
+}
+.line-numbers-mode {
+  @include Fish-Box();
+  margin: 1.2rem;
+  pre {
+    background: #282c34;
+  }
+}
+
+img {
+  @include Fish-Box();
 }

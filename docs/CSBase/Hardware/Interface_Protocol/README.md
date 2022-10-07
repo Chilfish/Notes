@@ -30,14 +30,14 @@ date: 2022-09-28
 
 发展至今 USB 有 7 种不同的接口类型：
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="70%"
+<div align="center"><img width="70%"
   src="./img/USB_interface.png"/><br><div style="color: #999;padding: 0.4rem;">
   USB 的物理接口
 </div></div>
 
 <br>
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%"
+<div align="center"><img width="50%"
   src="./img/USB_History.jpg"/><br><div style="color: #999;padding: 0.4rem;">
   USB 的发展史
 </div></div>
@@ -50,14 +50,14 @@ date: 2022-09-28
 
 <br>
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%"
+<div align="center"><img width="50%"
   src="./img/USB_Type-C_Receptacle_Pinout.svg"/><br><div style="color: #999;padding: 0.4rem;">
   母头
 </div></div>
 
 <br>
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%"
+<div align="center"><img width="50%"
   src="./img/USB_Type-C_Plug_Pinout.svg"/><br><div style="color: #999;padding: 0.4rem;">
   公头
 </div></div>
@@ -70,7 +70,7 @@ date: 2022-09-28
  
 **接口的功能：**
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
+<div align="center"><img width="60%"
   src="./img/USB_Type-C_Pin.png"/><br><div style="color: #999;padding: 0.4rem;">
   出处： <a target="_blank" rel="noopener noreferrer" href="https://www.anandtech.com/show/8558/displayport-alternate-mode-for-usb-typec-announced">AnandTech</a>
 </div></div>
@@ -89,7 +89,7 @@ date: 2022-09-28
 
 #### 数据传输
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%"
+<div align="center"><img width="50%"
   src="./img/USB_protocol.png"/><br><div style="color: #999;padding: 0.4rem;">
   其中，USB-PD是基于 <code>USB3.2 Gen2</code> 的传输协议
 </div></div>
@@ -100,14 +100,14 @@ date: 2022-09-28
 
 **USB PD 1.0：** （黑历史，只是画饼）
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%"
+<div align="center"><img width="50%"
   src="./img/USB_PD1.0.png"/><br><div style="color: #999;padding: 0.4rem;">
   只是设想
 </div></div>
 
 **USB DP 2.0：** 改用了 `USB Type-C` 口 (USB3.1)
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="35%"
+<div align="center"><img width="35%"
   src="./img/USB_PD2.0.png"/><br><div style="color: #999;padding: 0.4rem;">
   注：60W 以上必须用 6A 电线
 </div></div>
@@ -116,7 +116,7 @@ date: 2022-09-28
 
 **USB DP 3.1：** 把原先 PD 3.0 的内容归纳至标准功率范围，最大功率维持原本的 100 瓦，并同时增加扩展功率范围最大功率为 **240 瓦**
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%"
+<div align="center"><img width="50%"
   src="./img/USB_PD3.1.png"/><br></div>
 
 **雷电协议：**
@@ -126,21 +126,21 @@ date: 2022-09-28
 
 <br>
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="40%"
+<div align="center"><img width="40%"
   src="./img/USB_DP.png"/><br><div style="color: #999;padding: 0.4rem;">
   电脑上的雷电接口及充电线通常有着尊贵的闪电图标
 </div></div>
 
 <br>
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="50%"
+<div align="center"><img width="50%"
   src="./img/USB_DP_Gen.png"/><br><div style="color: #999;padding: 0.4rem;">
   各代雷电的区别
 </div></div>
 
 <br>
 
-<div align="center"><img style="border-radius: 0.5rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="75%"
+<div align="center"><img width="75%"
   src="./img/USB_DP_CompareWithOther.png"/><br></div>
 
 ### 参考
