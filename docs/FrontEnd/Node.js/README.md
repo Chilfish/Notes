@@ -41,9 +41,9 @@ title: Node.js
 - `package.json` 文件包含的信息：
 
 <div align="center"><img width="80%"
-  src="./img/Node_package.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Node_package.png"/><p>
   配置信息
-</div></div>
+</p></div><br>
 
 - 其中最后的 `type` 字段是涉及到模块规范的支持，它有两个可选值： `commonjs` 和 `module` ，其默认值为 `commonjs`
 

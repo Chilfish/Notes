@@ -4,8 +4,7 @@ date: 2022-09-26
 sidebar: false
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **章节目录：**
   - [概述](Summary/README.md)
@@ -24,9 +23,9 @@ sidebar: false
 ### 从输入 URL 到页面加载的全过程
 
 <div align="center"><img width="70%"
-  src="./img/HTTP_url.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/HTTP_url.png"/><p>
   URL 到页面加载
-</div></div>
+</p></div><br>
 
 1. 首先在浏览器中输入 `URL`
 2. **查找缓存**：浏览器先查看浏览器缓存-系统缓存-路由缓存中是否有该地址页面，如果有则显示页面内容。如果没有则进行下一步。

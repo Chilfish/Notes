@@ -3,8 +3,7 @@ title: 常见接口及其通信协议
 date: 2022-09-28
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
@@ -31,16 +30,16 @@ date: 2022-09-28
 发展至今 USB 有 7 种不同的接口类型：
 
 <div align="center"><img width="70%"
-  src="./img/USB_interface.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/USB_interface.png"/><p>
   USB 的物理接口
-</div></div>
+</p></div><br>
 
 <br>
 
-<div align="center"><img width="50%"
-  src="./img/USB_History.jpg"/><br><div style="color: #999;padding: 0.4rem;">
+<div align="center"><img width="70%"
+  src="./img/USB_History.jpg"/><p>
   USB 的发展史
-</div></div>
+</p></div><br>
 
 #### Type C 接口
 
@@ -48,21 +47,15 @@ date: 2022-09-28
 
 **USB-C 规范 1.0** 由 USB **开发者论坛（USB-IF）** 发布，并于 2014 年 8 月完成。与 USB 3.1 规格大致相同。但 USB-C 只是一个接口，不一定支持 `USB 3.x` 或 `Power Delivery`
 
-<br>
-
-<div align="center"><img width="50%"
-  src="./img/USB_Type-C_Receptacle_Pinout.svg"/><br><div style="color: #999;padding: 0.4rem;">
+<div align="center"><img width="60%"
+  src="./img/USB_Type-C_Receptacle_Pinout.svg"/><p>
   母头
-</div></div>
+</p></div><br>
 
-<br>
-
-<div align="center"><img width="50%"
-  src="./img/USB_Type-C_Plug_Pinout.svg"/><br><div style="color: #999;padding: 0.4rem;">
+<div align="center"><img width="60%"
+  src="./img/USB_Type-C_Plug_Pinout.svg"/><p>
   公头
-</div></div>
-
-<br>
+</p></div><br>
 
 > 可以很明显看出，插口内的 Pin 功能相对于中心对称。公头插入母头，无论正反插，引脚功能都完美契合。而且电源 `VBUS/GND` 都拥有 4 个 Pin，最大支持 5A 电流，在保证高速数据传输的同时也提高了电流承载能力
 
@@ -70,12 +63,10 @@ date: 2022-09-28
  
 **接口的功能：**
 
-<div align="center"><img width="60%"
-  src="./img/USB_Type-C_Pin.png"/><br><div style="color: #999;padding: 0.4rem;">
+<div align="center"><img width="70%"
+  src="./img/USB_Type-C_Pin.png"/><p>
   出处： <a target="_blank" rel="noopener noreferrer" href="https://www.anandtech.com/show/8558/displayport-alternate-mode-for-usb-typec-announced">AnandTech</a>
-</div></div>
-
-<br>
+</p></div><br>
 
 **但：** 不是所有的 Type-C 都是满血的接口，会在仅充电需求中砍掉一些接口：
 
@@ -85,14 +76,16 @@ date: 2022-09-28
 
 - CC1、CC2 用于 PD 设备识别，承载 USB-PD 的通信，以向供电端请求电源供给。在传输电力的同时，USB 数据传输不会受到影响
 
+<br>
+
 ### 协议
 
 #### 数据传输
 
-<div align="center"><img width="50%"
-  src="./img/USB_protocol.png"/><br><div style="color: #999;padding: 0.4rem;">
+<div align="center"><img width="60%"
+  src="./img/USB_protocol.png"/><p>
   其中，USB-PD是基于 <code>USB3.2 Gen2</code> 的传输协议
-</div></div>
+</p></div><br>
 
 #### 充电标准
 
@@ -101,47 +94,42 @@ date: 2022-09-28
 **USB PD 1.0：** （黑历史，只是画饼）
 
 <div align="center"><img width="50%"
-  src="./img/USB_PD1.0.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/USB_PD1.0.png"/><p>
   只是设想
-</div></div>
+</p></div><br>
 
 **USB DP 2.0：** 改用了 `USB Type-C` 口 (USB3.1)
 
-<div align="center"><img width="35%"
-  src="./img/USB_PD2.0.png"/><br><div style="color: #999;padding: 0.4rem;">
+<div align="center"><img width="40%"
+  src="./img/USB_PD2.0.png"/><p>
   注：60W 以上必须用 6A 电线
-</div></div>
+</p></div><br>
 
 **USB DP 3.0：** 相较于 DP 2.0，加入可编程电源供应，可兼容各家快充协议，最新可支持 `QC4+` 快充
 
 **USB DP 3.1：** 把原先 PD 3.0 的内容归纳至标准功率范围，最大功率维持原本的 100 瓦，并同时增加扩展功率范围最大功率为 **240 瓦**
 
-<div align="center"><img width="50%"
-  src="./img/USB_PD3.1.png"/><br></div>
+<div align="center"><img width="50%" src="./img/USB_PD3.1.png"/><p></p></div><br>
 
 **雷电协议：**
 **Thunderbolt**（又称“雷电”，苹果中国译为“雷雳”）是由英特尔发表的**连接器标准**，目的在于当作电脑与其他设备之间的通用总线，第一代与第二代接口是与 Mini DisplayPort 集成，较新的第三代开始改为与 USB Type-C 结合，并能提供电源。 早期由英特尔独立研发，使用光纤传输；后来在一次科技展示会场上，苹果公司看到了早期光纤传输的原型后，主动对英特尔表示兴趣并给予开发上的建议，致使正式发表的第一代从光纤改用铜线和苹果的 **Mini DP** 外形
 
 &emsp;&emsp; 第三代改为使用 **USB Type-C 接口**。继续延伸多合一的集成特点，因此它既能以双向 $40 Gbit/s$ 传输数据，又能兼容` Mini DP` 设备直接连接 Thunderbolt 接口传输视频与声音信号
 
-<br>
-
 <div align="center"><img width="40%"
-  src="./img/USB_DP.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/USB_DP.png"/><p>
   电脑上的雷电接口及充电线通常有着尊贵的闪电图标
-</div></div>
-
-<br>
+</p></div><br>
 
 <div align="center"><img width="50%"
-  src="./img/USB_DP_Gen.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/USB_DP_Gen.png"/><p>
   各代雷电的区别
-</div></div>
-
-<br>
+</p></div><br>
 
 <div align="center"><img width="75%"
   src="./img/USB_DP_CompareWithOther.png"/><br></div>
+
+<br>
 
 ### 参考
 

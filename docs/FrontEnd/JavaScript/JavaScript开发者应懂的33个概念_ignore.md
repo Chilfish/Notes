@@ -2,8 +2,7 @@
 title: JavaScript开发者应懂的33个概念（转）
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 ## 简介
 

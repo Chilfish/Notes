@@ -38,10 +38,9 @@ date: 2022-06-20
 - **社交平台**
   - B 站果然整付费视频了...... 之前爬到的视频 APi：`GET https://api.bilibili.com/x/player/v2?cid=xx&aid=xx&bvid=xx`，中就有一个莫名的返回结果：`preview_toast "为创作付费，购买观看完整视频|购买观看"`
 
-<div align="center"><img width="60%"
-  src="./img/22-06-21.png"/><br><div style="color: #999;padding: 0.4rem;">
+<div align="center"><img width="60%" src="./img/22-06-21.png"/><p>
   来自：差评君
-</div></div>
+</p></div>
 
 <br>
 
@@ -154,20 +153,19 @@ date: 2022-06-20
 - **流水：**
 
   - 内网穿透……如果早知道……但那时候连 Node 都还不知道吧……害，还得是先观望观望
-  <div align="center"><img width="50%" src="./img/22-10-05-01.png"/>
-  <br><div style="color: #999;padding: 0.4rem;">
+  <div align="center"><img width="50%" src="./img/22-10-05-01.png"/><p>
    还得是GitHub
-  </div></div>
+  </p></div><br>
 
   - 但有个新发现诶，为什么 `live-server` 更胜一筹呢，那就得挖坑去看看网络 WiFi 方面了诶
-  <div align="center"><img width="80%" src="./img/22-10-05-02.png"/><br><div style="color: #999;padding: 0.4rem;">
+  <div align="center"><img width="80%" src="./img/22-10-05-02.png"/><p>
     <code>live-server</code>与<code>LanDrop</code>的对比
-  </div></div>
+  </p></div><br>
 
   - 感觉感觉……还是记不住啊
-  <div align="center"><img width="80%" src="./img/22-10-05.png"/><br><div style="color: #999;padding: 0.4rem;">
+  <div align="center"><img width="80%" src="./img/22-10-05.png"/><p>
     放语雀上了
-  </div></div>
+  </p></div><br>
 
   - 但又是摸了又摸……大都是在 _逛街_ 找找该怎么干上了，反正就是被一堆信息填满了
   - 那就明天开始吧））
@@ -176,10 +174,21 @@ date: 2022-06-20
 
 ### 10-06
 
-- **dashboard:** VsCode： ``
+- **dashboard:** VsCode： `5h42m`
 - **文章 | 文档：** <br> [State of JS](https://2021.stateofjs.com/zh-Hans/)、 [Tailwind.css](https://tailwindcss.com/) 、[蓝湖](https://lanhuapp.com/)、 [Svelte.js](https://www.sveltejs.cn/)、 [Lodash.js](https://www.lodashjs.com/)
 - **流水：**
   - 噢噢补完了久仰大名的 **ReLIFE**，以及 **24 小时核酸常态化**，然后又只是在逛街了……
   - 感觉还是好多东西，_Tailwind CSS_ 看着是有些强，但感觉现在还是先观望看看以及补完基础部分先，不着急……）是吧
   - 果然是有从 _UI 设计图到代码_ 的工具 —— 蓝湖，但还是先收藏看看先把
   - 突然又有一个前端的框架 —— `Svelte.js`，似乎挺受欢迎……？
+
+<br>
+
+### 10-07
+
+- **dashboard:** VsCode： `6h`
+- **文章 | 文档：** <br> [程沛权——用 vite2 重构了博客](https://chengpeiquan.com/article/rewrite-in-vite.html)、 [Vue3 入门指南到实战](https://vue3.chengpeiquan.com/)、 [Github 刷漆统计](https://github-contributions.vercel.app/)
+- **流水：**
+  - [程沛权](https://github.com/chengpeiquan) 的 Vue3 教程刚发了 [Release](https://github.com/chengpeiquan/learning-vue3/releases/tag/v1.0.0) 诶诶，那就……完结撒花？）虽然还没看完
+  - 然后就顺便翻到了他的重构博客的过程，感觉好多东西啊……
+  - 然后今天下来大都在重构下数据结构的知识体系之类的……

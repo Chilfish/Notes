@@ -3,8 +3,7 @@ title: 只是一些没地方放的 Temp 码
 date: 2020-06-20
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
  
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
  

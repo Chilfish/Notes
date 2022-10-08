@@ -2,8 +2,7 @@
 title: Ajax | Axios | Fetch
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **参考：**
   - [万字 Ajax\_掘金](https://juejin.cn/post/6844903469896171533)
@@ -104,9 +103,9 @@ xhr 提供了 3 个属性来获取请求返回的数据，分别是：`xhr.respo
 ### 发送过程的状态
 
 <div align="center"><img width="80%"
-  src="./img/Ajax_onreadystate.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Ajax_onreadystate.png"/><p>
   发送过程的状态
-</div></div>
+</p></div><br>
 
 ### 设置请求的超时时间
 
@@ -131,9 +130,9 @@ xhr 提供了 3 个属性来获取请求返回的数据，分别是：`xhr.respo
 #### 事件触发条件
 
 <div align="center"><img width="90%"
-  src="./img/Ajax_onxxx.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Ajax_onxxx.png"/><p>
 事件触发条件
-</div></div>
+</p></div><br>
 
 #### 事件触发顺序
 

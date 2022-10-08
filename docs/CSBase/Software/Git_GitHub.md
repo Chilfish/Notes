@@ -3,8 +3,7 @@ title: Git & GitHub
 date: 2022-07-10
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
@@ -28,7 +27,7 @@ date: 2022-07-10
 
 使用 git config 命令尽心 git 的配置，常用命令如下：
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 
 <span></span>
 命令 | 作用
@@ -82,9 +81,9 @@ git clone https://github.com/Organic-Fish/Notes.git
 Git 操作一个新文件的流程为：工作区(也就是本地文件)–> 暂存区(staged) –> 仓库，如下图所示：
 
 <div align="center"><img width="60%"
-  src="./img/Git_add.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Git_add.png"/><p>
   Git 新增文件流程
-</div></div>
+</p></div><br>
 
 在完成开发后，
 

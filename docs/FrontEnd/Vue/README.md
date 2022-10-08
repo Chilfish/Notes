@@ -2,8 +2,7 @@
 title: Vue.js
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - [vite 初体验](ShoppingCart.demo.md)
 
@@ -92,9 +91,9 @@ title: Vue.js
   ```
 - 项目文件结构
 <div align="center"><img width="60%"
-  src="./img/Vue_proj.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Vue_proj.png"/><p>
   文件结构
-</div></div>
+</p></div><br>
 
 #### 运行
 

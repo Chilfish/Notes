@@ -3,8 +3,7 @@ title: 标准容器库 (STL)
 date: 2022-04-14
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **外链**
   - [STL 详解](https://blog.csdn.net/u010183728/article/details/81913729)

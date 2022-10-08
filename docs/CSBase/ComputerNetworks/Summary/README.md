@@ -3,8 +3,7 @@ title: 第0章 概述-计算机网络和因特网
 date: 2022-09-26
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
@@ -107,9 +106,9 @@ date: 2022-09-26
 ### 因特网发展的三个阶段
 
 <div align="center"><img width="80%"
-  src="./img/road_of_Internet.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/road_of_Internet.png"/><p>
   互联网的发展
-</div></div>
+</p></div><br>
 
 <br>
 
@@ -120,18 +119,18 @@ date: 2022-09-26
 中国的三大 ISP：
 
 <div align="center"><img width="80%"
-  src="./img/ISP.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/ISP.png"/><p>
   三大 IPS
-</div></div>
+</p></div><br>
 
 ISP 可以从因特网管理机构申请到成块的 IP 地址，同时拥有通信线路以及路由器等联网设备。任何机构和个人只需缴纳费用，就可从 ISP 的得到所需要的 IP 地址
 
 因为因特网上的主机都必须有 IP 地址才能进行通信，这样就可以通过该 ISP 接入到因特网
 
 <div align="center"><img width="70%"
-  src="./img/ISP_net.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/ISP_net.png"/><p>
   基于 ISP 的三层结构的因特网
-</div></div>
+</p></div><br>
 
 一旦某个用户能够接入到因特网，那么他也可以成为一个 ISP，所需要做的就是购买一些如调制解调器或路由器这样的设备，让其他用户可以和他相连
 
@@ -204,16 +203,16 @@ P2P 应用软件主要包括 **文件分发软件**、语音服务软件、流�
 电路交换是根据**交换机结构**原理实现数据交换的。其主要任务是把要求通信的输入端与被呼叫的输出端接通，即由交换机负责在两者之间建立起一条物理通路。在完成接续任务之后，双方通信的内容和格式等均不受交换机的制约。电路交换方式的主要特点就是**要求在通信的双方之间建立一条实际的物理通路，并且在整个通信过程中，这条通路被独占**
 
 <div align="center"><img width="80%"
-  src="./img/Circuit_0.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Circuit_0.png"/><p>
   两两相连的线路交换的电话机 
-</div></div>
+</p></div><br>
 
 近乎 $O(n^2)$ 的耗材很是不优雅，于是就有个**交换机**作为交换载体
 
 <div align="center"><img width="60%"
-  src="./img/Circuit_1.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Circuit_1.png"/><p>
   带有中间交换机只要 O(n) 的耗材
-</div></div>
+</p></div><br>
 
 从通信资源的分配角度来看，交换（Switching）就是按照某种方式动态地分配传输线路的资源
 
@@ -283,9 +282,9 @@ P2P 应用软件主要包括 **文件分发软件**、语音服务软件、流�
 “分组交换”与“报文交换”技术类似，但**规定了交换机处理和传输的数据长度**（称之为分组），不同用户的数据分组可以交织地在网络中的物理链路上传输，是目前应用最广的交换技术。**它结合了线路交换和报文交换两者的优点，使其性能达到最优**
 
 <div align="center"><img width="70%"
-  src="./img/Packet.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Packet.png"/><p>
   分组交换网络
-</div></div>
+</p></div><br>
 
 为了理解分组交换的优越性，先了解一下“报文”与“报文分组”的区别：
 
@@ -310,9 +309,9 @@ P2P 应用软件主要包括 **文件分发软件**、语音服务软件、流�
 **假设 A，B，C，D 是分组传输路径所要经过的 4 个结点交换机，纵坐标为时间**
 
 <div align="center"><img width="100%"
-  src="./img/Switching.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Switching.png"/><p>
   三种交换方式
-</div></div>
+</p></div><br>
 
 **电路交换：**
 
@@ -348,18 +347,18 @@ $$
 一般来说，**数据传输** 大多是以 **比特** 为单位的，这也就是为什么网速的单位大都是 `Mbps` 了；而 **数据存储** 是则以 **字节** 为单位，比如硬盘的读写速度一般就用的是 `MB/s`。
 
 <div align="center"><img width="90%"
-  src="./img/rate.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/rate.png"/><p>
   速率及单位之间的转换
-</div></div>
+</p></div><br>
 
 <br>
 
 ### 带宽
 
 <div align="center"><img width="90%"
-  src="./img/band_width.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/band_width.png"/><p>
   带宽
-</div></div>
+</p></div><br>
 
 <br>
 
@@ -370,9 +369,9 @@ $$
 其测试方法是：在测试中以一定速率发送一定数量的帧，并计算待测设备传输的帧，如果发送的帧与接收的帧数量相等，那么就将发送速率提高并重新测试；如果接收帧少于发送帧则降低发送速率重新测试，直至得出最终结果
 
 <div align="center"><img width="90%"
-  src="./img/tuntu.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/tuntu.png"/><p>
   网络吞吐量
-</div></div>
+</p></div><br>
 
 带宽 `1 Gb/s` 的以太网，代表其额定速率是 `1 Gb/s`，这个数值也是该以太网的吞吐量的绝对上限值。因此，对于带宽 `1 Gb/s` 的以太网，可能实际吞吐量只有 `700 Mb/s`，甚至更低。
 
@@ -392,9 +391,9 @@ $$
 **总时延 = 发送时延 + 传播时延 + 处理时延 （处理时延 + 排队时延）**
 
 <div align="center"><img width="90%"
-  src="./img/delay.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/delay.png"/><p>
   网络时延的计算
-</div></div>
+</p></div><br>
 
 > 当处理时延忽略不计时，发送时延和传播时延谁占主导要是情况分析
 
@@ -405,27 +404,27 @@ $$
 互联网上的信息不仅仅单方向传输而是双向交互的。因此，我们有时很需要知道双向交互一次所需的时间。
 
 <div align="center"><img width="60%"
-  src="./img/RTT.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/RTT.png"/><p>
   往返时间
-</div></div>
+</p></div><br>
 
 <br>
 
 ### 利用率
 
 <div align="center"><img width="60%"
-  src="./img/Utilization.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/Utilization.png"/><p>
   利用率
-</div></div>
+</p></div><br>
 
 <br>
 
 ### 丢包率
 
 <div align="center"><img width="60%"
-  src="./img/packet_lost.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/packet_lost.png"/><p>
   丢包率
-</div></div>
+</p></div><br>
 
 <br>
 

@@ -2,8 +2,7 @@
 title: ShoppingCart.demo
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - [Vue.md](README.md)
 - [demo 源码](https://github.com/Organic-Fish/FishCode/tree/master/Web/vue/ts-vite/src)
@@ -25,9 +24,9 @@ title: ShoppingCart.demo
 ### 预览
 
 <div align="center"><img width="60%"
-  src="./img/CartDemo_0.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/CartDemo_0.png"/><p>
   预览图
-</div></div>
+</p></div><br>
 
 ## 创建项目
 
@@ -47,9 +46,9 @@ pnpm install
 
 - 添加文件：
 <div align="center"><img width="60%"
-  src="./img/CartDemo_1.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/CartDemo_1.png"/><p>
   文件树
-</div></div>
+</p></div><br>
 
 - 修改 `tsconfig.json`，添加以下配置，才能在 `Typescript` 的 `import` 中省略后缀名，直接是：`import xx from "src/api"`
   ```js {.line-numbers}
@@ -64,9 +63,9 @@ pnpm install
 - 修改 `vite.config.ts`，添加别名等设置 [demo 中的 vite.config.ts](https://github.com/Organic-Fish/FishCode/blob/master/Web/vue/ts-vite/vite.config.ts)。参考 [vite 官方的配置文件](https://cn.vitejs.dev/config/)
 
 <div align="center"><img width="60%"
-  src="./img/CartDemo_2.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/CartDemo_2.png"/><p>
   vite.config.ts
-</div></div>
+</p></div><br>
 
 ## 添加路由
 

@@ -3,8 +3,7 @@ title: MySQL
 date: 2022-03-12
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
@@ -121,7 +120,7 @@ date: 2022-03-12
 
 - **`operator` 运算符：**
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 <table class="reference"><tbody><tr><th width="20%">运算符</th><th width="80%">描述</th></tr><tr><td>=</td><td>等于</td></tr><tr><td>&lt;&gt;</td><td>不等于</td></tr><tr><td> > </td><td>大于</td></tr><tr><td>&lt;</td><td>小于</td></tr><tr><td>&gt;=</td><td>大于等于</td></tr><tr><td>&lt;=</td><td>小于等于</td></tr><tr><td>BETWEEN</td><td>在某个范围内</td></tr><tr><td>Like</td><td>搜索某种模式 | 模糊判断</td></tr><tr><td>in</td><td>指定针对某个列的多个可能值</td></tr></tbody></table><br>
 </div>
 

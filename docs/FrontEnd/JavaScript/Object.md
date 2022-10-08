@@ -259,7 +259,7 @@ const b = Object.assign(a);
 
 - **函数方法**
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 
 <span></span>
 | 方法 | 描述 |

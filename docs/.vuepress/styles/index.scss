@@ -1,6 +1,10 @@
 $main-color: #2c3e50;
 $theme-color: #7d426c;
 
+* {
+  box-sizing: border-box;
+}
+
 // 圆角与阴影
 @mixin Fish-Box {
   border-radius: 0.5rem;
@@ -8,9 +12,22 @@ $theme-color: #7d426c;
     11px 17px 20px -6px rgba(0, 0, 0, 0.1);
 }
 
+.tableBox {
+  text-align: center;
+  margin: 1rem 4rem;
+  transition: all ease-in 0.5s;
+}
+
+@media screen and (max-width: 500px) {
+  .tableBox {
+    margin: 1rem 0;
+  }
+}
+
 table {
+  @include Fish-Box();
   display: inline-table;
-  width: auto;
+  width: 100%;
   font-size: 0.8rem;
   border-collapse: collapse;
   text-align: center;
@@ -83,12 +100,10 @@ code {
 li {
   margin-bottom: 5px;
 }
+
 blockquote {
-  // background-color: #f9f9f9;
   border-color: $theme-color !important;
   border-left: 4px solid $theme-color !important;
-  // color: #858585;
-  // margin: 2em 0;
   padding-left: 20px;
 }
 
@@ -104,6 +119,35 @@ html[data-theme='light'] .token.class-name {
   }
 }
 
-img {
+main img {
   @include Fish-Box();
+  margin-top: 1rem;
+  & + p {
+    color: #999;
+    padding: 0.4rem;
+    margin: 0;
+    text-align: center !important;
+  }
+}
+
+$scrollbar: #d5d5d5;
+body,
+.sidebar {
+  scrollbar-color: $scrollbar transparent !important;
+  scrollbar-width: thin !important;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: $scrollbar;
+    border-radius: 4px;
+    margin-right: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $scrollbar;
+  }
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
 }

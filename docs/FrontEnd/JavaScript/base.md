@@ -46,7 +46,7 @@ date: 2022-03-11
 
 **方法**
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 
 <span></span>
 | 方法 | 描述 |

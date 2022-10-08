@@ -2,8 +2,7 @@
 title: DOM | Events
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
  
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
@@ -142,7 +141,7 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 ### 鼠标事件
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 
 <span></span>
 | 属性 | 描述 |
@@ -198,7 +197,7 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 ## 表单事件
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 
 <span></span>
 | 属性 | 描述 |
@@ -227,7 +226,7 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 ## 框架/对象（Frame/Object）事件
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 
 <span></span>
 | 属性 | 描述 |

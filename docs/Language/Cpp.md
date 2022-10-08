@@ -3,8 +3,7 @@ title: C / C++
 date: 2022-04-14
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **[算法 (C++ 描述)](../Algorithm/README.md)**
 
@@ -222,8 +221,8 @@ class son : public | private | protected father {};
 **重载运算符：**
 
 <div align="center"><img width="90%"
-  src="./img/cpp_overload.png"/><div style="color: #999;padding: 0.4rem;">
-</div></div>
+  src="./img/cpp_overload.png"/><p>
+</p></div><br>
 
 **一元运算符：** 如负号、自增自减
 
@@ -393,14 +392,14 @@ print({2, 3, 4});
 
 **定义：**
 
-<div align="center"><img width="80%" src="./img/cpp_lambda.png"/> </div>
-  &emsp;&emsp;
-  
-  - **捕获列表**
-    - 当为默认的 `[]` 时，lambda 内是不能访问当前作用域中的变量的（除了全局）
-    - 而 `[&]` 表示按引用访问，`[=]` 表示按值访问，多变量见用逗号分隔
-  - **参数列表：** 可省略，带则和普通函数差不多
-  - **可变的 `mutable`：** 默认下 lambda 是 const 的，加了这个就可以改变捕获到的值
+<div align="center"><img width="80%" src="./img/cpp_lambda.png"/>
+<p></p></div><br>
+
+- **捕获列表**
+  - 当为默认的 `[]` 时，lambda 内是不能访问当前作用域中的变量的（除了全局）
+  - 而 `[&]` 表示按引用访问，`[=]` 表示按值访问，多变量见用逗号分隔
+- **参数列表：** 可省略，带则和普通函数差不多
+- **可变的 `mutable`：** 默认下 lambda 是 const 的，加了这个就可以改变捕获到的值
 
 **原理：**
 
@@ -555,6 +554,6 @@ sprintf(ans, "%d+%d=%d", x, y, x + y);
 
 **符号优先级：**
 
-<div align="center"><img  width="90%" src="./img/cpp_priority.png"/><div style="color: #999;padding: 0.4rem;">
+<div align="center"><img width="90%" src="./img/cpp_priority.png"/><p>
   符号优先级
-</div></div>
+</p></div><br>

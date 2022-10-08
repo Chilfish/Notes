@@ -2,8 +2,7 @@
 title: CSS | Scss
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **外链：**
   - [HTML](HTML.md)
@@ -60,10 +59,9 @@ title: CSS | Scss
   - `lowercase` 将所有字母小写
   - `ful-width` 全角
 - `write-mode` 文字书写方向
-  <div align="center"><img width="30%"
-    src="./img/CSS_write_mode.png"/><br><div style="color: #999;padding: 0.4rem;">
-    书写方向
-  </div></div>
+
+  <div align="center"><img width="30%" src="./img/CSS_write_mode.png"/><p>书写方向</p></div><br>
+
 - `white-space`：对文本的**换行操作**进行控制
   - 默认值是 `normal`，设置文本到达父元素的边界就自动换行
   - `nowrap` 设置文本不换行，意思是文本到达边界依然会继续的由左向右平铺
@@ -81,13 +79,15 @@ title: CSS | Scss
   - ` vertical-align: middle | baseline | top | ...`： 仅对设置 **内联元素** 的**上下对齐方式**。在父元素设置此样式时，会对 `inline-block` 和 `inline` 类型的**子元素**都有用，这个样式一般用做图片和文字的对齐
   - - `text-align: left | right | center | justify (文字向两侧对齐)` , 文字的**水平对齐方式**
 
+<br>
+
 ### 单位
 
 - **绝对长度:**
 
   - 绝对长度单位是固定的，用任何一个绝对长度表示的长度都将恰好显示为这个尺寸
   - 不建议在屏幕上使用绝对长度单位，因为屏幕尺寸变化很大。但是，如果已知输出介质，则可以使用它们，例如用于打印布局（print layout）
-  <div style="text-align: center;margin: 1rem;">
+  <div class="tableBox">
 
   <span></span>
   | 单位 | 描述 |
@@ -105,7 +105,7 @@ title: CSS | Scss
 
   - 相对长度单位规定相对于另一个长度属性的长度。相对长度单位在不同渲染介质之间缩放表现得更好
 
-  <div style="text-align: center;margin: 1rem;">
+  <div class="tableBox">
 
   <span></span>
   | 单位 | 描述 |
@@ -124,6 +124,8 @@ title: CSS | Scss
 
 - 视口（Viewport）= 浏览器窗口的尺寸。如果视口宽 50 里面，则 1vw = 0.5cm
 
+<br>
+
 ### background 背景
 
 简写：`background: color | image | origin | position | repeat | size | attachment`
@@ -137,6 +139,8 @@ title: CSS | Scss
   - `fixed`：不随任何滚动
   - `local`：随图片内容而滚动
 
+<br>
+
 ### 图片
 
 - `opacity` , 透明度
@@ -146,6 +150,8 @@ title: CSS | Scss
   - `cover` - 调整替换内容的大小，以在填充元素的整个内容框时保持其长宽比。该对象将被裁剪以适应
   - `none` - 不对替换的内容调整大小
   - `scale-down` - 调整内容大小就像没有指定内容或包含内容一样（将导致较小的具体对象尺寸）
+
+<br>
 
 ### 盒子
 
@@ -161,12 +167,15 @@ title: CSS | Scss
 - `padding` , 内边距
 - `height`、`width` , 宽高
 - 但是，如图 完整的框是指 长：`width + 2\*(margin + padding + border)`
-<div align="center"><img width="60%"
-  src="./img/CSS_border.png"/><br><div style="color: #999;padding: 0.4rem;">
+
+<div align="center"><img width="50%"
+  src="./img/CSS_border.png"/><p>
   Border
-</div></div>
+</p></div><br>
 
 - 而用了 **`box-sizing: border-box;`** 后，边距不影响宽度了（放全局）
+
+<br>
 
 ### 列表
 
@@ -187,6 +196,8 @@ title: CSS | Scss
   - `outside`：默认值,让列表符号与文字分离开
   - `inside`：使得列表序号在文本内，可以通过控制文本来控制
 
+<br>
+
 ### 选择器
 
 #### 组合选择与继承
@@ -202,6 +213,8 @@ title: CSS | Scss
   - 自定义属性：如 `<div data-123="texts"></div>` `->` `div[data-123] {}`
   - 指定 <br>
     <table><tbody><tr><th >选择器</th><th>例子</th><th>例子描述</th></tr><tr><td><code>[<i>attribute</i>]</code></td><td>[target]</td><td>选择带有target属性的所有元素。</td></tr><tr><td><code>[<i>attribute</i>=<i>value</i>]</code></td><td>[target=_blank]</td><td>选择带有target="_blank"属性的所有元素。</td></tr><tr><td><code>[<i>attribute</i>~=<i>value</i>]</code></td><td>[title~=flower]</td><td>选择title属性包含单词"flower"的所有元素。</td></tr><tr><td><code>[<i>attribute</i>|=<i>value</i>]</code></td><td>[lang|=en]</td><td>选择lang属性值以"en"开头的所有元素。</td></tr><tr><td><code>[<i>attribute</i>^=<i>value</i>]</code></td><td>a[href^="https"]</td><td>选择其src属性值以"https"开头的每个&lt;a&gt;元素。</td></tr><tr><td><code>[<i>attribute</i>$=<i>value</i>]</code></td><td>a[href$=".pdf"]</td><td>选择其src属性以".pdf"结尾的所有&lt;a&gt;元素。</td></tr><tr><td><code >[<i>attribute</i>*=<i>value</i>]</code></td><td>a[href*="abc"]</td><td>选择其href属性值中包含"abc"子串的每个&lt;a&gt;元素。</td></tr></tbody></table>
+
+<br>
 
 #### 伪类
 
@@ -243,6 +256,8 @@ title: CSS | Scss
 - **其他：**
   - `:fullscreen` 全屏时触发
 
+<br>
+
 #### 伪元素
 
 - `::first-letter` 选择每个元素的第一个字母
@@ -253,6 +268,8 @@ title: CSS | Scss
 - `::selection` 用户选中的部分
 
 > Ref: [伪类与伪元素](http://www.alloyteam.com/2016/05/summary-of-pseudo-classes-and-pseudo-elements/)
+
+<br>
 
 ### 布局方式
 
@@ -289,12 +306,18 @@ title: CSS | Scss
   }
   ```
 
+<br>
+
 #### grid 网格
+
+<br>
 
 #### float 浮动
 
 - 创建：`float: left | right | none (默认值) | inherit (继承父元素的浮动属性)`
 - 清除：`clear: left | right | both`
+
+<br>
 
 #### position 定位
 
@@ -304,9 +327,11 @@ title: CSS | Scss
 - `fixed` : 相对于浏览器窗口固定
 - `sticky` : **粘性定位**，当元素(滚动条)移动到预设位置时固定
 <div align="center"><img width="80%"
-  src="./img/CSS_position.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/CSS_position.png"/><p>
   position
-</div></div>
+</p></div><br>
+
+<br>
 
 #### column 多列布局
 
@@ -316,6 +341,8 @@ title: CSS | Scss
 - `column-width: number`：列宽
 
 > Ref: [flex 与 grid 区别](https://juejin.cn/post/6940627375537258527#heading-9) 、 [CSS flex 布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+
+<br>
 
 ### transition 过渡
 
@@ -337,6 +364,8 @@ title: CSS | Scss
 
 > Ref： [深入理解 transition](https://www.cnblogs.com/xiaohuochai/p/5347930.html)
 
+<br>
+
 #### 可过渡的样式
 
 - 颜色: `color` `border-color` `outline-color`
@@ -350,9 +379,13 @@ title: CSS | Scss
 - 组合: `text-shadow` `transform` `box-shadow` `clip`
 - 其他: `gradient`
 
+<br>
+
 #### 过渡函数
 
 - `scale(value)` : 用于修改元素的大小。可以通过向量形式定义的缩放值来放大或缩小元素，同时可以在不同的方向设置不同的缩放值
+
+<br>
 
 ### animation 动画
 
@@ -374,9 +407,13 @@ title: CSS | Scss
   - `both`：轮流应用 `forwards` 和 `backwards` 规则
 - 简写： `animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name`
 
+<br>
+
 #### 关键帧 @keyframes name
 
 在 animation 申明 name 后，再另写关键帧动画样式
+
+<br>
 
 ## Scss
 
@@ -447,6 +484,8 @@ title: CSS | Scss
   }
   ```
 
+<br>
+
 ### 继承 复用与导入
 
 - **`@mixin`：** 类比于函数，还可以传入参数。按顺序传入或指定参数名
@@ -467,6 +506,8 @@ title: CSS | Scss
 - **`@Partials`：** 忽略编译的文件，在文件名前加一个下划线。主要是用来定义**公共样式**的，专门用于被其他的 scss 文件 import 进行使用的
 - **`@function`：** 主要用于计算，带返回值 `@return`
 - **也就是：** `@function` 用来计算，`@mixin` 用来封装样式，`@import` 用来抽离他们为一个模块
+
+<br>
 
 ### 语句
 

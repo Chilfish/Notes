@@ -2,8 +2,7 @@
 title: 应用层 —— HTTP | DNS
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **外链：**
   - [HTTP1、2、3](https://juejin.cn/post/6995109407545622542)

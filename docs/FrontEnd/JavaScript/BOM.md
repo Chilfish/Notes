@@ -2,8 +2,7 @@
 title: BOM_window 对象
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - [JavaScript.md](README.md)
 - [window 对象](https://www.jianshu.com/p/7c796f4ff810)

@@ -1,18 +1,16 @@
 ---
-title: 算 法 (C++ 描述)
+title: 算 法
 date: 2022-07-31
 ---
 
 <br><p style="font-size: 2rem; font-weight: bold;">目录</p>
 
 - [C++ 小语法](../Language/Cpp.md)
-- [STL](STL.md)
-- [数据结构](DataStruct.md)
-- [树、图](Tree_Graph.md)
+- [数据结构](DataStructure/README.md)
+- [STL 标准库](STL.md)
 - [排序算法](Sort.md)
 - [动态规划 DP](DP.md)
 - [搜索](Search.md)
-- [字符串](String.md)
 - [数学](Math.md)
 - [喵啊的一些解法](miao.md)
 
@@ -86,9 +84,9 @@ date: 2022-07-31
 - 对于 1s 的时间限制，需要保证程序的所有语句的总执行次数不超过 1e8.
 
 <div align="center"><img width="60%"
-  src="./img/cpp_1.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/cpp_1.png"/><p>
   复杂度限制
-</div></div>
+</p></div><br>
 
 一般 ACM 或者笔试题的时间限制是 1 秒或 2 秒。在这种情况下，C++代码中的操作次数控制在 $10^7∼10^8$ 为最佳。
 
@@ -110,44 +108,49 @@ date: 2022-07-31
 
 ### 前缀和 区间和
 
-- 一维：
+一维：
+
+```cpp {.line-numbers}
+for (int i = 1; i <= n; i++) {
+  cin >> a[i];
+  sum[i] = sum[i - 1] + a[i];
+}
+```
+
+差分：如给数组 `[l, r]` 之间加上 c
+
+```cpp {.line-numbers}
+int n, m;
+scanf("%d%d", &n, &m);
+for (int i = 1; i <= n; i++) {
+  scanf("%d", &a[i]);
+  b[i] = a[i] - a[i - 1]; //构建差分数组
+}
+int l, r, c;
+while (m--) {
+  scanf("%d%d%d", &l, &r, &c);
+  b[l] += c, b[r + 1] -= c;
+}
+for (int i = 1; i <= n; i++) {
+  b[i] += b[i - 1]; //求前缀和运算
+  printf("%d ", b[i]);
+}
+```
+
+二维：
+
+- 求表
+  ![](./img/cpp_2.png)
   ```cpp {.line-numbers}
-  for (int i = 1; i <= n; i++) {
-    cin >> a[i];
-    sum[i] = sum[i - 1] + a[i];
-  }
+  for (i = 1; i <= n; i++)  //打表
+    for (j = 1; j <= m; j++) {
+      cin >> mpa[i][j];
+      sum[i][j] = mpa[i][j] + sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1];
+    }
   ```
-- 差分：如给数组 `[l, r]` 之间加上 c
+- 还原：
+  ![](./img/cpp_3.png)
   ```cpp {.line-numbers}
-  int n, m;
-  scanf("%d%d", &n, &m);
-  for (int i = 1; i <= n; i++) {
-    scanf("%d", &a[i]);
-    b[i] = a[i] - a[i - 1]; //构建差分数组
-  }
-  int l, r, c;
-  while (m--) {
-    scanf("%d%d%d", &l, &r, &c);
-    b[l] += c, b[r + 1] -= c;
-  }
-  for (int i = 1; i <= n; i++) {
-    b[i] += b[i - 1]; //求前缀和运算
-    printf("%d ", b[i]);
-  }
+  cin >> x1 >> y1 >> x2 >> y2;   //求表
+  cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1];
   ```
-- 二维：
-  - 求表
-    ![](./img/cpp_2.png)
-    ```cpp {.line-numbers}
-    for (i = 1; i <= n; i++)  //打表
-      for (j = 1; j <= m; j++) {
-        cin >> mpa[i][j];
-        sum[i][j] = mpa[i][j] + sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1];
-      }
-    ```
-  - 还原：
-    ![](./img/cpp_3.png)
-    ```cpp {.line-numbers}
-    cin >> x1 >> y1 >> x2 >> y2;   //求表
-    cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1];
-    ```

@@ -45,10 +45,5 @@ features:
 <style lang="scss">
 .hero {
   margin: 3rem auto;
-  & > img{
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),
-      0 2px 10px 0 rgba(34,36,38,.08);
-  }
 }
 </style>

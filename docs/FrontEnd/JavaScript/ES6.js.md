@@ -2,8 +2,7 @@
 title: ES6.js
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **外链：**
   - [阮一峰 ES6](https://es6.ruanyifeng.com)

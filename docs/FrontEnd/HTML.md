@@ -2,8 +2,7 @@
 title: HTML
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - [CSS | Less](CSS.md)
 - [JavaScript.md](JavaScript/README.md)
@@ -43,9 +42,9 @@ title: HTML
 
 - 表单的属性和方法
 <div align="center"><img width="70%"
-  src="./img/html_form.png"/><br><div style="color: #999;padding: 0.4rem;">
+  src="./img/html_form.png"/><p>
   表单
-</div></div>
+</p></div><br>
 
 - **且：**
 

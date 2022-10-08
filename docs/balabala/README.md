@@ -3,9 +3,7 @@ title: Chaos 不好分类的杂在一起
 date: 2022-07-07
 ---
 
-<br>
-
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
  
 - **外链：**
   - [Daily Surfing](DailySurfing/README.md)

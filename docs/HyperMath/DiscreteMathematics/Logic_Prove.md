@@ -3,14 +3,12 @@ title: 第一章 逻辑与证明
 date: 2022-09-26
 ---
 
-<br>
-<p style="font-size: 32px; font-weight: bold;">目录</p>
+<br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [本章概述](#本章概述)
 - [命题逻辑（Propositional Logic）](#命题逻辑propositional-logic)
   - [命题及其表示法](#命题及其表示法)
   - [联结词（Connectives Logical Operator）](#联结词connectives-logical-operator)
@@ -27,12 +25,6 @@ date: 2022-09-26
 
 <br> 
 &emsp;
- 
-## 本章概述
-
-命题、连接词、等价命题、逻辑等价式、命题逻辑、谓词、量词、谓词逻辑、逻辑证明
-
-<br>
 
 ## 命题逻辑（Propositional Logic）
 
@@ -56,7 +48,7 @@ date: 2022-09-26
 
 #### 真值表
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 
 <span></span>
 | $P$ | $Q$ | $\lnot P$ | $\wedge Q$ | $\vee Q$ | $P\oplus Q$ | $P\rightarrow Q$ | $P\leftrightarrow Q$ |
@@ -71,6 +63,8 @@ date: 2022-09-26
 #### 优先级
 
 $$\lnot \;>\; \wedge \;>\; \vee \;>\; \to \;>\; \Leftrightarrow$$
+
+<br>
 
 ### 真值表与等价命题
 
@@ -104,7 +98,7 @@ $$\lnot \;>\; \wedge \;>\; \vee \;>\; \to \;>\; \Leftrightarrow$$
 
 **初级公式**
 
-<div style="text-align: center;margin: 1rem;">
+<div class="tableBox">
 
 <span></span>
 命题定律 | 表达式
