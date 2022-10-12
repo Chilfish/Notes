@@ -44,33 +44,40 @@ date: 2022-04-14
 
 <br>
 
-- **互转：**
-  - **数字转 string：** `string s = to_string(整数 | 小数)`;
-  - **string 转数字：** `int a = stoi(s); double b = stod(s);`
-- **大小写转换：**
-  ```cpp {.line-numbers}
-  transform(all(str), str.begin(), ::tolower);
-  ```
-- 不用带转译的**纯文本格式**，保持缩进：
-  ```cpp {.line-numbers}
-  string str = R"(233
-      asd\n
-      asd
-  233)";
-  // cout:
+**互转：**
+
+- **数字转 string：** `string s = to_string(整数 | 小数)`;
+- **string 转数字：** `int a = stoi(s); double b = stod(s);`
+
+**大小写转换：**
+
+```cpp {.line-numbers}
+transform(all(str), str.begin(), ::tolower);
+```
+
+不用带转译的**纯文本格式**，保持缩进：
+
+```cpp {.line-numbers}
+string str = R"(233
+    asd\n
+    asd
+233)";
+// cout:
+233
+    asd\n
+    asd
   233
-      asd\n
-      asd
-    233
-  ```
-- **STL 函数：**
-  - **替换：** `c.replace(a, b, "xxx")`，a：替换的初始位置，b：替换的长度
-  - **查找：**
-    - `b.find(c, a)` ：从位置 a 开始，在 b 中找 c
-    - `str.find_first_of(str1)` ：找第一次出现的位置，找不到就返回 -1
-    - `find` 需要子串和父串全部匹配，`find_first_of` 只需匹配一个字符就可以
-  - **删除：** `c.erase(a, b)` a：删除的初始位置，b：删除的个数。仅有 a 的话，则删除位置 a 后面的字符
-  - **截取：** `string s = c.substr(a, b);`，a：截取的初始位置，b：截取的长度
+```
+
+**STL 函数：**
+
+- **替换：** `c.replace(a, b, "xxx")`，a：替换的初始位置，b：替换的长度
+- **查找：**
+  - `b.find(c, a)` ：从位置 a 开始，在 b 中找 c
+  - `str.find_first_of(str1)` ：找第一次出现的位置，找不到就返回 -1
+  - `find` 需要子串和父串全部匹配，`find_first_of` 只需匹配一个字符就可以
+- **删除：** `c.erase(a, b)` a：删除的初始位置，b：删除的个数。仅有 a 的话，则删除位置 a 后面的字符
+- **截取：** `string s = c.substr(a, b);`，a：截取的初始位置，b：截取的长度
 
 <br>
 
@@ -78,77 +85,90 @@ date: 2022-04-14
 
 ### Vector
 
-- **构造函数：**
-  - `vector()`：创建一个空 `vector`
-  - `vector(int len)`：创建一个 `vector`，元素个数为 `len`
-  - `vector(int len, const T& t)`：创建一个 `vector`，元素个数为 `len`，且值均为 `t`
-  - `vector(const vector&)`：复制构造函数
-  - `vector(begin, end)`：复制 `[begin, end)` 区间内另一个数组的元素到 `vector` 中
-- **属性：**
-  - `a.at(pos)`：返回编号位置的数据
-  - `a.begin()`：返回数组 `第一个元素` 的迭代器
-  - `a.end()`：返回数组的 `最后一个元素+1` 的迭代器
-  - `a.rbegin()`：将 `vector` 反转后的开始迭代器返回
-  - `a.rend()`：将 `vector` 反转构的结束迭代器返回
-  - `a.front()`：返回数组的第一个元素
-  - `a.back()`：返回数组的最后一个元素
-  - `a.max_size()`：返回 `vector` 最大可以是多大
-  - `a.capacity()`：返回当前 `vector` 分配的大小
-  - `a.size()`：返回数组的长度
-  - `a.empty()`：判断` vector` 是否为空
-- **方法：**
-  - `a.insert(a.begin() + n, x)`：在 下标 $n - 1$ 之前插入 $x$
-  - `a.push_back(x)`：在数组的最后添加一个数据
-  - `a.pop_back()`：去掉数组的最后一个数据
-  - `a.resize()`：改变当前使用数据的大小，如果它比当前使用的大，者填充默认值
-  - `a.reserve()`：改变当前 `vecotr` 所分配空间的大小
-  - `a.erase(begin [, end])`：删除迭代器范围的元素
-  - `a.clear()`：清空当前的 `vector`
-  - `a.swap(b)`：与另一个 `vector` 交换数据
-- **二维数组：**
-  ```cpp {.line-numbers}
-  vector<vi> aa(5, vi(2, 5)); // 5行2列的5
-  vector<vi> arr{
-    {1, 2, 3, 5}, {5, 3, 1, 5}, {4, 5, 6, 7}
-  };
-  for (auto row : arr) {
-    cout << toString(row) << endl;
-    // for (auto col : row) cout << col << " ";
-    // cout << endl;
-  }
-  ```
+**构造函数：**
+
+- `vector()`：创建一个空 `vector`
+- `vector(int len)`：创建一个 `vector`，元素个数为 `len`，值默认为 0
+- `vector(int len, const T& t)`：创建一个 `vector`，元素个数为 `len`，且值均为 `t`
+- `vector(const vector&)`：复制构造函数
+- `vector(begin, end)`：复制 `[begin, end)` 区间内另一个数组的元素到数组中
+
+**属性：**
+
+- `a.at(pos)`：返回编号位置的数据
+- `a.begin()`：返回数组 _第一个元素_ 的迭代器
+- `a.end()`：返回数组的 _最后一个元素+1_ 的迭代器
+- `a.rbegin()`：将数组反转后的开始迭代器返回
+- `a.rend()`：将数组反转构的结束迭代器返回
+- `a.front()`：返回数组的第一个元素
+- `a.back()`：返回数组的最后一个元素
+- `a.max_size()`：返回数组最大可以是多大
+- `a.capacity()`：返回当前数组分配的大小
+- `a.size()`：返回数组的长度
+- `a.empty()`：判断` vector` 是否为空
+
+**方法：**
+
+- `a.insert(a.begin() + n, x)`：在 下标 $n - 1$ 之前插入 $x$
+- `a.push_back(x)`：在数组的最后添加一个数据
+- `a.pop_back()`：去掉数组的最后一个数据
+- `a.resize(newSize, value = 0)`：改变数组的长度，如果大于当前长度，则填充默认值 0 或 `value`；否则将数组缩减至新长度
+- `a.reserve(newCapacity)`：改变当前数组所分配容量的大小，如果小于等于当前容量，则将当前容量改为当前长度
+- `a.erase(begin [, end])`：删除迭代器范围的元素
+- `a.clear()`：清空当前的数组
+- `a.swap(b)`：与另一个数组交换数据
+
+**二维数组：**
+
+```cpp {.line-numbers}
+vector<vi> aa(5, vi(2, 5)); // 5行2列的5
+vector<vi> arr{
+  {1, 2, 3, 5}, {5, 3, 1, 5}, {4, 5, 6, 7}
+};
+for (auto row : arr) {
+  cout << toString(row) << endl;
+  // for (auto col : row) cout << col << " ";
+  // cout << endl;
+}
+```
 
 <br>
 
 ### deque
 
-- **属性方法：**
-  - `deq[pos]`：用来访问双向队列中单个的元素
-  - `deq.front()`：返回第一个元素的引用
-  - `deq.back()`：返回最后一个元素的引用
-  - `deq.push_front(x)`：把元素 x 插入到双向队列的头部
-  - `deq.pop_front()`：弹出双向队列的第一个元素
-  - `deq.push_back(x)`：把元素 x 插入到双向队列的尾部
-  - `deq.pop_back()`：弹出双向队列的最后一个元素
-- **双向队列的一些特点：**
-  - 支持随机访问，即支持 `[ ]` 以及 `at()`，但是性能没有`vector`好
-  - 与 `vector` `比较，deque` 的优势是：头部插入和删除时，不需要搬移元素，效率特别高，而且在扩容时，也不需要搬移大量的元素，因此其效率是必 `vector` 高的
-  - 与 `list` 比较，其底层是连续空间，空间利用率比较高，不需要存储额外字段
-  - `deque`的元素存取和迭代器操作会稍微慢一些，因为`deque`的内部结构会多一个间接过程
-  - `deque`迭代器是特殊的智能指针，而不是一般指针，它需要在不同的区块之间跳转
-  - `deque`可以包含更多的元素，其`max_size`可能更大，因为不止使用一块内存
-  - `deque`的内存区块不再被使用时，会被释放，`deque`的内存大小是可缩减的。不过，是不是这么做以及怎么做由实际操作版本定义
-- **但是：**
-  - `deque` 有一个致命缺陷：不适合遍历。因为在遍历时，`deque` 的迭代器要频繁的去检测其是否移动到某段小空间的边界，导致效率低下
-  - 而序列式场景中，可能需要经常遍历，因此在实际中，需要线性结构时，大多数情况下优先考虑 `vector` 和 `list`
-  - `deque` 的应用并不多，而目前能看到的一个应用就是，`STL` 用其作为 `stack` 和 `queue` 的底层数据结构
+**属性方法：**
+
+- `deq[pos]`：用来访问双向队列中单个的元素
+- `deq.front()`：返回第一个元素的引用
+- `deq.back()`：返回最后一个元素的引用
+- `deq.push_front(x)`：把元素 x 插入到双向队列的头部
+- `deq.pop_front()`：弹出双向队列的第一个元素
+- `deq.push_back(x)`：把元素 x 插入到双向队列的尾部
+- `deq.pop_back()`：弹出双向队列的最后一个元素
+
+**双向队列的一些特点：**
+
+- 支持随机访问，即支持 `[ ]` 以及 `at()`，但是性能没有`vector`好
+- 与数组`比较，deque` 的优势是：头部插入和删除时，不需要搬移元素，效率特别高，而且在扩容时，也不需要搬移大量的元素，因此其效率是必数组高的
+- 与 `list` 比较，其底层是连续空间，空间利用率比较高，不需要存储额外字段
+- `deque`的元素存取和迭代器操作会稍微慢一些，因为`deque`的内部结构会多一个间接过程
+- `deque`迭代器是特殊的智能指针，而不是一般指针，它需要在不同的区块之间跳转
+- `deque`可以包含更多的元素，其`max_size`可能更大，因为不止使用一块内存
+- `deque`的内存区块不再被使用时，会被释放，`deque`的内存大小是可缩减的。不过，是不是这么做以及怎么做由实际操作版本定义
+
+**但是：**
+
+- `deque` 有一个致命缺陷：不适合遍历。因为在遍历时，`deque` 的迭代器要频繁的去检测其是否移动到某段小空间的边界，导致效率低下
+- 而序列式场景中，可能需要经常遍历，因此在实际中，需要线性结构时，大多数情况下优先考虑数组和 `list`
+- `deque` 的应用并不多，而目前能看到的一个应用就是，`STL` 用其作为 `stack` 和 `queue` 的底层数据结构
 
 <br>
 
 ### List
 
-- `List` 是 STL 实现的双向链表，与`vectors`相比，它允许快速的插入和删除，但是随机访问却比较慢
-- 可以直接` s.sort();` 或 `s.sort(greater<name>());`
+`List` 是 STL 实现的双向链表，与`vectors`相比，它允许快速的插入和删除，但是随机访问却比较慢
+
+可以直接` s.sort();` 或 `s.sort(greater<name>());`
 
 <br>
 
@@ -156,59 +176,64 @@ date: 2022-04-14
 
 ### Map multimap
 
-- 对 `map` 的定义：
-  ```cpp {.line-numbers}
-  map<class Key, class Value, class Compare = less<Key>> name
-  ```
-- 所以定义`map`的时候，默认是按`key`的值小到大排序的。要按大到小时， 就`map<key, value, greater<key>>name`
-- **属性方法：**
-  - 插入：`s.insert(make_pair(key, value));`
-  - 指定位置插入：`s.insert(s.begin() + n, pair);`
-- 当要按自定义 `key` 来排序时，要另外写 cmp 的**仿函数**：
+对 `map` 的定义：
 
-  ```cpp {.line-numbers}
-  void Map() {
-    struct CmpByKeyLen {
-      bool operator()(const string& k1, const string& k2) {
-        return k1 + k2 < k2 + k1;
-      } // 按 key 的字典序升序
-    };
+```cpp {.line-numbers}
+map<class Key, class Value, class Compare = less<Key>> name
+```
 
-    vector<PSI> a{
-      {"fish", 233}, {"mie", 123}, {"haha", 100}, {"ohh", 233}
-    };
-    map<string, int, CmpByKeyLen> m;
-    for (auto ele : a) m.insert(ele);
+所以定义`map`的时候，默认是按`key`的值小到大排序的。要按大到小时， 就`map<key, value, greater<key>>name`
 
-    for (auto ele : m) {
-      cout << "name: " << ele.first
-        << "\tscore: " << ele.second << endl;
-    }
+**属性方法：**
+
+- 插入：`s.insert(make_pair(key, value));`
+- 指定位置插入：`s.insert(s.begin() + n, pair);`
+
+当要按自定义 `key` 来排序时，要另外写 cmp 的**仿函数**：
+
+```cpp {.line-numbers}
+void Map() {
+  struct CmpByKeyLen {
+    bool operator()(const string& k1, const string& k2) {
+      return k1 + k2 < k2 + k1;
+    } // 按 key 的字典序升序
+  };
+
+  vector<PSI> a{
+    {"fish", 233}, {"mie", 123}, {"haha", 100}, {"ohh", 233}
+  };
+  map<string, int, CmpByKeyLen> m;
+  for (auto ele : a) m.insert(ele);
+
+  for (auto ele : m) {
+    cout << "name: " << ele.first
+      << "\tscore: " << ele.second << endl;
   }
-  ```
+}
+```
 
-- 按 **`Value`** 排序：
+按 **`Value`** 排序：
 
-  ```cpp {.line-numbers}
-  void Map_Value() {
-    vector<PSI> a{
-      {"fish", 233}, {"mie", 123}, {"haha", 100}, {"ohh", 233}
-    };
-    map<string, int> m;
-    for (auto ele : a) m.insert(ele); // 构造数据
+```cpp {.line-numbers}
+void Map_Value() {
+  vector<PSI> a{
+    {"fish", 233}, {"mie", 123}, {"haha", 100}, {"ohh", 233}
+  };
+  map<string, int> m;
+  for (auto ele : a) m.insert(ele); // 构造数据
 
-    vector<PSI> ans(all(m)); // 需要移植到vector才能排序
-    auto byValue = [](const PSI& lhs, const PSI& rhs) {
-      return lhs.second < rhs.second;
-    };
-    sort(all(ans), byValue);
+  vector<PSI> ans(all(m)); // 需要移植到vector才能排序
+  auto byValue = [](const PSI& lhs, const PSI& rhs) {
+    return lhs.second < rhs.second;
+  };
+  sort(all(ans), byValue);
 
-    for (auto ele : ans) {
-      cout << "name: " << ele.first
-        << "\tscore: " << ele.second << endl;
-    }
+  for (auto ele : ans) {
+    cout << "name: " << ele.first
+      << "\tscore: " << ele.second << endl;
   }
-  ```
+}
+```
 
 <br>
 
@@ -269,77 +294,81 @@ date: 2022-04-14
 
 ### Stack
 
-- **属性方法：**
-  - `stack<int> s`：定义栈
-  - `s.empty()： bool`：判断栈是否为空
-  - `s.size()： int`：返回栈中的元素个数
-  - `s.pop()： void`：删除栈中的顶部元素
-  - `s.top()： type`：返回栈中的顶部元素
-  - `s.push(item)： void`：往栈顶压入元素
+**属性方法：**
+
+- `stack<int> s`：定义栈
+- `s.empty()：bool`：判断栈是否为空
+- `s.size()：int`：返回栈中的元素个数
+- `s.pop()：void`：删除栈中的顶部元素
+- `s.top()：type`：返回栈中的顶部元素
+- `s.push(item)：void`：往栈顶压入元素
 
 <br>
 
 ### 队列
 
-- **`queue`：**
+**`queue`：**
 
-  - **属性方法：**
-    - `queue<int> q`：定义队列
-    - `q.empty()： bool`：判断队列是否为空
-    - `q.size()： int`：返回队列中的元素个数
-    - `q.pop()： void`：删除队列中的顶部元素
-    - `q.push(item)： void`：往队列尾部压入元素
-    - `q.front()： type`：返回队首元素的值
-    - `q.back()： type`：返回队尾元素的值
+- **属性方法：**
+  - `queue<int> q`：定义队列
+  - `q.empty()：bool`：判断队列是否为空
+  - `q.size()：int`：返回队列中的元素个数
+  - `q.pop()：void`：删除队列中的顶部元素
+  - `q.push(item)：void`：往队列尾部压入元素
+  - `q.front()：type`：返回队首元素的值
+  - `q.back()：type`：返回队尾元素的值
 
-- **`priority_queue`：**
+**`priority_queue`：**
 
-  - 和 `queue` 不同的就在于，可以自定义其中数据的优先级，让优先级高的排在队列前面，优先出队
-    &emsp; 优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个**堆**实现的
-  - **定义：**`priority_queue<元素类型，基础序列的类型，比较的类型> name;`
-    &emsp; 基础序列必须是由数组实现的容器，默认为 `vector`；比较类型默认为 `less<value_type>`
-    ```cpp {.line-numbers}
-    priority_queue <PII, vector<PII>, cmp> q;
-    priority_queue <int, vector<int>, greater<int> > q;
-    ```
-  - **栗子：** 当然，也可以用 `struct` 代替 `pair`
+- 和 `queue` 不同的就在于，可以自定义其中数据的优先级，让优先级高的排在队列前面，优先出队
+  &emsp; 优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个**堆**实现的
+- **定义：**`priority_queue<元素类型，基础序列的类型，比较的类型> name;`
+  &emsp; 基础序列必须是由数组实现的容器，默认为 `vector`；比较类型默认为 `less<value_type>`
+  ```cpp {.line-numbers}
+  priority_queue <PII, vector<PII>, cmp> q;
+  priority_queue <int, vector<int>, greater<int> > q;
+  ```
+- **栗子：** 当然，也可以用 `struct` 代替 `pair`
 
-    ```cpp {.line-numbers}
-    void Priority_Struct() {
-      struct Student {
-        string name;
-        int score;
-      };
-      struct cmp {
-        bool operator()(const Student& a, const Student& b) const {
-          return a.score < b.score || (
-            a.score == b.score &&
-            a.name + b.name > b.name + a.name);
-        } // 先按 score 降序，再按 name 字典序升序
-      };
+  ```cpp {.line-numbers}
+  void Priority_Struct() {
+    struct Student {
+      string name;
+      int score;
+    };
+    struct cmp {
+      bool operator()(const Student& a, const Student& b) const {
+        return a.score < b.score || (
+          a.score == b.score &&
+          a.name + b.name > b.name + a.name);
+      } // 先按 score 降序，再按 name 字典序升序
+    };
 
-      vector<Student> a{ {"fish", 233}, {"mie", 123}, {"haha", 100}, {"ohh", 233}};
+    vector<Student> a{ {"fish", 233}, {"mie", 123}, {"haha", 100}, {"ohh", 233}};
 
-      priority_queue <Student, vector<Student>, cmp> pq;
-      for (auto ele ： a) pq.push(ele);
+    priority_queue <Student, vector<Student>, cmp> pq;
+    for (auto ele ： a) pq.push(ele);
 
-      while (!pq.empty()) {
-        auto ele = pq.top();
-        cout << "name： " << ele.name
-          << "\tscore： " << ele.score << endl;
-        pq.pop();
-      }
+    while (!pq.empty()) {
+      auto ele = pq.top();
+      cout << "name： " << ele.name
+        << "\tscore： " << ele.score << endl;
+      pq.pop();
     }
-    ```
+  }
+  ```
 
 <br>
 
 ## 迭代器
 
-- 迭代器要遍历，随机访问是指用下标或 at()
-  - `vector` 随机访问， `deque` 随机访问， `stack` 不支持， `queue` 不支持， `priority_queue` 不支持
-  - `list` 双向，`set` 双向， `multiset` 双向 ， `map` 双向， `multimap` 双向
-- 范围总是 $[begin, end)$
+迭代器要遍历，随机访问是指用下标或 at()
+
+-数组随机访问， `deque` 随机访问， `stack` 不支持， `queue` 不支持， `priority_queue` 不支持
+
+- `list` 双向，`set` 双向， `multiset` 双向 ， `map` 双向， `multimap` 双向
+
+范围总是 $[begin, end)$
 
 <br>
 

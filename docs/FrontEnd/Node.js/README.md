@@ -49,7 +49,13 @@ title: Node.js
 
   > 关于 `package.json` 的完整的选项可以在 [npm Docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)上查阅
 
-- 监视 node 文件更改的 `nodemon`：[官网](https://nodemon.io/) 、 [配置说明](https://www.jianshu.com/p/a35dfc72c6e6)
+- 监视 node 文件更改的 `nodemon`：[官网](https://nodemon.io/) 、 [配置说明](https://www.jianshu.com/p/a35dfc72c6e6)，以及大概的配置：
+
+  ```json {.line-numbers}
+  "scripts": {
+    "dev": "nodemon --experimental-specifier-resolution=node --ignore ./static --delay 3s ./src"
+  },
+  ```
 
 > Ref： [Node 项目如何使用 ES 模块](https://blog.csdn.net/sayUonly/article/details/122885171) 、 [tsconfig.json 的配置](https://blog.csdn.net/muguli2008/article/details/122246623) 、 [Node 为什么用不了 ES 模块](https://segmentfault.com/q/1010000039917414)
 

@@ -2,14 +2,31 @@ import { navbar } from 'vuepress-theme-hope';
 
 export const navbarConfig = navbar([
   {
-    text: '算法',
-    icon: 'strong',
-    link: '/Algorithm/',
-  },
-  {
     text: '编程语言',
     icon: 'code',
     link: '/Language/',
+  },
+  {
+    text: '算法',
+    icon: 'ability',
+    prefix: '/Algorithm/',
+    children: [
+      {
+        text: '首页',
+        icon: 'home',
+        link: '',
+      },
+      {
+        text: '数据结构',
+        icon: 'diagram',
+        link: 'DataStructure/',
+      },
+      {
+        text: '排序算法',
+        icon: 'sort',
+        link: 'Sort',
+      },
+    ],
   },
   {
     text: '前端',
@@ -61,12 +78,12 @@ export const navbarConfig = navbar([
       {
         text: '其他一些知识',
         icon: 'engine',
-        link: 'not_JustCode/',
+        link: 'not_JustCode',
       },
       {
         text: '临时堆砌的码',
         icon: 'template',
-        link: 'TempCoder/',
+        link: 'TempCoder',
       },
     ],
   },

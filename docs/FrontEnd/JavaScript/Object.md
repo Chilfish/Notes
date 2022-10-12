@@ -233,8 +233,6 @@ const b = Object.assign(a);
     ```
   - `reduce`： 归并器，多带一个参数：`arr.reduce(function(prev, curr, index, arr))`
 
->
-
 - **等概率的随机洗牌：**
   ```js {.line-numbers}
   function shuffle(array) {

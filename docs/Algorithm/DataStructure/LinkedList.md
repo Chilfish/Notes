@@ -30,9 +30,9 @@ date: 2022-08-07
 **结构：**
 
 <div align="center"><img width="80%"
-  src="./img/list_0.png"/><br></div>
+  src="./img/list_0.png"/><p></p><br></div>
 
-- **头指针：** 一个指向第一个节点地址的指针变量。头指针具有标识单链表的作用，所以经常用头指针代表单链表的名字
+- **头指针：** 一个指向第一个节点地址的指针变量，而不存数据。头指针具有标识单链表的作用，所以经常用头指针代表单链表的名字
 - **头结点：** 在单链表的第一个结点之前附设一个结点，它没有直接前驱，称之为头结点。可不存信息，也可以作为监视哨，或用于存放线性表的长度等附加信息指针域中存放首元结点的地址
 - **首元结点：** 存储第一个元素的节点
 - 其中，**头结点的作用：**
@@ -63,7 +63,7 @@ public:
     curLength = 0;
   }
   ~List() {
-    this->clear();
+    clear();
     delete head, tail;
   }
 };
@@ -73,55 +73,65 @@ public:
   ```cpp {.line-numbers}
   void push_back(const T value) {
     Node* p = new Node(value, nullptr);
-    this->tail->next = p;
-    this->tail = p;
-    ++this->curLength;
+    tail->next = p;
+    tail = p;
+    ++curLength;
   }
   ```
 - 在增删节点之前，需要先找到 **指定下标的节点**：
+
   ```cpp {.line-numbers}
   Node* find(int index) const {
     if (index < 0 or index > curLength)
       throw outOfRange;
-    int i = 0; Node* p = this->head;
+    int i = 0; Node* p = head;
     while (p and i++ < index)
       p = p->next; // 遍历寻找
     return p; // 返回的是该节点前一个到之后的所有节点
   }
   ```
+
 - **在指定下标前插入：**
+
   ```cpp {.line-numbers}
   void insert(int index, const T value) {
     try {
-      Node* p = this->find(index); // 先找到节点
+      Node* p = find(index); // 先找到节点
       Node* newNode = new Node(value, p);
       // newNode 的首节点的 data 即 value，next 为 nullptr
       newNode->next = p->next; // 将新节点
       p->next = newNode;
       // 其实这里影响到了 head，等价于是
       // head 在节点 p 的 next 都指向了新节点
-      ++this->curLength;
+      ++curLength;
     } catch (const char* err) {
       std::cerr << err << '\n';
     }
   }
   ```
+
+  > 噢所谓的 “链表能快速地增删元素，但在指定位置时却要遍历” 的矛盾，是在于
+  >
+  > - 因为 **查找链表只需要读，数组移动元素除了读还需要写**。而对于很多介质来说，读比写快。甚至可能相差一个数量级。只是在远古时期的时候，写数据是一个开销很大的操作
+  > - 以及在实际的应用中，更多的需求是 **删除|增加 某个节点 p**，而不是 _在指定下标删除增加_，而链表是记录了节点的数据了，只要删除增加那个 **数据** 所在的节点就行
+  > - Ref: [知乎：链表和数组的插入删除时间复杂度都是 $O(n)$，为什么教材网络上说链表效率高？](https://www.zhihu.com/question/51545092)
+
 - **删除指定下标节点：**
   ```cpp {.line-numbers}
   void remove(int index) {
     try {
-      Node* prev = this->find(index),
+      Node* prev = find(index),
         * p = prev->next;
       // 目的是将目标节点的前一个节点的 next 指向下一个节点即可
-      if (p == this->tail) {
-        this->tail = prev;
+      if (p == tail) {
+        tail = prev;
         prev->next = nullptr;
         delete p;
       } else {
         prev->next = p->next;
         delete p;
       }
-      --this->curLength;
+      --curLength;
     } catch (const char* err) {
       std::cerr << err << '\n';
     }

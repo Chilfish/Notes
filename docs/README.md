@@ -12,7 +12,7 @@ features:
     link: Language/
 
   - title: 算法
-    icon: strong
+    icon: ability
     details: 以 C++ 为主的算法，ACM 时代的遗产……
     link: Algorithm/
 

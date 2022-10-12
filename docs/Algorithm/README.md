@@ -32,46 +32,48 @@ date: 2022-07-31
 
 ### ACM
 
-- **快读快写：**
-  ```cpp {.line-numbers}
-  ll read() {
-    ll x = 0, f = 1; char c;
-    while (c = getchar(), !isdigit(c))
-        if (c == '-') f = -1;
-    while (isdigit(c))
-        x = x * 10 + c - '0', c = getchar();
-    return  x * f;
-  }
-  void write(ll n) {
-    if (n < 0) putchar('-'), n = -n;
-    if (n > 9) write(n / 10);
-    putchar(n % 10 + '0');
-  }
-  ```
-- **头模板：**
+**快读快写：**
 
-  ```cpp {.line-numbers}
-  #include <bits/stdc++.h>
-  #define QAQ std
-  #define endl "\n"
-  #define ll long long
-  #define all(s) s.begin(), s.end()
-  using namespace QAQ;
+```cpp {.line-numbers}
+ll read() {
+  ll x = 0, f = 1; char c;
+  while (c = getchar(), !isdigit(c))
+      if (c == '-') f = -1;
+  while (isdigit(c))
+      x = x * 10 + c - '0', c = getchar();
+  return  x * f;
+}
+void write(ll n) {
+  if (n < 0) putchar('-'), n = -n;
+  if (n > 9) write(n / 10);
+  putchar(n % 10 + '0');
+}
+```
 
-  const int MAX = 1e6;
-  ll a[MAX + 5]{};
+**头模板：**
 
-  void solve(){
+```cpp {.line-numbers}
+#include <bits/stdc++.h>
+#define QAQ std
+#define endl "\n"
+#define ll long long
+#define all(s) s.begin(), s.end()
+using namespace QAQ;
 
-  }
-  int main(){
-    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-    ll T = 1;
-    cin >> T; //
-    while(T--) solve();
-    return 0;
-  }
-  ```
+const int MAX = 1e6;
+ll a[MAX + 5]{};
+
+void solve(){
+
+}
+int main(){
+  ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+  ll T = 1;
+  cin >> T; //
+  while(T--) solve();
+  return 0;
+}
+```
 
 <br>
 
