@@ -1,5 +1,5 @@
 ---
-title: 线性表（Linear List） —— 数组、栈、队列
+title: 动态数组、栈、队列
 date: 2022-07-30
 ---
 
@@ -18,7 +18,7 @@ date: 2022-07-30
   - [应用](#应用)
 - [队列（Queue）](#队列queue)
   - [定义](#定义-2)
-  - [主要实现](#主要实现-2)
+  - [主要实现（数组）](#主要实现数组)
 
 <!-- /code_chunk_output -->
 
@@ -60,8 +60,11 @@ date: 2022-07-30
 - `a.pop_back()`：去掉数组的最后一个数据
 - `a.resize(newSize, value = 0)`：改变数组的长度，如果大于当前长度，则填充默认值 0 或 `value`；否则将数组缩减至新长度
 - `a.reserve(newCapacity)`：改变当前数组所分配容量的大小，如果小于等于当前容量，则将当前容量改为当前长度
+- `a.remove(index)`：删除下标的元素
 - `a.erase(begin [, end])`：删除下标范围的元素
-- `a.clear()`：清空当前的数组
+- `a.clear()`：清空当前的数组，但仅是将长度置零
+- `a.assign(n, value)`：将 n 个 value 赋值给 a。若原先容量大于 n，则不变；否则变为 n
+- `a.assign({list})`：将 [初始化列表](../../Language/Cpp.md#initializer-list-列表初始化) 赋值给 a
 
 <br>
 
@@ -78,12 +81,16 @@ date: 2022-07-30
 
   ```cpp {.line-numbers}
   void reserve(int newCapacity) {
-    if (newCapacity < curLength)
-        return;
+    if (newCapacity < curLength) {
+      curCapacity = curLength;
+      return;
+    }
+
     T* temp = new T[newCapacity];
     for (int i = 0; i < curLength; ++i) {
       temp[i] = arr[i];
     }
+
     curCapacity = newCapacity;
     swap(arr, temp);
     delete[] temp;
@@ -95,6 +102,10 @@ date: 2022-07-30
 ## 栈（Stack）
 
 ### 定义
+
+**概念：** 栈是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。
+
+&emsp; 向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素
 
 **属性方法：**
 
@@ -113,7 +124,12 @@ template<class T> class Stack {
 private:
   Vector<T> s;
 public:
-  // 以及一堆的构造函数和重载
+  explicit Stack() {};
+  explicit Stack(const Vector<T>& a) {
+    for (auto ele : a) {
+      s.push_back(ele);
+    }
+  }
   T top() { return s.back(); }
   void pop() { s.pop_back(); }
   void push(const T& data) { s.push_back(data); }
@@ -122,6 +138,8 @@ public:
 };
 ```
 
+> 当然也能重写，也还有用单链表实现的
+
 ### 应用
 
 <br>
@@ -129,6 +147,12 @@ public:
 ## 队列（Queue）
 
 ### 定义
+
+**概念**
+
+- 队列是一种只允许在一段进行删除操作，在另一端进行插入操作的线性表
+- 队列的数据元素又叫做队列元素，在队列中插入一个队列元素称为 **入队**，从队列中删除一个队列元素称为 **出队** ，也正是因为队列只允许在一段插入，另一端删除，所以这也就是我们前面例子中体现出来的 **先进先出** (`FIFO - first in first out`) 的概念
+- 队列可以用动态数组或者单链表来实现，其实限制下单链表的操作就是个队列了，比较好写）
 
 **属性方法：**
 
@@ -139,21 +163,74 @@ public:
 - `q.front()`：返回队首元素的值
 - `q.back()`：返回队尾元素的值
 
-### 主要实现
+### 主要实现（数组）
 
-只是单向队列的话，借助 Vector 就好。详见：[Queue.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/Queue/Queue.hpp)
+详见： [Queue.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/Queue/Queue.hpp)
+
+用数组时，要用到表示队首队尾的位置指针，以及像动态数组的到点扩容。于是乎，为了减少扩容的次数、高效地利用已有的空间，其内部是一个循环数组。其中：
+
+- `Front` 队首指针表示的是 队首元素*下标的前一位*，于是初始化为 $-1$
+- `Back`：队尾指针表示的是 队尾元素的下标，初始化也为 $-1$
+
+于是由以上的特点可以得出以下的性质：
+
+- 队列的大小为 $(Back - Front + Capacity) \% Capacity$
+- 队列为空时 $Back == Front$
+- 入队的位置为 $(Back + 1) \% Capacity$
+- 出队的位置为 $(Front + 1) \% Capacity$
+- 为了两指针不冲突，当队列大小达到容量 -1 的时候就要扩容，即队满的情况为 $size() == Capacity -1$
+- 而扩容就和动态数组差不多了，定义一个长度为两倍容量的临时数组，再把队列原先的数据搬过去）如下：
 
 ```cpp {.line-numbers}
-template<class T> class Queue {
+template<class T> class Queue : private QueueBase<T> {
 private:
-  vector<T> q;
-public:
-  // 以及一堆构造函数和重载……
-  bool empty() { return q.empty(); }
-  int size() { return q.size(); }
-  T back() { return q.back(); }
-  T front() { return q.front(); }
-  void push(const T& data) { q.push_back(data); }
-  void pop() { q.pop_back(); }
-};
+  T* arr;
+  int Front; // 记录队首的下标
+  int Back; // 记录队尾的下标
+  int Capacity; // 队列的当前容量
+
+  // 初始的默认容量
+  static const int INIT_CAPACITY = 10;
+
+  // 扩容
+  void reserve() {
+    T* temp = new T[Capacity << 1];
+    for (int i = 0; i < size(); ++i) {
+      temp[i] = arr[i + (Front + 1) % Capacity];
+    }
+    swap(temp, arr);
+    delete[] temp;
+
+    Back = size() - 1, Front = -1;
+    Capacity <<= 1;
+  }
+}
+```
+
+**入队：**
+
+```cpp {.line-numbers}
+void push(const T& value) {
+  if (full()) reserve();
+
+  Back = (Back + 1) % Capacity;
+  arr[Back] = value;
+}
+```
+
+**出队：**
+
+```cpp {.line-numbers}
+void pop() {
+  assert(empty() == false);
+  Front = (Front + 1) % Capacity;
+}
+```
+
+**队首元素：**
+
+```cpp {.line-numbers}
+T front() const {
+  return arr[(Front + 1) % Capacity];
+}
 ```

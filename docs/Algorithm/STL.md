@@ -117,6 +117,9 @@ string str = R"(233
 - `a.erase(begin [, end])`：删除迭代器范围的元素
 - `a.clear()`：清空当前的数组
 - `a.swap(b)`：与另一个数组交换数据
+- `a.assign(n, value)`：将 n 个 value 赋值给 a。若原先容量大于 n，则不变；否则变为 n
+- `a.assign({list})`：将 [初始化列表](../Language/Cpp.md#initializer-list-列表初始化) 赋值给 a
+- `a.assign(arr.from, arr.to)`：将 arr 迭代器范围内的赋值给 a
 
 **二维数组：**
 
@@ -307,7 +310,7 @@ void Map_Value() {
 
 ### 队列
 
-**`queue`：**
+**`queue` 队列**
 
 - **属性方法：**
   - `queue<int> q`：定义队列
@@ -318,16 +321,17 @@ void Map_Value() {
   - `q.front()：type`：返回队首元素的值
   - `q.back()：type`：返回队尾元素的值
 
-**`priority_queue`：**
+**`priority_queue` 优先队列**
 
-- 和 `queue` 不同的就在于，可以自定义其中数据的优先级，让优先级高的排在队列前面，优先出队
-  &emsp; 优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个**堆**实现的
-- **定义：**`priority_queue<元素类型，基础序列的类型，比较的类型> name;`
-  &emsp; 基础序列必须是由数组实现的容器，默认为 `vector`；比较类型默认为 `less<value_type>`
+- 和 `queue` 不同的就在于，可以自定义其中数据的优先级，让优先级高的排在队列前面，优先出队。 优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个 **堆** 实现的
+
+- **定义：**`priority_queue<元素类型，基础序列的类型，比较的类型> name;`。基础序列必须是由数组实现的容器，默认为 `vector`；比较类型默认为 `less<value_type>`
+
   ```cpp {.line-numbers}
   priority_queue <PII, vector<PII>, cmp> q;
   priority_queue <int, vector<int>, greater<int> > q;
   ```
+
 - **栗子：** 当然，也可以用 `struct` 代替 `pair`
 
   ```cpp {.line-numbers}

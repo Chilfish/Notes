@@ -7,9 +7,9 @@ sidebar: false
 <br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **线性结构**
-  - [线性表 —— 数组、栈、队列](LinearList.md)
+  - [数组、栈、队列](LinearList.md)
   - [链表 Linked List](LinkedList.md)
-  - [字符串](#)
+  - [字符串 String](#)
 - **非线性结构结构**
   - [树 Tree](#)
   - [散列表 Hash](#)
@@ -35,8 +35,6 @@ sidebar: false
 :::info
 **主要参考书：** [数据结构与算法分析 C++语言描述第四版 —— Mark Allen Weiss（电子工业出版社）](https://book.douban.com/subject/30393441/)
 :::
-
-<br>
 
 :::tip
 在设计上更多地参考了 C++的 [STL 标准库](../STL.md) ）模仿

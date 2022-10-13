@@ -19,7 +19,7 @@ sidebar: false
   - :white_large_square: [Windows]()
   - :white_large_square: [Linux](OperationSystem/Linux.md)
   - :white_large_square: [Android]()
-- **[软件使用](Software/README.md)**
+- **软件使用**
   - :white_large_square: [浏览器及其工作原理](Software/Browser.md)
   - :white_large_square: [VsCode]()
   - :construction: [Git 及 GitHub](Software/Git_GitHub.md)
