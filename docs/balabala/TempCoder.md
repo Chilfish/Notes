@@ -4,9 +4,9 @@ date: 2020-06-20
 ---
 
 <br><p style="font-size: 32px; font-weight: bold;">目录</p>
- 
+
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
- 
+
 <!-- code_chunk_output -->
 
 - [C++](#c)
@@ -189,7 +189,7 @@ async function getImg(postUrl) {
 
   await axios.get(url).then((res) => {
     const imgs = res.data.pic_infos;
-    for (const [key, value] of Object.entries(./imgs)) {
+    for (const value of Object.values(imgs)) {
       ansUrl.push(
         value.large.url.replace(/wx(\d)/gm, `ww$1`).replace(/orj960/gm, `large`)
       );

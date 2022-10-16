@@ -1,5 +1,5 @@
 ---
-title: 动态规划 DP
+title: 动态规划 Dynamic Programming
 ---
 
 <br><p style="font-size: 32px; font-weight: bold;">目录</p>
