@@ -83,44 +83,45 @@ title: CSS | Scss
 
 ### 单位
 
-- **绝对长度:**
+<div class="h5">绝对长度：</div>
 
-  - 绝对长度单位是固定的，用任何一个绝对长度表示的长度都将恰好显示为这个尺寸
-  - 不建议在屏幕上使用绝对长度单位，因为屏幕尺寸变化很大。但是，如果已知输出介质，则可以使用它们，例如用于打印布局（print layout）
-  <div class="tableBox">
+- 绝对长度单位是固定的，用任何一个绝对长度表示的长度都将恰好显示为这个尺寸
+- 不建议在屏幕上使用绝对长度单位，因为屏幕尺寸变化很大。但是，如果已知输出介质，则可以使用它们，例如用于打印布局（print layout）
+<div class="tableBox">
 
-  <span></span>
-  | 单位 | 描述 |
-  | :--- | :--------- |
-  | `cm` | 厘米 |
-  | `mm` | 毫米 |
-  | `in` | 英寸 (1in = 96px = 2.54cm) |
-  | `px` | 像素 (1px = 1/96th of 1in) |
-  | `pt` | 点 (1pt = 1/72 of 1in) |
-  </div>
-
-  - **像素（px）** 是相对于观看设备的。对于低 dpi 的设备，1px 是显示器的一个设备像素（点）。对于打印机和高分辨率屏幕，1px 表示多个设备像素
-
-- **相对长度:**
-
-  - 相对长度单位规定相对于另一个长度属性的长度。相对长度单位在不同渲染介质之间缩放表现得更好
-
-  <div class="tableBox">
-
-  <span></span>
-  | 单位 | 描述 |
-  | :----- | :--- |
-  | `em` | 相对于元素的字体大小（font-size）（2em 表示当前字体大小的 2 倍） |
-  | `ex` | 相对于当前字体的 x-height(极少使用) |
-  | `ch` | 相对于 "0"（零）的宽度 |
-  | `rem` | 相对于根元素的字体大小（font-size） |
-  | `vw` | 相对于视口\*宽度的 1% |
-  | `vh` | 相对于视口\*高度的 1% |
-  | `vmin` | 相对于视口\*较小尺寸的 1％ |
-  | `vmax` | 相对于视口\*较大尺寸的 1％ |
-  | `%` | 相对于父元素 |
+<span></span>
+| 单位 | 描述 |
+| :--- | :--------- |
+| `cm` | 厘米 |
+| `mm` | 毫米 |
+| `in` | 英寸 (1in = 96px = 2.54cm) |
+| `px` | 像素 (1px = 1/96th of 1in) |
+| `pt` | 点 (1pt = 1/72 of 1in) |
 
   </div>
+
+- **像素（px）** 是相对于观看设备的。对于低 dpi 的设备，1px 是显示器的一个设备像素（点）。对于打印机和高分辨率屏幕，1px 表示多个设备像素
+
+<div class="h5">相对长度：</div>
+
+- 相对长度单位规定相对于另一个长度属性的长度。相对长度单位在不同渲染介质之间缩放表现得更好
+
+<div class="tableBox">
+
+<span></span>
+| 单位 | 描述 |
+| :----- | :--- |
+| `em` | 相对于元素的字体大小（font-size）（2em 表示当前字体大小的 2 倍） |
+| `ex` | 相对于当前字体的 x-height(极少使用) |
+| `ch` | 相对于 "0"（零）的宽度 |
+| `rem` | 相对于根元素的字体大小（font-size） |
+| `vw` | 相对于视口\*宽度的 1% |
+| `vh` | 相对于视口\*高度的 1% |
+| `vmin` | 相对于视口\*较小尺寸的 1％ |
+| `vmax` | 相对于视口\*较大尺寸的 1％ |
+| `%` | 相对于父元素 |
+
+</div>
 
 - 视口（Viewport）= 浏览器窗口的尺寸。如果视口宽 50 里面，则 1vw = 0.5cm
 
@@ -179,22 +180,27 @@ title: CSS | Scss
 
 ### 列表
 
-- **`list-style-type`：**
-  - `none`：不使用项目符号
-  - `disc`：实心圆
-  - `circle`：空心圆
-  - `square`：实心方块
-  - `decimal`：阿拉伯数字
-  - `lower-alpha`：小写英文字母
-  - `upper-alpha`：大写英文字母
-  - `lower-roman`：小写罗马数字
-  - `upper-roman`：大写罗马数字
-- **`list-style-image`：**属性用来设置对象的列表项是否**图像**作为项目符号
-  - `url()`：指定图片的域名
-  - `none`：不指定图片符号
-- **`list-style-position`：**属性用来设置对象的列表序号的位置
-  - `outside`：默认值,让列表符号与文字分离开
-  - `inside`：使得列表序号在文本内，可以通过控制文本来控制
+**`list-style-type`：**
+
+- `none`：不使用项目符号
+- `disc`：实心圆
+- `circle`：空心圆
+- `square`：实心方块
+- `decimal`：阿拉伯数字
+- `lower-alpha`：小写英文字母
+- `upper-alpha`：大写英文字母
+- `lower-roman`：小写罗马数字
+- `upper-roman`：大写罗马数字
+
+**`list-style-image`：** 属性用来设置对象的列表项是否**图像**作为项目符号
+
+- `url()`：指定图片的域名
+- `none`：不指定图片符号
+
+**`list-style-position`：** 属性用来设置对象的列表序号的位置
+
+- `outside`：默认值,让列表符号与文字分离开
+- `inside`：使得列表序号在文本内，可以通过控制文本来控制
 
 <br>
 
@@ -218,43 +224,50 @@ title: CSS | Scss
 
 #### 伪类
 
-- **状态：**
-  - `:link` 超链接点击之前
-  - `:visited` 链接被访问过之后
-    但 `a`标签涵盖了`link`、`visited`的状态
-  - `:hover` “悬停”：鼠标放到标签上的时候
-  - `:active` “激活”： 鼠标点击标签，但是不松手时
-  - `:focus` 是某个标签获得焦点时的样式（比如某个输入框获得焦点）
-- **指定元素：**
-  - `:not` 一个否定伪类，用于匹配不符合参数选择器的元素
-  - `:first-child` 匹配元素的第一个子元素
-  - `:last-child` 匹配元素的最后一个子元素
-  - `:first-of-type` 表示一组兄弟元素中其类型的第一个元素
-  - `:last-of-type` 表示一组兄弟元素中其类型的最后一个元素
-  - `:nth-child` 根据元素的位置匹配一个或者多个元素，它接受一个 an+b 形式的参数
-  - `:nth-last-child` 与`:nth-child` 相似，不同之处在于它从最后一个子元素开始计数
-  - `:nth-of-type` 与 `nth-child` 相似，不同之处在于它是只匹配特定类型的元素
-  - `:nth-last-type` 与 `nth-of-type` 相似，不同之处在于它是从最后一个子元素开始计数的
-  - `:only-child` 当元素是其父元素中唯一的子元素时，`:only-child` 匹配该元素
-  - `:only-of-type` 当元素是其父元素中唯一特定类型的子元素时，`:only-child` 匹配该元素
-  - `:target` 当 url 带有瞄名称，指向文档内某个具体的元素时`:target` 匹配该元素
-- **表单：**
-  - `:checked` 匹配被选中的 `input` 元素，这个 `input` 元素包裹 `radio` 和 `checkbox`.
-  - `:default` 匹配默认选中的元素
-  - `:disabled` 匹配禁用的表单元素
-  - `:empty` 匹配没有子元素的元素，如果元素中含有文本节点，html 元素或者一个空格，则`:empty` 不能匹配这个元素
-  - `:enabled` 匹配没有设置 disabled 属性的表单元素
-  - `:in-range` 匹配在指定区域内元素，
-  - `:out-of-range` 匹配不在指定区域内的元素
-  - `:indetermimate` 当某组中的单选框或复选框还没有选取状态时，匹配该组中所有的单选框或复选框
-  - `:valid` 匹配条件验证正确的表单元素
-  - `:invalid` 匹配提交验证错误的表单元素
-  - `:optional` `:required` 匹配设置有无设置 `required` 属性的表单元素
-  - `:read-only` 匹配设置了只读属性的元素
-  - `:read-write` 匹配处于编辑状态的元素
-  - `:placeholder-shown` 当 `input` 设置了 `placeholder` 后，在用户输入前生效
-- **其他：**
-  - `:fullscreen` 全屏时触发
+<div class="h5">状态：</div>
+
+- `:link` 超链接点击之前
+- `:visited` 链接被访问过之后
+  但 `a`标签涵盖了`link`、`visited`的状态
+- `:hover` “悬停”：鼠标放到标签上的时候
+- `:active` “激活”： 鼠标点击标签，但是不松手时
+- `:focus` 是某个标签获得焦点时的样式（比如某个输入框获得焦点）
+
+<div class="h5">指定元素：</div>
+ 
+- `:not` 一个否定伪类，用于匹配不符合参数选择器的元素
+- `:first-child` 匹配元素的第一个子元素
+- `:last-child` 匹配元素的最后一个子元素
+- `:first-of-type` 表示一组兄弟元素中其类型的第一个元素
+- `:last-of-type` 表示一组兄弟元素中其类型的最后一个元素
+- `:nth-child` 根据元素的位置匹配一个或者多个元素，它接受一个 an+b 形式的参数
+- `:nth-last-child` 与`:nth-child` 相似，不同之处在于它从最后一个子元素开始计数
+- `:nth-of-type` 与 `nth-child` 相似，不同之处在于它是只匹配特定类型的元素
+- `:nth-last-type` 与 `nth-of-type` 相似，不同之处在于它是从最后一个子元素开始计数的
+- `:only-child` 当元素是其父元素中唯一的子元素时，`:only-child` 匹配该元素
+- `:only-of-type` 当元素是其父元素中唯一特定类型的子元素时，`:only-child` 匹配该元素
+- `:target` 当 url 带有瞄名称，指向文档内某个具体的元素时`:target` 匹配该元素
+
+<div class="h5">表单：</div>
+
+- `:checked` 匹配被选中的 `input` 元素，这个 `input` 元素包裹 `radio` 和 `checkbox`.
+- `:default` 匹配默认选中的元素
+- `:disabled` 匹配禁用的表单元素
+- `:empty` 匹配没有子元素的元素，如果元素中含有文本节点，html 元素或者一个空格，则`:empty` 不能匹配这个元素
+- `:enabled` 匹配没有设置 disabled 属性的表单元素
+- `:in-range` 匹配在指定区域内元素，
+- `:out-of-range` 匹配不在指定区域内的元素
+- `:indetermimate` 当某组中的单选框或复选框还没有选取状态时，匹配该组中所有的单选框或复选框
+- `:valid` 匹配条件验证正确的表单元素
+- `:invalid` 匹配提交验证错误的表单元素
+- `:optional` `:required` 匹配设置有无设置 `required` 属性的表单元素
+- `:read-only` 匹配设置了只读属性的元素
+- `:read-write` 匹配处于编辑状态的元素
+- `:placeholder-shown` 当 `input` 设置了 `placeholder` 后，在用户输入前生效
+
+<div class="h5">其他：</div>
+
+- `:fullscreen` 全屏时触发
 
 <br>
 
@@ -275,36 +288,46 @@ title: CSS | Scss
 
 #### flex 弹性
 
-- **定义:**
-  - 基于一维的布局。只要给`flex`元素的父元素声明 `display： flex` ，默认地所有子元素就会排成一行，且自动分配小大以充分展示元素的内容。所以是，**在父元素定义 `flex`，然后再在子元素再定义下列属性**
-- **子元素的分布：**
-  - `flex-direction`：默认为`row` 水平排列，`column`为竖直排列。`flex-wrap`：溢出时自动换行换行
-    - 可以将两个属性 `flex-direction` 和 `flex-wrap` 组合为简写属性 `flex-flow`。第一个指定的值为 `flex-direction` ，第二个指定的值为 `flex-wrap`.
-  - `flex-grow`：元素放大比例。值为 0 或 正整数(按比例分配多余的空间)
-  - `flex-shrink`：元素缩小比例。值为 1 或 0；
-  - `flex-basic`：设置子元素初始化大小，给上面两个属性分配多余空间之前，计算项目是否有多余空间，默认值为 auto,即项目本身的大小
-  - （可简写：`flex: grow shrink basic`）
-- **子元素对齐方式：**
-  - 要先定义父元素的长宽，子元素才会对齐
-  - **`justify-content`** ： 属性用来使元素在**主轴**方向上对齐，主轴方向是通过`flex-direction` 设置的方向。初始值是`flex-start`
-    - 可分为：`center`、`flex-start`、`flex-end`、`stretch(在轴上撑满整个父元素)`、`space-around`(元素之间的距离相等)、`space-between`(元素左右的空间相等、**贴边**)
-  - **`align-items`**： 属性可以使元素在**交叉轴**方向对齐。初始值为`stretch`
-    - 可分为：`center`、`flex-start`、`flex-end`、`stretch`、`baseline(基于文本内容基线)`
-  - **`align-content`**：当容器内为**多行元素**时的对齐方式，把每一行当做整体来对齐，同 items
-  - **`align-self`**：单独的对齐方式
-- **另一种居中对齐：** 必须定义宽高才能 `auto`
-  ```css {.line-numbers}
-  .par {
-    width: xx;
-    height: xx;
-    display: flex;
-  }
-  .child {
-    width: xx;
-    height: xx;
-    margin: auto;
-  }
-  ```
+<div class="h5">定义：</div>
+
+基于一维的布局。只要给`flex`元素的父元素声明 `display： flex` ，默认地所有子元素就会排成一行，且自动分配小大以充分展示元素的内容。所以是，**在父元素定义 `flex`，然后再在子元素再定义下列属性**
+
+<div class="h5">子元素的分布：</div>
+
+- `flex-direction`：默认为`row` 水平排列，`column`为竖直排列。`flex-wrap`：溢出时自动换行换行
+  - 可以将两个属性 `flex-direction` 和 `flex-wrap` 组合为简写属性 `flex-flow`。第一个指定的值为 `flex-direction` ，第二个指定的值为 `flex-wrap`.
+- `flex-grow`：元素放大比例。值为 0 或 正整数(按比例分配多余的空间)
+- `flex-shrink`：元素缩小比例。值为 1 或 0；
+- `flex-basic`：设置子元素初始化大小，给上面两个属性分配多余空间之前，计算项目是否有多余空间，默认值为 auto,即项目本身的大小
+- （可简写：`flex: grow shrink basic`）
+
+<div class="h5">子元素对齐方式：</div>
+
+要先定义父元素的长宽，子元素才会对齐
+
+- **`justify-content`** ： 属性用来使元素在**主轴**方向上对齐，主轴方向是通过`flex-direction` 设置的方向。初始值是`flex-start`
+  - 可分为：`center`、`flex-start`、`flex-end`、`stretch(在轴上撑满整个父元素)`、`space-around`(元素之间的距离相等)、`space-between`(元素左右的空间相等、**贴边**)
+- **`align-items`**： 属性可以使元素在**交叉轴**方向对齐。初始值为`stretch`
+  - 可分为：`center`、`flex-start`、`flex-end`、`stretch`、`baseline(基于文本内容基线)`
+- **`align-content`**：当容器内为**多行元素**时的对齐方式，把每一行当做整体来对齐，同 items
+- **`align-self`**：单独的对齐方式
+
+<div class="h5">另一种居中对齐：</div>
+
+必须定义宽高才能 `auto`
+
+```css {.line-numbers}
+.par {
+  width: xx;
+  height: xx;
+  display: flex;
+}
+.child {
+  width: xx;
+  height: xx;
+  margin: auto;
+}
+```
 
 <br>
 
@@ -314,18 +337,22 @@ title: CSS | Scss
 
 #### float 浮动
 
-- 创建：`float: left | right | none (默认值) | inherit (继承父元素的浮动属性)`
-- 清除：`clear: left | right | both`
+创建：`float: left | right | none (默认值) | inherit (继承父元素的浮动属性)`
+
+清除：`clear: left | right | both`
 
 <br>
 
 #### position 定位
+
+<div class="h5">定位的属性：</div>
 
 - `static` : **默认**的定位方式，没有特别的地方
 - `relative` : **相对定位**，不添加偏移量则与 `static` 没差
 - `absolute` : **绝对定位**，往上冒泡地找定位方式**不是 `static`**的祖先(父)元素，并相对于该元素绝对定位
 - `fixed` : 相对于浏览器窗口固定
 - `sticky` : **粘性定位**，当元素(滚动条)移动到预设位置时固定
+
 <div align="center"><img width="80%"
   src="./img/CSS_position.png"/><p>
   position
@@ -419,7 +446,10 @@ title: CSS | Scss
 
 ### 基础
 
-- **编译：** 安装 `live Sass Compile` 插件，再点底栏的 `watch sass`。 `settings.json` 的配置：
+<div class="h5">编译：</div>
+
+- 安装 `live Sass Compile` 插件，再点底栏的 `watch sass`。 `settings.json` 的配置：
+
   ```json {.line-numbers}
   {
     "liveSassCompile.settings.formats": [
@@ -437,52 +467,60 @@ title: CSS | Scss
     "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"]
   }
   ```
-  而且不编译单行注释， `compressed` 不编译多行注释，`/*! xxx */` 强制编译
-- **变量：**
-  ```scss {.line-numbers}
-  $primary_color: #243e59;
-  $name: 'fish';
-  // 使用
-  .#{$name} {
-    color: $primary_color;
+
+  > 而且不编译单行注释， `compressed` 不编译多行注释，`/*! xxx */` 强制编译
+
+<div class="h5">变量：</div>
+
+```scss {.line-numbers}
+$primary_color: #243e59;
+$name: 'fish';
+// 使用
+.#{$name} {
+  color: $primary_color;
+}
+// 编译成：
+.fish {
+  color: #243e59;
+}
+```
+
+**模板字符串：** `#{$var}`：在字符串里套变量
+
+**嵌套选择：** 像 `html` 那样的嵌套结构。而缩略属性也能写：
+
+```scss {.line-numbers}
+html {
+  font: {
+    size: 16px;
+    decoration: none;
+    family: 'Lato', sans-serif;
   }
-  // 编译成：
-  .fish {
-    color: #243e59;
-  }
-  ```
-  **模板字符串：** `#{$var}`：在字符串里套变量
-- **嵌套选择：** 像 `html` 那样的嵌套结构。而缩略属性也能写：
-  ```scss {.line-numbers}
-  html {
-    font: {
-      size: 16px;
-      decoration: none;
-      family: 'Lato', sans-serif;
-    }
-  }
-  // 等同于
-  html {
-    font-size: 16px;
-    font-family: 'xxxx';
-  }
-  ```
-- **父级选择器：** 也就是将 当前的属性名替换成 `&`
-  ```scss {.line-numbers}
-  .fish {
-    color: #654321;
-    &:hover {
-      color: #123456;
-    }
-  }
-  //编译成：
-  .fish {
-    color: #654321;
-  }
-  .fish:hover {
+}
+// 等同于
+html {
+  font-size: 16px;
+  font-family: 'xxxx';
+}
+```
+
+**父级选择器：** 也就是将 当前的属性名替换成 `&`
+
+```scss {.line-numbers}
+.fish {
+  color: #654321;
+  &:hover {
     color: #123456;
   }
-  ```
+}
+//编译成：
+.fish {
+  color: #654321;
+}
+.fish:hover {
+  color: #123456;
+}
+```
 
 <br>
 
@@ -500,57 +538,73 @@ title: CSS | Scss
     @include absolute(20px, 30px); // absolute();
   }
   ```
-  &emsp;&emsp; `@mixin` 是可以重复使用的一组 css 声明，有助于减少重复代码，只需声明一次，就可在文件中引用。混合指令可以包含所有的 css 规则，绝大部分 scss 规则，可以传递参数，输出多样化的样式
+  `@mixin` 是可以重复使用的一组 css 声明，有助于减少重复代码，只需声明一次，就可在文件中引用。混合指令可以包含所有的 css 规则，绝大部分 scss 规则，可以传递参数，输出多样化的样式
 - **`@extend`：** 继承样式： `@extend .fish;`
 - **`@import`：** scss 拓展了 `@import` 的功能，允许其导入 scss 或 sass 文件。被导入的文件将合并编译到同一个 css 文件中，被导入的文件中所包含的变量或者混合指令 (`mixin`) 都可以在导入的文件中使用
 - **`@Partials`：** 忽略编译的文件，在文件名前加一个下划线。主要是用来定义**公共样式**的，专门用于被其他的 scss 文件 import 进行使用的
 - **`@function`：** 主要用于计算，带返回值 `@return`
-- **也就是：** `@function` 用来计算，`@mixin` 用来封装样式，`@import` 用来抽离他们为一个模块
+
+**也就是：** `@function` 用来计算，`@mixin` 用来封装样式，`@import` 用来抽离他们为一个模块
 
 <br>
 
 ### 语句
 
-- **`@if`：** `@if` 语法和 js 类似，基本格式是`@if...@else if...@else`
-  ```scss {.line-numbers}
-  .fish {
-    @if ($a > 20) {
-      color: #123;
-    } @else if ($a < 20) {
-      color: #234;
-    } @else {
-      color: #233;
-    }
+<div class="h5">@if</div>
+
+`@if` 语法和 js 类似，基本格式是`@if...@else if...@else`
+
+```scss {.line-numbers}
+.fish {
+  @if ($a > 20) {
+    color: #123;
+  } @else if ($a < 20) {
+    color: #234;
+  } @else {
+    color: #233;
   }
-  ```
-- **`@for`：** for 在条件范围内重复操作，这个指令包含两种格式： `@for $var from <start> through | to <end>;`
-  两者区别在于 `through` 与 `to` 的含义：
-  - 使用 `through` 时，条件范围：`[start, end]`
-  - 使用 `to` 时条件范围：`[start, end)`
-  - `$var` 可以是任何变量，比如`$i`，`<start>` 和 `<end>` 必须是整数值
-  ```scss {.line-numbers}
-  @for $i from 1 to 3 {
-    .fish span:nth-child(#{$i}) {
-      width: 20 * ($i - 1) + px;
-    }
+}
+```
+
+<div class="h5">@for</div>
+
+for 在条件范围内重复操作，这个指令包含两种格式： `@for $var from <start> through | to <end>;`
+
+两者区别在于 `through` 与 `to` 的含义：
+
+- 使用 `through` 时，条件范围：`[start, end]`
+- 使用 `to` 时条件范围：`[start, end)`
+- `$var` 可以是任何变量，比如`$i`，`<start>` 和 `<end>` 必须是整数值
+
+```scss {.line-numbers}
+@for $i from 1 to 3 {
+  .fish span:nth-child(#{$i}) {
+    width: 20 * ($i - 1) + px;
   }
-  ```
-- **`@each`：** 类似于 `foreach`
-  ```scss {.line-numbers}
-  $num_list: 1 3 4;
-  @each $ele in $num_list {
-    .p#{$ele} {
-      height: $ele * $ele;
-    }
+}
+```
+
+<div class="h5">@each</div>
+
+类似于 `foreach`
+
+```scss {.line-numbers}
+$num_list: 1 3 4;
+@each $ele in $num_list {
+  .p#{$ele} {
+    height: $ele * $ele;
   }
-  ```
-- **`@while`：**
-  ```scss {.line-numbers}
-  $column: 12;
-  @while $column>0 {
-    .col-sm-#{$column} {
-      width: $column / 12 * 100%;
-    }
-    $column: $column - 1;
+}
+```
+
+<div class="h5">@while：</div>
+
+```scss {.line-numbers}
+$column: 12;
+@while $column>0 {
+  .col-sm-#{$column} {
+    width: $column / 12 * 100%;
   }
-  ```
+  $column: $column - 1;
+}
+```

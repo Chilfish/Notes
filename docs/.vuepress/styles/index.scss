@@ -101,6 +101,24 @@ li {
   margin-bottom: 5px;
 }
 
+p,
+li {
+  color: $main-color;
+}
+
+div.art > p {
+  text-indent: 2rem;
+}
+
+div.h5 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 2rem 0 1rem 0;
+  & + p {
+    text-indent: 2rem;
+  }
+}
+
 blockquote {
   border-color: $theme-color !important;
   border-left: 4px solid $theme-color !important;
