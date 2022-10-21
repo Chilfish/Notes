@@ -14,6 +14,7 @@ title: 应用层 —— HTTP | DNS
 
 <!-- code_chunk_output -->
 
+- [](#)
 - [HTTP 和 HTTPS](#http-和-https)
   - [基本概念](#基本概念)
   - [区别及优缺点](#区别及优缺点)
@@ -24,10 +25,16 @@ title: 应用层 —— HTTP | DNS
   - [Request Body 请求体](#request-body-请求体)
 - [响应报文](#响应报文)
   - [状态行](#状态行)
-  - [响应头](#响应头)
+  - [响应头](#响应头) 
   - [响应主体](#响应主体)
 
 <!-- /code_chunk_output -->
+
+## 应用层
+
+### 概述
+
+<br>
 
 ## HTTP 和 HTTPS
 
@@ -56,11 +63,10 @@ title: 应用层 —— HTTP | DNS
 - `web` 服务器通过自己的私钥解密出会话密钥
 - `web` 服务器通过会话密钥加密与客户端之间的通信
 
-&emsp;
+<br>
 
 ## 请求报文
 
-&emsp;
 `HTTP` 报文的组成成分：
 
 - **请求报文**：{ 请求行、请求头、空行、请求体 }
@@ -82,6 +88,8 @@ title: 应用层 —— HTTP | DNS
 - **5.安全性不同**：GET 参数通过 URL 传递，不安全；POST 放在 `Request Body` 中，相对更安全。但因为 HTTP 传输的内容都是明文的，虽然在浏览器地址拦看不到 POST 提交的 body 数据，但是只要抓个包就都能看到了。所以，要避免传输过程中数据被窃取，就要使用 **HTTPS 协议**，这样所有 HTTP 的数据都会被加密传输。
 - **6.针对数据操作的类型不同**：GET 对数据进行查询，POST 主要对数据进行增删改！简单说，GET 是只读，POST 是写。
 
+<br>
+
 ### Request Header 请求头
 
 这里设置的主要是一些信息，包含客户端，服务器
@@ -101,7 +109,7 @@ title: 应用层 —— HTTP | DNS
 - `Cookie`：浏览器每次都会将` cookie` 发送到服务器上，允许服务器在客户端存储少量数据
 - `Referer`：包含一个 URL，用户从该 URL 代表的页面出发访问当前请求的页面。服务器能知道你是从哪个页面过来的。`Referer: HTTP://www.baidu.com/`
 
-&emsp;
+<br>
 
 **`Content-Type` 的一些类型：**
 
@@ -130,7 +138,7 @@ title: 应用层 —— HTTP | DNS
 
 需要注意的是,如果是往服务器提交数据,需要在请求头中设置 `Content-Type:application/x-www-form-urlencoded`
 
-&emsp;
+<br>
 
 ## 响应报文
 
@@ -178,5 +186,5 @@ title: 应用层 —— HTTP | DNS
 ### 响应主体
 
 即服务端返回给客户端的内容
-&emsp;
+
 <br>

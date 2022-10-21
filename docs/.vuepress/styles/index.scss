@@ -59,6 +59,30 @@ table {
   }
 }
 
+html[data-theme='dark'] {
+  table {
+    color: #000;
+    th {
+      color: #9e9e9e;
+      background-color: #282c34;
+    }
+    tbody tr {
+      &:nth-child(even) {
+        background-color: #8d8d8d;
+      }
+      &:nth-child(odd) {
+        background-color: #b9b9b9;
+      }
+      &:hover {
+        background-color: #918f8f;
+      }
+    }
+    code {
+      background-color: #c7c1c1;
+    }
+  }
+}
+
 hr {
   display: block;
   border: 1px solid #485e7386;
@@ -93,17 +117,12 @@ code {
   background-color: #f1f1f1;
   padding: 0.15em 0.5em;
   border-radius: 4px;
-  color: #4e6e8e;
+  // color: #4e6e8e;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 li {
   margin-bottom: 5px;
-}
-
-p,
-li {
-  color: $main-color;
 }
 
 div.art > p {
@@ -150,6 +169,7 @@ main img {
 
 $scrollbar: #d5d5d5;
 body,
+html,
 .sidebar {
   scrollbar-color: $scrollbar transparent !important;
   scrollbar-width: thin !important;
