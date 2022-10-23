@@ -176,6 +176,10 @@ title: CSS | Scss
 
 - 而用了 **`box-sizing: border-box;`** 后，边距不影响宽度了（放全局）
 
+<div align="center"><img width="60%" src="./img/.png"/><p>
+  图片描述
+</p></div><br>
+
 <br>
 
 ### 列表
