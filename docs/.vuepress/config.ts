@@ -1,5 +1,5 @@
-import { defineUserConfig, NavbarConfig } from 'vuepress';
-import { hopeTheme, navbar } from 'vuepress-theme-hope';
+import { defineUserConfig } from 'vuepress';
+import { hopeTheme } from 'vuepress-theme-hope';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 import { path } from '@vuepress/utils';
 
@@ -9,15 +9,15 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: "Fish's Notes",
   description: '基于 Vuepress 的笔记 blog',
-  base: '/Notes/',
+  // base: '/Notes/',
 
-  head: [['link', { rel: 'icon', href: '/Notes/logo.png' }]],
+  head: [['link', { rel: 'icon', href: './logo.png' }]],
   markdown: {
     headers: {
       level: [2, 3, 4],
     },
   },
-  dest: 'dist/Notes/',
+  // dest: 'dist/Notes/',
 
   plugins: [
     registerComponentsPlugin({

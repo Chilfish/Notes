@@ -1,5 +1,6 @@
 cd dist/Notes
 echo.>.nojekyll
+echo notes.organicfish.top>CNAME
 
 git init
 git remote add origin "https://github.com/Organic-Fish/Notes.git"
