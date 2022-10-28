@@ -63,7 +63,7 @@ title: Vue.js
   const vm = app.mount('#app');
   ```
 
-- `data` 选项是一个函数。Vue 在创建新组件实例的过程中调用此函数。它应该**返回一个对象**，然后 Vue 会通过响应性系统将其包裹起来，并以 `$data` 的形式存储在组件实例中。
+- `data` 选项是一个函数。Vue 在创建新组件实例的过程中调用此函数。它应该**返回一个对象**，然后 Vue 会通过响应性系统将其包裹起来，并以 `$data` 的形式存储在组件实例中
 - `mount()` 挂载应用：应用实例必须在调用了 `.mount()` 方法后才会渲染出来。该方法接收一个“容器”参数，可以是一个实际的 DOM 元素或是一个 CSS 选择器字符串
 
 <br>
@@ -116,8 +116,8 @@ export default defineComponent({
 });
 ```
 
-- 使用 `setup` 的情况下，请牢记一点：不能再用 `this` 来获取 Vue 实例，也就是无法通过 `this.xxx` 、 `this.fn()` 这样来获取实例上的数据，或者执行实例上的方法。
-- 在 Vue 3 的 `defineComponent` 写法里，只要你的数据要在 `<template>` 中使用，就必须在 `setup` 里 `return` 出去。
+- 使用 `setup` 的情况下，请牢记一点：不能再用 `this` 来获取 Vue 实例，也就是无法通过 `this.xxx` 、 `this.fn()` 这样来获取实例上的数据，或者执行实例上的方法
+- 在 Vue 3 的 `defineComponent` 写法里，只要你的数据要在 `<template>` 中使用，就必须在 `setup` 里 `return` 出去
 
 > 当然，只在函数中调用到，而不需要渲染到模板里的，则无需 return
 
@@ -144,7 +144,7 @@ export default defineComponent({
 
 ### 模板语法与指令
 
-**文本插值**：`{{...}}` 标签的内容将会被替代为对应组件实例中 `message` 属性的值，如果 `message` 属性的值发生了改变，`{{...}}` 标签内容也会更新。
+**文本插值**：`{{...}}` 标签的内容将会被替代为对应组件实例中 `message` 属性的值，如果 `message` 属性的值发生了改变，`{{...}}` 标签内容也会更新
 
 **指令：** 以 `v-*`为格式的 attribute 被称为一个 Vue 指令，用来操作 DOM
 
@@ -252,7 +252,7 @@ export default defineComponent({
 </span>
 ```
 
-**复选框：** `checkedNames` 数组将始终包含来自当前选中框的值。
+**复选框：** `checkedNames` 数组将始终包含来自当前选中框的值
 
 ```html {.line-numbers}
 <div>Checked names: {{ checkedNames }}</div>
@@ -292,10 +292,10 @@ export default defineComponent({
 - `onUnmounted()`: 组件卸载完成后执行的函数；
 - `onActivated()`: 被包含在 `<keep-alive>` 中的组件，会多出两个生命周期钩子函数，被激活时执行；
 - `onDeactivated()`: 比如从 A 组件，切换到 B 组件，A 组件消失时执行；
-- `onErrorCaptured()`: 当捕获一个来自子孙组件的异常时激活钩子函数。
+- `onErrorCaptured()`: 当捕获一个来自子孙组件的异常时激活钩子函数
 
-> PS： 使用`<keep-alive>` 组件会将数据保留在内存中，比如我们不想每次看到一个页面都重新加载数据，就可以使用`<keep-alive>` 组件解决。
-> 在 Vue3 里， 每个生命周期函数都要先导入才可以使用，并且所有生命周期函数统一放在 `setup` 里运行。
+> PS： 使用`<keep-alive>` 组件会将数据保留在内存中，比如我们不想每次看到一个页面都重新加载数据，就可以使用`<keep-alive>` 组件解决
+> 在 Vue3 里， 每个生命周期函数都要先导入才可以使用，并且所有生命周期函数统一放在 `setup` 里运行
 
 ### 响应式数据
 
@@ -313,16 +313,16 @@ export default defineComponent({
   **但是：**
   - 定义**挂载节点**后，也是必须通过 `xxx.value` 才能正确操作到挂载的 `DOM` 元素或组件（详见下方的变量的读取与赋值）
   - 请保证视图渲染完毕后，再执行 DOM 或组件的相关操作，需要放到生命周期的 `onMounted` 或者 `nextTick` 函数里
-  - 该变量必须 `return` 出去才可以给到 `template` 使用（这一点是 3.x 生命周期的硬性要求，子组件的数据和方法如果要给父组件操作，也要 return 出来才可以）。
+  - 该变量必须 `return` 出去才可以给到 `template` 使用（这一点是 3.x 生命周期的硬性要求，子组件的数据和方法如果要给父组件操作，也要 return 出来才可以）
   - 当变量是 DOM 时，类型应该是 [HTML 元素](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model#html_%E5%85%83%E7%B4%A0%E6%8E%A5%E5%8F%A3)
-  - 读取任何 ref 对象的值都**必须**通过 `xxx.value` 才可以正确获取到。
+  - 读取任何 ref 对象的值都**必须**通过 `xxx.value` 才可以正确获取到
 
 <br>
 
-- **reactive:** `reactive` 是继 `ref` 之后最常用的一个响应式 API 了，相对于 `ref`，它的局限性在于只适合对象、数组。
+- **reactive:** `reactive` 是继 `ref` 之后最常用的一个响应式 API 了，相对于 `ref`，它的局限性在于只适合对象、数组
   定义和使用与 ref 差不多，**但：**
-  - 在 2.x 的时候，在操作数组时，完全可以和普通数组那样随意的处理数据的变化，依然能够保持响应性。
-  - 但在 3.x ，如果使用 `reactive` 定义数组，则不能这么搞了，必须只使用那些不会改变引用地址的操作。
+  - 在 2.x 的时候，在操作数组时，完全可以和普通数组那样随意的处理数据的变化，依然能够保持响应性
+  - 但在 3.x ，如果使用 `reactive` 定义数组，则不能这么搞了，必须只使用那些不会改变引用地址的操作
 
 <br>
 
@@ -330,8 +330,8 @@ export default defineComponent({
 
   - `toRef` 创建一个新的 `ref` 变量，转换 `reactive` 对象的某个字段为 `ref` 变量
 
-    - 在 `toRef` 的过程中，如果使用了原对象上面不存在的 `key` ，那么定义出来的变量的 `value` 将会是 `undefined` 。
-      如果你对这个不存在的 `key` 的 `ref` 变量，进行了 `value` 赋值，那么原来的对象也会同步增加这个 `key`，其值也会同步更新。
+    - 在 `toRef` 的过程中，如果使用了原对象上面不存在的 `key` ，那么定义出来的变量的 `value` 将会是 `undefined` 
+      如果你对这个不存在的 `key` 的 `ref` 变量，进行了 `value` 赋值，那么原来的对象也会同步增加这个 `key`，其值也会同步更新
 
   - `toRefs` 创建一个新的对象，它的每个字段都是 `reactive` 对象各个字段的 `ref` 变量。本身是个普通对象，但是它的每个字段，都是与原来关联的 `ref` 变量
 
@@ -339,7 +339,7 @@ export default defineComponent({
 
 ### 监听数据
 
-监听数据变化也是组件里的一项重要工作，比如监听路由变化、监听参数变化等等。
+监听数据变化也是组件里的一项重要工作，比如监听路由变化、监听参数变化等等
 
 - **语法：**
   ```ts {.line-numbers}
@@ -351,7 +351,7 @@ export default defineComponent({
   );
   ```
 - **监听的数据源源：**
-  要想定义的 `watch` 能够做出预期的行为，数据源必须具备**响应性**或者是一个 **`getter`** ，如果只是通过 `let` 定义一个普通变量，然后去改变这个变量的值，这样是无法监听的。
+  要想定义的 `watch` 能够做出预期的行为，数据源必须具备**响应性**或者是一个 **`getter`** ，如果只是通过 `let` 定义一个普通变量，然后去改变这个变量的值，这样是无法监听的
   - `getter`函数：
     ```ts {.line-numbers}
     () => userInfo.name     // 只监听 name 的变化
@@ -380,20 +380,20 @@ export default defineComponent({
 
   <table><thead><tr><th >选项</th><th >类型</th><th >默认值</th><th >可选值</th><th >作用</th></tr></thead><tbody><tr><td >deep</td><td >boolean</td><td >false</td><td >true | false</td><td >是否进行深度监听</td></tr><tr><td >immediate</td><td >boolean</td><td >false</td><td >true | false</td><td >是否立即执行监听回调</td></tr><tr><td >flush</td><td >string</td><td >'pre'</td><td >'pre' | 'post' | 'sync'</td><td >控制监听回调的调用时机</td></tr><tr><td >onTrack</td><td >(e) =&gt; void</td><td ></td><td ></td><td >在数据源被追踪时调用</td></tr><tr><td >onTrigger</td><td >(e) =&gt; void</td><td ></td><td ></td><td >在监听回调被触发时调用</td></tr></tbody></table>
 
-  - `deep`： `deep` 选项接受一个布尔值，可以设置为 `true` 开启深度监听，或者是 `false` 关闭深度监听，默认情况下这个选项是 `false` 关闭深度监听的，但也存在特例 (`reactive`)。
+  - `deep`： `deep` 选项接受一个布尔值，可以设置为 `true` 开启深度监听，或者是 `false` 关闭深度监听，默认情况下这个选项是 `false` 关闭深度监听的，但也存在特例 (`reactive`)
     设置为 `false` 的情况下，如果直接监听一个响应式的 **引用类型** 数据（e.g. `Object` 、 `Array` … ），虽然它的属性的值有变化，但对其本身来说是不变的，所以不会触发 `watch` 的 `callback` 。这时候要手动启用 `deep`
 
 - **watchEffect：** 传入一个回调函数
   - 和 `watch` 的区别 —— 虽然理论上 `watchEffect` 是 `watch` 的一个简化操作，可以用来代替 **批量监听** ，但它们也有一定的区别：
-    - `watch` 可以访问侦听状态变化前后的值，而 `watchEffect` 没有。
-    - `watch` 是在属性改变的时候才执行，而 `watchEffect` 则默认会执行一次，然后在属性改变的时候也会执行。
+    - `watch` 可以访问侦听状态变化前后的值，而 `watchEffect` 没有
+    - `watch` 是在属性改变的时候才执行，而 `watchEffect` 则默认会执行一次，然后在属性改变的时候也会执行
       也就是：(被监听的数据)初定义执行，变化时执行
     - 而且不支持 `deep` 和 `immediate`
   - 同时，操作 `reactive` 的引用类型的数据时，要转换下：`{ ...userInfo }`
 
 ### 数据的计算
 
-只要原始数据没有发生改变，多次访问 `computed` ，都是会立即返回之前的计算结果，而不是再次执行函数；而普通的 function 调用多少次就执行多少次，每调用一次就计算一次。
+只要原始数据没有发生改变，多次访问 `computed` ，都是会立即返回之前的计算结果，而不是再次执行函数；而普通的 function 调用多少次就执行多少次，每调用一次就计算一次
 
 - **用法：**
   ```ts {.line-numbers}
@@ -403,7 +403,7 @@ export default defineComponent({
   - 定义出来的 `computed` 变量，和 `ref` 变量的用法一样，也是需要通过 `.value` 才能拿到它的值
   - 但是区别在于， `computed` 的 `value` 是只读的
 - **但：** 只会更新响应式数据的计算
-  假设要获取当前的时间信息，因为*不是*响应式数据，所以这种情况下就需要用普通的*函数*去获取返回值，才能拿到最新的时间。
+  假设要获取当前的时间信息，因为*不是*响应式数据，所以这种情况下就需要用普通的*函数*去获取返回值，才能拿到最新的时间
 - 而要**改变**时：使用 `setter` 函数
   ```ts {.line-numbers}
   const fullName = computed({
@@ -421,7 +421,7 @@ export default defineComponent({
 
 ## 路由
 
-像 Vue 工程，可以通过配置一个生态组件，来实现只用一个 html ，却能够完成多个站内页面渲染、跳转的功能。这个生态组件，就是**路由**。
+像 Vue 工程，可以通过配置一个生态组件，来实现只用一个 html ，却能够完成多个站内页面渲染、跳转的功能。这个生态组件，就是**路由**
 
 ### 引入路由与配置
 

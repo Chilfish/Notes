@@ -41,7 +41,7 @@ int Fib() {
 
 ### MIS 最大子段和
 
-[洛谷 P1115](https://www.luogu.com.cn/problem/P1115)： 给出一个长度为 $n$ 的序列 $a$，选出其中连续且非空的一段使得这段和最大。
+[洛谷 P1115](https://www.luogu.com.cn/problem/P1115)： 给出一个长度为 $n$ 的序列 $a$，选出其中连续且非空的一段使得这段和最大
 
 - 数据范围： $1 \leq n \leq 2 \times 10^5$ ， $-10^4 \leq a_i \leq 10^4$
 

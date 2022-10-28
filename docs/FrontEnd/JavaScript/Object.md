@@ -76,7 +76,7 @@ title: 对象、类和 OOP
   console.log(car1.owner.name); // Rand McKinnon
   ```
 
-- **使用 Object.create( ) 方法** &emsp;&emsp; 对象也可以用 `Object.create()` 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。
+- **使用 Object.create( ) 方法** &emsp;&emsp; 对象也可以用 `Object.create()` 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数
 
   ```js {.line-numbers}
   let Animal = {
@@ -130,14 +130,14 @@ const b = Object.assign(a);
 
 #### this
 
-在 `JavaScript` 中 `this` 不是固定不变的，它会随着执行环境的改变而改变。
+在 `JavaScript` 中 `this` 不是固定不变的，它会随着执行环境的改变而改变
 
-- 在**对象方法**中， this 指向调用它所在方法的对象。
-- **单独**使用 this，它指向全局(Global)对象。
-- **函数**使用中，this 指向函数的所属者。
+- 在**对象方法**中， this 指向调用它所在方法的对象
+- **单独**使用 this，它指向全局(Global)对象
+- **函数**使用中，this 指向函数的所属者
 - **严格模式**下函数是没有绑定到 this 上，这时候 this 是 `undefined`
-- 在 **HTML 事件**句柄中，this 指向了接收事件的 HTML 元素。
-- apply 和 call 允许切换函数执行的上下文环境（context），即 this 绑定的对象，可以将 this 引用到任何对象。
+- 在 **HTML 事件**句柄中，this 指向了接收事件的 HTML 元素
+- apply 和 call 允许切换函数执行的上下文环境（context），即 this 绑定的对象，可以将 this 引用到任何对象
 
 - **如：**
 
@@ -169,7 +169,7 @@ const b = Object.assign(a);
     num2 = [4, 5, 6],
   let num = num1.concat(num2); // [1, 2, 3, 4 ,5 ,6]
   ```
-- `array.join(value)` : 将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。
+- `array.join(value)` : 将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串
   ```js {.line-numbers}
   let numbers = [4, 2, 5, 1, 3];
   console.log(numbers.join('--'));
@@ -177,7 +177,7 @@ const b = Object.assign(a);
   ```
 - **搜索：**
   - `arr.indexOf(value, pos)`：从 pos 开始搜索 value，找到则返回下标
-  - `arr.includes(value | pos)` : 从`pos`开始判断一个数组是否包含一个指定的值，如果包含则返回 `true`，否则返回 `false`。
+  - `arr.includes(value | pos)` : 从`pos`开始判断一个数组是否包含一个指定的值，如果包含则返回 `true`，否则返回 `false`
   - `arr.find(function(item, index, arr))`：
     找到时返回 `item`，否则返回 `undefined`
     ```js {.line-numbers}
@@ -278,13 +278,13 @@ const b = Object.assign(a);
 
 #### Math 对象
 
-Math 是一个内置对象，它拥有一些数学常数属性和数学函数方法。
+Math 是一个内置对象，它拥有一些数学常数属性和数学函数方法
 
 - **属性**
 
-  - `Math.E` : 欧拉常数，也是自然对数的底数，约等于 2.718。
-  - `Math.LN2` ： 2 的自然对数，约等于 0.693。
-  - `Math.PI` : 圆周率，约等于 3.14159。
+  - `Math.E` : 欧拉常数，也是自然对数的底数，约等于 2.718
+  - `Math.LN2` ： 2 的自然对数，约等于 0.693
+  - `Math.PI` : 圆周率，约等于 3.14159
 
 - **函数方法**
 
@@ -310,7 +310,7 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
 
 #### Map 对象
 
-- **定义** &emsp;&emsp; 一个 Map 的键可以是任意值，包括函数、对象或任意基本类型。且 Map 中的 key 是有序的。因此当迭代的时候以插入的顺序返回键值。
+- **定义** &emsp;&emsp; 一个 Map 的键可以是任意值，包括函数、对象或任意基本类型。且 Map 中的 key 是有序的。因此当迭代的时候以插入的顺序返回键值
 
 - **属性**
 
@@ -339,11 +339,11 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
   - `mpa.delete(key)` : 删除 key 并返回 bool 值
   - `mpa.has(key)` : 返回 bool 值
   - `mpa.get(key)` : 返回 key 下的 value
-  - `mpa.entries()` : 返回一个新的包含 `[key, value]` 对的 `Iterator` 对象，返回的迭代器的迭代顺序与 Map 对象的**插入顺序**相同。
+  - `mpa.entries()` : 返回一个新的包含 `[key, value]` 对的 `Iterator` 对象，返回的迭代器的迭代顺序与 Map 对象的**插入顺序**相同
 
 #### Set 对象
 
-- **定义** &emsp;&emsp; Set 对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set 中的元素只会出现一次，即 Set 中的元素是唯一的。
+- **定义** &emsp;&emsp; Set 对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set 中的元素只会出现一次，即 Set 中的元素是唯一的
 
 - **属性**
 
@@ -367,13 +367,13 @@ Math 是一个内置对象，它拥有一些数学常数属性和数学函数方
 
 ### 迭代器 iterator
 
-所有的迭代器对象都有一个 `next()` 方法，每次调用都返回一个结果对象。结果对象有两个属性：一个是 **`value`**，表示下一个将要返回的值；另一个是 **`done`**，它是一个布尔类型的值，当没有更多可返回数据时返回 true。
+所有的迭代器对象都有一个 `next()` 方法，每次调用都返回一个结果对象。结果对象有两个属性：一个是 **`value`**，表示下一个将要返回的值；另一个是 **`done`**，它是一个布尔类型的值，当没有更多可返回数据时返回 true
 
 - **可被迭代的对象** 目前所有的内置可迭代对象如下：String、Array、TypedArray、Map 、 Set 和 NodeList 对象
 
 ### arguments 对象
 
-是一个对应于传递给函数的参数的**类数组**对象。
+是一个对应于传递给函数的参数的**类数组**对象
 
 - **如：**
 

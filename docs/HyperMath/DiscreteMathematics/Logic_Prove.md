@@ -130,14 +130,14 @@ $$\lnot \;>\; \wedge \;>\; \vee \;>\; \to \;>\; \Leftrightarrow$$
 
 我们用大写字母表示谓词，用小写字母表示客体名称，如 $A(b) 、 $B(a,b)$ 、 $L(a,b,c)$ 等，表示客体是否具有谓词所表述的那个性质
 
-单独一个谓词不是完整的命题（谓词没有真假值），我们把谓词字母后填以客体所得的式子称为谓词填式，如果 $A$ 为 $n$ 元谓词， $a_1,a_2 ,\cdots,a _n$​ 是客体的名称，则 $A(a_1,a_2,\cdots,a_n)$ 就可成为命题。
+单独一个谓词不是完整的命题（谓词没有真假值），我们把谓词字母后填以客体所得的式子称为谓词填式，如果 $A$ 为 $n$ 元谓词， $a_1,a_2 ,\cdots,a _n$​ 是客体的名称，则 $A(a_1,a_2,\cdots,a_n)$ 就可成为命题
 
 ### 命题函数（Propositional Function）与量词（Quantifiers）
 
 引入两种**量词（Quantifiers）**
 
 - **全称量词** <br> &emsp;&emsp; 一个用符号 $(\forall x)$ 表示，代表“对所有的 $x$”，称为**全称量词（Universal Quantifiers）**
-- **存在量词** <br> &emsp;&emsp; 另一个用符号 $(\exist x)$表示，表示“存在一些 $x$”，称为**存在量词（Existential Quantifiers）**。全称量词和存在量词通称为量词。
+- **存在量词** <br> &emsp;&emsp; 另一个用符号 $(\exist x)$表示，表示“存在一些 $x$”，称为**存在量词（Existential Quantifiers）**。全称量词和存在量词通称为量词
 - **唯一性量词** <br> &emsp;&emsp; 唯一性量词表示论域有且仅有一个元素满足谓词的性质。**符号为：** ! $\exists !$ <br> &emsp;&emsp; 但是，可以用全称量词和存在量词去代替唯一性量词。 例如： $\exists!x(P(x)) \equiv \exists x (P(x) \wedge \forall y((y!=x)\rightarrow \neg P(y) )$
 
 **量词的优先级：** 量词的优先级最高。比如： $\forall xP(x)\wedge Q(x)\equiv (\forall xP(x)\wedge Q(x)$

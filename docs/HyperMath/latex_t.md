@@ -152,15 +152,15 @@ $$
 
 $\textbf{2. } f(x,g(y)) \text{是项，} P(g(x)),  \quad\forall y(P(y) \to Q(x,y)) \text{是公式。}$
 
-$\textbf{3. } \exist x$ 的唯一一次出现的辖域是 $P(x)$。
+$\textbf{3. } \exist x$ 的唯一一次出现的辖域是 $P(x)$
 
-- $x$ 的最后一次出现是自由出现，其余各次出现都是约束出现。
-- $y$ 的唯一一次出现是自由出现。
-- $x$ 既是公式的约束变元，又是自由变元。
+- $x$ 的最后一次出现是自由出现，其余各次出现都是约束出现
+- $y$ 的唯一一次出现是自由出现
+- $x$ 既是公式的约束变元，又是自由变元
 
 $\textbf{4. }$ 在解释 $I$ 和赋值 $v$ 下，$h(g1(a,f(x)), \quad g2(b, h(a, b, y)), x)=(1+(-3))\times(0\times(1\times0-(-2)))-3= - 3$
 
-$\textbf{5. }$ 在解释 $I$ 和赋值 $v$ 下，对于任意实数 $y$，存在实数 $z$，使得 $y\times z=1$。这个命题是一个假命题，因为不存在实数 $z$ 使得 $0\times z=1$。
+$\textbf{5. }$ 在解释 $I$ 和赋值 $v$ 下，对于任意实数 $y$，存在实数 $z$，使得 $y\times z=1$。这个命题是一个假命题，因为不存在实数 $z$ 使得 $0\times z=1$
 
 $\textbf{6. }$
 
@@ -181,10 +181,10 @@ $$
 
 $\textbf{7. }$
 
-- 给定使 $P(x) \to (\forall xQ(x, y) \to P(y))$ **为真的解释** $I_1$ 和 $I_1$ 中的赋值 $v_1$ 如下：<br> $D_{II}$ 为自然数集，$P(x):x$ 是奇数，$Q(x, y):x\geq y，v1(x)=v1(y)=0$ 。
-- 给定使 $P(x) \to (\forall xQ(x, y) \to P(y))$ **为假的解释** $I_2$ 和 $I_2$ 中的赋值 $v_2$ 如下：<br> $D_{II}$ 为自然数集，$P(x):x$ 是奇数，$Q(x, y):x\geq y，v2(x)=1, v2(y)=0$。
+- 给定使 $P(x) \to (\forall xQ(x, y) \to P(y))$ **为真的解释** $I_1$ 和 $I_1$ 中的赋值 $v_1$ 如下：<br> $D_{II}$ 为自然数集，$P(x):x$ 是奇数，$Q(x, y):x\geq y，v1(x)=v1(y)=0$ 
+- 给定使 $P(x) \to (\forall xQ(x, y) \to P(y))$ **为假的解释** $I_2$ 和 $I_2$ 中的赋值 $v_2$ 如下：<br> $D_{II}$ 为自然数集，$P(x):x$ 是奇数，$Q(x, y):x\geq y，v2(x)=1, v2(y)=0$
 
 $\textbf{8. }$
 
 - 给定使 $(\forall xP(x) \to \forall xQ(x)) \to \forall x(P(x) \to Q(x))$ **为真的解释** $I_1$ 如下：<br> $D_{II}=\{a\}, P(a)=Q(a)=1$
-- 给定使 $(\forall xP(x) \to \forall xQ(x)) \to \forall x(P(x) \to Q(x))$ **为假的解释** $I_2$ 如下 <br> $D_{II} =\{a, b\}, P(a)=Q(b)=1, Q(a)= P(b)=0$。
+- 给定使 $(\forall xP(x) \to \forall xQ(x)) \to \forall x(P(x) \to Q(x))$ **为假的解释** $I_2$ 如下 <br> $D_{II} =\{a, b\}, P(a)=Q(b)=1, Q(a)= P(b)=0$

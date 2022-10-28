@@ -37,12 +37,12 @@ title: DOM
 
 ### 概述
 
-HTML 文档的主干是标签（tag）。根据文档对象模型（DOM），每个 HTML 标签都是一个对象。嵌套的标签是闭合标签的“子标签（children）”。标签内的文本也是一个对象。
-所有这些对象都可以通过 JS 来访问，我们可以使用它们来修改页面。例如，`document.body` 是表示 `<body>` 标签的对象。
+HTML 文档的主干是标签（tag）。根据文档对象模型（DOM），每个 HTML 标签都是一个对象。嵌套的标签是闭合标签的“子标签（children）”。标签内的文本也是一个对象
+所有这些对象都可以通过 JS 来访问，我们可以使用它们来修改页面。例如，`document.body` 是表示 `<body>` 标签的对象
 
 - **节点：**
 
-  - 每个树的节点都是一个对象。 <br> &emsp;&emsp; 标签被称为 元素节点（或者仅仅是元素），并形成了树状结构：`<html>` 在根节点，`<head>` 和 `<body>` 是其子项，等。 <br> &emsp;&emsp; 元素内的文本形成 文本节点，被标记为 `＃text`。一个文本节点只包含一个字符串。它没有子项，并且总是树的叶子。
+  - 每个树的节点都是一个对象。 <br> &emsp;&emsp; 标签被称为 元素节点（或者仅仅是元素），并形成了树状结构：`<html>` 在根节点，`<head>` 和 `<body>` 是其子项，等。 <br> &emsp;&emsp; 元素内的文本形成 文本节点，被标记为 `＃text`。一个文本节点只包含一个字符串。它没有子项，并且总是树的叶子
 
 - 请注意文本节点中的**特殊字符：**
   - 换行符：`↵`（在 JS 中为 `\n`）
@@ -52,8 +52,8 @@ HTML 文档的主干是标签（tag）。根据文档对象模型（DOM），每
 
 ### DOM 的自动修正
 
-如果浏览器遇到格式不正确的 HTML，它会在形成 DOM 时自动更正它。
-例如，顶级标签总是 `<html>`。即使它不存在于文档中 — 它也会出现在 DOM 中，因为浏览器会创建它。对于 `<body>` 也是一样。
+如果浏览器遇到格式不正确的 HTML，它会在形成 DOM 时自动更正它
+例如，顶级标签总是 `<html>`。即使它不存在于文档中 — 它也会出现在 DOM 中，因为浏览器会创建它。对于 `<body>` 也是一样
 例如，如果一个 HTML 文件中只有一个单词 “Hello”，浏览器则会把它包装到 `<html>` 和 `<body>` 中，并且会添加所需的 `<head>`
 
 ### 访问 DOM
@@ -61,24 +61,24 @@ HTML 文档的主干是标签（tag）。根据文档对象模型（DOM），每
 给定一个 DOM 节点，我们可以使用导航（navigation）属性访问其直接的邻居，并返回实时更新的 **集合 (Set)**
 
 - 这些属性主要分为两组：
-  - 对于所有节点： <br> &emsp;&emsp; `parentNode`，`childNodes`，`firstChild`，`lastChild`，`previousSibling`，`nextSibling`。
-  - 仅对于元素节点： <br> &emsp;&emsp; `parentElement`，`children`，`firstElementChild`，`lastElementChild`，`previousElementSibling`，`nextElementSibling`。
+  - 对于所有节点： <br> &emsp;&emsp; `parentNode`，`childNodes`，`firstChild`，`lastChild`，`previousSibling`，`nextSibling`
+  - 仅对于元素节点： <br> &emsp;&emsp; `parentElement`，`children`，`firstElementChild`，`lastElementChild`，`previousElementSibling`，`nextElementSibling`
 
-某些类型的 DOM 元素，例如 table，提供了用于访问其内容的其他属性和集合。
+某些类型的 DOM 元素，例如 table，提供了用于访问其内容的其他属性和集合
 
 且由于空格与换行也算作节点，因此用 `*Nodes` 访问是包括了这些**文本节点**的
 
 ### 主要的 DOM 节点属性
 
-- `nodeType` <br> &emsp;&emsp; 我们可以使用它来查看节点是文本节点还是元素节点。它具有一个数值型值：1 表示元素，3 表示文本节点，其他一些则代表其他节点类型。只读。
-- `nodeName/tagName` <br> &emsp;&emsp; 用于元素名，标签名（除了 XML 模式，都要大写）。对于非元素节点，nodeName 描述了它是什么。只读。
-- `innerHTML` <br> &emsp;&emsp; 元素的 HTML 内容。可以被修改。
-- `outerHTML` <br> &emsp;&emsp; 元素的完整 HTML。对 `elem.outerHTML` 的写入操作不会触及 elem 本身。而是在外部上下文中将其替换为新的 HTML。
-- `nodeValue/data` <br> &emsp;&emsp; 非元素节点（文本、注释）的内容。两者几乎一样，我们通常使用 data。可以被修改。
-- `textContent` <br> &emsp;&emsp; 元素内的文本：HTML 减去所有 `<tags>`。写入文本会将文本放入元素内，所有特殊字符和标签均被视为文本。可以安全地插入用户生成的文本，并防止不必要的 HTML 插入。
-- `hidden` <br> &emsp;&emsp; 当被设置为 true 时，执行与 CSS `display:none` 相同的事。
+- `nodeType` <br> &emsp;&emsp; 我们可以使用它来查看节点是文本节点还是元素节点。它具有一个数值型值：1 表示元素，3 表示文本节点，其他一些则代表其他节点类型。只读
+- `nodeName/tagName` <br> &emsp;&emsp; 用于元素名，标签名（除了 XML 模式，都要大写）。对于非元素节点，nodeName 描述了它是什么。只读
+- `innerHTML` <br> &emsp;&emsp; 元素的 HTML 内容。可以被修改
+- `outerHTML` <br> &emsp;&emsp; 元素的完整 HTML。对 `elem.outerHTML` 的写入操作不会触及 elem 本身。而是在外部上下文中将其替换为新的 HTML
+- `nodeValue/data` <br> &emsp;&emsp; 非元素节点（文本、注释）的内容。两者几乎一样，我们通常使用 data。可以被修改
+- `textContent` <br> &emsp;&emsp; 元素内的文本：HTML 减去所有 `<tags>`。写入文本会将文本放入元素内，所有特殊字符和标签均被视为文本。可以安全地插入用户生成的文本，并防止不必要的 HTML 插入
+- `hidden` <br> &emsp;&emsp; 当被设置为 true 时，执行与 CSS `display:none` 相同的事
 
-DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类。例如，`<input>` 元素 支持 value，type，而 `<a>` 元素 则支持 href 等。大多数标准 HTML 特性（attribute）都具有相应的 DOM 属性。
+DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类。例如，`<input>` 元素 支持 value，type，而 `<a>` 元素 则支持 href 等。大多数标准 HTML 特性（attribute）都具有相应的 DOM 属性
 
 ### NodeList 与 HTMLCollection
 
@@ -119,24 +119,24 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
   - `node.prepend(...nodes or strings)` —— 在 node 开头 插入节点或字符串，
   - `node.before(...nodes or strings)` —— 在 node 前面 插入节点或字符串，
   - `node.after(...nodes or strings)` —— 在 node 后面 插入节点或字符串，
-  - `node.replaceWith(...nodes or strings)` —— 将 node 替换为给定的节点或字符串。
+  - `node.replaceWith(...nodes or strings)` —— 将 node 替换为给定的节点或字符串
 
   **注意**：
 
-  1. 如果被添加的节点是一个页面中存在的节点，则执行后这个节点将会添加到指定位置，其原本所在的位置将移除该节点。也就是说不会同时存在两个该节点在页面上，相当于把这个节点移动到另一个地方。
-  2. 如果 child 绑定了事件，被移动时，它依然绑定着该事件。
+  1. 如果被添加的节点是一个页面中存在的节点，则执行后这个节点将会添加到指定位置，其原本所在的位置将移除该节点。也就是说不会同时存在两个该节点在页面上，相当于把这个节点移动到另一个地方
+  2. 如果 child 绑定了事件，被移动时，它依然绑定着该事件
 
-- **替换**：`node.replaceWith(...nodes or strings)` — 替换 node。
+- **替换**：`node.replaceWith(...nodes or strings)` — 替换 node
 
 - 子节点修改 **\*Old School**
-  - `parent.appendChild(child);` 将指定的节点添加到调用该方法的节点的子元素的末尾。
-    child 节点将会作为 parent 节点的最后一个子节点。
+  - `parent.appendChild(child);` 将指定的节点添加到调用该方法的节点的子元素的末尾
+    child 节点将会作为 parent 节点的最后一个子节点
   - ` parentNode.insertBefore(newNode, refNode)` 用来添加一个节点到一个参照节点之前
     - `parentNode` 表示新节点被添加后的父节点
     - `newNode` 表示要添加的节点
     - `refNode` 表示参照节点，新节点会添加到这个节点之前
   - `parent.removeChild(node)` 删除指定的子节点并返回
-  - `deletedChild` 指向被删除节点的引用，它等于 node，被删除的节点仍然存在于内存中，可以对其进行下一步操作。
+  - `deletedChild` 指向被删除节点的引用，它等于 node，被删除的节点仍然存在于内存中，可以对其进行下一步操作
   - `parent.replaceChild(newChild, oldChild)` 用于使用一个节点替换另一个节点
     - `newChild` 是替换的节点，可以是新的节点，也可以是页面上的节点，如果是页面上的节点，则其将被转移到新的位置
     - `oldChild` 是被替换的节点
@@ -160,7 +160,7 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
   3. 调用接收的 deep 参数最好传入，如果不传入该参数，不同浏览器对其默认值的处理可能不同
   4. 如果被复制的节点绑定了事件，则副本也会跟着绑定该事件吗？这里要分情况讨论：
      1. 如果是通过 `addEventListener` 或者比如 `onclick` 进行绑定事件，则副本节点不会绑定该事件
-     2. 如果是内联方式绑定比如：`<div onclick="showParent()"></div>`，这样的话，副本节点同样会触发事件。
+     2. 如果是内联方式绑定比如：`<div onclick="showParent()"></div>`，这样的话，副本节点同样会触发事件
 
 #### 属性
 
@@ -214,8 +214,8 @@ DOM 节点还具有其他属性，具体有哪些属性则取决于它们的类�
   - `naturalWidth`：返回图片的实际宽高
   - `complete`：返回图片加载完成情况的布尔值
   - `crossOrigin`：返回图片的跨域设置，有两种情况：
-    - `anonymous`：跨域请求不要求用户身份（`credentials`），这是默认值。
-    - `use-credentials`：跨域请求要求用户身份。
+    - `anonymous`：跨域请求不要求用户身份（`credentials`），这是默认值
+    - `use-credentials`：跨域请求要求用户身份
 - **方法：**
   - `onload`：加载完成
   - `onerror`：加载失败

@@ -26,7 +26,7 @@ title: DOM | Events
 <br> 
 &emsp; 
 
-事件 是某事发生的信号。所有的 DOM 节点都生成这样的信号（但事件不仅限于 DOM）。
+事件 是某事发生的信号。所有的 DOM 节点都生成这样的信号（但事件不仅限于 DOM）
 
 ## 分配事件处理程序的方式
 
@@ -37,8 +37,8 @@ title: DOM | Events
   }
   ```
 - 对于文档级的处理程序 —— **始终使用**的是 `addEventListener`
-  - 当我们将事件处理程序分配给 `document` 对象时，我们应该始终使用 `addEventListener`，而不是 `document.on<event>`，因为后者会引起冲突：新的处理程序会覆盖旧的处理程序。
-  - 对于实际项目来说。在 document 上有许多由代码的不同部分设置的处理程序，这是很正常的。
+  - 当我们将事件处理程序分配给 `document` 对象时，我们应该始终使用 `addEventListener`，而不是 `document.on<event>`，因为后者会引起冲突：新的处理程序会覆盖旧的处理程序
+  - 对于实际项目来说。在 document 上有许多由代码的不同部分设置的处理程序，这是很正常的
 
 ### Event
 
@@ -54,19 +54,19 @@ title: DOM | Events
 
 **方法：**
 
-- `Event.preventDefault()` ：取消事件（如果可以取消）。
-- `Event.stopImmediatePropagation()` ：对于此特定事件，阻止所有其他侦听器被调用。这包括附加到相同元素的侦听器以及附加到稍后将遍历的元素的侦听器（例如，在捕获阶段）。
-- `Event.stopPropagation()` ：阻止事件在 DOM 中进一步传播。
+- `Event.preventDefault()` ：取消事件（如果可以取消）
+- `Event.stopImmediatePropagation()` ：对于此特定事件，阻止所有其他侦听器被调用。这包括附加到相同元素的侦听器以及附加到稍后将遍历的元素的侦听器（例如，在捕获阶段）
+- `Event.stopPropagation()` ：阻止事件在 DOM 中进一步传播
 
 ### EventTarget
 
-EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦听器的对象实现。
+EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦听器的对象实现
 
 **方法：**
 
-- ` EventTarget.removeEventListener()` ：EventTarget 中删除事件侦听器。
-- `EventTarget.dispatchEvent()` ：将事件分派到此 EventTarget。
-- `addEventListener()` 方法将指定的监听器注册到 `EventTarget` 上，当该对象**触发指定的事件**时，指定的回调**函数就会被执行**。
+- ` EventTarget.removeEventListener()` ：EventTarget 中删除事件侦听器
+- `EventTarget.dispatchEvent()` ：将事件分派到此 EventTarget
+- `addEventListener()` 方法将指定的监听器注册到 `EventTarget` 上，当该对象**触发指定的事件**时，指定的回调**函数就会被执行**
 
   - **定义：**
     ```js {.line-numbers}
@@ -75,8 +75,8 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
     - `type`：DOM 事件 (没有 on)
     - `listener` 函数或对象
     - `capture ` 选项有两个可能的值：
-      - 如果为 `false`（默认值），则在**冒泡阶段**设置处理程序。
-      - 如果为 `true`，则在**捕获阶段**设置处理程序。
+      - 如果为 `false`（默认值），则在**冒泡阶段**设置处理程序
+      - 如果为 `true`，则在**捕获阶段**设置处理程序
   - 当 `listener` 为对象时：会调用对象中的 `handleEvent`函数
 
     ```js {.line-numbers}
@@ -130,12 +130,12 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 一些常见的：
 
-- `mousedown` —— 开始选择（移动鼠标进行选择）。
-  在 `<input type="checkbox">` 上的 `click` —— 选中 | 取消选中 的 input。
-- `submit` —— 点击 `<input type="submit">` 或者在表单字段中按下 Enter 键会触发该事件，之后浏览器将提交表单。
-- `keydown` —— 按下一个按键会导致将字符添加到字段，或者触发其他行为。
-- `contextmenu` —— 事件发生在鼠标右键单击时，触发的行为是显示浏览器上下文菜单。
-  如果我们只想通过 JavaScript 来处理事件，那么所有默认行为都是可以被阻止的。 想要阻止默认行为 —— 可以使用` event.preventDefault()` 或` return false`。第二个方法只适用于通过 `on<event>` 分配的处理程序。 `addEventListener` 的 `passive: true` 选项告诉浏览器该行为不会被阻止。这对于某些移动端的事件（像 `touchstart` 和 `touchmove`）很有用，用以告诉浏览器在滚动之前不应等待所有处理程序完成。 如果默认行为被阻止，`event.defaultPrevented` 的值会变成 `true`，否则为 false。
+- `mousedown` —— 开始选择（移动鼠标进行选择）
+  在 `<input type="checkbox">` 上的 `click` —— 选中 | 取消选中 的 input
+- `submit` —— 点击 `<input type="submit">` 或者在表单字段中按下 Enter 键会触发该事件，之后浏览器将提交表单
+- `keydown` —— 按下一个按键会导致将字符添加到字段，或者触发其他行为
+- `contextmenu` —— 事件发生在鼠标右键单击时，触发的行为是显示浏览器上下文菜单
+  如果我们只想通过 JavaScript 来处理事件，那么所有默认行为都是可以被阻止的。 想要阻止默认行为 —— 可以使用` event.preventDefault()` 或` return false`。第二个方法只适用于通过 `on<event>` 分配的处理程序。 `addEventListener` 的 `passive: true` 选项告诉浏览器该行为不会被阻止。这对于某些移动端的事件（像 `touchstart` 和 `touchmove`）很有用，用以告诉浏览器在滚动之前不应等待所有处理程序完成。 如果默认行为被阻止，`event.defaultPrevented` 的值会变成 `true`，否则为 false
 
 ## UI 事件
 
@@ -188,12 +188,12 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 **键盘事件：**
 
 - `keydown` —— 在按下键时（如果长按按键，则将自动重复），
-- `keyup` —— 释放按键时。
+- `keyup` —— 释放按键时
 
 **键盘事件的主要属性：**
 
-- `code` —— “按键代码”（"KeyA"，"ArrowLeft" 等），特定于键盘上按键的物理位置。
-- k`ey —— 字符（"A"，"a" 等），对于非字符（non-character）的按键，通常具有与 code 相同的值。
+- `code` —— “按键代码”（"KeyA"，"ArrowLeft" 等），特定于键盘上按键的物理位置
+- k`ey —— 字符（"A"，"a" 等），对于非字符（non-character）的按键，通常具有与 code 相同的值
 
 ## 表单事件
 
@@ -217,11 +217,11 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 **访问：**
 
-- `document.forms` 一个表单元素可以通过 `document.forms[name/index]` 访问到。
-- `form.elements` 表单元素可以通过 `form.elements[name/index]` 的方式访问，或者也可以使用 `form[name/index]`。elements 属性也适用于 `<fieldset>`。
-- `element.form` 元素通过 form 属性来引用它们所属的表单。
-- `value` 可以被通过 `input.value` 等来获取到。
-  - 对于单选按钮（radio button）和复选框（checkbox），可以使用 `input.checked` 来确定是否选择了一个值。
+- `document.forms` 一个表单元素可以通过 `document.forms[name/index]` 访问到
+- `form.elements` 表单元素可以通过 `form.elements[name/index]` 的方式访问，或者也可以使用 `form[name/index]`。elements 属性也适用于 `<fieldset>`
+- `element.form` 元素通过 form 属性来引用它们所属的表单
+- `value` 可以被通过 `input.value` 等来获取到
+  - 对于单选按钮（radio button）和复选框（checkbox），可以使用 `input.checked` 来确定是否选择了一个值
   - 对于 `<select>`，可以通过索引 `select.selectedIndex` 来获取它的 value，也可以通过 `<option>` 集合 `select.options` 来获取它的 value
 
 ## 框架/对象（Frame/Object）事件

@@ -24,7 +24,7 @@ title: Express 框架
 
 我们所使用的 app 与 `HTTP` 方法相对应的 `Express` 对象方法来定义路由，如 `app.get()` 用于处理 GET 请求
 
-这些路由方法都指定了回调函数 ，当程序接收到指定的路由（端点）的时候（也就是说 `HTTP` 方法请求时被调用），来调用回调函数，换句话说就是应用程序监听与指定路由和方法匹配的请求，当检测到匹配时，他会调用对应的回调函数。
+这些路由方法都指定了回调函数 ，当程序接收到指定的路由（端点）的时候（也就是说 `HTTP` 方法请求时被调用），来调用回调函数，换句话说就是应用程序监听与指定路由和方法匹配的请求，当检测到匹配时，他会调用对应的回调函数
 
 - **如：**
   ```ts {.line-numbers}
@@ -57,12 +57,12 @@ title: Express 框架
 
 - **Response:**
   - `res.end([data] [，encoding])`：用于快速结束没有数据的响应，而 data 只能是 `string | Buffer` 类型
-  - `res.send(data)`： 只发送一个 `https` 响应至请求端，只接收一个参数，这个参数可以是任何类型。因为执行这个方法的时候会自动设置响应头数据类型，即响应头里 `Content-Type` 字段。
+  - `res.send(data)`： 只发送一个 `https` 响应至请求端，只接收一个参数，这个参数可以是任何类型。因为执行这个方法的时候会自动设置响应头数据类型，即响应头里 `Content-Type` 字段
   - `res.json(data)`：只发送 json 类型的数据
   - `res.status(num)`：设定 HTTP 状态码
   - `res.redirect([status,] path)`：重定向至...... 还能设置状态码(可选参数)
   - `res.download(path, [filename, fn(err)])`：下载文件请求，`filename` 为下载文件的别名
-  - `res.render(viewPath, [locals, fn(err, html)])`：渲染一个视图，并把一个 `HTML` 字符串发送给客户端，`locals` 是一个对象，其属性定义了视图内的局部变量。`fn` 是一个回调函数，如果提供了，这个方法返回可能的错误信息和渲染字符串。如果有错误，这个方法会使用一个 `next(err)` 的内部函数。
+  - `res.render(viewPath, [locals, fn(err, html)])`：渲染一个视图，并把一个 `HTML` 字符串发送给客户端，`locals` 是一个对象，其属性定义了视图内的局部变量。`fn` 是一个回调函数，如果提供了，这个方法返回可能的错误信息和渲染字符串。如果有错误，这个方法会使用一个 `next(err)` 的内部函数
   - `res.cookie(name, value, [options])`：设置 **Cookie**。`options` 的属性：
     - `domain` ： `cookie` 在什么域名下有效，类型为 `String` 。默认为网站域名
     - `expires` ： `cookie` 过期时间，类型为 `Date` 。如果没有设置或者设置为 0 ，那么该 `cookie` 只在这个这个 `session` 有效，即关闭浏览器后，这个 `cookie` 会被浏览器删除

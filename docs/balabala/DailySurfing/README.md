@@ -90,7 +90,7 @@ date: 2022-06-20
   - 趁着买一送一和史低补上了 `Minecraft`！顺便也在 Wiki 补了点基础的，像是版本特性之类的。甚至之前对 MC 的认知还在 `1.8.0` 左右 hh（按版本号的话，破坏性更新的 `2.0.0` 什么时候出 \\Doge）
   - 忘记原因地要找回微博的裂图，然后发现它的原理应该是检测到是“违规图片”后，将链接重定向到 [裂图](https://ww4.sinaimg.cn/images/default_s_large.gif)。但原图还在图床上，改改图床链接就好：
     - 挂图链接（可在 F12 看到）：`https://wx2.sinaimg.cn/orj360/xxx.jpg`
-    - 只要将 `/wx(\d)/gm` 改为 `ww$1`，`orj360` 改为原图大小的 `large` 就行。
+    - 只要将 `/wx(\d)/gm` 改为 `ww$1`，`orj360` 改为原图大小的 `large` 就行
     - 用 axios 请求到微博详情的 Api：`https://weibo.com/ajax/statuses/show?id=`，其中 id 值为微博原链接 `https://weibo.com/用户id/博文id` 中的 `博文 id`。再把获取到的原图链接再请求下来转存成本地文件就好。码：[一些 Temp.md](../TempCoder.md#大眼仔，你坏事干净！)
   - 学了点 Sass，好玩诶，并且终于上了 `Bootstarp` 和 `font-awesome`，开始筹备起聚合音乐了
 
@@ -127,7 +127,7 @@ date: 2022-06-20
   - 首先是作者有发 NPM 包： `pnpm install --save sakana-widget`，然后发现好像不能直接插到 md 里。**那是因为：** Vuepress 先是转为 Vue 再打包到 HTML 的，而 md 的内容就被编译到 Vue 的 `<Template>` 里了，那看起来是要么把 md 当 Vue 写，要么引入 Vue 组件了
   - 比较舒服优雅的方式当然是选择 _引入组件_ 啦）但就此掉大坑里了。先是 ts 忘太多了，然后 Vue 的写法又不大记得…… 磨蹭了好久…… 最开始被绊倒的居然还是 ts 的 `__dirname`，但虽然翻了源码，但还是没想到带的 `@vuepress/utils` 就把这个给封装好了，但一开始库然既没查 API 又没输出试探……
   - 上完下午的课回来就着手于再 md 里插 Vue 组件了，但又还是兜兜转转地在 [官方文档](https://v2.vuepress.vuejs.org/zh/reference/plugin/register-components.html#componentsdir) 里找到了说明……
-  - 但这还不是最大的问题，居然是 dev 里没问题但就死活 build 不了……但那个时候 **查找定位 Bug 的方式** 也太不对了……最后又转了几圈回到 _官方文档_ 里就有提到 [Vuepress clientOnly](https://v2.vuepress.vuejs.org/zh/reference/components.html#clientonly) 的特性。
+  - 但这还不是最大的问题，居然是 dev 里没问题但就死活 build 不了……但那个时候 **查找定位 Bug 的方式** 也太不对了……最后又转了几圈回到 _官方文档_ 里就有提到 [Vuepress clientOnly](https://v2.vuepress.vuejs.org/zh/reference/components.html#clientonly) 的特性
   - 还是出现在 `Sakana` 的源码用到了 DOM，而且还不是 `type: module`，就这两个问题搞了几十分钟……
   - 最后还是日常的组内输出及试图指引
   - **但蛋旦：** 还是那个很重要的问题，一个又是跳得太快了，基础的前置知识没补上就大搞，就很浪费时间；以及一直以来的遇到问题时的解决方法都太不对劲了，实在是没有那个敏锐的意识……
@@ -234,7 +234,7 @@ date: 2022-06-20
 
 所以又是一段的澡中妙想））
 
-话题是 **感觉还是得培养靠一手的官方文档来学习或是解决问题**。先套个盾：当然对于每个人来对于讲视频与纯文字的 _接受/上手_ 程度是不一样的，不强求只是发表观察出的观点。
+话题是 **感觉还是得培养靠一手的官方文档来学习或是解决问题**。先套个盾：当然对于每个人来对于讲视频与纯文字的 _接受/上手_ 程度是不一样的，不强求只是发表观察出的观点
 
 对于视频讲解来讲，博主的当然也是依靠官方文档为依据的，再加上自己的理解和做过的实例，再把它们整理起来费曼出去；而就目前而言，那些高人气的库的文档肯定是相当地完善）大多数） 在学习新东西的上手过程中，当然是得选自己舒服的）不然太劝退就不好玩了
 

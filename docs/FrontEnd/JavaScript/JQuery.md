@@ -26,7 +26,7 @@ title: JQuery
 
 ## 函数入口
 
-`window.onload()` 方法是等到页面中所有元素加载完毕之后，才执行，即 `javascript` 此时才可以访问网页中的任何元素。而 jQuery 使用 `$(document).ready()` 方法，可以在 DOM 载入就绪时就对其进行操纵并调用执行它所绑定的函数。也就是说在 jQ 中，不需要等待所有图片加载完再执行。
+`window.onload()` 方法是等到页面中所有元素加载完毕之后，才执行，即 `javascript` 此时才可以访问网页中的任何元素。而 jQuery 使用 `$(document).ready()` 方法，可以在 DOM 载入就绪时就对其进行操纵并调用执行它所绑定的函数。也就是说在 jQ 中，不需要等待所有图片加载完再执行
 
 但是就会有个问题，当获取图片宽高的时候，可能获取不到。不过 jQ 中单独提出了一个页面加载的方法——`load()` 方法，如果这个处理函数绑定给 `window` 对象则会在所有内容加载完毕之后触发，且不会被覆盖：
 
@@ -95,7 +95,7 @@ window.onload = function () {
 
 - `$().attr(name | val)`：单参数时为获取，双参数为设置。设置多值时，参数为 json 对象
 - `$().removeAttr()`：删除属性值，多值时空格间隔
-- 而：对于 `checked、selected、disabled` 这类 boolean 类型的属性来说，不能用 attr 方法，只能用 `prop` 方法。
+- 而：对于 `checked、selected、disabled` 这类 boolean 类型的属性来说，不能用 attr 方法，只能用 `prop` 方法
 - `$().addClass(val)` | `$().removeClass(val)` ：只 添加 | 删除 而不是替换掉
 - `$().toggleClass(val)`：切换 —— 存在则删除，不在则添加
 - `$().is(val)`：判断元素是否包含某一属性
@@ -127,12 +127,12 @@ window.onload = function () {
 - **显示 | 隐藏：**
   - `$().show(val)` | `$().hide(val)`：带参数则 淡入淡出地改变宽高和不透明度，val 为 毫秒
   - `$().fadeIn()` | `$().fadeout()`：只改透明度的淡入淡出
-  - `slideUp()` 方法和 `slideDown()` 方法只会改变元素的高度，如果一个元素的 di`splay 属性值为“none”，调用 `slideDown()` 方法的时候元素由上至下延伸显示。`slideUp()` 正好相反，元素将由下到上缩短隐藏。
+  - `slideUp()` 方法和 `slideDown()` 方法只会改变元素的高度，如果一个元素的 di`splay 属性值为“none”，调用 `slideDown()` 方法的时候元素由上至下延伸显示。`slideUp()` 正好相反，元素将由下到上缩短隐藏
 - **自定义：** `$().animate(params, speed, way, callback)`
   - `params`：一个包含样式和值的 json 对象，比如`{p1:"val1",p2:"val2",...}`；
   - `speed`：动画执行速度(可选)，默认 400；
   - `way`：表示过度使用哪种缓动函数(默认 `swing`，jQ 内部还支持一个 `linear`)
-  - `callback`：在动画执行完之后，执行的函数(可选)。
+  - `callback`：在动画执行完之后，执行的函数(可选)
 
 ## Ajax
 

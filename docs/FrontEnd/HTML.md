@@ -112,16 +112,16 @@ title: HTML
   - `volume`：在 0.0 到 1.0 间的音量值，或查询当前音量值
   - `currentTime`：以 `s` 为单位返回从开始播放到目前所花的时间，也可设置 `currentTime` 的值来跳转到特定位置
 - **更多属性**
-  - `audioTracks`：返回表示可用音频滚到的 `AudioTrackList` 对象。
-  - `controller`：返回表示音频大年媒体控制器的 `MediaController` 对象。
+  - `audioTracks`：返回表示可用音频滚到的 `AudioTrackList` 对象
+  - `controller`：返回表示音频大年媒体控制器的 `MediaController` 对象
   - `crossOrigin`：设置或返回音频的 `CORS` 设置
   - `defaultMuted`：设置或返回音频默认是否静音
   - `defaultPlaybackRate`：设置或返回音频的默认播放速度
   - `mediaGroup`：设置或返回音频叔叔的美肌组合的名称
   - `networkState`：返回音频的当前网络状态
-  - `playbackRate`：设置或返回音频的播放速度。
+  - `playbackRate`：设置或返回音频的播放速度
   - `seekable`：返回标识音频可寻址部分的 `TimeRanges` 对象
-  - `seeking`：返回用户当前收正在音频中进行查找。
+  - `seeking`：返回用户当前收正在音频中进行查找
   - `textTracks`：返回标识文本滚到的 `TextTrackList` 对象
 
 ### 方法事件
@@ -132,9 +132,9 @@ title: HTML
   - `pause()`：暂停
   - `canPlayType(obj)`：测试饭后指定指定的 `Mime` 类型的文件
   - `load()`：重新加载音频元素
-  - `getStartDate()`：返回新的 `Date` 对象，表示当前时间线偏移量。
-  - `fastSeek()`：在音频播放器中指定播放时间。
-  - `addTextTrack()`：想音频添加新的文本轨道。
+  - `getStartDate()`：返回新的 `Date` 对象，表示当前时间线偏移量
+  - `fastSeek()`：在音频播放器中指定播放时间
+  - `addTextTrack()`：想音频添加新的文本轨道
 - **事件**
   - `loadstart`：客户端开始请求数据
   - `progress`：正在播放的时候不停触发，如果暂停不会触发，触发的时间间隔比较大
