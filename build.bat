@@ -1,4 +1,4 @@
-cd dist/Notes
+cd out/dist
 echo.>.nojekyll
 echo notes.organicfish.top>CNAME
 

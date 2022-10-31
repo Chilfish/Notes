@@ -16,6 +16,7 @@ date: 2022-08-07
   - [定义](#定义)
 - [循环单链表](#循环单链表)
 - [双向链表](#双向链表)
+- [循环双链表](#循环双链表)
 
 <!-- /code_chunk_output -->
 
@@ -115,7 +116,7 @@ void push_back(const T &value) {
 }
 ```
 
-**头插法：** 
+**头插法：**
 
 ```cpp {.line-numbers}
 void push_front(const T &value) {
@@ -210,10 +211,106 @@ void inverse() {
 }
 ```
 
+**遍历输出：**
+
+```cpp {.line-numbers}
+void print() const {
+  cout << "Length: " << curLength << "\ndata: ";
+  // 从头遍历到尾
+  Node *p = head;
+  while (p != tail) {
+    p = p->next;
+    cout << p->data << " ";
+  } cout << endl;
+}
+```
+
 <br>
 
 ## 循环单链表
 
+<div class="art">
+
+循环单链表的特点就是尾指针指向了首元结点而形成一个环。详见： [LoopList.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/LoopList.hpp)
+
+</div>
+
+**头插元素：**
+
+```cpp {.line-numbers}
+void push_front(const T &value) {
+  // p 就是整个数据节点
+  Node *p = new Node(value, head->next);
+  if (!head->next) {
+    // 空链表时得先初始化尾节点
+    tail = p;
+  } else {
+    // 非空则将尾节点的下一个指向首元结点，来实现循环
+    tail->next = p;
+  }
+  // 头插地拼回来
+  head->next = p;
+  ++curLength;
+}
+```
+
+**尾插元素：**
+
+```cpp {.line-numbers}
+void push_back(const T &value) {
+  // 与单链表 尾节点->next为空指针 不同的是，
+  // 循环链表的 尾节点->next指向了首元结点，来实现循环
+  Node *p = new Node(value, head->next);
+  // 尾插地拼在一起
+  tail->next = p; tail = p;
+  ++curLength;
+}
+```
+
+**删除首元结点：** ）尾节点的话还得遍历到最后……
+
+```cpp {.line-numbers}
+void pop_front() {
+  Node *p = head->next;
+  // 删除了首元结点
+  head->next = p->next;
+  // 同时也要让尾节点指向新的首元结点
+  tail->next = head->next;
+}
+```
+
 <br>
 
 ## 双向链表
+
+<div class="art">
+
+双向链表就多了一个 **前驱节点** 的指针。详见： [DoubleList.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/DoubleList.hpp)
+
+</div>
+
+**所以就得要有前驱指针：**
+
+```cpp {.line-numbers}
+template<class T> class DoubleList {
+private:
+  struct Node {
+    T data;
+    Node *next;
+    Node *prev;
+
+    Node(const T &value, Node *p = nullptr, Node *n = nullptr) :
+      data{value}, prev{p}, next{n} {};
+    Node(Node *p = nullptr, Node *n = nullptr) :
+      data{T()}, prev{p}, next(n) {};
+  };
+
+  Node *head; // 头节点
+  Node *tail; // 尾节点
+  int curLength;
+}
+```
+
+<br>
+
+## 循环双链表

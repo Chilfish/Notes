@@ -181,10 +181,23 @@ $$
 
 $\textbf{7. }$
 
-- 给定使 $P(x) \to (\forall xQ(x, y) \to P(y))$ **为真的解释** $I_1$ 和 $I_1$ 中的赋值 $v_1$ 如下：<br> $D_{II}$ 为自然数集，$P(x):x$ 是奇数，$Q(x, y):x\geq y，v1(x)=v1(y)=0$ 
+- 给定使 $P(x) \to (\forall xQ(x, y) \to P(y))$ **为真的解释** $I_1$ 和 $I_1$ 中的赋值 $v_1$ 如下：<br> $D_{II}$ 为自然数集，$P(x):x$ 是奇数，$Q(x, y):x\geq y，v1(x)=v1(y)=0$
 - 给定使 $P(x) \to (\forall xQ(x, y) \to P(y))$ **为假的解释** $I_2$ 和 $I_2$ 中的赋值 $v_2$ 如下：<br> $D_{II}$ 为自然数集，$P(x):x$ 是奇数，$Q(x, y):x\geq y，v2(x)=1, v2(y)=0$
 
 $\textbf{8. }$
 
 - 给定使 $(\forall xP(x) \to \forall xQ(x)) \to \forall x(P(x) \to Q(x))$ **为真的解释** $I_1$ 如下：<br> $D_{II}=\{a\}, P(a)=Q(a)=1$
 - 给定使 $(\forall xP(x) \to \forall xQ(x)) \to \forall x(P(x) \to Q(x))$ **为假的解释** $I_2$ 如下 <br> $D_{II} =\{a, b\}, P(a)=Q(b)=1, Q(a)= P(b)=0$
+
+<br>
+
+$$
+\begin{align*}
+F &= AB\overline{C} + \overline{A}BC + A\overline{B}C + ABC \\
+  &= AB\overline{C} + \overline{A}BC + AC \\
+  &= AB\overline{C} + C(A+\overline{A}B) \\
+  &= AB\overline{C} + AC +BC \\
+  &= AC + B(C + A\overline{C}) \\
+  &= AC + BC + AB
+\end{align*}
+$$

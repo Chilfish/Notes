@@ -11,13 +11,18 @@ export default defineUserConfig({
   description: '基于 Vuepress 的笔记 blog',
   // base: '/Notes/',
 
-  head: [['link', { rel: 'icon', href: './logo.png' }]],
+  head: [
+    ['link', { rel: 'icon', href: 'https://notes.organicfish.top/logo.png' }],
+  ],
   markdown: {
     headers: {
       level: [2, 3, 4],
     },
   },
   // dest: 'dist/Notes/',
+  dest: 'out/dist',
+  cache: 'out/cache',
+  temp: 'out/temp',
 
   plugins: [
     registerComponentsPlugin({
@@ -50,7 +55,7 @@ export default defineUserConfig({
     navbar: navbarConfig,
     // navbarAutoHide: 'always',
 
-    toc: false,
+    // toc: false,
     logo: '/logo.png',
 
     darkmode: 'toggle',
