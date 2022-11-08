@@ -1,5 +1,5 @@
 ---
-title: 标准容器库 (STL)
+title: STL 标准库容器
 date: 2022-04-14
 ---
 
@@ -366,11 +366,40 @@ void Map_Value() {
 
 ## 迭代器
 
-迭代器要遍历，随机访问是指用下标或 at()
+<div class="art">
 
--数组随机访问， `deque` 随机访问， `stack` 不支持， `queue` 不支持， `priority_queue` 不支持
+在想要遍历或访问数据结构中的数据时，一方面希望只使用共有的方法就能遍历，另一方面又希望能够统一各个数据结构的遍历方式，于是就有了 **迭代器**
 
-- `list` 双向，`set` 双向， `multiset` 双向 ， `map` 双向， `multimap` 双向
+就如，`std::vector` 是用数组实现的，`std::list`使用链表实现的，`std::map`则是红黑树实现，每个 **容器** 的遍历方式都不一样，遍历的边界也都不一样，这时候就需要迭代器去统一
+
+而对表的一些操作，尤其是在表的中间进行插入和删除的操作，需要位置的概念。在 STL 中位置由内嵌的 `iterator` 表示。它定义了一对方法：
+
+- `iterator begin()`：表示容器|表的第一项
+- `Iterator end()`：表示容器|表最后一项之后的位置
+
+使用迭代器对表的遍历，即为从表头一直到表尾。如：
+
+```cpp {.line-numbers}
+for (vector<int>::iterator it = arr.begin(); it != arr.end(); ++it) {
+  std::cout << *it << " ";
+}
+```
+
+<div class="h5">一些对迭代器的操作：</div>
+
+- `++it` 和 `++it`：将迭代器推到下一个位置
+- `--it` 和 `it--`：将迭代器推到上一个位置
+- `it1 == it2` 和 `it1 != it2`：比较是否指向同一个位置
+- `*it`，返回迭代器指向数据的引用
+- `It + n` 和 `it - n`：将迭代器向前或向后推 n 个位置
+
+其中，对于数据的访问有两种情况：只读或读写：`const_iterator` 表示只读迭代器，不允许改写指向元素的值， `iterator` 则是可读写迭代器
+
+<div class="h5">而在STL中：</div>
+
+- 随机访问： `vector`、`deque`
+- 不支持：`stack`、`queue`、`priority_queue`
+- 双向：`list`、`set`、`multiset`、`map`、`multimap`
 
 范围总是 $[begin, end)$
 

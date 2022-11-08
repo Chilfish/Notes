@@ -176,7 +176,7 @@ void quick(vi& arr, int begin, int end) {
 void insert(vi& arr) {
   for (int i = 0; i < arr.size(); ++i) {
     int temp = arr[i], j = i;
-    while ( j > 0 and arr[j - 1] > temp)
+    while (j > 0 and arr[j - 1] > temp)
       arr[j] = arr[j - 1], --j; //往后挪
     arr[j] = temp; // 插入
   }

@@ -12,6 +12,7 @@ date: 2022-04-14
 <!-- code_chunk_output -->
 
 - [一些小语法](#一些小语法)
+  - [指针与内存分配](#指针与内存分配)
   - [命名规范](#命名规范)
   - [缓冲区](#缓冲区)
   - [stringstream](#stringstream)
@@ -38,6 +39,36 @@ date: 2022-04-14
 <br>
 
 ## 一些小语法
+
+### 指针与内存分配
+
+```cpp {.line-numbers}
+struct node {
+  node *next;
+  node(node *p = nullptr) :
+    next{p} {}
+};
+
+int main() {
+  node *a,
+    *n = new node,
+    *m = n,
+    *p = new node(n);
+
+  cout << n << " " << n << endl
+    << a << " " << p << endl;
+  return 0;
+}
+```
+
+输出：
+
+```text {.line-numbers}
+0xe913d0 0xe913d0
+0 0xe913f0
+```
+
+<br>
 
 ### 命名规范
 

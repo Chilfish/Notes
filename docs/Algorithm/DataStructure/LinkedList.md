@@ -6,14 +6,13 @@ date: 2022-08-07
 <br><p style="font-size: 32px; font-weight: bold;">目录</p>
 
 - **参考：**
-  - [知乎：C++ 单链表](https://zhuanlan.zhihu.com/p/84950700)
+  - [二境志：C++ 单链表](https://blog.csdn.net/weixin_44652781/article/details/101860069)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=5 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
 - [单链表](#单链表)
-  - [定义](#定义)
 - [循环单链表](#循环单链表)
 - [双向链表](#双向链表)
 - [循环双链表](#循环双链表)
@@ -23,8 +22,6 @@ date: 2022-08-07
 <br>
 
 ## 单链表
-
-### 定义
 
 <div class="art">
 
@@ -235,19 +232,46 @@ void print() const {
 
 </div>
 
+**私有成员：**
+
+```cpp {.line-numbers}
+template<class T> class LoopList {
+private:
+  struct Node {
+    T data;
+    Node *next;
+
+    Node(const T &value, Node *p = nullptr) :
+      data{value}, next{p} {};
+    Node(Node *p = nullptr) :
+      data{T()}, next{p} {};
+  };
+
+  Node *head; // 头节点
+  Node *tail; // 尾节点
+  int curLength;
+
+  void init() {
+    head = tail = new Node;
+    head->next = tail;
+    tail->next = head->next;
+    curLength = 0;
+  }
+}
+```
+
 **头插元素：**
 
 ```cpp {.line-numbers}
 void push_front(const T &value) {
-  // p 就是整个数据节点
+  // p 是首元结点的前一个节点，来头插
   Node *p = new Node(value, head->next);
-  if (!head->next) {
-    // 空链表时得先初始化尾节点
+  // 空链表时得先初始化尾节点
+  if (head->next == head) {
     tail = p;
-  } else {
-    // 非空则将尾节点的下一个指向首元结点，来实现循环
-    tail->next = p;
   }
+  // 将尾节点的下一个指向首元结点，来实现循环
+  tail->next = p;
   // 头插地拼回来
   head->next = p;
   ++curLength;
@@ -272,10 +296,12 @@ void push_back(const T &value) {
 ```cpp {.line-numbers}
 void pop_front() {
   Node *p = head->next;
-  // 删除了首元结点
-  head->next = p->next;
+  // 让首元结点指向它的下一个节点
   // 同时也要让尾节点指向新的首元结点
-  tail->next = head->next;
+  tail->next = head->next = p->next;
+  // 最后要释放掉原先的首元结点的内存
+  delete p; p = nullptr;
+  --curLength;
 }
 ```
 
@@ -285,7 +311,7 @@ void pop_front() {
 
 <div class="art">
 
-双向链表就多了一个 **前驱节点** 的指针。详见： [DoubleList.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/DoubleList.hpp)
+双向链表就多了一个 **前驱节点** 的指针。详见： [DoubleList.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/DoubleList.hpp)。这次就用了 [迭代器](README.md#迭代器) 来写了
 
 </div>
 
@@ -299,15 +325,145 @@ private:
     Node *next;
     Node *prev;
 
-    Node(const T &value, Node *p = nullptr, Node *n = nullptr) :
+    Node(const T &value = T{}, Node *p = nullptr, Node *n = nullptr) :
       data{value}, prev{p}, next{n} {};
-    Node(Node *p = nullptr, Node *n = nullptr) :
-      data{T()}, prev{p}, next(n) {};
   };
 
   Node *head; // 头节点
   Node *tail; // 尾节点
   int curLength;
+
+  // 构造函数的初始化
+  void init() {
+    tail = new Node;
+    head = new Node;
+    assert(head), assert(tail);
+
+    tail->prev = head;
+    head->next = tail;
+    curLength = 0;
+  }
+}
+```
+
+**插入节点**
+
+```cpp {.line-numbers}
+/**
+* @brief 在指定迭代器前插入元素
+* @param position 链表的迭代器
+* @param x 要插入的元素
+* @returns 指向被插入元素的迭代器
+*/
+iterator insert(const_iterator position, const T &x) {
+  position.assertValid();
+  if (position.thisList != this) {
+    throw IteratorError();
+  }
+
+  Node *p = position.cur,
+    *newNode = new Node{x, p->prev, p};
+
+  p->prev = p->prev->next = newNode;
+  ++curLength;
+  return iterator{*this, newNode};
+}
+
+/**
+* @brief 在指定位置前插入元素
+* @param index 要插入的位置
+* @param x 要插入的元素
+* @returns 指向被插入元素的迭代器
+*/
+iterator insert(int index, const T &x) {
+  if (index < 0 || index >= size())
+    throw outOfRange();
+
+  // 折半遍历
+  const_iterator it = (index <= size() >> 1)
+    ? begin() + index
+    : end() - index - 1;
+  return insert(it, x);
+}
+
+// 尾插法
+void push_back(const T &x) { insert(end(), x); }
+// 头插法
+void push_front(const T &x) { insert(begin(), x); }
+```
+
+**删除节点：**
+
+```cpp {.line-numbers}
+/**
+* @brief 删除指定位置迭代器的元素
+* @param position 指向被删元素的迭代器
+* @returns 指向被删元素的下一个节点的迭代器
+*/
+iterator erase(const_iterator position) {
+  position.assertValid();
+  if (position.thisList != this) {
+    throw IteratorError();
+  }
+
+  Node *p = position.cur;
+  iterator nextE{*this, p->next};
+
+  p->prev->next = p->next;
+  p->next->prev = p->prev;
+  delete p; p = nullptr;
+  --curLength;
+  return nextE;
+}
+
+/**
+* @brief 删除范围内的元素，左闭右开
+* @param front 开始的迭代器
+* @param to 结束的迭代器
+* @returns 指向 to 的迭代器
+*/
+iterator erase(const_iterator from, const_iterator to) {
+  while (from != to) erase(from++);
+  return iterator{*this, to.cur};
+}
+
+// 尾删除
+void pop_back() { erase(end() - 1); }
+// 首删除
+void pop_front() { erase(begin()); }
+```
+
+**清空链表：** 其实就是从头开始删除
+
+```cpp {.line-numbers}
+// 清空链表
+void clear() {
+  while (!empty()) pop_front();
+}
+
+```
+
+**遍历输出：**
+
+```cpp {.line-numbers}
+// 正序输出链表
+void print() const {
+  cout << "length: " << curLength << "\ndata: ";
+  Node *p = head->next;
+  while (p != tail) {
+    cout << p->data << " ";
+    p = p->next;
+  } cout << endl;
+}
+
+// 逆序输出
+void reprint() const {
+  cout << "length: " << curLength << "\ndata: ";
+  Node *p = tail->prev;
+  while (p != head) {
+    cout << p->data << " ";
+    p = p->prev;
+  } cout << endl;
 }
 ```
 

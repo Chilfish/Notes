@@ -36,6 +36,7 @@ export default defineUserConfig({
         tex: true,
         footnote: true,
         container: true,
+        mermaid: true,
       },
       copyCode: {},
       activeHeaderLinks: false,

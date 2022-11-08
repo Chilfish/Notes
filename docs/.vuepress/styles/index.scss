@@ -81,15 +81,17 @@ html[data-theme='dark'] {
       background-color: #c7c1c1;
     }
   }
+
+  div.md-enhance-mermaid {
+    & svg foreignObject {
+      color: #000 !important;
+    }
+  }
 }
 
 hr {
   display: block;
   border: 1px solid #485e7386;
-}
-
-em {
-  color: black;
 }
 
 strong {
@@ -161,11 +163,24 @@ html[data-theme='light'] .token.class-name {
 main img {
   @include Fish-Box();
   margin-top: 1rem;
+  background-color: #fff;
   & + p {
     color: #999;
     padding: 0.4rem;
     margin: 0;
     text-align: center !important;
+  }
+}
+
+// mermaid 图
+div.md-enhance-mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto;
+
+  svg circle {
+    fill: #ececff !important;
+    stroke: #9370db !important;
   }
 }
 

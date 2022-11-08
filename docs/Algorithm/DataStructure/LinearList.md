@@ -123,16 +123,12 @@ private:
   Vector<T> s;
 public:
   explicit Stack() {};
-  explicit Stack(const Vector<T>& a) {
-    for (auto ele : a) {
-      s.push_back(ele);
-    }
-  }
-  T top() { return s.back(); }
+  explicit Stack(const Vector<T>& a): s{a} {}
+  T top() const { return s.back(); }
   void pop() { s.pop_back(); }
   void push(const T& data) { s.push_back(data); }
-  int size() { return s.size(); }
-  bool empty() { return s.empty(); }
+  int size() const { return s.size(); }
+  bool empty() const { return s.empty(); }
 };
 ```
 

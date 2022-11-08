@@ -11,7 +11,7 @@ sidebar: false
   - [链表 Linked List](LinkedList.md)
   - [字符串 String](#)
 - **非线性结构结构**
-  - [树 Tree](#)
+  - [树 Tree](Tree.md)
   - [散列表 Hash](#)
   - [堆 Heap](#)
   - [图 Graph](#)
@@ -27,6 +27,7 @@ sidebar: false
 - [数据结构的分类](#数据结构的分类)
   - [按逻辑结构分类](#按逻辑结构分类)
   - [按储存结构分类](#按储存结构分类)
+- [迭代器](#迭代器)
 
 <!-- /code_chunk_output -->
 
@@ -37,7 +38,7 @@ sidebar: false
 :::
 
 :::tip
-在设计上更多地参考了 C++的 [STL 标准库](../STL.md) ）模仿
+在设计上更多地参考了 C++的 [STL 标准库容器](../STL.md) ）模仿 -> 尽头都是手搓个低配版 STL 了）
 :::
 
 <br>
@@ -141,3 +142,124 @@ sidebar: false
 > 为什么一堆“教程”一上来就都是直接的 复杂度 $\to$ 数组 $\to$ 链表 $\dots$，都跳过了概念呢……
 
 <br>
+
+## 迭代器
+
+<div class="art">
+
+在想要遍历或访问数据结构中的数据时，一方面希望只使用共有的方法就能遍历，另一方面又希望能够统一各个数据结构的遍历方式，于是就有了 **迭代器**
+
+就如，`std::vector` 是用数组实现的，`std::list`使用链表实现的，`std::map`则是红黑树实现，每个 **容器** 的遍历方式都不一样，遍历的边界也都不一样，这时候就需要迭代器去统一
+
+而对表的一些操作，尤其是在表的中间进行插入和删除的操作，需要位置的概念。在 STL 中位置由内嵌的 `iterator` 表示。它定义了一对方法：
+
+- `iterator begin()`：表示容器|表的第一项
+- `Iterator end()`：表示容器|表最后一项之后的位置
+
+使用迭代器对表的遍历，即为从表头一直到表尾。如：
+
+```cpp {.line-numbers}
+for (vector<int>::iterator it = arr.begin(); it != arr.end(); ++it) {
+  std::cout << *it << " ";
+}
+```
+
+<div class="h5">一些对迭代器的操作：</div>
+
+- `++it` 和 `++it`：将迭代器推到下一个位置
+- `--it` 和 `it--`：将迭代器推到上一个位置
+- `it1 == it2` 和 `it1 != it2`：比较是否指向同一个位置
+- `*it`，返回迭代器指向数据的引用
+- `It + n` 和 `it - n`：将迭代器向前或向后推 n 个位置
+
+其中，对于数据的访问有两种情况：只读或读写：`const_iterator` 表示只读迭代器，不允许改写指向元素的值， `iterator` 则是可读写迭代器
+
+一个的 **双向迭代器：**
+
+```cpp {.line-numbers}
+template<class T>class xxx {
+private:
+  // 或是其他的内部的数据结构
+  typedef Node int;
+public:
+  // 只读迭代器，不能改写指向元素的值
+  class const_iterator {
+  protected:
+    Node *cur; // 指迭代器当前指向的元素
+    int index; // 记录迭代器当前指向的线性结构的“下标”
+    const xxx<T> *thisList; // 指向迭代器本身的对象的指针
+    friend class xxx<T>; // 向本对象声明友元
+
+    const_iterator(const xxx<T> &l, Node *p)
+      :thisList{&l}, cur{p}, index{0} {}
+
+    // 判断迭代器是否失效
+    void assertValid() const {
+      if (cur == nullptr || thisList == nullptr
+        || cur == thisList->head)
+        throw IteratorError();
+    }
+
+    // 返回当前迭代器指向元素的值
+    T &getData() const {
+      assertValid();
+      return cur->data;
+    }
+
+  public:
+    // 重载 *以访问值
+    const T &operator*() { return getData(); }
+    // 向前推进迭代器
+    const_iterator &operator++() {
+      if (cur->next == nullptr) {
+        throw IteratorError();
+      }
+      cur = cur->next;
+      ++index;
+      return *this;
+    }
+    const_iterator operator++(int) {
+      const_iterator old = *this;
+      ++(*this);
+      return old;
+    }
+    // 向后推进迭代器
+    const_iterator &operator--() {
+      if (cur->prev == nullptr) {
+        throw IteratorError();
+      }
+      cur = cur->prev;
+      --index;
+      return *this;
+    }
+    const_iterator &operator--(int) {
+      const_iterator old = *this;
+      --(*this);
+      return old;
+    }
+    // 迭代器向前推进x位
+    const_iterator &operator+(int x) {
+      while (x--) ++(*this);
+      return *this;
+    }
+    // 迭代器向后推进x位
+    const_iterator &operator-(int x) {
+      while (x--) --(*this);
+      return *this;
+    }
+    // 返回两个迭代器之间的距离
+    int operator-(const const_iterator &x) {
+      return index - x.index;
+    }
+    // 判断两个迭代器是否相等
+    bool operator==(const const_iterator &rhs) const {
+      return cur == rhs.cur;
+    }
+    bool operator!=(const const_iterator &rhs) const {
+      return !(*this == rhs);
+    }
+  };
+};
+```
+
+</div>
