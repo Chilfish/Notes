@@ -1,5 +1,5 @@
 ---
-title: 应用层 —— HTTP | DNS
+title: HTTP 与 HTTPS 协议
 date: 2022-07-24
 ---
 
@@ -17,6 +17,7 @@ date: 2022-07-24
 
 - [概述](#概述)
   - [HTTP 的一些性质](#http-的一些性质)
+- [URL](#url)
 - [HTTP 和 HTTPS](#http-和-https)
   - [基本概念](#基本概念)
   - [区别及优缺点](#区别及优缺点)
@@ -30,11 +31,12 @@ date: 2022-07-24
     - [状态行](#状态行)
     - [响应头](#响应头)
     - [响应主体](#响应主体)
-- [持久性连接与缓存](#持久性连接与缓存)
-  - [HTTP 缓存的类型](#http-缓存的类型)
-  - [HTTP 缓存控制](#http-缓存控制)
-- [Cookie, Session 与 Token](#cookie-session-与-token)
-- [代理服务器](#代理服务器)
+- [HTTP 应用](#http-应用)
+  - [持久性连接与缓存](#持久性连接与缓存)
+    - [HTTP 缓存的类型](#http-缓存的类型)
+    - [HTTP 缓存控制](#http-缓存控制)
+  - [Cookie, Session 与 Token](#cookie-session-与-token)
+  - [代理服务器](#代理服务器)
 
 <!-- /code_chunk_output -->
 
@@ -59,7 +61,7 @@ HTTP 并不需要其底层的传输层协议是面向连接的，只需要它是
 <div class="art">
 <div class="h5">无状态，有会话</div>
 
-**无状态是指在同一个连接中，两个执行成功的请求之间是没有关系的。**这就带来了一个问题，用户没有办法在同一个网站中进行连续的交互。比如在一个电商网站里，用户把某个商品加入到购物车，切换到另一个商品页面后再次添加了商品，这两次添加商品的*请求之间没有关联*，浏览器无法知道用户最终选择了哪些商品
+**无状态是指在同一个连接中，两个执行成功的请求之间是没有关系的。** 这就带来了一个问题，用户没有办法在同一个网站中进行连续的交互。比如在一个电商网站里，用户把某个商品加入到购物车，切换到另一个商品页面后再次添加了商品，这两次添加商品的*请求之间没有关联*，浏览器无法知道用户最终选择了哪些商品
 
 而使用 Cookies 就可以解决这个问题。把 Cookies 添加到头部中，创建一个会话让每次请求都能共享相同的上下文信息，达成相同的状态
 
@@ -73,13 +75,45 @@ HTTP 并不需要其底层的传输层协议是面向连接的，只需要它是
 
 </div><br>
 
+## URL
+
+<div class="art">
+
+统一资源定位符（`Uniform Resource Locator`），缩写：URL，也就是网址。完整格式如下：
+
+`[协议类型]://[访问资源需要的凭证信息]@[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID]`
+
+其中`[访问凭证信息]`、`[端口号]`、`[查询]`、`[片段 ID]`都属于选填项
+
+例如： `https://lab.sample.com:2333/url/xxx.html?pid=2333&f=asd#what%20is%20url`，其中：
+
+- **协议类型：** 此处为 `https`，表示该网址应用的协议，如 `HTTP`、`HTTPS`、`FTP`、`file`、`mailto`、`thunder`
+- **域名部分：** 此处为 `lab.sample.com`，其中 `lab` 为二级域名，`sample` 为一级域名，`com` 为顶级域名，交由后面的 **域名解析系统** 获得服务器的 ip 地址。也可以只用 ip 作为域名
+- **端口号：** 此处为 `:2333`，用来将服务器“分区”，以获取不同类型的文件。如 80 为 `http` 的默认端口， 443 为 `https` 的默认端口，这两个指定协议类型时可以省略
+- **文件目录：** 此处为 `/url/`，以根域名为主目录，一直到被访问的文件。但在前后端工程化的现在，大多为由路由生成的 _虚拟目录_
+- **文件名：** 此处为 `xxx.html`，从域名后最后一个 `/` 开始到 `?` 为止的部分，表示被访问文件的文件名。如果以 `/` 结尾则表示的是访问该目录下的默认文件名 `index.xxx`，因此有时文件名也不是必须的
+- **定位锚：** 此处为 `#what is url`，访问带上锚就会自动将页面滑到锚点
+- **查询参数：** 此处为 `?pid=2333&f=asd`，指 `?` 到 `#` 之间的部分，表示要请求的参数，以 `?` 开始，`&` 作分隔，键值(`key=value`)的格式
+
+<div class="h5">URL 的编码与解码</div>
+
+因为 URL 上的字符只能是 ASCII 码，也就是说 URL 只能使用英文字母、阿拉伯数字和某些标点符号，不能使用其他文字和符号
+
+即只有字母和数字`[0-9a-zA-Z]`、一些特殊符号`$-_.+!*'()`(不包括双引号)、以及某些保留字（空格转换为+），才可以不经过编码直接用于 URL。这意味着 如果 URL 中有汉字，就必须编码后使用。如 `汉字` 就会被编码成 `%E6%B1%89%E5%AD%97`。如上述的网址中的 `%20` 就是对 空格 字符的编码
+
+js 通常使用 `encodeURLComponent()` 来编码，`decodeURLComponent`来解码
+
+</div>
+
+<br>
+
 ## HTTP 和 HTTPS
 
 ### 基本概念
 
 - `HTTP`: 是一个**客户端**和**服务器端**请求和应答的**标准**，用于从 `WWW` 服务器传输超文本到本地浏览器的**超文本传输协议**
 
-- `HTTPS`：是以安全为目标的 `HTTP` 通道，即 `HTTP` 下 加入 `SSL` 层进行**加密**。其作用是：建立一个信息安全通道，来确保数据的传输，确保网站的真实性
+- `HTTPS`：在 HTTP 加上 **加密处理**、**认证**、**完整性保护**，套上 SSL(`Secure Socket Layer`) 就是 HTTPS
 
 ### 区别及优缺点
 
@@ -88,7 +122,8 @@ HTTP 并不需要其底层的传输层协议是面向连接的，只需要它是
 - `HTTP` 的连接很简单，是无状态的。`HTTPS` 握手阶段比较费时，会使页面加载时间延长 `50%`
 - `HTTPS` 缓存不如 `HTTP` 高效，会增加数据开销
 - `Https` 协议需要 `ca` 证书，费用较高，功能越强大的证书费用越高
-- `SSL` 证书需要绑定 `IP`，不能再同一个 `IP` 上绑定多个域名，`IPV4` 资源支持不了这种消耗
+- `HTTP` 无法证明报文完整性，其可能会被中途篡改
+-
 
 ### HTTPS 协议的工作原理
 
@@ -115,20 +150,41 @@ HTTP 并不需要其底层的传输层协议是面向连接的，只需要它是
 - **请求行**：{ http 方法、页面地址、http 协议、http 版本 }
 - **响应报文**：{ 状态行、响应头、空行、响应体 }
 
+如下为一个请求：
+
+```yaml {.line-numbers}
+GET /logo.png HTTP/2
+Host: notes.organicfish.top
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-US,zh;q=0.8,zh-CN;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Referer: https://notes.organicfish.top/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Sec-GPC: 1
+If-Modified-Since: Tue, 08 Nov 2022 15:27:00 GMT
+If-None-Match: "636a7544-1bad2"
+TE: trailers
+```
+
 #### 请求方法
 
 <div style="text-align: center;margin: 1rem;">
 
 <span></span>
-方法| 描述|
-:---:|:---|
+方法| 描述
+:---:|:---
 GET| 请求指定的页面信息，并返回实体主体
 HEAD| 类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头
 POST| 向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST 请求可能会导致新的资源的建立和/或已有资源的修改
 PUT| 从客户端向服务器传送的数据取代指定的文档的内容
 DELETE| 请求服务器删除指定的页面
-CONNECT| `HTTP/1.1` 协议中预留给能够将连接改为管道方式的代理服务器
-OPTIONS| 允许客户端查看服务器的性能
+CONNECT| 要求在与代理服务器通信时建立隧道，实现用隧道协议进行 TCP 通信
+OPTIONS| 查询对 URL 指定的资源支持的方法
 TRACE| 回显服务器收到的请求，主要用于测试或诊断
 PATCH| 是对 PUT 方法的补充，用来对已知资源进行局部更新
 
@@ -150,7 +206,7 @@ PATCH| 是对 PUT 方法的补充，用来对已知资源进行局部更新
 这里设置的主要是一些信息，包含客户端，服务器
 
 - `GET/`：请求行
-- `Host`：请求的目标域名和端口，允许多个域名同处一个 IP 地址，即虚拟主机
+- `Host`：请求的目标域名和端口，允许多个域名同处一个 IP 地址，即一个物理服务器主机可以承载多个域名，每个域名的主机就是这个物理主机的 **虚拟主机**，Host 就是要表明要访问哪一个虚拟主机
 - `User-Agent`：浏览器的具体类型，如：`User-Agent：Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0`
 - `Accept`：客户端希望接受的数据类型，如：`Accept: text/html,application/xhtml+xml,application/xml;q=0.9;`
 - `Accept-Charset`：浏览器采用的编码方式，如：`Accept-Charset: ISO-8859-1`
@@ -192,6 +248,25 @@ PATCH| 是对 PUT 方法的补充，用来对已知资源进行局部更新
 ### 响应报文
 
 响应报文是服务器发回给客户端的。组成部分有**状态行**，**响应头**，**响应主体**
+
+对上面请求的一个响应：
+
+```yaml {.line-numbers}
+HTTP/2 304 Not Modified
+date: Wed, 09 Nov 2022 07:13:08 GMT
+via: 1.1 varnish
+cache-control: max-age=600
+etag: "636a7544-1bad2"
+expires: Wed, 09 Nov 2022 07:23:08 GMT
+age: 0
+x-served-by: cache-tyo11942-TYO
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1667977989.772745,VS0,VE181
+vary: Accept-Encoding
+x-fastly-request-id: 2261d73ed59e38f18e603a9e65f1318235cfdba0
+X-Firefox-Spdy: h2
+```
 
 #### 状态行
 
@@ -238,7 +313,11 @@ PATCH| 是对 PUT 方法的补充，用来对已知资源进行局部更新
 
 <br>
 
-## 持久性连接与缓存
+## HTTP 应用
+
+<br>
+
+### 持久性连接与缓存
 
 <div class="art">
 
@@ -252,7 +331,7 @@ PATCH| 是对 PUT 方法的补充，用来对已知资源进行局部更新
 
 </div>
 
-### HTTP 缓存的类型
+#### HTTP 缓存的类型
 
 通常 HTTP 缓存策略分为两种：强缓存、协商缓存。从字面意思我们可以很直观的看到它们的差别：
 
@@ -267,7 +346,7 @@ PATCH| 是对 PUT 方法的补充，用来对已知资源进行局部更新
 
 协商缓存会先向服务器发送一个请求，服务器会根据这个**请求头**的一些参数来判断是否命中协商缓存，如果命中，则返回 304 状态码并带上新的**响应头**通知浏览器从缓存中读取资源
 
-### HTTP 缓存控制
+#### HTTP 缓存控制
 
 <div class="art">
 
@@ -326,10 +405,14 @@ Etag 都是服务器为每份资源生成的唯一标识，就像一个指纹，
 
 </div>
 
-<br>
-
-## Cookie, Session 与 Token
+> temp: [简书 HTTP 缓存](https://www.jianshu.com/p/227cee9c8d15)
 
 <br>
 
-## 代理服务器
+### Cookie, Session 与 Token
+
+> temp: [掘金](https://juejin.cn/post/7040695405486538759)
+
+<br>
+
+### 代理服务器

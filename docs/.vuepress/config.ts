@@ -1,9 +1,10 @@
 import { defineUserConfig } from 'vuepress';
 import { hopeTheme } from 'vuepress-theme-hope';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
-import { path } from '@vuepress/utils';
-
+import { getDirname, path } from '@vuepress/utils';
 import { navbarConfig } from './navBar';
+
+const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -33,7 +34,7 @@ export default defineUserConfig({
   theme: hopeTheme({
     plugins: {
       mdEnhance: {
-        tex: true,
+        katex: true,
         footnote: true,
         container: true,
         mermaid: true,
