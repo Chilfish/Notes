@@ -9,6 +9,7 @@
   - [第一次离散数学作业](#第一次离散数学作业)
   - [还是离散作业](#还是离散作业)
   - [第四章 一阶逻辑基本概念(章节练习)](#第四章-一阶逻辑基本概念章节练习)
+  - [离散 11-11](#离散-11-11)
 
 <!-- /code_chunk_output -->
 
@@ -201,3 +202,162 @@ F &= AB\overline{C} + \overline{A}BC + A\overline{B}C + ABC \\
   &= AC + BC + AB
 \end{align*}
 $$
+
+<br>
+
+## 离散 11-11
+
+**P140**
+
+<div class="h5">12.</div>
+
+**关系矩阵：**
+
+$$
+R =
+\begin{bmatrix}
+  1&  0&  0& 1 \\
+  0&  0&  0& 0 \\
+  1&  1&  0& 1 \\
+  0&  0&  1& 0
+\end{bmatrix}
+$$
+
+<div class="h5"></div>
+
+**关系图：**
+
+```mermaid
+graph LR
+0-->0
+0-->3
+3-->2
+2-->1
+2-->0
+2-->3
+```
+
+<div class="h5">14.</div>
+
+**解：**
+
+$$
+\begin{align*}
+PoR &= \{<0,2>,<0,3>,<1,3>\} \\
+R^{-1} &= \{<1,0>,<2,0>,<3,0>,<2,1>,<3,1>,<3,2>\} \\
+R \uparrow \{0,1\} &= \{<0,1>,<0,2>,<0,3>,<1,2>,<1,3> \} \\
+R[\{1,2,3\}] &= \{2,3\}
+\end{align*}
+$$
+
+<br>
+
+**25.**
+
+**r（R）：**
+
+```mermaid
+graph LR
+a-->a
+a-->b
+b-->b
+b-->e
+b-->c
+c-->c
+c-->d
+d-->d
+e-->e
+```
+
+**s（R）：**
+
+```mermaid
+graph LR
+a-->b
+b-->a
+b-->c
+c-->b
+b-->e
+e-->b
+e-->e
+c-->d
+d-->c
+```
+
+**t（R）：**
+
+```mermaid
+graph LR
+a-->b
+a-->c
+a-->d
+a-->e
+b-->c
+b-->d
+b-->e
+c-->c
+c-->d
+d-->d
+d-->c
+e-->e
+```
+
+**P143**
+
+**44. 解：**
+
+$$
+\begin{align*}
+(a) \text{偏序集} <A,R>,\; A &= \{1,2,3,4,5\},\\
+    R&=\{<1,3>,<1,5>,<2,4>, <2,5>,<3,5>,<4,5>\} UI_A \\
+(b) \text{偏序集} <A,R>,\; A &= \{a,b,c,d,f,e\},\\
+    R &=\{<a,b>,<c,d>,<e,f>\} UI_A\\
+(c) \text{偏序集} <A,R>,\; A &= \{<1,2>,<1,3>,<1,4>,<1,5>,<2,4>,\\&\qquad <2,5>,<3,4>,<3,5>,<4,5>\} UI_A
+\end{align*}
+$$
+
+**45. 解：**
+
+$$
+\begin{align*}
+(a) A &= \{a,b,c,d,e,f,g\} \\
+  R \leq &= \{<a,b>,<a,c>,<a,d>,<a,e>,<a,f>,\\&\qquad <a,g>,<b,d>,<b,e>,<c,f>,<c,g>\} UI_A\\
+(b) A &= \{a,b,c,d,e,f,g\} \\
+  R \leq &= \{<a,b>,<a,c>,<a,d>,<a,e>,<a,f>,\\&\qquad <d,f>,<e,f>\} UI_A
+\end{align*}
+$$
+
+**46. 解：**
+
+$$
+\begin{align*}
+(1) A &= \{a,b,c,d,e,f\} \\
+  R \leq &= \{<a,b>,<a,c>,<a,b>,<a,e>,<b,e>,\\&\qquad <c,e>,<d,e>\} UI_A
+\end{align*}
+$$
+
+**哈斯图：**
+
+```mermaid
+graph TB
+a---d
+a---b
+b---e
+a---c
+c---e
+d---e
+```
+
+$(2) A = \{a,b,c,d,e\}, R \leq = \{<c,d>\} UI_A$
+
+**哈斯图：**
+
+```mermaid
+graph TB
+d---c
+a
+b
+e
+```
+
+$\therefore$ 极大元： $d,a,b,e$ ，最大元：无；极小元： $c,a,b,e$ ，最小元：无

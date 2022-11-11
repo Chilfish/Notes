@@ -1,6 +1,7 @@
 cd out/dist
-echo.>.nojekyll
-echo notes.organicfish.top>CNAME
+
+new-item .nojekyll -type file
+new-item CNAME -type file -value notes.organicfish.top
 
 git init
 git remote add origin "https://github.com/Organic-Fish/Notes.git"

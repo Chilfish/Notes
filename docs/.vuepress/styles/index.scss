@@ -1,5 +1,6 @@
 $main-color: #2c3e50;
 $theme-color: #7d426c;
+$dark-bg: #0d1117;
 
 * {
   box-sizing: border-box;
@@ -60,22 +61,24 @@ table {
 }
 
 html[data-theme='dark'] {
+  html,
+  body {
+    background: $dark-bg;
+  }
   table {
-    color: #000;
-    th {
-      color: #9e9e9e;
-      background-color: #282c34;
+    tr,
+    tr:nth-child(even),
+    tr:nth-child(odd) {
+      border: 1px solid #30363d;
+      background-color: $dark-bg;
     }
-    tbody tr {
-      &:nth-child(even) {
-        background-color: #8d8d8d;
-      }
-      &:nth-child(odd) {
-        background-color: #b9b9b9;
-      }
-      &:hover {
-        background-color: #918f8f;
-      }
+    th,
+    tr:hover {
+      background-color: #161b22;
+    }
+    td,
+    th {
+      border: 1px solid #30363d;
     }
     code {
       background-color: #c7c1c1;
