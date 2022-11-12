@@ -1,2 +1,2 @@
 cd ./out/dist;
-live-server --port=80 --verbose
+live-server --port=80 --verbose -q

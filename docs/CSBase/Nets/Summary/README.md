@@ -397,7 +397,7 @@ $$
 
 <div align="center"><img width="70%" src="./img/NetworkSystem.png"/><p>
   网络体系
-</p></div><br>
+</p></div>
 
 <div class="h5">其中：</div>
 

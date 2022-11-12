@@ -13,11 +13,11 @@ sidebar: false
 
 ## 目录
 
-- :construction: [计算机网络](ComputerNetworks/README.md)
+- :construction: [计算机网络](Nets/README.md)
 - :construction: [数据机构与算法（C++描述）](../Algorithm/DataStructure/README.md)
-- **[操作系统 OS](OperationSystem/README.md)**
+- **[操作系统 OS](OS/README.md)**
   - :white_large_square: [Windows]()
-  - :white_large_square: [Linux](OperationSystem/Linux.md)
+  - :white_large_square: [Linux](OS/Linux.md)
   - :white_large_square: [Android]()
 - **软件使用**
   - :white_large_square: [浏览器及其工作原理](Software/Browser.md)

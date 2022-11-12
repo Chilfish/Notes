@@ -100,12 +100,12 @@ export const navbarConfig = navbar([
       {
         text: '计算机网络',
         icon: 'network',
-        link: 'ComputerNetworks/',
+        link: 'Nets/',
       },
       {
         text: '操作系统',
         icon: 'OS',
-        link: 'OperationSystem/',
+        link: 'OS/',
       },
     ],
   },
