@@ -109,7 +109,6 @@ date: 2022-06-20
 
 ### 09-15
 
-- **dashboard:** VsCode： ``
 - **流水：**
   - [希望从这个视频开始，你能理解色彩科学【差评君】][09-15-01]
 
@@ -138,7 +137,6 @@ date: 2022-06-20
 
 ### 10-01
 
-- **dashboard:** VsCode： ``
 - **文章 | 文档：** <br> [Node.js 的 fs 模块](https://juejin.cn/post/7039160563393363981)、 [path 模块](https://juejin.cn/post/6844903806107566094)、[Node.js 入门到](https://juejin.cn/column/7135720308404666398)
 - **流水：**
   - 真心打算是又得重头地学一下那些跳过的东西了，以及多点实例，不然每次到处搜也太狼狈了……
@@ -147,7 +145,6 @@ date: 2022-06-20
 
 ### 10-02
 
-- **dashboard:** VsCode： ``
 - **文章 | 文档：** <br> [20 年 JavaScript | JS 发展史](https://cn.history.js.org/) 、 [Element-Plus Vue3 框架](https://element-plus.gitee.io/zh-CN/)
 - **流水：**
   - 嗨虽然就不该跳着做的，但还是用 el-vue3 整了个 [Hash 密码生成器](https://organicfish.top/HashPW/)，但也不大对，像是特殊字符大小写都没整上，没有浏览器推荐的有内味，但又想整出 Hash 的感觉……
@@ -157,7 +154,6 @@ date: 2022-06-20
 
 ### 10-045
 
-- **dashboard:** VsCode： ``
 - **文章 | 文档：** <br> [localtunnel 内网穿透](https://github.com/localtunnel/localtunnel)
 - **流水：**
 
@@ -206,13 +202,9 @@ date: 2022-06-20
 
 ### ~10-22
 
-- **dashboard:** VsCode： ``
 - **文章 | 文档：** <br>
 - **流水：** 已经好久没有更新了诶……更主要还是在想着决策性的事情，以及还是那些的发呆了……
   - 阿萨德
-
-<br>
-
 - 浴中奇思……但还得先交吧，忙碌的线下……
   <div class="art">
 
@@ -248,7 +240,11 @@ date: 2022-06-20
 
 <br>
 
-### 11-01 -> 11-11
+### 11-01 -> 11-19
 
-- **文章 | 文档：** <br>
-- **流水：**
+- **文章 | 文档：** <br> [紫云飞\_知乎](https://zhihu.com/people/zi-yun-fei)、[V2ex.com](https://v2ex.com/)、[Zlib_mirror](https://node2.v4.zhelper.net/)、[电子元件和半导体数据表](https://alldatasheetcn.com/)、[table convert md](https://markdown-convert.com/en/tool/table)、[WSL 开发](https://dowww.spencerwoo.com)、[Linux 教程\_博客园](https://cnblogs.com/qinlulu/p/16217325.html)
+- **流水：** 蒜了，太久没写了，就不按顺序好了
+  - 升级了一大波编程软件工具什么的，还是新东西好玩，`GCC 12 & C++ 17`、`JDK 18 & JavaFX 19 & IDEA 2022.2`、`Python 3.11 & pip 22.3`、`PowerShell 7.3`……
+  - 貌似可以玩一下 Rust：[Rust 教程](https://bilibili.com/video/BV1hp4y1k7SV)，对标 C++的
+  - 进度缓慢的计网和数据结构，但这都是包袱了……
+  - 以及已经等不及下一集的 ぼっち・ざ・ろっく！了啊啊
