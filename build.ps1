@@ -11,3 +11,5 @@ git add .
 git commit -m deploy
 
 git push -f origin build
+
+live-server --port=80 --verbose -q

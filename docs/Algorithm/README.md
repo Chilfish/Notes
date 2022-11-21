@@ -5,7 +5,7 @@ date: 2022-07-31
 
 <br><p style="font-size: 2rem; font-weight: bold;">目录</p>
 
-- [C++ 小语法](../Language/Cpp.md)
+- [C++ 小语法](../Language/Cpp.md) <!-- [](..\..\..\FishCode\note\Language\Cpp.md) -->
 - [数据结构](DataStructure/README.md)
 - [STL 标准库](STL.md)
 - [排序算法](Sort.md)
@@ -21,7 +21,10 @@ date: 2022-07-31
 - [小算法](#小算法)
   - [ACM](#acm)
   - [复杂度](#复杂度)
-  - [前缀和 区间和](#前缀和-区间和)
+  - [前缀和与差分](#前缀和与差分)
+  - [树状数组](#树状数组)
+    - [树状数组的几种变式](#树状数组的几种变式)
+  - [线段树](#线段树)
 
 <!-- /code_chunk_output -->
 
@@ -108,41 +111,34 @@ int main(){
 
 <br>
 
-### 前缀和 区间和
+### 前缀和与差分
 
-一维：
+**题目要求：** 对长为 n 的数组进行 m 次查询：求 $[l, r]$ 之间的和
+
+- 如果是暴力遍历，则最坏可达到 $O(n * m)$
+- 前缀和主要应用在对给定数组进行离线求和，与求区间和。离线在于预先遍历求一次和后，之后就可以直接读取了， 复杂度为 $O(n)$
+
+此时，前 n 项和为：`sum[n]`，$[l ,r]$ 之间的和为 `sum[r] - sum[l - 1]`
+
+<div class="h5">一维：</div>
 
 ```cpp {.line-numbers}
+int sum(int l, int r) {
+  return sum[r] - sum[l - 1];
+}
+
 for (int i = 1; i <= n; i++) {
   cin >> a[i];
   sum[i] = sum[i - 1] + a[i];
 }
 ```
 
-差分：如给数组 `[l, r]` 之间加上 c
-
-```cpp {.line-numbers}
-int n, m;
-scanf("%d%d", &n, &m);
-for (int i = 1; i <= n; i++) {
-  scanf("%d", &a[i]);
-  b[i] = a[i] - a[i - 1]; //构建差分数组
-}
-int l, r, c;
-while (m--) {
-  scanf("%d%d%d", &l, &r, &c);
-  b[l] += c, b[r + 1] -= c;
-}
-for (int i = 1; i <= n; i++) {
-  b[i] += b[i - 1]; //求前缀和运算
-  printf("%d ", b[i]);
-}
-```
-
-二维：
+<div class="h5">二维：</div>
 
 - 求表
+
   ![](./img/cpp_2.png)
+
   ```cpp {.line-numbers}
   for (i = 1; i <= n; i++)  //打表
     for (j = 1; j <= m; j++) {
@@ -150,9 +146,170 @@ for (int i = 1; i <= n; i++) {
       sum[i][j] = mpa[i][j] + sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1];
     }
   ```
+
 - 还原：
+
   ![](./img/cpp_3.png)
+
   ```cpp {.line-numbers}
   cin >> x1 >> y1 >> x2 >> y2;   //求表
   cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1];
   ```
+
+<div class="h5">差分：</div>
+
+如给数组 `[l, r]` 之间加上 c
+
+```cpp {.line-numbers}
+const int len = 5;
+int b[len + 1]{}, // 差分数组
+  sum[len + 1]{}; // 差分的前缀和
+
+// 区间加
+void add(int l, int r, int k) {
+  b[l] += k, b[r + 1] -= k;
+}
+
+// 还原操作后的数组，及其前缀和
+void re() {
+  memset(arr, 0, len); memset(sum, 0, len);
+  for (int i = 1; i <= len; ++i) {
+    arr[i] = arr[i - 1] + b[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+}
+
+int main() {
+  for (int i = 1; i <= n; ++i){
+    cin >> arr[i];
+    b[i] = arr[i] - arr[i - 1];
+  }
+}
+```
+
+<br>
+
+### 树状数组
+
+前缀和对于一次求和(n)多次查询很快，就 $O(n)$；但对于修改值后再查询却可能高达 $O(n^2)$，因为每次修改后还要再求前缀和
+
+而树状数组对于修改和查询都是 $O(\log_2{n})$，因此整体就 $O(m\log_2{n})$
+
+树状数组要做的就是，对数组进行单点或区间修改，并进行单点或区间查询和
+
+树状数组的结构就是将完全二叉树用数组来表示
+
+以数组 $Arr = \{8,6,1,4,5,5,1,1,3,2,1,4,9,0,7,4\}$ 为例
+
+<div align="center"><img width="70%" src="./img/TreeArr0.png"/><p>
+  树的每个节点都是区间和
+</p></div>
+
+<div align="center"><img width="70%" src="./img/TreeArr1.png"/><p>
+  树状数组与原数组的对应关系
+</p></div><br>
+
+> 详见 [动画讲解树状数组](https://bilibili.com/video/BV1ce411u7qP/)、[高级数据结构——树状数组](https://www.cnblogs.com/RabbitHu/p/BIT.html)吧
+
+#### 树状数组的几种变式
+
+<div class="h5">单点更新，区间查询</div>
+
+**[题目要求](https://www.luogu.com.cn/problem/P3374)：** 对数组进行 T 次操作，输入 3 个数字，分别表示：
+
+- `1 x k` 含义：将第 $x$ 个数加上 $k$
+- `2 x y` 含义：输出区间 $[x,y]$ 内每个数的和
+
+```cpp {.line-numbers}
+const int Max = 5e5 + 5;
+ll a[Max]{}, sum[Max]{};
+int n, T;
+
+void add(int p, int x) {
+  while (p <= n) sum[p] += x, p += p & -p;
+}
+
+int ask(int p) {
+  int res = 0;
+  while (p) res += sum[p], p -= p & -p;
+  return res;
+}
+int ask(int l, int r) {
+  return ask(r) - ask(l - 1);
+}
+
+int main() {
+  cin >> n >> T;
+  for (int i = 1; i <= n; ++i) {
+    cin >> a[i]; add(i, a[i]);
+  }
+  while (T--) {
+    int t, l, r, x;
+    cin >> t >> l;
+    if (t == 1) {
+      cin >> x; add(l, x);
+    } else {
+      cin >> r;
+      cout << ask(l, r) << endl;
+    }
+  }
+}
+```
+
+<br>
+<div class="h5">区间更新，区间查询</div>
+
+**题目要求** 变成了是在 $[l, r]$ 内增加 k，并求区间内的和
+
+很难不想到利用 **差分** 来进行区间更新，那么：
+
+```cpp {.line-numbers}
+const int Max = 5e5 + 5;
+ll a[Max]{}, sum1[Max]{}, sum2[Max]{};
+int n, T;
+
+void add(int p, int k) {
+  for (int x = p; p <= n; p += p & -p) {
+    sum1[p] += k;
+    sum2[p] += k * (x - 1);
+  }
+}
+void add(int l, int r, int x) {
+  add(l, x), add(r + 1, -x);
+}
+int ask(int p) {
+  int ans = 0;
+  for (int x = p; p > 0; p -= p & -p) {
+    ans += x * sum1[p] - sum2[p];
+  }
+  return ans;
+}
+int ask(int l, int r) {
+  return ask(r) - ask(l - 1);
+}
+
+int main() {
+  cin >> n >> T;
+  for (int i = 1; i <= n; ++i) {
+    cin >> a[i];
+    add(i, a[i] - a[i - 1]); // 差分
+  }
+  while (T--) {
+    int t, l, r, k;
+    cin >> t >> l >> r;
+    if (t == 1) {
+      cin >> k;
+      add(l, r, k);
+    } else {
+      cout << ask(l, r) << endl;
+    }
+  }
+  return 0;
+}
+```
+
+<br>
+
+### 线段树
+
+> [线段树详解](https://www.cnblogs.com/AC-King/p/7789013.html)
