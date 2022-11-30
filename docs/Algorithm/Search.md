@@ -9,8 +9,6 @@ title: 搜索
 <!-- code_chunk_output -->
 
 - [二分搜索](#二分搜索)
-  - [特征](#特征)
-  - [码](#码)
 - [深搜](#深搜)
 - [广搜](#广搜)
   - [方向数组](#方向数组)
@@ -20,7 +18,7 @@ title: 搜索
 
 ## 二分搜索
 
-### 特征
+<div class="h5">特征</div>
 
 **思路过程：**
 
@@ -30,7 +28,7 @@ title: 搜索
 - 以及是 mid 要和谁去比较
 - 要去考虑什么时候往大了搜或小的方向
 
-### 码
+<div class="h5">码</div>
 
 传统的二分搜索，要求数组已序， $O(\log n)$
 
@@ -52,7 +50,7 @@ int binary_search(vector<int> arr, int x) {
 }
 ```
 
-`upper_bound` 和 `lower_bound` 只要在相等时再找找下标有没有 _更大|小_ 的
+`upper_bound` 和 `lower_bound` 只要在相等时再找找下标有没有 _更大 or 更小_ 的
 
 ```cpp {.line-numbers}
 int binary_bound(vector<int> arr, int x) {
@@ -109,21 +107,20 @@ int main() {
 选数，求质数和
 
 ```cpp {.line-numbers}
-void dfs(int m, int sum, int startx)
 //k：边界，m：判断是否到了边界，sum：一个值，startx：用于排列组合地选的 地址
-{
-    if (m == k)
-    {
-        if (isprime(sum))
-            ans++;
-        return;//这个退出是指 退出一层递归，回到上一次调用函数的那行码的下一行，再无事地走下去
-    }   //因为到边界了，所以要退出
-    for (int i = startx; i < n; i++)
-        dfs(m + 1, sum + a[i], i + 1);
-    //其实等价于：(m = m + 1, sum = sum + a[i], startx = i + 1)这样的
+void dfs(int m, int sum, int startx) {
+  if (m == k) {
+    if (isprime(sum)) ans++;
     return;
+  }
+  //因为到边界了，所以要退出
+  for (int i = startx; i < n; i++)
+    dfs(m + 1, sum + a[i], i + 1);
+  return;
 }
 ```
+
+<br>
 
 ## 广搜
 
@@ -165,38 +162,44 @@ void fang4(int x, int y)  //4个方向 上下左右
 马的遍历 [洛谷 P1443 马的遍历](https://www.luogu.com.cn/problem/P1443)
 
 ```cpp {.line-numbers}
-#include <bits/stdc++.h>
-using namespace std;
-#define Paint pair<int, int>
-queue<Paint> q;
 int dx[8] = {1, 2, 1, 2, -1, -2, -1, -2};
 int dy[8] = {2, 1, -2, -1, 2, 1, -2, -1};
 int mpa[500][500];
 bool vis[500][500] = {false};
-signed main()
-{
-    int n, m, x, y;
-    cin >> n >> m >> x >> y;
-    memset(mpa, -1, sizeof(mpa));
-    mpa[x][y] = 0, vis[x][y] = true, q.push(make_pair(x, y));
-    while (!q.empty())
-    {
-        int xx = q.front().first, yy = q.front().second;
-        q.pop();
-        for (int i = 0; i < 8; ++i)
-        {
-            int xi = dx[i] + xx, yj = dy[i] + yy;
-            if (xi < 1 or xi > n or yj < 1 or yj > m or vis[xi][yj])
-                continue;
-            vis[xi][yj] = true, mpa[xi][yj] = mpa[xx][yy] + 1;
-            q.push(make_pair(xi, yj));
-        }
+
+struct node {
+  int x, y;
+  node(int a, int b) :x{a}, y{b} {};
+};
+queue<node> q;
+
+void solve() {
+  int n, m, x, y;
+  cin >> n >> m >> x >> y;
+  memset(mpa, -1, sizeof(mpa));
+
+  mpa[x][y] = 0, vis[x][y] = true,
+    q.push(node(x, y));
+
+  while (!q.empty()) {
+    int xx = q.front().x, yy = q.front().y;
+    q.pop();
+
+    for (int i = 0; i < 8; ++i) {
+      int xi = dx[i] + xx, yj = dy[i] + yy;
+      if ((xi < 1 or xi > n) ||
+        (yj < 1 or yj > m) || vis[xi][yj])
+        continue;
+
+      vis[xi][yj] = true, mpa[xi][yj] = mpa[xx][yy] + 1;
+      q.push(node(xi, yj));
     }
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= m; j++)
-            printf("%-5d", mpa[i][j]);
-        puts("");
-    }
+  }
+
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= m; j++)
+      printf("%-5d", mpa[i][j]);
+    puts("");
+  }
 }
 ```

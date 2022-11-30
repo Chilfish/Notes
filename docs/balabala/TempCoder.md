@@ -18,7 +18,6 @@ date: 2020-06-20
   - [模糊查询](#模糊查询)
   - [获取系统 IPV4](#获取系统-ipv4)
   - [大眼仔，你坏事干净！](#大眼仔你坏事干净)
-- [TypeScript](#typescript)
 - [Python](#python)
 
 <!-- /code_chunk_output -->
@@ -28,17 +27,15 @@ date: 2020-06-20
 ### 欢迎各位滚动屏的莅临指导
 
 ```cpp {.line-numbers}
-void welcome()
-{
-    string cont = "Welcome all leaders to guide us!   ";
-    int len = cont.length();
-    while (true)
-    {
-        Sleep(200);
-        system("cls");
-        cout << cont;
-        cont = cont.substr(1, len) + cont[0];
-    }
+#include <windows.h>
+void solve() {
+  string str = "Welcome all leaders to guide us!   ";
+  const int len = str.length();
+  while (true) {
+    Sleep(100); system("cls");
+    cout << str;
+    str = str.substr(1, len) + str[0];
+  }
 }
 ```
 
@@ -49,14 +46,14 @@ void welcome()
 > 超早期写的，但 B 站的 class 一直在变......
 
 ```js {.line-numbers}
-var upname = document.getElementsByClassName('bili-dyn-title'),
+const upList = document.querySelectorAll('.bili-dyn-title__text'),
   up = new Set();
 
-upname.forEach((element) => {
-  up.add(element.innerText);
+[...upList].forEach((ele) => {
+  up.add(ele.innerText);
 });
 
-console.log('共有', up.size, '位 up 主更新了动态。分别是：');
+console.log(`共有 ${up.size()} 位 up 主更新了动态。分别是：`);
 up.forEach((element) => {
   console.log(element);
 });
@@ -175,55 +172,10 @@ function getIPV4() {
 
 ### 大眼仔，你坏事干净！
 
+[Github](https://github.com/Chilfish/FishCode/blob/master/Web/Node.js/NodeLearn/src/utils/BolckedImgs.js)
+
 > 但并不能总是成功诶......
 
-```js {.line-numbers}
-const axios = require('axios'),
-  fs = require('fs'),
-  path = require('path');
-
-async function getImg(postUrl) {
-  const baseURL = 'https://weibo.com/ajax/statuses/show?id=',
-    url = baseURL + postUrl.match(/(?<=\d+\/)\w+/gm)[0],
-    ansUrl = [];
-
-  await axios.get(url).then((res) => {
-    const imgs = res.data.pic_infos;
-    for (const value of Object.values(imgs)) {
-      ansUrl.push(
-        value.large.url.replace(/wx(\d)/gm, `ww$1`).replace(/orj960/gm, `large`)
-      );
-    }
-  });
-  return new Promise((resolve, rejects) => {
-    resolve(ansUrl);
-  });
-}
-
-async function downloadImg(url, filePath, fileName) {
-  if (!fs.existsSync(filePath)) {
-    fs.mkdirSync(filePath);
-  }
-  const writer = fs.createWriteStream(path.resolve(filePath, fileName));
-
-  await axios({
-    url,
-    methods: 'get',
-    responseType: 'stream',
-  }).then((res) => {
-    res.data.pipe(writer);
-  });
-}
-
-const weibo = 'https://weibo.com/6069191706/LBBROtrFz';
-
-getImg(weibo).then((res) => {
-  res.forEach((ele, index) => {
-    downloadImg(ele, './Web/img/blockImg/', `${index}.jpg`);
-  });
-});
-```
-
-## TypeScript
+<br>
 
 ## Python

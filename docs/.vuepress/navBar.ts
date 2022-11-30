@@ -19,7 +19,7 @@ export const navbarConfig = navbar([
       {
         text: '数据结构',
         icon: 'diagram',
-        link: 'DataStructure/',
+        link: 'DS/',
       },
       {
         text: '排序算法',

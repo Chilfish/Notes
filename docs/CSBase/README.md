@@ -14,7 +14,7 @@ sidebar: false
 ## 目录
 
 - :construction: [计算机网络](Nets/README.md)
-- :construction: [数据机构与算法（C++描述）](../Algorithm/DataStructure/README.md)
+- :construction: [数据机构与算法（C++描述）](../Algorithm/DS/README.md)
 - **[操作系统 OS](OS/README.md)**
   - :white_large_square: [Windows]()
   - :white_large_square: [Linux](OS/Linux.md)

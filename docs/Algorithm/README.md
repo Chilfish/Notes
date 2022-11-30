@@ -6,7 +6,7 @@ date: 2022-07-31
 <br><p style="font-size: 2rem; font-weight: bold;">目录</p>
 
 - [C++ 小语法](../Language/Cpp.md) <!-- [](..\..\..\FishCode\note\Language\Cpp.md) -->
-- [数据结构](DataStructure/README.md)
+- [数据结构](DS/README.md)
 - [STL 标准库](STL.md)
 - [排序算法](Sort.md)
 - [动态规划 DP](DP.md)
@@ -35,16 +35,17 @@ date: 2022-07-31
 
 ### ACM
 
-**快读快写：**
+<div class="h5">快读快写：</div>
 
 ```cpp {.line-numbers}
+// 读整数
 ll read() {
-  ll x = 0, f = 1; char c;
+  ll x = 0; char c; bool f = 0;
   while (c = getchar(), !isdigit(c))
-      if (c == '-') f = -1;
+    if (c == '-') f = 1;
   while (isdigit(c))
-      x = x * 10 + c - '0', c = getchar();
-  return  x * f;
+    x = x * 10 + c - '0', c = getchar();
+  return f ? ~x + 1 : x;
 }
 void write(ll n) {
   if (n < 0) putchar('-'), n = -n;
@@ -53,7 +54,7 @@ void write(ll n) {
 }
 ```
 
-**头模板：**
+<div class="h5">头模板：</div>
 
 ```cpp {.line-numbers}
 #include <bits/stdc++.h>
@@ -62,18 +63,20 @@ void write(ll n) {
 #define ll long long
 #define all(s) s.begin(), s.end()
 using namespace QAQ;
+#pragma GCC optimize(3)
 
 const int MAX = 1e6;
 ll a[MAX + 5]{};
 
-void solve(){
+void solve() {
 
 }
-int main(){
+
+int main() {
   ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
   ll T = 1;
   cin >> T; //
-  while(T--) solve();
+  while (T--) solve();
   return 0;
 }
 ```
@@ -82,7 +85,7 @@ int main(){
 
 ### 复杂度
 
-**复杂度限制：**
+<div class="h5">复杂度限制：</div>
 
 - 在函数(非递归)中，一维数组大小不超过 1e5.
 - 在全局变量中，一维数组大小不超过 1e8，二维数组大小不超过 1e4
@@ -156,6 +159,7 @@ for (int i = 1; i <= n; i++) {
   cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1];
   ```
 
+<br>
 <div class="h5">差分：</div>
 
 如给数组 `[l, r]` 之间加上 c

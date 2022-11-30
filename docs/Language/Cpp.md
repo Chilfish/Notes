@@ -24,7 +24,7 @@ date: 2022-04-14
     - [继承](#继承)
     - [重载](#重载)
     - [类的五大函数](#类的五大函数)
-  - [initializer_list 列表初始化](#initializer_list-列表初始化)
+  - [initializer\_list 列表初始化](#initializer_list-列表初始化)
   - [Lambda 匿名函数](#lambda-匿名函数)
   - [函数传参类型](#函数传参类型)
     - [左值引用与右值引用](#左值引用与右值引用)
@@ -103,11 +103,10 @@ string Itos(int x)  //int Stoi(string x)
 }
 ```
 
-<br>
-
 ### 模板 template
 
-**[C++模板 template 用法总结](https://blog.csdn.net/qq_35637562/article/details/55194097)**
+- [C++模板 template 用法总结](https://blog.csdn.net/qq_35637562/article/details/55194097)
+- [CppTemplateTutorial](https://github.com/wuye9036/CppTemplateTutorial)，或 [存档](wuye9036_CppTemplateTutorial.md)
 
 ```cpp {.line-numbers}
 template <class T>  //单个类型

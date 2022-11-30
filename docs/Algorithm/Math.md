@@ -47,7 +47,7 @@ title: 数学
 2. $(A \times B) \bmod C = ((A \bmod C) \times (B \bmod C))\bmod C$
 3. $A^B\ \bmod C = (A \bmod C)^B\ \bmod C$
 4. 令 a 为 mod 的最大质因数，那大于等于 a 的数的阶乘都能被 mod 整除
-   即：`a！% mod == 0`
+   > 即：`a! % mod == 0`
 
 ### 快速幂
 
@@ -57,9 +57,8 @@ title: 数学
 ll fpow(ll a, ll x, ll mod) {
   ll ans = 1;
   while (x) {
-      if (x & 1)
-          (ans *= a) %= mod;
-      (a *= a) %= mod, x >>= 1;
+    if (x & 1) (ans *= a) %= mod;
+    (a *= a) %= mod, x >>= 1;
   }
   return ans % mod;
 }
@@ -79,7 +78,7 @@ ll ksc(ll x, ll y, ll mod) {
 
 ### 最大公约数
 
-最小公倍数为 `a * b / 返回值 a`。在 C++中：函数 `int c = __gcd(a, b)`;
+最小公倍数为 `a * b / 返回值 a`。在 C++中：`c = __gcd(a, b);`
 
 ```cpp {.line-numbers}
 int gcd(int a, int b) {
@@ -134,11 +133,11 @@ cout << oct << n << endl; //输出 8 进制数
 十进制转 xx 进制
 
 ```cpp {.line-numbers}
-string jin(int n, const int x) {
+string jin(int x, int radix) {
   string ans(8, '0');
-  for (int i = 8; n; n /= x) {
-    int t = n % x;
-    ans[--i] = (t >= 0 and t <= 9 ? t + '0' : t - 10 + 'a');
+  for (int i = 8; x; x /= radix) {
+    int t = x % radix;
+    ans[--i] = (t >= 10 ? t - 10 + 'A' : t + '0');
   }
   return ans;
 }
@@ -147,18 +146,17 @@ string jin(int n, const int x) {
 十进制转二进制：
 
 ```cpp {.line-numbers}
-vector<int> a;
+deque<int> a;
 while (n)
-  a.push_back(n & 1), n >>= 1;
-reverse(all(a));
+  a.push_front(n & 1), n >>= 1;
 ```
 
 十六进制转十进制：
 
 ```cpp {.line-numbers}
-int hex(string x) {
+ll hex(string x) {
   transform(all(x), x.begin(), ::tolower);
-  int ans = 0, l = x.length();
+  ll ans = 0, l = x.length();
   for (ll i = 0, n = 1; i < l; i++, n *= 16)
     ans += n * (isdigit(x[i]) ? x[i] - '0' : x[i] - 'a' + 10);
   return ans;
@@ -244,16 +242,16 @@ int primer(int n) {
 
 ```cpp {.line-numbers}
 const int N = 1e7 + 5;
-int f[N]{}, primes[N]{};
+bool f[N]{}; // 判断 n 是否为质数
+int primes[N]{}; // 返回第 n 个质数
 
 void ola() {
+  memset(f, true, N);
   for (int i = 2, cnt = 0; i <= N; i++) {
-    if (!f[i])
-      primes[cnt++] = i;
+    if (f[i]) primes[cnt++] = i;
     for (int j = 0; primes[j] <= N / i; j++) {
-      f[primes[j] * i] = 1;
-      if (i % primes[j] == 0)
-        break;
+      f[primes[j] * i] = false;
+      if (i % primes[j] == 0) break;
     }
   }
 }
@@ -261,14 +259,13 @@ void ola() {
 
 ### 高精度
 
-加法
+<div class="h5">加法</div>
 
 ```cpp {.line-numbers}
 // x >= 0, y >= 0
-vecint add(vecint x, vecint y) {
-  if (x.size() < y.size())
-    return add(y, x);
-  vecint ans;
+vi add(vi x, vi y) {
+  if (x.size() < y.size()) return add(y, x);
+  vi ans;
   int t = 0;
   for (int i = 0; i < x.size(); ++i) {
     t += x[i];
@@ -282,12 +279,12 @@ vecint add(vecint x, vecint y) {
 }
 ```
 
-乘法
+<div class="h5">乘法</div>
 
 ```cpp {.line-numbers}
 // x > 0, y > 0, x高精 y低精
-vecint multi(vecint x, int y) {
-  vecint ans;
+vi multi(vi x, int y) {
+  vi ans;
   int t = 0;
   for (int i = 0; i < x.size() or t; ++i)
     t += x[i] * y, ans.push_back(t % 10), t /= 10;
