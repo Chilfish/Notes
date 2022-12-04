@@ -23,15 +23,11 @@ date: 2022-08-07
 
 ## 单链表
 
-<div class="art">
-
 由一系列结点（链表中每一个元素称为结点）组成，每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域
 
 用数组存数据的特点就是数据的内存地址是连续的，就像是有序地排队；而链表的特点就在于数据的地址不一定是连续的，就好像是在医院等候一样，每个人只要记住自己下一个人是谁就好，只要那个人被叫到了那下一个就到自己了，而至于位置坐在哪里就不作要求了
 
 这样的话，在数组的中间插入元素就得让后面的挪出位置给它，而链表只需要让后一个人重新记一下下个人的位置就好
-
-</div>
 
 <div class="h5">结构：</div>
 <div align="center"><img width="80%"
@@ -226,11 +222,7 @@ void print() const {
 
 ## 循环单链表
 
-<div class="art">
-
 循环单链表的特点就是尾指针指向了首元结点而形成一个环。详见： [LoopList.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/LoopList.hpp)
-
-</div>
 
 **私有成员：**
 
@@ -309,11 +301,7 @@ void pop_front() {
 
 ## 双向链表
 
-<div class="art">
-
 双向链表就多了一个 **前驱节点** 的指针。详见： [DoubleList.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/DoubleList.hpp)。这次就用了 [迭代器](README.md#迭代器) 来写了
-
-</div>
 
 **所以就得要有前驱指针：**
 

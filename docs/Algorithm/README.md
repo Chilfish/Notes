@@ -5,7 +5,7 @@ date: 2022-07-31
 
 <br><p style="font-size: 2rem; font-weight: bold;">目录</p>
 
-- [C++ 小语法](../Language/Cpp.md) <!-- [](..\..\..\FishCode\note\Language\Cpp.md) -->
+- [C++ 小语法](../Language/Cpp.md) <!-- [](..\..\..\FishCode\Notes\Language\Cpp.md) -->
 - [数据结构](DS/README.md)
 - [STL 标准库](STL.md)
 - [排序算法](Sort.md)
@@ -61,6 +61,7 @@ void write(ll n) {
 #define QAQ std
 #define endl "\n"
 #define ll long long
+#define vi vector<int>
 #define all(s) s.begin(), s.end()
 using namespace QAQ;
 #pragma GCC optimize(3)

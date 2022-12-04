@@ -366,7 +366,6 @@ void Map_Value() {
 
 ## 迭代器
 
-<div class="art">
 
 在想要遍历或访问数据结构中的数据时，一方面希望只使用共有的方法就能遍历，另一方面又希望能够统一各个数据结构的遍历方式，于是就有了 **迭代器**
 
@@ -403,7 +402,6 @@ for (vector<int>::iterator it = arr.begin(); it != arr.end(); ++it) {
 
 范围总是 $[begin, end)$
 
-</div>
 
 <br>
 

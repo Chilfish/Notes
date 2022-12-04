@@ -126,11 +126,14 @@ code {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+ul{
+  margin: 1.4rem 0;
+}
 li {
   margin-bottom: 5px;
 }
 p {
-  margin: 0.55rem 0 !important;
+  margin: 1.4rem 0 !important;
 }
 div.art > p {
   text-indent: 2rem;
