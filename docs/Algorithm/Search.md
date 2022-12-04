@@ -20,7 +20,7 @@ title: 搜索
 
 <div class="h5">特征</div>
 
-**思路过程：**
+<div class="h5">思路过程：</div>
 
 - 找到 `(l, r)` 的区间范围
 - 要求最值其实就是 `upper OR lower bound` 的情况了

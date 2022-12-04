@@ -180,7 +180,7 @@ title: CSS | Scss
 
 ### 列表
 
-**`list-style-type`：**
+<div class="h5"><code>list-style-type</code></div>
 
 - `none`：不使用项目符号
 - `disc`：实心圆

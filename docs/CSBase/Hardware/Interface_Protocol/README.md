@@ -61,7 +61,7 @@ date: 2022-09-28
 
 <br>
  
-**接口的功能：**
+<div class="h5">接口的功能：</div>
 
 <div align="center"><img width="70%"
   src="./img/USB_Type-C_Pin.png"/><p>
@@ -111,7 +111,8 @@ date: 2022-09-28
 
 <div align="center"><img width="50%" src="./img/USB_PD3.1.png"/><p></p></div><br>
 
-**雷电协议：**
+<div class="h5">雷电协议：</div>
+
 **Thunderbolt**（又称“雷电”，苹果中国译为“雷雳”）是由英特尔发表的**连接器标准**，目的在于当作电脑与其他设备之间的通用总线，第一代与第二代接口是与 Mini DisplayPort 集成，较新的第三代开始改为与 USB Type-C 结合，并能提供电源。 早期由英特尔独立研发，使用光纤传输；后来在一次科技展示会场上，苹果公司看到了早期光纤传输的原型后，主动对英特尔表示兴趣并给予开发上的建议，致使正式发表的第一代从光纤改用铜线和苹果的 **Mini DP** 外形
 
 &emsp;&emsp; 第三代改为使用 **USB Type-C 接口**。继续延伸多合一的集成特点，因此它既能以双向 $40 Gbit/s$ 传输数据，又能兼容` Mini DP` 设备直接连接 Thunderbolt 接口传输视频与声音信号

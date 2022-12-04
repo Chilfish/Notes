@@ -97,11 +97,11 @@ title: Vue.js
 
 #### 运行
 
-**入口：**
+<div class="h5">入口：</div>
 
 使用 Vue 3 的生命周期的情况下，整个组件相关的业务代码，都可以丢到 `setup` 里编写。因为在 setup 之后，其他的生命周期才会被启用
 
-**基本语法：**
+<div class="h5">基本语法：</div>
 
 ```ts {.line-numbers}
 import { defineComponent } from 'vue';
@@ -243,7 +243,7 @@ export default defineComponent({
 - `<select>` 使用的 `value` 作为 ` prop`，`change ` 作为事件
   &emsp;&emsp;
 
-**文本：**
+<div class="h5">文本：</div>
 
 ```html {.line-numbers}
 <span>
@@ -269,7 +269,7 @@ export default defineComponent({
 </script>
 ```
 
-**下拉框：**
+<div class="h5">下拉框：</div>
 
 ```html {.line-numbers}
 <p>Selected: {{ selected }}</p>

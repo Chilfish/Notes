@@ -46,7 +46,7 @@ date: 2022-08-07
 
 <div align="center"><img width="90%" src="./img/list_1.svg"/><p>现假设单链表 s 中的数据为 {1, 2, 3, 4, 5};</p></div><br>
 
-**链表中的数据表示**
+<div class="h5">链表中的数据表示</div>
 
 ```cpp {.line-numbers}
 template<class T> class List {
@@ -109,7 +109,7 @@ void push_back(const T &value) {
 }
 ```
 
-**头插法：**
+<div class="h5">头插法：</div>
 
 ```cpp {.line-numbers}
 void push_front(const T &value) {
@@ -138,7 +138,7 @@ Node* getNode(int index) const {
 
 > s.getNode(3) 返回的是 data 为 3，next 指向 {4, 5} 的指针
 
-**在指定下标前插入：**
+<div class="h5">在指定下标前插入：</div>
 
 ```cpp {.line-numbers}
 void insert(int index, const T &value) {
@@ -165,7 +165,7 @@ void insert(int index, const T &value) {
 
 <br>
 
-**删除指定下标节点：**
+<div class="h5">删除指定下标节点：</div>
 
 ```cpp {.line-numbers}
 void remove(int index) {
@@ -204,7 +204,7 @@ void inverse() {
 }
 ```
 
-**遍历输出：**
+<div class="h5">遍历输出：</div>
 
 ```cpp {.line-numbers}
 void print() const {
@@ -224,7 +224,7 @@ void print() const {
 
 循环单链表的特点就是尾指针指向了首元结点而形成一个环。详见： [LoopList.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/LoopList.hpp)
 
-**私有成员：**
+<div class="h5">私有成员：</div>
 
 ```cpp {.line-numbers}
 template<class T> class LoopList {
@@ -252,7 +252,7 @@ private:
 }
 ```
 
-**头插元素：**
+<div class="h5">头插元素：</div>
 
 ```cpp {.line-numbers}
 void push_front(const T &value) {
@@ -270,7 +270,7 @@ void push_front(const T &value) {
 }
 ```
 
-**尾插元素：**
+<div class="h5">尾插元素：</div>
 
 ```cpp {.line-numbers}
 void push_back(const T &value) {
@@ -303,7 +303,7 @@ void pop_front() {
 
 双向链表就多了一个 **前驱节点** 的指针。详见： [DoubleList.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/DoubleList.hpp)。这次就用了 [迭代器](README.md#迭代器) 来写了
 
-**所以就得要有前驱指针：**
+<div class="h5">所以就得要有前驱指针：</div>
 
 ```cpp {.line-numbers}
 template<class T> class DoubleList {
@@ -334,7 +334,7 @@ private:
 }
 ```
 
-**插入节点**
+<div class="h5">插入节点</div>
 
 ```cpp {.line-numbers}
 /**
@@ -380,7 +380,7 @@ void push_back(const T &x) { insert(end(), x); }
 void push_front(const T &x) { insert(begin(), x); }
 ```
 
-**删除节点：**
+<div class="h5">删除节点：</div>
 
 ```cpp {.line-numbers}
 /**
@@ -431,7 +431,7 @@ void clear() {
 
 ```
 
-**遍历输出：**
+<div class="h5">遍历输出：</div>
 
 ```cpp {.line-numbers}
 // 正序输出链表

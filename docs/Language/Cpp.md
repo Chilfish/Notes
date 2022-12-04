@@ -138,7 +138,7 @@ int main(){
 
 #### 定义类
 
-**访问权限：**
+<div class="h5">访问权限：</div>
 
 - `public`：**任何地方** 都能访问
 - `private`：只能被 **类内访问**，被继承的子孙类都没法访问
@@ -230,7 +230,7 @@ explicit String(int a): len{a} {};
 
 **概念：** 在定义一个新的类 B 时，如果该类与某个已有的类 A 相似（指的是 B 拥有 A 的全部特点），那么就可以把 A 作为一个基类，而把 B 作为基类的一个派生类（也称子类）
 
-**格式：**
+<div class="h5">格式：</div>
 
 ```cpp {.line-numbers}
 class son : public | private | protected father {};
@@ -248,7 +248,7 @@ class son : public | private | protected father {};
 
 #### 重载
 
-**重载运算符：**
+<div class="h5">重载运算符：</div>
 
 <div align="center"><img width="90%"
   src="./img/cpp_overload.png"/><p>
@@ -401,7 +401,7 @@ vector<int> arr1{1, 2, 3, 4},
             arr2 = {3, 4, 5, 6};
 ```
 
-**使用：**
+<div class="h5">使用：</div>
 
 ```cpp {.line-numbers}
 template<class T>
@@ -420,7 +420,7 @@ print({2, 3, 4});
 
 ### Lambda 匿名函数
 
-**定义：**
+<div class="h5">定义：</div>
 
 <div align="center"><img width="80%" src="./img/cpp_lambda.png"/>
 <p></p></div><br>
@@ -431,7 +431,7 @@ print({2, 3, 4});
 - **参数列表：** 可省略，带则和普通函数差不多
 - **可变的 `mutable`：** 默认下 lambda 是 const 的，加了这个就可以改变捕获到的值
 
-**原理：**
+<div class="h5">原理：</div>
 
 ```cpp {.line-numbers}
 string s = "abandon";
@@ -535,7 +535,7 @@ int&& Ra = a;   // 错误的，右值引用不能指向左值
 
 ## C 語言中に
 
-**数组长度：**
+<div class="h5">数组长度：</div>
 
 ```cpp {.line-numbers}
 int len = sizeof(b)/sizeof(int);
@@ -548,7 +548,7 @@ memset(a, 127, sizeof(a))   //赋值无穷大
 memset(a, 128, sizeof(a))   //赋值无穷小
 ```
 
-**`ctime`**
+<div class="h5">`ctime`</div>
 
 - 时间戳获取与转换
   ```cpp {.line-numbers}
@@ -575,14 +575,14 @@ isupper(c) //-->是否为大写字母
 isspace(c) //-->是否为空格
 ```
 
-**`sprintf`：**
+<div class="h5">`sprintf`：</div>
 
 ```cpp {.line-numbers}
 sprintf(ans, "%d+%d=%d", x, y, x + y);
 // →同时还把 + = 也存进去了
 ```
 
-**符号优先级：**
+<div class="h5">符号优先级：</div>
 
 <div align="center"><img width="90%" src="./img/cpp_priority.png"/><p>
   符号优先级

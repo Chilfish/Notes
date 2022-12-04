@@ -30,7 +30,7 @@ setTimeout(fun, delay, arg);
 // arg 为每次 delay 后传给 fun 的参数
 ```
 
-**例：**
+<div class="h5">例：</div>
 
 - 拆分结构
 
@@ -67,10 +67,10 @@ setTimeout(fun, delay, arg);
   }
   ```
 
-**返回值：**
+<div class="h5">返回值：</div>
 
 `timeoutID`。是一个正整数，表示定时器的编号。这个值可以传递给 `clearTimeout()`来取消该定时器
 
-**取消定时：**
+<div class="h5">取消定时：</div>
 
 `clearTimeout(timeoutID)`。该 ID 值为 `setTimeout()` 的返回值

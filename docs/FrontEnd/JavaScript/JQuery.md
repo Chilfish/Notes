@@ -51,25 +51,25 @@ window.onload = function () {
 
 ### 过滤器
 
-**基本过滤器**
+<div class="h5">基本过滤器</div>
 
 ![](./img/JQuery-0.png)
 
-**内容过滤器：**
+<div class="h5">内容过滤器：</div>
 
 ![](./img/JQuery-1.png)
 
-**属性过滤器**
+<div class="h5">属性过滤器</div>
 
 ![](./img/JQuery-2.png)
 
-**表单过滤器**
+<div class="h5">表单过滤器</div>
 
 ![](./img/JQuery-3.png)
 
 ### 方法
 
-**选择器方法**
+<div class="h5">选择器方法</div>
 
 ![](./img/JQuery-4.png)
 

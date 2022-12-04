@@ -44,7 +44,7 @@ title: DOM | Events
 
 **构造函数：** `Event(typeArg[, eventInit])`
 
-**参数说明：**
+<div class="h5">参数说明：</div>
 
 - `typeArg` ：代表事件类型字符串，例如 keypress，click
 - `eventInit`
@@ -52,7 +52,7 @@ title: DOM | Events
   - `cancelable` ：定义事件是否可取消，默认为 `false`
   - `composed` ：指示事件是否会在影子 DOM 根节点之外触发侦听器。默认为 `false`
 
-**方法：**
+<div class="h5">方法：</div>
 
 - `Event.preventDefault()` ：取消事件（如果可以取消）
 - `Event.stopImmediatePropagation()` ：对于此特定事件，阻止所有其他侦听器被调用。这包括附加到相同元素的侦听器以及附加到稍后将遍历的元素的侦听器（例如，在捕获阶段）
@@ -62,7 +62,7 @@ title: DOM | Events
 
 EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦听器的对象实现
 
-**方法：**
+<div class="h5">方法：</div>
 
 - ` EventTarget.removeEventListener()` ：EventTarget 中删除事件侦听器
 - `EventTarget.dispatchEvent()` ：将事件分派到此 EventTarget
@@ -185,12 +185,12 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 按一个按键总是会产生一个键盘事件，无论是符号键，还是例如 Shift 或 Ctrl 等特殊按键
 
-**键盘事件：**
+<div class="h5">键盘事件：</div>
 
 - `keydown` —— 在按下键时（如果长按按键，则将自动重复），
 - `keyup` —— 释放按键时
 
-**键盘事件的主要属性：**
+<div class="h5">键盘事件的主要属性：</div>
 
 - `code` —— “按键代码”（"KeyA"，"ArrowLeft" 等），特定于键盘上按键的物理位置
 - k`ey —— 字符（"A"，"a" 等），对于非字符（non-character）的按键，通常具有与 code 相同的值
@@ -215,7 +215,7 @@ EventTarget 是一个 DOM 接口，由可以接收事件、并且可以创建侦
 
 </div>
 
-**访问：**
+<div class="h5">访问：</div>
 
 - `document.forms` 一个表单元素可以通过 `document.forms[name/index]` 访问到
 - `form.elements` 表单元素可以通过 `form.elements[name/index]` 的方式访问，或者也可以使用 `form[name/index]`。elements 属性也适用于 `<fieldset>`

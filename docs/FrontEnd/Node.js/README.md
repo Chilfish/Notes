@@ -107,7 +107,7 @@ title: Node.js
 
 path 模块包含了一些列处理和转换文件路径的工具集。其中，在 Windows 下，目录的分隔符为 `\`，UNIX 下，分隔符为 `/`
 
-**方法：**
+<div class="h5">方法：</div>
 
 - `path.resolve([path1], [path2], ...)`： 按照顺序依次拼接，返回的是 **绝对路径**，路径末尾的不会带有路径分隔符。若合并后的路径没有构成一个绝对路径，则会默认使用 **当前工作目录的绝对路径**
   ```js {.line-numbers}
@@ -163,7 +163,7 @@ path 模块包含了一些列处理和转换文件路径的工具集。其中，
 - `fs.readFile(file, callback(err, data))`
 - 大文件用流式读取： `fs.createReadStream(file)`
 
-**文件删除和复制：**
+<div class="h5">文件删除和复制：</div>
 
 - `fs.unlink(path, callback(err));`：删除文件或符号链接
 - `fs.rm(path[, options], callback(err))`：删除目录和文件，其中 `options: {recursive: true}` 执行递归删除嵌套目录
@@ -172,13 +172,13 @@ path 模块包含了一些列处理和转换文件路径的工具集。其中，
   - 目标目录不存在则不会创建并报错
   - 文件类型可以不一致
 
-**重命名：**
+<div class="h5">重命名：</div>
 
 - `fs.rename(oldPath, newPath, callback(err))`，重命名，但：
   - 不能重命名目录，只能重命名文件
   - 如果重命名文件已存在将被覆盖
 
-**文件夹操作：**
+<div class="h5">文件夹操作：</div>
 
 - `fs.mkdir(path[, options], callback(err, path))`：创建文件夹
   - 其中的 `options` 有两个参数：

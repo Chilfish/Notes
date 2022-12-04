@@ -106,10 +106,4 @@ sidebar: false
 每一个不同的应用都有其对应的协议，就按 **万维网 WWW**、**多媒体网络（音视频等）**、**文件传送 FTP 和 P2P 文件共享**、**电子邮件**、**域名解析** 等来讲吧
 
 <br>
-
-<style lang="scss">
-.theme-hope-content > p,
-.markdown-preview > p{
-  text-indent: 2rem;
-}
-</style>
+ 

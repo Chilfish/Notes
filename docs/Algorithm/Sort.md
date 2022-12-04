@@ -60,7 +60,7 @@ date: 2022-04-14
 
 </div>
 
-**其中：**
+<div class="h5">其中：</div>
 
 - **时间/空间复杂度：** 描述一个算法执行时间/占用空间与数据规模的增长关系
 - **n：** 待排序列的个数
@@ -80,19 +80,19 @@ date: 2022-04-14
 
 #### 冒泡排序
 
-**描述：**
+<div class="h5">描述：</div>
 
 - 从头到 `len-1`，依此地把较大值往后堆
 - 循环次数大约：$\frac{n^2}{2}$
 
-**动图：**
+<div class="h5">动图：</div>
 
 <div align="center"><img width="90%" src="./img/sort_bubble.gif"/>
 <p>
   冒泡排序
 </p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 #define vi vector<int>
@@ -110,13 +110,13 @@ void bubble(vi& arr) {
 
 #### 快速排序
 
-**描述：**
+<div class="h5">描述：</div>
 
 - 快速排序之所以比较快，是因为与冒泡排序相比，每次的交换时跳跃式的。每次排序的时候设置一个**基准点**，将小于等于基准点的数全部放到基准点的左边，将大于等于基准点的数全部放到基准点的右边
 - 这样在每次交换的时候就不会像冒泡排序一样每次只能在相邻的数之间进行交换，交换的距离就大的多了。因此总的比较和交换次数就少了，速度自然就提高了
 - 当然在最坏的情况下，仍可能是相邻的两个数进行了交换。因此快速排序的最差时间复杂度和冒泡排序是一样的都是 $O(n^2)$ ，它的平均时间复杂度为 $O(n\log_2n)$
 
-**动图：**
+<div class="h5">动图：</div>
 
 <div align="center"><img width="80%" src="./img/sort_quick.gif"/>
 <p>
@@ -128,7 +128,7 @@ void bubble(vi& arr) {
   快排分解
 </p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void quick(vi& arr, int begin, int end) {
@@ -158,19 +158,19 @@ void quick(vi& arr, int begin, int end) {
 
 #### 简单插入排序
 
-**描述：**
+<div class="h5">描述：</div>
 
 - 将 i 前面(不包含 i)当做有序序列，后面为原始未序
 - 从 `i-1` 开始，用 `arr[i]`往前比较，将 `arr[i]` 插入到合适的位置
 - 如果相同，则插入到相同数的后一位保证稳定性
 - 循环次数大约： $\frac{n^2}{5}$
 
-**动图：**
+<div class="h5">动图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_insert.gif"/>
 <p></p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void insert(vi& arr) {
@@ -187,17 +187,17 @@ void insert(vi& arr) {
 
 #### 希尔排序
 
-**描述：**
+<div class="h5">描述：</div>
 
 - 将数组分成间隔为 $2$ 个一组，组内进行插入排序，把组中小的数移到左半边
 - 再分为 $4$ 个、$8$ 个、$2^{n}$ 个一组地组内插入排序
 
-**图：**
+<div class="h5">图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_shell.png"/>
 <p></p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void shell(vi& arr) {
@@ -218,16 +218,16 @@ void shell(vi& arr) {
 
 #### 简单选择排序
 
-**描述：**
+<div class="h5">描述：</div>
 
 - 从 i 开始遍历寻找最小数的**下标**，然后与 i 交换
 
-**动图：**
+<div class="h5">动图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_select.gif"/>
 <p></p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void select(vi& arr) {
@@ -252,24 +252,24 @@ void select(vi& arr) {
 
 #### 堆排序
 
-**描述：**
+<div class="h5">描述：</div>
 
-**图：**
+<div class="h5">图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_heap.gif"/>
 <p></p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 <br>
 
 ### 归并排序
 
-**描述：**
+<div class="h5">描述：</div>
 
 - 稳定在 $O(n\log_2n)$ 的稳定排序......见注释吧
 
-**动图：**
+<div class="h5">动图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_merge.gif"/>
 <p></p></div><br>
@@ -277,7 +277,7 @@ void select(vi& arr) {
 <div align="center"><img width="70%" src="./img/sort_merge_1.png"/>
 <p></p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void Merge(vi& arr, int l, int m, int r) {
@@ -326,7 +326,7 @@ void MergeSort(vi& arr, int l, int r) {
 }
 ```
 
-**精简：**
+<div class="h5">精简：</div>
 
 ```cpp {.line-numbers}
 bool cmp(const int a, const int b){
@@ -357,7 +357,7 @@ void MergeSort(vi& arr, int l, int r) {
 
 **描述：** 时间复杂度为 $O(n + max(arr))$
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void count(vi& arr) {
@@ -373,18 +373,18 @@ void count(vi& arr) {
 
 ### 桶排序
 
-**描述：**
+<div class="h5">描述：</div>
 
 - 先扫描得到待排序数组中的最大值 `max` 与最小值 `min`，假设桶的个数为 $k$ ，则代表则将 `[min, max]` 均分为 $k$ 个范围
 - 每个范围中的元素各自放入对应的桶中。如此桶之间必然是有序的，桶内使用排序算法进行排序，最后按序收集所有桶的元素，即完成桶排序
 - 总的时间复杂度为 $O(n \log_2(\frac{n}{k}))$ ，当 $k$ 接近于 $n$ 时，桶排序的时间复杂度就可以金斯认为是 $O(n)$ 的
 - 即桶越多，时间效率就越高，而桶越多，空间就越大
 
-**动图：**
+<div class="h5">动图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_bucket.webp"/><p></p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void bucket(vi& arr, int cnt = 3) {
@@ -414,17 +414,17 @@ void bucket(vi& arr, int cnt = 3) {
 
 ### 基数排序
 
-**描述：**
+<div class="h5">描述：</div>
 
 - 从最低位开始，按照该位的大小进行一次稳定排序，再对下一位进行稳定排序，直至最高位结束
 - 一般会开辟一个大小为 10 的桶，将元素按照 个位 -> 十位 -> … 放入对应位置，进行稳定排序
 
-**图：**
+<div class="h5">图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_radix.gif"/>
 <p></p></div><br>
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void Radix(vi& arr) {

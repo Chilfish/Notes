@@ -44,12 +44,12 @@ date: 2022-04-14
 
 <br>
 
-**互转：**
+<div class="h5">互转：</div>
 
 - **数字转 string：** `string s = to_string(整数 | 小数)`;
 - **string 转数字：** `int a = stoi(s); double b = stod(s);`
 
-**大小写转换：**
+<div class="h5">大小写转换：</div>
 
 ```cpp {.line-numbers}
 transform(all(str), str.begin(), ::tolower);
@@ -69,7 +69,7 @@ string str = R"(233
   233
 ```
 
-**STL 函数：**
+<div class="h5">STL 函数：</div>
 
 - **替换：** `c.replace(a, b, "xxx")`，a：替换的初始位置，b：替换的长度
 - **查找：**
@@ -85,7 +85,7 @@ string str = R"(233
 
 ### Vector
 
-**构造函数：**
+<div class="h5">构造函数：</div>
 
 - `vector()`：创建一个空 `vector`
 - `vector(int len)`：创建一个 `vector`，元素个数为 `len`，值默认为 0
@@ -93,7 +93,7 @@ string str = R"(233
 - `vector(const vector&)`：复制构造函数
 - `vector(begin, end)`：复制 `[begin, end)` 区间内另一个数组的元素到数组中
 
-**属性：**
+<div class="h5">属性：</div>
 
 - `a.at(pos)`：返回编号位置的数据
 - `a.begin()`：返回数组 _第一个元素_ 的迭代器
@@ -107,7 +107,7 @@ string str = R"(233
 - `a.size()`：返回数组的长度
 - `a.empty()`：判断` vector` 是否为空
 
-**方法：**
+<div class="h5">方法：</div>
 
 - `a.insert(a.begin() + n, x)`：在 下标 $n - 1$ 之前插入 $x$
 - `a.push_back(x)`：在数组的最后添加一个数据
@@ -121,7 +121,7 @@ string str = R"(233
 - `a.assign({list})`：将 [初始化列表](../Language/Cpp.md#initializer-list-列表初始化) 赋值给 a
 - `a.assign(arr.from, arr.to)`：将 arr 迭代器范围内的赋值给 a
 
-**二维数组：**
+<div class="h5">二维数组：</div>
 
 ```cpp {.line-numbers}
 vector<vi> aa(5, vi(2, 5)); // 5行2列的5
@@ -139,7 +139,7 @@ for (auto row : arr) {
 
 ### deque
 
-**属性方法：**
+<div class="h5">属性方法：</div>
 
 - `deq[pos]`：用来访问双向队列中单个的元素
 - `deq.front()`：返回第一个元素的引用
@@ -149,7 +149,7 @@ for (auto row : arr) {
 - `deq.push_back(x)`：把元素 x 插入到双向队列的尾部
 - `deq.pop_back()`：弹出双向队列的最后一个元素
 
-**双向队列的一些特点：**
+<div class="h5">双向队列的一些特点：</div>
 
 - 支持随机访问，即支持 `[ ]` 以及 `at()`，但是性能没有`vector`好
 - 与数组`比较，deque` 的优势是：头部插入和删除时，不需要搬移元素，效率特别高，而且在扩容时，也不需要搬移大量的元素，因此其效率是必数组高的
@@ -159,7 +159,7 @@ for (auto row : arr) {
 - `deque`可以包含更多的元素，其`max_size`可能更大，因为不止使用一块内存
 - `deque`的内存区块不再被使用时，会被释放，`deque`的内存大小是可缩减的。不过，是不是这么做以及怎么做由实际操作版本定义
 
-**但是：**
+<div class="h5">但是：</div>
 
 - `deque` 有一个致命缺陷：不适合遍历。因为在遍历时，`deque` 的迭代器要频繁的去检测其是否移动到某段小空间的边界，导致效率低下
 - 而序列式场景中，可能需要经常遍历，因此在实际中，需要线性结构时，大多数情况下优先考虑数组和 `list`
@@ -187,7 +187,7 @@ map<class Key, class Value, class Compare = less<Key>> name
 
 所以定义`map`的时候，默认是按`key`的值小到大排序的。要按大到小时， 就`map<key, value, greater<key>>name`
 
-**属性方法：**
+<div class="h5">属性方法：</div>
 
 - 插入：`s.insert(make_pair(key, value));`
 - 指定位置插入：`s.insert(s.begin() + n, pair);`
@@ -240,17 +240,17 @@ void Map_Value() {
 
 <br>
 
-**与 `unordered_map` 区别：**
+<div class="h5">与 `unordered_map` 区别：</div>
 
 - **运行效率方面：** `unordered_map` 最高，而 `map` 效率较低但提供了稳定效率和有序的序列
 - **占用内存方面：** `map` 内存占用略低，`unordered_map` 内存占用略高，而且是线性成比例的
 
-**内部实现机理：**
+<div class="h5">内部实现机理：</div>
 
 - **`map`：** `map` 内部实现了一个**红黑树**，该结构具有自动排序的功能，因此 `map` 内部的所有元素都是有序的。红黑树的每一个节点都代表着 `map` 的一个元素，因此对于 `map` 进行的查找、删除、添加等一系列的操作都相当于是对红黑树进行这样的操作，故红黑树的效率决定了 `map` 的效率
 - **`unordered_map`：** `unordered_map` 内部实现了一个**哈希表**，因此其元素的排列顺序是杂乱的，无序的
 
-**优点、缺点、使用场景：**
+<div class="h5">优点、缺点、使用场景：</div>
 
 - **`map`：**
   - **优点：** 有序性，这是 `map` 结构最大的优点，其元素的有序性在很多应用中都会简化很多的操作。内部实现一个红黑树使得 `map` 的很多操作在 $\log_2{n}$ 的时间复杂度下就可以实现，因此效率非常的高
@@ -297,7 +297,7 @@ void Map_Value() {
 
 ### Stack
 
-**属性方法：**
+<div class="h5">属性方法：</div>
 
 - `stack<int> s`：定义栈
 - `s.empty()：bool`：判断栈是否为空
@@ -310,7 +310,7 @@ void Map_Value() {
 
 ### 队列
 
-**`queue` 队列**
+<div class="h5">`queue` 队列</div>
 
 - **属性方法：**
   - `queue<int> q`：定义队列
@@ -321,7 +321,7 @@ void Map_Value() {
   - `q.front()：type`：返回队首元素的值
   - `q.back()：type`：返回队尾元素的值
 
-**`priority_queue` 优先队列**
+<div class="h5">`priority_queue` 优先队列</div>
 
 - 和 `queue` 不同的就在于，可以自定义其中数据的优先级，让优先级高的排在队列前面，优先出队。 优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个 **堆** 实现的
 

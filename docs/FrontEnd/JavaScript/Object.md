@@ -159,7 +159,7 @@ const b = Object.assign(a);
 
 #### Array 数组
 
-**函数方法：**
+<div class="h5">函数方法：</div>
 
 - `arr.splice(pos, len, ...[array])`：增删元素，无返回值。在 `pos` 处删除 `len` 长的元素，并插入新元素(可选)
 - `arr.slice(start, end)`：数组切片，返回 从 [`start`, `end`) 之间的元素的数组，无参数则复制整个数组

@@ -187,7 +187,7 @@ xhr 提供了 3 个属性来获取请求返回的数据，分别是：`xhr.respo
 
 ## Axios 模块
 
-**栗子：**
+<div class="h5">栗子：</div>
 
 - **创建：**
   ```js {.line-numbers}

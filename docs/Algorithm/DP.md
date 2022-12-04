@@ -80,7 +80,7 @@ int Fib() {
 
 复杂度为 $O(n^2)$
 
-**码：**
+<div class="h5">码：</div>
 
 ```cpp {.line-numbers}
 void solve() {
