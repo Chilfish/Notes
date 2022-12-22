@@ -51,7 +51,7 @@ date: 2022-04-14
 选择排序 | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | 不稳定 | In-place
 插入排序 | $O(n^2)$ | $O(n)$ | $O(n^2)$ | $O(1)$ | 稳定 | In-place
 希尔排序 | $O(n\log_2n)$ | $O(n^{1.3})$ | $O(n^2)$ | $O(1)$ | 不稳定 | In-place
-归并排序 | $O(n\log_2n)$ | $O(n\log_2n)$ | $O(n\log_2n)$ | $O(n)$ | 稳定 | Out-place
+归并排序 | $O(n\log_2n)$ | $O(n\log_2n)$ | $O(n\log_2n)$ | $O(n)$ | 稳定 | In-place
 快速排序 | $O(n\log_2n)$ | $O(n\log_2n)$ | $O(n^2)$ | $O(\log_2n)$ | 不稳定 | In-place
 堆排序 | $O(n\log_2n)$ | $O(n\log_2n)$ | $O(n\log_2n)$ | $O(1)$ | 不稳定 | In-place
 桶排序 | $O(n+k)$ | $O(n+k)$ | $O(n^2)$ | $O(n+k)$ | 稳定 | Out-place

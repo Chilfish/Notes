@@ -60,7 +60,7 @@ export default defineUserConfig({
     // toc: false,
     logo: '/logo.png',
 
-    darkmode: 'toggle',
+    // darkmode: 'auto',
     themeColor: {
       blue: '#2196f3',
       red: '#f26d6d',

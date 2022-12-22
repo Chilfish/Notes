@@ -122,8 +122,7 @@ code {
   background-color: #f1f1f1;
   padding: 0.15em 0.5em;
   border-radius: 4px;
-  // color: #4e6e8e;
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: 'Fira Code', Consolas;
 }
 
 ul {
@@ -134,6 +133,7 @@ li {
 }
 p {
   margin: 1.4rem 0 !important;
+  text-indent: 0 !important;
 }
 
 div.h5 {
@@ -158,6 +158,10 @@ html[data-theme='light'] .token.class-name {
   pre {
     background: #282c34;
   }
+}
+
+pre {
+  font-family: 'Fira Code', Consolas;
 }
 
 main img {
