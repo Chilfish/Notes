@@ -44,7 +44,7 @@ date: 2022-08-07
 
 > 详见： [List.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/List.hpp)
 
-<div align="center"><img width="90%" src="./img/list_1.svg"/><p>现假设单链表 s 中的数据为 {1, 2, 3, 4, 5};</p></div><br>
+<div align="center"><img width="90%" src="./img/list_1.svg"/><p>现假设单链表 s 中的数据为 {1, 2, 3, 4, 5};</p></div>
 
 <div class="h5">链表中的数据表示</div>
 
@@ -155,7 +155,7 @@ void insert(int index, const T &value) {
 
 <div align="center"><img width="40%" src="./img/list_2.png"/><p>
   在 <code>getNode</code> 中，返回的p节点的 <b>首指针</b> 的地址与 head节点的第三个节点的地址相同，所以才做到了只是修改 p 但也影响到了 head
-</p></div><br>
+</p></div>
 
 > 噢所谓的 “链表能快速地增删元素，但在指定位置时却要遍历” 的矛盾，是在于
 >

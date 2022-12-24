@@ -26,7 +26,7 @@ title: ShoppingCart.demo
 <div align="center"><img width="60%"
   src="./img/CartDemo_0.png"/><p>
   预览图
-</p></div><br>
+</p></div>
 
 ## 创建项目
 
@@ -48,7 +48,7 @@ pnpm install
 <div align="center"><img width="60%"
   src="./img/CartDemo_1.png"/><p>
   文件树
-</p></div><br>
+</p></div>
 
 - 修改 `tsconfig.json`，添加以下配置，才能在 `Typescript` 的 `import` 中省略后缀名，直接是：`import xx from "src/api"`
   ```js {.line-numbers}
@@ -65,7 +65,7 @@ pnpm install
 <div align="center"><img width="60%"
   src="./img/CartDemo_2.png"/><p>
   vite.config.ts
-</p></div><br>
+</p></div>
 
 ## 添加路由
 

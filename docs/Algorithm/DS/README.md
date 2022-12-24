@@ -66,7 +66,7 @@ sidebar: false
 
 <div align="center"><img width="70%" src="./img/DS_base.png"/><p>
   计算机内的数据分类
-</p></div><br>
+</p></div>
 
 <div class="h5">原始数据结构的特点：</div>
 

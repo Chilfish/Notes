@@ -43,7 +43,7 @@ title: Node.js
 <div align="center"><img width="80%"
   src="./img/Node_package.png"/><p>
   配置信息
-</p></div><br>
+</p></div>
 
 - 其中最后的 `type` 字段是涉及到模块规范的支持，它有两个可选值： `commonjs` 和 `module` ，其默认值为 `commonjs`
 

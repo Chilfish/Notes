@@ -160,17 +160,17 @@ date: 2022-06-20
   - 内网穿透……如果早知道……但那时候连 Node 都还不知道吧……害，还得是先观望观望
   <div align="center"><img width="50%" src="./img/22-10-05-01.png"/><p>
    还得是GitHub
-  </p></div><br>
+  </p></div>
 
   - 但有个新发现诶，为什么 `live-server` 更胜一筹呢，那就得挖坑去看看网络 WiFi 方面了诶
   <div align="center"><img width="80%" src="./img/22-10-05-02.png"/><p>
     <code>live-server</code>与<code>LanDrop</code>的对比
-  </p></div><br>
+  </p></div>
 
   - 感觉感觉……还是记不住啊
   <div align="center"><img width="80%" src="./img/22-10-05.png"/><p>
     放语雀上了
-  </p></div><br>
+  </p></div>
 
   - 但又是摸了又摸……大都是在 _逛街_ 找找该怎么干上了，反正就是被一堆信息填满了
   - 那就明天开始吧））
@@ -267,6 +267,8 @@ Python 更多还是做做玩具之类的
 
 后端方面，感觉肯定不会去涉及 Java 或 PHP 了，可能是说 Node 或 Rust
 
+稍微了解了下 Flutter 和 Dart，虽然也能编译到安卓加桌面，但先按下吧
+
 <br>
 
 ### 12-04
@@ -275,19 +277,34 @@ Python 更多还是做做玩具之类的
 
 <div align="center"><img width="50%" src="./img/22-12-04.png"/><p>
   期末报告……
-</p></div><br>
+</p></div>
 
 <br>
 
-<!-- ## 大二上 终
+- [x] C / C++
+  - [x] Basic
+  - [ ] Complex Algorithm (Learning)
+  - [ ] Desktop Application via QT (Not yet scheduled)
+- [x] Web Stack
+  - [x] HTML / CSS
+  - [x] Basic JS / TS / Node.js
+  - [ ] Vue.js (Learning)
+  - [ ] React.js (Not yet scheduled)
+  - [ ] Uniapp (NOT INTERESTED)
+  - [ ] WeChat app (Not yet scheduled)
+- [ ] C#
+  - [ ] Basic (Scheduled)
+  - [ ] WPF (Most interested, scheduled)
+  - [ ] Unity (Interested)
+- [x] Java
+  - [ ] Basic (Learning)
+  - [ ] Android (Most interested, scheduled)
+  - [x] JavaFX (Learned for homework, not interested)
+  - [ ] Backend (Not yet scheduled)
+- [ ] Python
+  - [ ] Basic (Learning)
+- [ ] Rust (Scheduled)
+- [ ] Dart
+  - [ ] Flutter front-end (Interested)
+  - [ ] Dart back-end
 
-完全就是被车轮碾死了……三个学期，三个不同的版本 hhh
-
-8 月底返校，衔接不上无能的暑假
-
-<br>
-
-未能的 list：
-
-
-want to 的 list： -->

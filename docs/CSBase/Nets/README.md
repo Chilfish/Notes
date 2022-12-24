@@ -26,7 +26,7 @@ sidebar: false
 <div align="center"><img width="70%"
   src="./img/HTTP_url.png"/><p>
   URL 到页面加载
-</p></div><br>
+</p></div>
 
 1. 首先在浏览器中输入 `URL`
 2. **查找缓存**：浏览器先查看浏览器缓存-系统缓存-路由缓存中是否有该地址页面，如果有则显示页面内容。如果没有则进行下一步

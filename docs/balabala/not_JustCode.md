@@ -26,7 +26,7 @@ date: 2022-09-17
 <div align="center" style="margin:1rem auto"><img width="60%"
   src="./img/aerography_WindRate.png"/><p>
   来源：中国气象局 <a href="http://www.cma.gov.cn/2011xzt/20120816/2012081601/201208160101/201407/t20140717_252607.html">风力等级划分</a>
-</p></div><br>
+</p></div>
 
 <div class="h5">风速与气压：</div>
 
@@ -35,7 +35,7 @@ date: 2022-09-17
 <div align="center"><img style="border-radius: 0.rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
   src="./img/aerography_WindPressure.png"/><p>
   常用的台风风压关系
-</p></div><br>
+</p></div>
 
 ### 台风
 

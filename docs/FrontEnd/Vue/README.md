@@ -93,7 +93,7 @@ title: Vue.js
 <div align="center"><img width="60%"
   src="./img/Vue_proj.png"/><p>
   文件结构
-</p></div><br>
+</p></div>
 
 #### 运行
 

@@ -44,7 +44,7 @@ title: HTML
 <div align="center"><img width="70%"
   src="./img/html_form.png"/><p>
   表单
-</p></div><br>
+</p></div>
 
 - **且：**
 

@@ -6,6 +6,14 @@ $dark-bg: #0d1117;
   box-sizing: border-box;
 }
 
+@media (min-width: 900px) {
+  .has-toc #toc {
+    display: block;
+  }
+  .theme-container.has-toc .page {
+    padding-right: 16rem;
+  }
+}
 // 圆角与阴影
 @mixin Fish-Box {
   border-radius: 0.5rem;
@@ -22,6 +30,103 @@ $dark-bg: #0d1117;
 @media screen and (max-width: 500px) {
   .tableBox {
     margin: 1rem 0;
+  }
+}
+
+hr {
+  display: block;
+  border: 1px solid #485e7386;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 1.4rem 0;
+  text-indent: 0 !important;
+}
+
+strong {
+  font-weight: bold; // 移动端居然显示 600
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 50px 0 30px;
+  font-weight: bold;
+  // color: $main-color;
+}
+h1 {
+  text-align: center;
+}
+
+h3 {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eaecef;
+}
+code {
+  background-color: #f1f1f1;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-family: 'Fira Code', Consolas;
+}
+
+div.h5 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 2rem 0 1rem 0;
+}
+
+blockquote {
+  border-color: $theme-color !important;
+  border-left: 4px solid $theme-color !important;
+  padding-left: 20px;
+  & p {
+    margin: 0;
+  }
+}
+
+// 代码块，但居然不是pre，class里也没有类似code或pre……
+html[data-theme='light'] .token.class-name {
+  text-decoration: none;
+}
+.line-numbers-mode {
+  @include Fish-Box();
+  margin: 1.2rem;
+  pre {
+    background: #282c34;
+  }
+}
+
+pre {
+  font-family: 'Fira Code', Consolas;
+}
+
+div > img {
+  @include Fish-Box();
+  margin-top: 1rem;
+  background-color: #fff;
+  & + p {
+    color: #999;
+    padding: 0.4rem;
+    margin: 0 0 1rem;
+    text-align: center !important;
+  }
+}
+
+// mermaid 图
+div.md-enhance-mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto;
+
+  svg circle {
+    fill: #ececff !important;
+    stroke: #9370db !important;
   }
 }
 
@@ -89,102 +194,6 @@ html[data-theme='dark'] {
     & svg foreignObject {
       color: #000 !important;
     }
-  }
-}
-
-hr {
-  display: block;
-  border: 1px solid #485e7386;
-}
-
-strong {
-  font-weight: bold; // 移动端居然显示 600
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 50px 0 30px;
-  font-weight: bold;
-  // color: $main-color;
-}
-h1 {
-  text-align: center;
-}
-
-h3 {
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #eaecef;
-}
-code {
-  background-color: #f1f1f1;
-  padding: 0.15em 0.5em;
-  border-radius: 4px;
-  font-family: 'Fira Code', Consolas;
-}
-
-ul {
-  margin: 1.4rem 0;
-}
-li {
-  margin-bottom: 5px;
-}
-p {
-  margin: 1.4rem 0 !important;
-  text-indent: 0 !important;
-}
-
-div.h5 {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 2rem 0 1rem 0;
-}
-
-blockquote {
-  border-color: $theme-color !important;
-  border-left: 4px solid $theme-color !important;
-  padding-left: 20px;
-}
-
-// 代码块，但居然不是pre，class里也没有类似code或pre……
-html[data-theme='light'] .token.class-name {
-  text-decoration: none;
-}
-.line-numbers-mode {
-  @include Fish-Box();
-  margin: 1.2rem;
-  pre {
-    background: #282c34;
-  }
-}
-
-pre {
-  font-family: 'Fira Code', Consolas;
-}
-
-main img {
-  @include Fish-Box();
-  margin-top: 1rem;
-  background-color: #fff;
-  & + p {
-    color: #999;
-    padding: 0.4rem;
-    margin: 0;
-    text-align: center !important;
-  }
-}
-
-// mermaid 图
-div.md-enhance-mermaid {
-  display: flex;
-  justify-content: center;
-  margin: 1.5rem auto;
-
-  svg circle {
-    fill: #ececff !important;
-    stroke: #9370db !important;
   }
 }
 

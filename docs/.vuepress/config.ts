@@ -52,12 +52,11 @@ export default defineUserConfig({
     docsDir: './docs/',
 
     displayFooter: true,
-    sidebar: 'heading',
+    sidebar: false,
     headerDepth: 3,
     navbar: navbarConfig,
     // navbarAutoHide: 'always',
 
-    // toc: false,
     logo: '/logo.png',
 
     // darkmode: 'auto',

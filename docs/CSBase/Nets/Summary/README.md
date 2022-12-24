@@ -105,7 +105,7 @@ date: 2022-09-26
 <div align="center"><img width="80%"
   src="./img/road_of_Internet.png"/><p>
   互联网的发展
-</p></div><br>
+</p></div>
 
 <br>
 
@@ -118,7 +118,7 @@ date: 2022-09-26
 <div align="center"><img width="80%"
   src="./img/ISP.png"/><p>
   三大 IPS
-</p></div><br>
+</p></div>
 
 ISP 可以从因特网管理机构申请到成块的 IP 地址，同时拥有通信线路以及路由器等联网设备。任何机构和个人只需缴纳费用，就可从 ISP 的得到所需要的 IP 地址
 
@@ -127,7 +127,7 @@ ISP 可以从因特网管理机构申请到成块的 IP 地址，同时拥有通
 <div align="center"><img width="70%"
   src="./img/ISP_net.png"/><p>
   基于 ISP 的三层结构的因特网
-</p></div><br>
+</p></div>
 
 一旦某个用户能够接入到因特网，那么他也可以成为一个 ISP，所需要做的就是购买一些如调制解调器或路由器这样的设备，让其他用户可以和他相连
 
@@ -162,14 +162,14 @@ ISP 可以从因特网管理机构申请到成块的 IP 地址，同时拥有通
 <div align="center"><img width="80%"
   src="./img/Circuit_0.png"/><p>
   两两相连的线路交换的电话机 
-</p></div><br>
+</p></div>
 
 近乎 $O(n^2)$ 的耗材很是不优雅，于是就有个**交换机**作为交换载体
 
 <div align="center"><img width="60%"
   src="./img/Circuit_1.png"/><p>
   带有中间交换机只要 O(n) 的耗材
-</p></div><br>
+</p></div>
 
 从通信资源的分配角度来看，交换（Switching）就是按照某种方式动态地分配传输线路的资源
 
@@ -241,7 +241,7 @@ ISP 可以从因特网管理机构申请到成块的 IP 地址，同时拥有通
 <div align="center"><img width="70%"
   src="./img/Packet.png"/><p>
   分组交换网络
-</p></div><br>
+</p></div>
 
 为了理解分组交换的优越性，先了解一下“报文”与“报文分组”的区别：
 
@@ -268,7 +268,7 @@ ISP 可以从因特网管理机构申请到成块的 IP 地址，同时拥有通
 <div align="center"><img width="100%"
   src="./img/Switching.png"/><p>
   三种交换方式
-</p></div><br>
+</p></div>
 
 <div class="h5">电路交换：</div>
 
@@ -306,7 +306,7 @@ $$
 <div align="center"><img width="90%"
   src="./img/rate.png"/><p>
   速率及单位之间的转换
-</p></div><br>
+</p></div>
 
 <br>
 
@@ -315,7 +315,7 @@ $$
 <div align="center"><img width="90%"
   src="./img/band_width.png"/><p>
   带宽
-</p></div><br>
+</p></div>
 
 <br>
 
@@ -328,7 +328,7 @@ $$
 <div align="center"><img width="90%"
   src="./img/tuntu.png"/><p>
   网络吞吐量
-</p></div><br>
+</p></div>
 
 带宽 `1 Gb/s` 的以太网，代表其额定速率是 `1 Gb/s`，这个数值也是该以太网的吞吐量的绝对上限值。因此，对于带宽 `1 Gb/s` 的以太网，可能实际吞吐量只有 `700 Mb/s`，甚至更低
 
@@ -350,7 +350,7 @@ $$
 <div align="center"><img width="90%"
   src="./img/delay.png"/><p>
   网络时延的计算
-</p></div><br>
+</p></div>
 
 > 当处理时延忽略不计时，发送时延和传播时延谁占主导要是情况分析
 
@@ -363,7 +363,7 @@ $$
 <div align="center"><img width="60%"
   src="./img/RTT.png"/><p>
   往返时间
-</p></div><br>
+</p></div>
 
 <br>
 
@@ -372,7 +372,7 @@ $$
 <div align="center"><img width="60%"
   src="./img/Utilization.png"/><p>
   利用率
-</p></div><br>
+</p></div>
 
 <br>
 
@@ -381,7 +381,7 @@ $$
 <div align="center"><img width="60%"
   src="./img/packet_lost.png"/><p>
   丢包率
-</p></div><br>
+</p></div>
 
 <br>
 
@@ -420,7 +420,7 @@ $$
 
 <div align="center"><img width="80%" src="./img/Transmission_process.png"/><p>
   传输过程
-</p></div><br>
+</p></div>
 
 <div class="h5">发送端发送：</div>
 

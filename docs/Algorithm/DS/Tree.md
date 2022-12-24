@@ -39,7 +39,7 @@ date: 2022-11-08
 
 <div align="center"><img width="70%" src="./img/tree_unix.png"/><p>
   Unix 的文件层次树
-</p></div><br>
+</p></div>
 
 正如 **打开文件夹找文件** 的过程而言，对树的遍历就是一个 **递归** 的过程（指只是点开下一个文件夹或返回键的情况下，毕竟在 GUI 下还可以直接点面包屑的节点跳转到先前节点），而内部对数据的存储的结构也是 **不连续的连式存储**
 
@@ -114,7 +114,7 @@ A---C
 
 <div align="center"><img width="70%" src="./img/tree_full_binary.png"/><p>
   完全二叉树与满二叉树
-</p></div><br>
+</p></div>
 
 ### 遍历方式
 

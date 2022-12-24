@@ -60,7 +60,7 @@ title: CSS | Scss
   - `ful-width` 全角
 - `write-mode` 文字书写方向
 
-  <div align="center"><img width="30%" src="./img/CSS_write_mode.png"/><p>书写方向</p></div><br>
+  <div align="center"><img width="30%" src="./img/CSS_write_mode.png"/><p>书写方向</p></div>
 
 - `white-space`：对文本的**换行操作**进行控制
   - 默认值是 `normal`，设置文本到达父元素的边界就自动换行
@@ -172,7 +172,7 @@ title: CSS | Scss
 <div align="center"><img width="50%"
   src="./img/CSS_border.png"/><p>
   Border
-</p></div><br>
+</p></div>
 
 - 而用了 **`box-sizing: border-box;`** 后，边距不影响宽度了（放全局）
 
@@ -356,7 +356,7 @@ title: CSS | Scss
 <div align="center"><img width="80%"
   src="./img/CSS_position.png"/><p>
   position
-</p></div><br>
+</p></div>
 
 <br>
 

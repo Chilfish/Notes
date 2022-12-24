@@ -19,7 +19,6 @@
     "vuepress-theme-hope": "2.0.0-beta.143"
   },
   "dependencies": {
-    "sakana": "^1.0.8",
-    "sakana-widget": "2.4.3"
+    "sakana": "^1.0.8"
   }
 }

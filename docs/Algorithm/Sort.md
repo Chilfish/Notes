@@ -90,7 +90,7 @@ date: 2022-04-14
 <div align="center"><img width="90%" src="./img/sort_bubble.gif"/>
 <p>
   冒泡排序
-</p></div><br>
+</p></div>
 
 <div class="h5">码：</div>
 
@@ -121,12 +121,12 @@ void bubble(vi& arr) {
 <div align="center"><img width="80%" src="./img/sort_quick.gif"/>
 <p>
   快排
-</p></div><br>
+</p></div>
 
 <div align="center"><img width="70%" src="./img/sort_quick.jpg"/>
 <p>
   快排分解
-</p></div><br>
+</p></div>
 
 <div class="h5">码：</div>
 
@@ -168,7 +168,7 @@ void quick(vi& arr, int begin, int end) {
 <div class="h5">动图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_insert.gif"/>
-<p></p></div><br>
+<p></p></div>
 
 <div class="h5">码：</div>
 
@@ -195,7 +195,7 @@ void insert(vi& arr) {
 <div class="h5">图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_shell.png"/>
-<p></p></div><br>
+<p></p></div>
 
 <div class="h5">码：</div>
 
@@ -225,7 +225,7 @@ void shell(vi& arr) {
 <div class="h5">动图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_select.gif"/>
-<p></p></div><br>
+<p></p></div>
 
 <div class="h5">码：</div>
 
@@ -257,7 +257,7 @@ void select(vi& arr) {
 <div class="h5">图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_heap.gif"/>
-<p></p></div><br>
+<p></p></div>
 
 <div class="h5">码：</div>
 
@@ -272,10 +272,10 @@ void select(vi& arr) {
 <div class="h5">动图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_merge.gif"/>
-<p></p></div><br>
+<p></p></div>
 
 <div align="center"><img width="70%" src="./img/sort_merge_1.png"/>
-<p></p></div><br>
+<p></p></div>
 
 <div class="h5">码：</div>
 
@@ -382,7 +382,7 @@ void count(vi& arr) {
 
 <div class="h5">动图：</div>
 
-<div align="center"><img width="70%" src="./img/sort_bucket.webp"/><p></p></div><br>
+<div align="center"><img width="70%" src="./img/sort_bucket.webp"/><p></p></div>
 
 <div class="h5">码：</div>
 
@@ -422,7 +422,7 @@ void bucket(vi& arr, int cnt = 3) {
 <div class="h5">图：</div>
 
 <div align="center"><img width="70%" src="./img/sort_radix.gif"/>
-<p></p></div><br>
+<p></p></div>
 
 <div class="h5">码：</div>
 

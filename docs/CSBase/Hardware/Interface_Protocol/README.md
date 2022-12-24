@@ -32,14 +32,14 @@ date: 2022-09-28
 <div align="center"><img width="70%"
   src="./img/USB_interface.png"/><p>
   USB 的物理接口
-</p></div><br>
+</p></div>
 
 <br>
 
 <div align="center"><img width="70%"
   src="./img/USB_History.jpg"/><p>
   USB 的发展史
-</p></div><br>
+</p></div>
 
 #### Type C 接口
 
@@ -50,12 +50,12 @@ date: 2022-09-28
 <div align="center"><img width="60%"
   src="./img/USB_Type-C_Receptacle_Pinout.svg"/><p>
   母头
-</p></div><br>
+</p></div>
 
 <div align="center"><img width="60%"
   src="./img/USB_Type-C_Plug_Pinout.svg"/><p>
   公头
-</p></div><br>
+</p></div>
 
 > 可以很明显看出，插口内的 Pin 功能相对于中心对称。公头插入母头，无论正反插，引脚功能都完美契合。而且电源 `VBUS/GND` 都拥有 4 个 Pin，最大支持 5A 电流，在保证高速数据传输的同时也提高了电流承载能力
 
@@ -66,7 +66,7 @@ date: 2022-09-28
 <div align="center"><img width="70%"
   src="./img/USB_Type-C_Pin.png"/><p>
   出处： <a target="_blank" rel="noopener noreferrer" href="https://www.anandtech.com/show/8558/displayport-alternate-mode-for-usb-typec-announced">AnandTech</a>
-</p></div><br>
+</p></div>
 
 **但：** 不是所有的 Type-C 都是满血的接口，会在仅充电需求中砍掉一些接口：
 
@@ -85,7 +85,7 @@ date: 2022-09-28
 <div align="center"><img width="60%"
   src="./img/USB_protocol.png"/><p>
   其中，USB-PD是基于 <code>USB3.2 Gen2</code> 的传输协议
-</p></div><br>
+</p></div>
 
 #### 充电标准
 
@@ -96,20 +96,20 @@ date: 2022-09-28
 <div align="center"><img width="50%"
   src="./img/USB_PD1.0.png"/><p>
   只是设想
-</p></div><br>
+</p></div>
 
 **USB DP 2.0：** 改用了 `USB Type-C` 口 (USB3.1)
 
 <div align="center"><img width="40%"
   src="./img/USB_PD2.0.png"/><p>
   注：60W 以上必须用 6A 电线
-</p></div><br>
+</p></div>
 
 **USB DP 3.0：** 相较于 DP 2.0，加入可编程电源供应，可兼容各家快充协议，最新可支持 `QC4+` 快充
 
 **USB DP 3.1：** 把原先 PD 3.0 的内容归纳至标准功率范围，最大功率维持原本的 100 瓦，并同时增加扩展功率范围最大功率为 **240 瓦**
 
-<div align="center"><img width="50%" src="./img/USB_PD3.1.png"/><p></p></div><br>
+<div align="center"><img width="50%" src="./img/USB_PD3.1.png"/><p></p></div>
 
 <div class="h5">雷电协议：</div>
 
@@ -120,12 +120,12 @@ date: 2022-09-28
 <div align="center"><img width="40%"
   src="./img/USB_DP.png"/><p>
   电脑上的雷电接口及充电线通常有着尊贵的闪电图标
-</p></div><br>
+</p></div>
 
 <div align="center"><img width="50%"
   src="./img/USB_DP_Gen.png"/><p>
   各代雷电的区别
-</p></div><br>
+</p></div>
 
 <div align="center"><img width="75%"
   src="./img/USB_DP_CompareWithOther.png"/><br></div>

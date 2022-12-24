@@ -95,7 +95,7 @@ int main() {
 <div align="center"><img width="60%"
   src="./img/cpp_1.png"/><p>
   复杂度限制
-</p></div><br>
+</p></div>
 
 一般 ACM 或者笔试题的时间限制是 1 秒或 2 秒。在这种情况下，C++代码中的操作次数控制在 $10^7∼10^8$ 为最佳
 
@@ -212,7 +212,7 @@ int main() {
 
 <div align="center"><img width="70%" src="./img/TreeArr1.png"/><p>
   树状数组与原数组的对应关系
-</p></div><br>
+</p></div>
 
 > 详见 [动画讲解树状数组](https://bilibili.com/video/BV1ce411u7qP/)、[高级数据结构——树状数组](https://www.cnblogs.com/RabbitHu/p/BIT.html)吧
 
