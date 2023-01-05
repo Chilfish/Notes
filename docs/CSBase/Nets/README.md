@@ -23,8 +23,7 @@ sidebar: false
 
 ### 从输入 URL 到页面加载的全过程
 
-<div align="center"><img width="70%"
-  src="./img/HTTP_url.png"/><p>
+<div class="img" align="center"><img src="./img/HTTP_url.png"/><p>
   URL 到页面加载
 </p></div>
 

@@ -11,7 +11,7 @@ date: 2022-11-12
 
 ## 概述
 
-<div align="center"><img width="90%" src="./img/DNS_0.png"/><p>
+<div class="img" align="center"><img src="./img/DNS_0.png"/><p>
   DNS 架构
 </p></div>
 

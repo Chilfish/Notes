@@ -64,7 +64,7 @@ sidebar: false
 
 在计算机或普遍的的编程语言中，数据通常分为两大类： **原始数据结构**、**非原始数据结构**
 
-<div align="center"><img width="70%" src="./img/DS_base.png"/><p>
+<div class="img" align="center"><img src="./img/DS_base.png"/><p>
   计算机内的数据分类
 </p></div>
 

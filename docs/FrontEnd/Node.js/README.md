@@ -40,8 +40,7 @@ title: Node.js
   ```
 - `package.json` 文件包含的信息：
 
-<div align="center"><img width="80%"
-  src="./img/Node_package.png"/><p>
+<div class="img" align="center"><img src="./img/Node_package.png"/><p>
   配置信息
 </p></div>
 

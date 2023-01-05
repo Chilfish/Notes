@@ -37,7 +37,7 @@ date: 2022-11-08
 
 树这种数据结构有很多的应用：如操作系统的文件管理的结构就是一个树状的，从根目录(磁盘)开始一直套娃下去打开文件夹直至没有文件夹或找到目标文件(夹)、又如 `Json`、`yaml`这类的数据存储类型都可以看做是树
 
-<div align="center"><img width="70%" src="./img/tree_unix.png"/><p>
+<div class="img" align="center"><img src="./img/tree_unix.png"/><p>
   Unix 的文件层次树
 </p></div>
 
@@ -112,7 +112,7 @@ A---C
 
 查找二叉树就是规定了在构造二叉树的时候左子节点必须大于父节点，右子节点必须小于其父节点
 
-<div align="center"><img width="70%" src="./img/tree_full_binary.png"/><p>
+<div class="img" align="center"><img src="./img/tree_full_binary.png"/><p>
   完全二叉树与满二叉树
 </p></div>
 

@@ -27,8 +27,7 @@ title: HTML
 
 ## 关键字缩写
 
-<div align="center"><img width="90%"
-  src="./img/html_label.png"/><br> </div>
+<div class="img" align="center"><img src="./img/html_label.png"/><br> </div>
 
 > 参考字典：[HTML 元素参考\_MDN ](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element)
 
@@ -41,8 +40,7 @@ title: HTML
 ### 概述
 
 - 表单的属性和方法
-<div align="center"><img width="70%"
-  src="./img/html_form.png"/><p>
+<div class="img" align="center"><img src="./img/html_form.png"/><p>
   表单
 </p></div>
 
@@ -64,13 +62,11 @@ title: HTML
 ### input
 
 - **定义：**
-<div align="center"><img width="80%"
-  src="./img/html_input.png"/><br> </div>
+<div class="img" align="center"><img src="./img/html_input.png"/><br> </div>
 
 - **type** 的类型
 
-<div align="center"><img width="80%"
-  src="./img/html_input_type.png"/><br> 
+<div class="img" align="center"><img src="./img/html_input_type.png"/><br> 
 </div>
 
 ### button

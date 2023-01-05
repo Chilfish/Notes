@@ -30,8 +30,7 @@ date: 2022-08-07
 这样的话，在数组的中间插入元素就得让后面的挪出位置给它，而链表只需要让后一个人重新记一下下个人的位置就好
 
 <div class="h5">结构：</div>
-<div align="center"><img width="80%"
-  src="./img/list_0.png"/><p></p><br></div>
+<div class="img" align="center"><img src="./img/list_0.png"/><p></p><br></div>
 
 - **头指针：** 一个指向第一个节点地址的指针变量，而不存数据。头指针具有标识单链表的作用，所以经常用头指针代表单链表的名字
 - **头结点：** 在单链表的第一个结点之前附设一个结点，它没有直接前驱，称之为头结点。可不存信息，也可以作为监视哨，或用于存放线性表的长度等附加信息指针域中存放首元结点的地址
@@ -44,7 +43,9 @@ date: 2022-08-07
 
 > 详见： [List.hpp](https://github.com/Organic-Fish/FishCode/blob/master/CPP/DataStruct/List/List.hpp)
 
-<div align="center"><img width="90%" src="./img/list_1.svg"/><p>现假设单链表 s 中的数据为 {1, 2, 3, 4, 5};</p></div>
+<div class="img" align="center"><img src="./img/list_1.svg"/><p>
+现假设单链表 s 中的数据为 {1, 2, 3, 4, 5};
+</p></div>
 
 <div class="h5">链表中的数据表示</div>
 
@@ -153,7 +154,7 @@ void insert(int index, const T &value) {
 }
 ```
 
-<div align="center"><img width="40%" src="./img/list_2.png"/><p>
+<div class="img" align="center"><img src="./img/list_2.png"/><p>
   在 <code>getNode</code> 中，返回的p节点的 <b>首指针</b> 的地址与 head节点的第三个节点的地址相同，所以才做到了只是修改 p 但也影响到了 head
 </p></div>
 

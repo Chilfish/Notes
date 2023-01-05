@@ -23,8 +23,7 @@ date: 2022-09-17
 
 国内
 
-<div align="center" style="margin:1rem auto"><img width="60%"
-  src="./img/aerography_WindRate.png"/><p>
+<div class="img" align="center"><img src="./img/aerography_WindRate.png"/><p>
   来源：中国气象局 <a href="http://www.cma.gov.cn/2011xzt/20120816/2012081601/201208160101/201407/t20140717_252607.html">风力等级划分</a>
 </p></div>
 
@@ -32,8 +31,7 @@ date: 2022-09-17
 
 - 中心气压低于 975 百帕(33 米/秒)，就达到了 12 级台风标准。低于 900 百帕(70 米/秒)，就达到了 5 级飓风标准
 
-<div align="center"><img style="border-radius: 0.rem;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="60%"
-  src="./img/aerography_WindPressure.png"/><p>
+<div class="img" align="center"><img src="./img/aerography_WindPressure.png"/><p>
   常用的台风风压关系
 </p></div>
 

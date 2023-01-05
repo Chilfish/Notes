@@ -60,7 +60,9 @@ title: CSS | Scss
   - `ful-width` 全角
 - `write-mode` 文字书写方向
 
-  <div align="center"><img width="30%" src="./img/CSS_write_mode.png"/><p>书写方向</p></div>
+  <div class="img" align="center"><img src="./img/CSS_write_mode.png"/><p>
+  书写方向
+</p></div>
 
 - `white-space`：对文本的**换行操作**进行控制
   - 默认值是 `normal`，设置文本到达父元素的边界就自动换行
@@ -169,8 +171,7 @@ title: CSS | Scss
 - `height`、`width` , 宽高
 - 但是，如图 完整的框是指 长：`width + 2\*(margin + padding + border)`
 
-<div align="center"><img width="50%"
-  src="./img/CSS_border.png"/><p>
+<div class="img" align="center"><img src="./img/CSS_border.png"/><p>
   Border
 </p></div>
 
@@ -353,8 +354,7 @@ title: CSS | Scss
 - `fixed` : 相对于浏览器窗口固定
 - `sticky` : **粘性定位**，当元素(滚动条)移动到预设位置时固定
 
-<div align="center"><img width="80%"
-  src="./img/CSS_position.png"/><p>
+<div class="img" align="center"><img src="./img/CSS_position.png"/><p>
   position
 </p></div>
 

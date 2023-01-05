@@ -5,6 +5,8 @@ date: 2022-06-20
 
 <br>
 
+## [2023](2023.md)
+
 ## 22-06
 
 ### 在这之前...
@@ -38,7 +40,7 @@ date: 2022-06-20
 - **社交平台**
   - B 站果然整付费视频了...... 之前爬到的视频 APi：`GET https://api.bilibili.com/x/player/v2?cid=xx&aid=xx&bvid=xx`，中就有一个莫名的返回结果：`preview_toast "为创作付费，购买观看完整视频|购买观看"`
 
-<div align="center"><img width="60%" src="./img/22-06-21.png"/><p>
+<div class="img" align="center"><img src="./img/22-06-21.png"/><p>
   来自：差评君
 </p></div>
 
@@ -158,17 +160,17 @@ date: 2022-06-20
 - **流水：**
 
   - 内网穿透……如果早知道……但那时候连 Node 都还不知道吧……害，还得是先观望观望
-  <div align="center"><img width="50%" src="./img/22-10-05-01.png"/><p>
+  <div class="img" align="center"><img src="./img/22-10-05-01.png"/><p>
    还得是GitHub
   </p></div>
 
   - 但有个新发现诶，为什么 `live-server` 更胜一筹呢，那就得挖坑去看看网络 WiFi 方面了诶
-  <div align="center"><img width="80%" src="./img/22-10-05-02.png"/><p>
+  <div class="img" align="center"><img src="./img/22-10-05-02.png"/><p>
     <code>live-server</code>与<code>LanDrop</code>的对比
   </p></div>
 
   - 感觉感觉……还是记不住啊
-  <div align="center"><img width="80%" src="./img/22-10-05.png"/><p>
+  <div class="img" align="center"><img src="./img/22-10-05.png"/><p>
     放语雀上了
   </p></div>
 
@@ -275,36 +277,79 @@ Python 更多还是做做玩具之类的
 
 快动不了了……一天搞定了 Java 期末…… java 真搞不来桌面端，缺太多东西了。但感受到了 **面向对象** 的一些概念了，感觉还蛮好玩的
 
-<div align="center"><img width="50%" src="./img/22-12-04.png"/><p>
+<div class="img" align="center"><img src="./img/22-12-04.png"/><p>
   期末报告……
 </p></div>
 
 <br>
 
-- [x] C / C++
-  - [x] Basic
-  - [ ] Complex Algorithm (Learning)
-  - [ ] Desktop Application via QT (Not yet scheduled)
-- [x] Web Stack
-  - [x] HTML / CSS
-  - [x] Basic JS / TS / Node.js
-  - [ ] Vue.js (Learning)
-  - [ ] React.js (Not yet scheduled)
-  - [ ] Uniapp (NOT INTERESTED)
-  - [ ] WeChat app (Not yet scheduled)
-- [ ] C#
-  - [ ] Basic (Scheduled)
-  - [ ] WPF (Most interested, scheduled)
-  - [ ] Unity (Interested)
-- [x] Java
-  - [ ] Basic (Learning)
-  - [ ] Android (Most interested, scheduled)
-  - [x] JavaFX (Learned for homework, not interested)
-  - [ ] Backend (Not yet scheduled)
-- [ ] Python
-  - [ ] Basic (Learning)
-- [ ] Rust (Scheduled)
-- [ ] Dart
-  - [ ] Flutter front-end (Interested)
-  - [ ] Dart back-end
+<div class="h5">年末……想了想</div>
 
+- :white_check_mark: C / C++
+  - :white_check_mark: Basic
+  - :white_large_square: Complex Algorithm (Learning)
+  - :white_large_square: Desktop Application via QT (Not yet scheduled)
+- :white_check_mark: Web Stack
+  - :white_check_mark: HTML / CSS
+  - :white_check_mark: Basic JS / TS / Node.js
+  - :white_large_square: Vue.js (Learning)
+  - :white_large_square: React.js (Not yet scheduled)
+  - :white_large_square: Uniapp (NOT INTERESTED)
+  - :white_large_square: WeChat app (Not yet scheduled)
+- :white_large_square: C#
+  - :white_large_square: Basic (Scheduled)
+  - :white_large_square: WPF (Most interested, scheduled)
+  - :white_large_square: Unity (Interested)
+- :white_check_mark: Java
+  - :white_large_square: Basic (Learning)
+  - :white_large_square: Android (Most interested, scheduled)
+  - :white_check_mark: JavaFX (Learned for homework, not interested)
+  - :white_large_square: Backend (Not yet scheduled)
+- :white_large_square: Python
+  - :white_large_square: Basic (Learning)
+- :white_large_square: Rust (Scheduled)
+- :white_large_square: Dart
+  - :white_large_square: Flutter front-end (Interested)
+  - :white_large_square: Dart back-end
+
+<br>
+
+## All the End……
+
+想不出来了……先是期末提前二十天，然后冲复习的中途告知也要跟着遣返…意味着整整的一个学期完全又以一种方式废掉了，虽然很像大一下
+
+<div class="img" align="center"><img src="./img/22-12-07.png"/><p>
+ 广东高校双一留决赛……
+</p></div>
+
+但反正在最终的博弈和决定下，还是早点就走，寒假再补了……但是一周后，封校多年突然阳了教职工）然后又是各种开会和微博冲，此时还有三天就是期末了……总之这提前走是对的了
+
+<div class="img" align="center"><img src="./img/22-12-14.png"/><p>
+  全面为了保障学生的安全，我哭了
+</p></div>
+
+但体侧完当天下午就得高铁回去…简直时要滩坏了身体，但高铁初体验））但贵……
+
+<div class="img" align="center"><img src="./img/22-12-11.jpg"/><p>
+但好快诶，时间减半，价格翻倍
+</p></div>
+
+但糟糕的是，跑出有史以来最快的一千米后，直接瘫床上三四天了；接着就是家里人阳，轮到我后又是瘫了四五天）期间全拿来补上之前的冲浪了……
+
+而且 ChatGPT 也太好玩了，我的感觉就是有了一个能直接回答我的问题的人了，而不是之前那样还得搜索引擎翻博客之类的，而且很重要的是以一个高级超高经验的开发者佬提供了解决的思路 hhh
+
+<br>
+
+一直想清灰来着，但螺丝笔一直对不上于是一下子买了 11 个装的，终于是第一次拆了下来）而且顺利断电清灰涂脂。风扇终于是安静下来了
+
+<div class="img" align="center"><img src="./img/22-12-30.jpg"/><p>
+  但这一年半的轻薄本……
+</p></div>
+
+而且顺便终于也在酷安->咸鱼买了第一个硬盘来着，装上了硬盘盒，简直是新家）而且也好喜欢收集这些的盒子，特别是想买特别久然后第一次买的
+
+<div class="img" align="center"><img src="./img/22-12-30.png"/><p>
+  说好的5Gbps呢……
+</p></div>
+
+这些便是新年前 12 月份的杂碎事了。总结什么的再想想吧

@@ -250,9 +250,7 @@ class son : public | private | protected father {};
 
 <div class="h5">重载运算符：</div>
 
-<div align="center"><img width="90%"
-  src="./img/cpp_overload.png"/><p>
-</p></div>
+<div class="img" align="center"><img src="./img/cpp_overload.png"/></div>
 
 **一元运算符：** 如负号、自增自减
 
@@ -422,8 +420,7 @@ print({2, 3, 4});
 
 <div class="h5">定义：</div>
 
-<div align="center"><img width="80%" src="./img/cpp_lambda.png"/>
-<p></p></div>
+<div class="img" align="center"><img src="./img/cpp_lambda.png"/></div>
 
 - **捕获列表**
   - 当为默认的 `[]` 时，lambda 内是不能访问当前作用域中的变量的（除了全局）
@@ -584,6 +581,6 @@ sprintf(ans, "%d+%d=%d", x, y, x + y);
 
 <div class="h5">符号优先级：</div>
 
-<div align="center"><img width="90%" src="./img/cpp_priority.png"/><p>
+<div class="img" align="center"><img src="./img/cpp_priority.png"/><p>
   符号优先级
 </p></div>

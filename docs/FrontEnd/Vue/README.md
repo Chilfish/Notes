@@ -90,8 +90,7 @@ title: Vue.js
   vue ui
   ```
 - 项目文件结构
-<div align="center"><img width="60%"
-  src="./img/Vue_proj.png"/><p>
+<div class="img" align="center"><img src="./img/Vue_proj.png"/><p>
   文件结构
 </p></div>
 

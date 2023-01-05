@@ -27,12 +27,6 @@ $dark-bg: #0d1117;
   transition: all ease-in 0.5s;
 }
 
-@media screen and (max-width: 500px) {
-  .tableBox {
-    margin: 1rem 0;
-  }
-}
-
 hr {
   display: block;
   border: 1px solid #485e7386;
@@ -69,7 +63,6 @@ h3 {
   border-bottom: 2px solid #eaecef;
 }
 code {
-  background-color: #f1f1f1;
   padding: 0.15em 0.5em;
   border-radius: 4px;
   font-family: 'Fira Code', Consolas;
@@ -106,15 +99,23 @@ pre {
   font-family: 'Fira Code', Consolas;
 }
 
-div > img {
-  @include Fish-Box();
-  margin-top: 1rem;
-  background-color: #fff;
-  & + p {
+div.img {
+  margin: 1rem 0 2rem;
+  & > img {
+    width: 40vw;
+    background-color: #fff;
+    transition: all ease-in-out 300ms;
+    @include Fish-Box();
+  }
+  & p {
     color: #999;
     padding: 0.4rem;
     margin: 0 0 1rem;
-    text-align: center !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  div.img > img {
+    width: 70vw;
   }
 }
 
@@ -184,9 +185,6 @@ html[data-theme='dark'] {
     td,
     th {
       border: 1px solid #30363d;
-    }
-    code {
-      background-color: #c7c1c1;
     }
   }
 

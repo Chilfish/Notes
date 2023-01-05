@@ -92,8 +92,7 @@ int main() {
 - 在全局变量中，一维数组大小不超过 1e8，二维数组大小不超过 1e4
 - 对于 1s 的时间限制，需要保证程序的所有语句的总执行次数不超过 1e8.
 
-<div align="center"><img width="60%"
-  src="./img/cpp_1.png"/><p>
+<div class="img" align="center"><img src="./img/cpp_1.png"/><p>
   复杂度限制
 </p></div>
 
@@ -206,11 +205,11 @@ int main() {
 
 以数组 $Arr = \{8,6,1,4,5,5,1,1,3,2,1,4,9,0,7,4\}$ 为例
 
-<div align="center"><img width="70%" src="./img/TreeArr0.png"/><p>
+<div class="img" align="center"><img src="./img/TreeArr0.png"/><p>
   树的每个节点都是区间和
 </p></div>
 
-<div align="center"><img width="70%" src="./img/TreeArr1.png"/><p>
+<div class="img" align="center"><img src="./img/TreeArr1.png"/><p>
   树状数组与原数组的对应关系
 </p></div>
 

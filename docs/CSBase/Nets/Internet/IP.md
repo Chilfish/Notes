@@ -51,7 +51,7 @@ IP 地址是 IP 协议中非常重要的内容，IP 数据报中含有 **收/发
 
 IP 地址就好像**电话号码**（地址码）：有了某人的电话号码，你就能与他通话了。同样，有了某台主机的 IP 地址，你就能与这台主机通信了
 
-<div align="center"><img width="70%" src="./img/IP_0.png"/><p>
+<div class="img" align="center"><img src="./img/IP_0.png"/><p>
   IP 的作用就是在复杂的网络环境中将数据包发送给指定的主机
 </p></div>
 
@@ -59,7 +59,7 @@ IP 地址就好像**电话号码**（地址码）：有了某人的电话号码�
 
 一个采用二进制形式的 IP 地址是一串很长的数字，人们处理起来也太费劲了。为了方便人们的使用，IP 地址习惯性地被写成十进制的形式，使用 “.” 分开不同的字节。这种表示法叫做点分十进制表示法，这显然比一连串二进制地 1 和 0 容易记忆得多。举个例子：
 
-<div align="center"><img width="70%" src="./img/ip_addr.png"/><p>
+<div class="img" align="center"><img src="./img/ip_addr.png"/><p>
   IP 地址的表示方式
 </p></div>
 

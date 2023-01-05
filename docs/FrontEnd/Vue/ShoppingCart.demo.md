@@ -23,8 +23,7 @@ title: ShoppingCart.demo
 
 ### 预览
 
-<div align="center"><img width="60%"
-  src="./img/CartDemo_0.png"/><p>
+<div class="img" align="center"><img src="./img/CartDemo_0.png"/><p>
   预览图
 </p></div>
 
@@ -45,8 +44,7 @@ pnpm install
 ### 完善目录结构
 
 - 添加文件：
-<div align="center"><img width="60%"
-  src="./img/CartDemo_1.png"/><p>
+<div class="img" align="center"><img src="./img/CartDemo_1.png"/><p>
   文件树
 </p></div>
 
@@ -62,8 +60,7 @@ pnpm install
   ```
 - 修改 `vite.config.ts`，添加别名等设置 [demo 中的 vite.config.ts](https://github.com/Organic-Fish/FishCode/blob/master/Web/vue/ts-vite/vite.config.ts)。参考 [vite 官方的配置文件](https://cn.vitejs.dev/config/)
 
-<div align="center"><img width="60%"
-  src="./img/CartDemo_2.png"/><p>
+<div class="img" align="center"><img src="./img/CartDemo_2.png"/><p>
   vite.config.ts
 </p></div>
 
