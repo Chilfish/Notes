@@ -1,1 +1,0 @@
-import{_ as e,V as t,W as o,Z as n}from"./framework-94985248.js";const s={},_=n("p",{style:{"font-size":"32px","font-weight":"bold"}},"目录",-1),c=[_];function r(a,l){return t(),o("div",null,c)}const i=e(s,[["render",r],["__file","Python.html.vue"]]);export{i as default};
