@@ -6,7 +6,7 @@ $dark-bg: #0d1117;
   box-sizing: border-box;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 700px) {
   .has-toc #toc {
     display: block;
   }
@@ -14,6 +14,7 @@ $dark-bg: #0d1117;
     padding-right: 16rem;
   }
 }
+
 // 圆角与阴影
 @mixin Fish-Box {
   border-radius: 0.5rem;
@@ -36,9 +37,26 @@ li {
   margin-bottom: 5px;
 }
 
+article {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 2px solid #bbb3;
+  border-radius: 8px;
+
+  h3::before {
+    content: '';
+    padding-left: 0.75em;
+    border-left: 2px solid #ffc107;
+  }
+
+  & p::first-letter {
+    margin-left: 2rem;
+  }
+}
+
 p {
-  margin: 1.4rem 0;
-  text-indent: 0 !important;
+  margin: 1rem 0;
+  letter-spacing: 0.03rem;
 }
 
 strong {
@@ -50,7 +68,6 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 50px 0 30px;
   font-weight: bold;
   // color: $main-color;
 }
@@ -58,8 +75,8 @@ h1 {
   text-align: center;
 }
 
-h3 {
-  padding-bottom: 1rem;
+h2 {
+  padding: 0.5rem 0;
   border-bottom: 2px solid #eaecef;
 }
 code {
@@ -71,7 +88,7 @@ code {
 div.h5 {
   font-weight: bold;
   font-size: 1.1rem;
-  margin: 2rem 0 1rem 0;
+  margin: 0.8rem 0;
 }
 
 blockquote {
@@ -101,18 +118,19 @@ pre {
 
 div.img {
   margin: 1rem 0 2rem;
-  & > img {
-    width: 40vw;
+  img {
+    width: 35vw;
     background-color: #fff;
     transition: all ease-in-out 300ms;
     @include Fish-Box();
   }
-  & p {
+  p {
     color: #999;
     padding: 0.4rem;
     margin: 0 0 1rem;
   }
 }
+
 @media screen and (max-width: 700px) {
   div.img > img {
     width: 70vw;

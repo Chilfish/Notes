@@ -7,220 +7,330 @@ date: 2022-06-20
 
 ## 22-06
 
+<article>
+
 ### 在这之前...
 
-- **文章：** <br> [Canvas 资源](https://github.com/chinaBerg/awesome-canvas) 、 [MDN 伪类和伪元素](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#%E5%8F%82%E8%80%83%E8%8A%82) 、 [隼鸟 2 号：首次发现地外氨基酸？](https://weibo.com/ttarticle/p/show?id=2309404781329462984737)
+<div class="h5">文章 | 文档</div>
 
-<br>
+[Canvas 资源](https://github.com/chinaBerg/awesome-canvas) 、 [MDN 伪类和伪元素](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#%E5%8F%82%E8%80%83%E8%8A%82) 、 [隼鸟 2 号：首次发现地外氨基酸？](https://weibo.com/ttarticle/p/show?id=2309404781329462984737)
+
+</article>
+
+<article>
 
 ### 06-20
 
-- **dashboard：**
-  - VsCode：`11h20m` | Firefox：`5h52m`
-- **文章 | 文档：** <br> [Axios 文档][06-20_1] 、 [使用 Typescript 开发 Node.js 项目][06-20_2] 、 [Express 框架 文档](http://expressjs.com/zh-cn/) 、 [用 Node 写一个 APi 接口](https://www.jianshu.com/p/44149ac15b40) 、 [还算可以的 Node 文章 ](https://brucecai55520.gitee.io/bruceblog/notes/nodejs/Node.html) 、 [输入 URL 到显示过程发生了什么](https://segmentfault.com/a/1190000013662126) &emsp;
-- **其他：**
-  - 先是凌晨的 [innei.ren 的毕业](https://innei.ren/notes/123)，看了会 [起码课的 Promise](https://www.bilibili.com/video/av712155832) 的异步，终于是由 [50 个项目的 github 查询](https://50projects50days.com/projects/github-profiles) 补了 `ajax | Axios`
-  - 艰难地尝试用 ts 配置 `Node` 的工程项目，更多的还是在模块的导入......终于是用 `pnpm i @types/Node` 才能在 ts 中使用 `Node` 自带模块（import）
-  - 然后在 [ts 项目](https://github.com/Organic-Fish/FishCode/tree/master/Web/TypeScript/ts-fish) 下，用 `HTTP` 模块整出了个 `API` 服务器，并结合 `axios` 成功地获取到了数据
-  - 顺便地在 [起码课的 ExpressJs](https://www.bilibili.com/video/av250818016) 项目中，终于是搞明白了 “路由” 的一些概念，以及 `ExpressJs` 框架的...... 所以，不要跳着来，Vue 之前还得是 Node
-  - 顺便的一个 Node 工具： `pnpm i nodemon`，它将监测文件的改动来刷新项目，就不用每次改动都手动重启项目了
+<div class="h5">wakaTime</div>
+
+VsCode：`11h20m` | Firefox：`5h52m`
+
+<div class="h5">文章 | 文档</div>
+
+[Axios 文档][06-20_1] 、 [使用 Typescript 开发 Node.js 项目][06-20_2] 、 [Express 框架 文档](http://expressjs.com/zh-cn/) 、 [用 Node 写一个 APi 接口](https://www.jianshu.com/p/44149ac15b40) 、 [还算可以的 Node 文章 ](https://brucecai55520.gitee.io/bruceblog/notes/nodejs/Node.html) 、 [输入 URL 到显示过程发生了什么](https://segmentfault.com/a/1190000013662126) &emsp;
+
+<div class="h5">Logs</div>
+
+先是凌晨的 [innei.ren 的毕业](https://innei.ren/notes/123)，看了会 [起码课的 Promise](https://www.bilibili.com/video/av712155832) 的异步，终于是由 [50 个项目的 github 查询](https://50projects50days.com/projects/github-profiles) 补了 `ajax | Axios`
+
+艰难地尝试用 ts 配置 `Node` 的工程项目，更多的还是在模块的导入......终于是用 `pnpm i @types/Node` 才能在 ts 中使用 `Node` 自带模块（import）
+
+然后在 [ts 项目](https://github.com/Organic-Fish/FishCode/tree/master/Web/TypeScript/ts-fish) 下，用 `HTTP` 模块整出了个 `API` 服务器，并结合 `axios` 成功地获取到了数据
+
+顺便地在 [起码课的 ExpressJs](https://www.bilibili.com/video/av250818016) 项目中，终于是搞明白了 “路由” 的一些概念，以及 `ExpressJs` 框架的...... 所以，不要跳着来，Vue 之前还得是 Node
+
+顺便的一个 Node 工具： `pnpm i nodemon`，它将监测文件的改动来刷新项目，就不用每次改动都手动重启项目了
 
 [06-20_1]: https://www.axios-http.cn/
 [06-20_2]: https://segmentfault.com/a/1190000007574276
 
-<br>
+</article>
+
+<article>
 
 ### 06-21
 
-- **dashboard:**
-  - VsCode： `3h36m` | FireFox： `4h6m`
-- **文章 | 文档：** <br> [用户代码片段生成器](https://snippet-generator.app/) 、 [JS 注释描述](http://yuri4ever.github.io/jsdoc/) 、 [代码规范](http://alloyteam.github.io/CodeGuide/) 、 [在线的网易云音乐 API 服务器](https://ping-music-api.vercel.app/)
-- **社交平台**
-  - B 站果然整付费视频了...... 之前爬到的视频 APi：`GET https://api.bilibili.com/x/player/v2?cid=xx&aid=xx&bvid=xx`，中就有一个莫名的返回结果：`preview_toast "为创作付费，购买观看完整视频|购买观看"`
+<div class="h5">wakaTime</div>
 
-<div class="img" align="center"><img src="./img/22-06-21.png"/><p>
-  来自：差评君
-</p></div>
+VsCode： `3h36m` | FireFox： `4h6m`
 
-<br>
+<div class="h5">文章 | 文档</div>
+
+[用户代码片段生成器](https://snippet-generator.app/) 、 [JS 注释描述](http://yuri4ever.github.io/jsdoc/) 、 [代码规范](http://alloyteam.github.io/CodeGuide/) 、 [在线的网易云音乐 API 服务器](https://ping-music-api.vercel.app/)
+
+<div class="h5">Logs</div>
+
+B 站果然整付费视频了...... 之前爬到的视频 APi：`GET https://api.bilibili.com/x/player/v2?cid=xx&aid=xx&bvid=xx`，中就有一个莫名的返回结果：`preview_toast "为创作付费，购买观看完整视频|购买观看"`
+
+<div class="img" align="center"><img src="./img/22-06-21.png"/></div>
+
+</article>
+
+<article>
 
 ### 06-22
 
-- **dashboard:**
-  - VsCode：`7h40m` | FireFox：`5h`
-- **文章 | 文档：** <br> [Node 项目如何使用 ES 模块](https://blog.csdn.net/sayUonly/article/details/122885171) 、 [tsconfig.json 的配置](https://blog.csdn.net/muguli2008/article/details/122246623) 、 [GitHub Node 前后端项目](https://github.com/shi-jin/myhoutai) 、 [Cors 跨源资源共享](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
-- **流水：**
-  - 终于算是解决了在 ts 中使用 ES 模块但编译到 js 后却用不了的窘况：[为什么用不了 ES 模块](https://segmentfault.com/q/1010000039917414) ......只能说官方没做好...？ 最后还得在 `Node` 之后加句编译选项，整到 `nodemon` 就是 `"serve": "nodemon --exec \"Node --experimental-specifier-resolution=Node ./build/main\""`
-  - 主要是在补 Node 了，感觉主要还是先搞定 Node 服务器(`express`)的问题，好在是找到了个用 Node 整前后端的项目。那感觉目前就是要 ——
-    - 先是 `node-ts` 后端部署好 API 服务器，同时连上 MySQL
-    - 前端先是 `html` 加上 `sass` 和 `css` 框架、ts 代替 js
-    - 项目先是一个后台管理系统，差不多时再接上网易云的 API，和网易云的静态界面
-    - 最后才上 `Vue` 框架补齐
+<div class="h5">wakaTime</div>
 
-<br>
+VsCode：`7h40m` | FireFox：`5h`
+
+<div class="h5">文章 | 文档</div>
+
+[Node 项目如何使用 ES 模块](https://blog.csdn.net/sayUonly/article/details/122885171) 、 [tsconfig.json 的配置](https://blog.csdn.net/muguli2008/article/details/122246623) 、 [GitHub Node 前后端项目](https://github.com/shi-jin/myhoutai) 、 [Cors 跨源资源共享](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
+
+<div class="h5">Logs</div>
+
+终于算是解决了在 ts 中使用 ES 模块但编译到 js 后却用不了的窘况：[为什么用不了 ES 模块](https://segmentfault.com/q/1010000039917414) ......只能说官方没做好...？ 最后还得在 `Node` 之后加句编译选项，整到 `nodemon` 就是 `"serve": "nodemon --exec \"Node --experimental-specifier-resolution=Node ./build/main\""`
+
+主要是在补 Node 了，感觉主要还是先搞定 Node 服务器(`express`)的问题，好在是找到了个用 Node 整前后端的项目。那感觉目前就是要 ——
+
+- 先是 `node-ts` 后端部署好 API 服务器，同时连上 MySQL
+- 前端先是 `html` 加上 `sass` 和 `css` 框架、ts 代替 js
+- 项目先是一个后台管理系统，差不多时再接上网易云的 API，和网易云的静态界面
+- 最后才上 `Vue` 框架补齐
+
+</article>
+
+<article>
 
 ### 06-23
 
-- **dashboard:**
-  - VsCode：`6h17m` | Firefox：`2h48m`
-- **文章 | 文档：** <br> [Express 入门项目](https://juejin.cn/post/7022539322670710798)
-- **流水：**
-  - 主要还是用着 `Express + ts` 写了个 `api` 服务器，对本地 `json` 文件增删改查似乎都可以用，`PostMan` 还挺好诶
+<div class="h5">wakaTime</div>
 
-<br>
+VsCode：`6h17m` | Firefox：`2h48m`
+
+<div class="h5">文章 | 文档</div>
+
+[Express 入门项目](https://juejin.cn/post/7022539322670710798)
+
+<div class="h5">Logs</div>
+
+主要还是用着 `Express + ts` 写了个 `api` 服务器，对本地 `json` 文件增删改查似乎都可以用，`PostMan` 还挺好诶
+
+</article>
 
 ## 22-07
 
+<article>
+
 ### 07-06
 
-- **dashboard:**
-  - VsCode：
-- **文章 | 文档：** <br> [VsCode 中使用 Eslint](https://www.cnblogs.com/Jamie1032797633/p/11125786.html) 、 [从零开始配置 TypeScript 项目](https://juejin.cn/post/6856410900577026061) 、 [Eslint 中文文档](http://eslint.cn/docs/user-guide/configuring) 、 [tsconfig 的一些配置](https://yesifang.com/zh/TypeScript%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/c2fff071/)
+<div class="h5">文章 | 文档</div>
 
-<br>
+[VsCode 中使用 Eslint](https://www.cnblogs.com/Jamie1032797633/p/11125786.html) 、 [从零开始配置 TypeScript 项目](https://juejin.cn/post/6856410900577026061) 、 [Eslint 中文文档](http://eslint.cn/docs/user-guide/configuring) 、 [tsconfig 的一些配置](https://yesifang.com/zh/TypeScript%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/c2fff071/)
+
+</article>
+
+<article>
 
 ### 07-10 ~ 11
 
-- **dashboard:**
-  - VsCode： `8h10m`
-- **文章 | 文档：** <br> [一些 Web 的聚合文档](https://www.icoderoad.com/) 、 [真丶 Bootstarp 中文文档](https://www.bootstrap.cn/doc/book/2.html) 、 [font-awesome@6.1](https://fontawesome.com/) 、 [可以试一试的 JS Web Projects](https://vanillawebprojects.com/#projects) 、 [Sass 教程](https://juejin.cn/post/7055101823442485255)
-- **社交平台**
-- **流水：**
-  - 补了 git，整了分支和一个 `pull request`
-  - 趁着买一送一和史低补上了 `Minecraft`！顺便也在 Wiki 补了点基础的，像是版本特性之类的。甚至之前对 MC 的认知还在 `1.8.0` 左右 hh（按版本号的话，破坏性更新的 `2.0.0` 什么时候出 \\Doge）
-  - 忘记原因地要找回微博的裂图，然后发现它的原理应该是检测到是“违规图片”后，将链接重定向到 [裂图](https://ww4.sinaimg.cn/images/default_s_large.gif)。但原图还在图床上，改改图床链接就好：
-    - 挂图链接（可在 F12 看到）：`https://wx2.sinaimg.cn/orj360/xxx.jpg`
-    - 只要将 `/wx(\d)/gm` 改为 `ww$1`，`orj360` 改为原图大小的 `large` 就行
-    - 用 axios 请求到微博详情的 Api：`https://weibo.com/ajax/statuses/show?id=`，其中 id 值为微博原链接 `https://weibo.com/用户id/博文id` 中的 `博文 id`。再把获取到的原图链接再请求下来转存成本地文件就好
-  - 学了点 Sass，好玩诶，并且终于上了 `Bootstarp` 和 `font-awesome`，开始筹备起聚合音乐了
+<div class="h5">wakaTime</div>
 
-<br>
+VsCode： `8h10m`
+
+<div class="h5">文章 | 文档</div>
+
+[一些 Web 的聚合文档](https://www.icoderoad.com/) 、 [真丶 Bootstarp 中文文档](https://www.bootstrap.cn/doc/book/2.html) 、 [font-awesome@6.1](https://fontawesome.com/) 、 [可以试一试的 JS Web Projects](https://vanillawebprojects.com/#projects) 、 [Sass 教程](https://juejin.cn/post/7055101823442485255)
+
+- **社交平台**
+<div class="h5">Logs</div>
+
+补了 git，整了分支和一个 `pull request`
+
+趁着买一送一和史低补上了 `Minecraft`！顺便也在 Wiki 补了点基础的，像是版本特性之类的。甚至之前对 MC 的认知还在 `1.8.0` 左右 hh（按版本号的话，破坏性更新的 `2.0.0` 什么时候出 \\Doge）
+
+忘记原因地要找回微博的裂图，然后发现它的原理应该是检测到是“违规图片”后，将链接重定向到 [裂图](https://ww4.sinaimg.cn/images/default_s_large.gif)。但原图还在图床上，改改图床链接就好：
+
+- 挂图链接（可在 F12 看到）：`https://wx2.sinaimg.cn/orj360/xxx.jpg`
+- 只要将 `/wx(\d)/gm` 改为 `ww$1`，`orj360` 改为原图大小的 `large` 就行
+- 用 axios 请求到微博详情的 Api：`https://weibo.com/ajax/statuses/show?id=`，其中 id 值为微博原链接 `https://weibo.com/用户id/博文id` 中的 `博文 id`。再把获取到的原图链接再请求下来转存成本地文件就好
+
+学了点 Sass，好玩诶，并且终于上了 `Bootstarp` 和 `font-awesome`，开始筹备起聚合音乐了
+
+</article>
+
+<article>
 
 ## 22-08
 
-### 08-01 ~ 10
+<div class="h5">文章 | 文档</div>
 
-- **dashboard:** `WakaTime Error`
-- **文章 | 文档：** <br> [C++ 右值引用 && 与 move](https://zhuanlan.zhihu.com/p/335994370)
+[C++ 右值引用 && 与 move](https://zhuanlan.zhihu.com/p/335994370)
 
-<br>
+</article>
 
-## 22-09
-
-### 09-15
-
-- **流水：**
-  - [希望从这个视频开始，你能理解色彩科学【差评君】][09-15-01]
-
-[09-15-01]: https://www.bilibili.com/video/BV1kD4y1v77R
-
-<br>
+<article>
 
 ### 九月底
 
-- **dashboard:** VsCode： `7h`
-- **文章 | 文档：** <br> [Sakana Widget](https://github.com/dsrkafuu/sakana-widget)
-- **流水：**
-  - 最近在补一些硬件插口的知识了，像是一直以来都在略略看的 USB、PD、DP 之类的和他们的协议，再就是音视频的一些规格和一些计算： [一些接口及协议](../../CSBase/Hardware/Interface_Protocol/README.md)
-  - 再者就是突然想把 _Sakana~_ 给搬到首页上，但好像不小心忘得太多了，导致最终整了六七个小时
-  - 首先是作者有发 NPM 包： `pnpm install --save sakana-widget`，然后发现好像不能直接插到 md 里。**那是因为：** Vuepress 先是转为 Vue 再打包到 HTML 的，而 md 的内容就被编译到 Vue 的 `<Template>` 里了，那看起来是要么把 md 当 Vue 写，要么引入 Vue 组件了
-  - 比较舒服优雅的方式当然是选择 _引入组件_ 啦）但就此掉大坑里了。先是 ts 忘太多了，然后 Vue 的写法又不大记得…… 磨蹭了好久…… 最开始被绊倒的居然还是 ts 的 `__dirname`，但虽然翻了源码，但还是没想到带的 `@vuepress/utils` 就把这个给封装好了，但一开始库然既没查 API 又没输出试探……
-  - 上完下午的课回来就着手于再 md 里插 Vue 组件了，但又还是兜兜转转地在 [官方文档](https://v2.vuepress.vuejs.org/zh/reference/plugin/register-components.html#componentsdir) 里找到了说明……
-  - 但这还不是最大的问题，居然是 dev 里没问题但就死活 build 不了……但那个时候 **查找定位 Bug 的方式** 也太不对了……最后又转了几圈回到 _官方文档_ 里就有提到 [Vuepress clientOnly](https://v2.vuepress.vuejs.org/zh/reference/components.html#clientonly) 的特性
-  - 还是出现在 `Sakana` 的源码用到了 DOM，而且还不是 `type: module`，就这两个问题搞了几十分钟……
-  - 最后还是日常的组内输出及试图指引
-  - **但蛋旦：** 还是那个很重要的问题，一个又是跳得太快了，基础的前置知识没补上就大搞，就很浪费时间；以及一直以来的遇到问题时的解决方法都太不对劲了，实在是没有那个敏锐的意识……
+<div class="h5">wakaTime</div>
 
-<br>
+VsCode： `7h`
+
+<div class="h5">文章 | 文档</div>
+
+[Sakana Widget](https://github.com/dsrkafuu/sakana-widget)
+
+<div class="h5">Logs</div>
+
+最近在补一些硬件插口的知识了，像是一直以来都在略略看的 USB、PD、DP 之类的和他们的协议，再就是音视频的一些规格和一些计算： [一些接口及协议](../../CSBase/Hardware/Interface_Protocol/README.md)
+
+再者就是突然想把 _Sakana~_ 给搬到首页上，但好像不小心忘得太多了，导致最终整了六七个小时
+
+首先是作者有发 NPM 包： `pnpm install --save sakana-widget`，然后发现好像不能直接插到 md 里。**那是因为：** Vuepress 先是转为 Vue 再打包到 HTML 的，而 md 的内容就被编译到 Vue 的 `<Template>` 里了，那看起来是要么把 md 当 Vue 写，要么引入 Vue 组件了
+
+比较舒服优雅的方式当然是选择 _引入组件_ 啦）但就此掉大坑里了。先是 ts 忘太多了，然后 Vue 的写法又不大记得…… 磨蹭了好久…… 最开始被绊倒的居然还是 ts 的 `__dirname`，但虽然翻了源码，但还是没想到带的 `@vuepress/utils` 就把这个给封装好了，但一开始库然既没查 API 又没输出试探……
+
+上完下午的课回来就着手于再 md 里插 Vue 组件了，但又还是兜兜转转地在 [官方文档](https://v2.vuepress.vuejs.org/zh/reference/plugin/register-components.html#componentsdir) 里找到了说明……
+
+但这还不是最大的问题，居然是 dev 里没问题但就死活 build 不了……但那个时候 **查找定位 Bug 的方式** 也太不对了……最后又转了几圈回到 _官方文档_ 里就有提到 [Vuepress clientOnly](https://v2.vuepress.vuejs.org/zh/reference/components.html#clientonly) 的特性
+
+还是出现在 `Sakana` 的源码用到了 DOM，而且还不是 `type: module`，就这两个问题搞了几十分钟……
+
+最后还是日常的组内输出及试图指引
+
+**但蛋旦：** 还是那个很重要的问题，一个又是跳得太快了，基础的前置知识没补上就大搞，就很浪费时间；以及一直以来的遇到问题时的解决方法都太不对劲了，实在是没有那个敏锐的意识……
+
+</article>
 
 ## 22-10
 
+<article>
+
 ### 10-01
 
-- **文章 | 文档：** <br> [Node.js 的 fs 模块](https://juejin.cn/post/7039160563393363981)、 [path 模块](https://juejin.cn/post/6844903806107566094)、[Node.js 入门到](https://juejin.cn/column/7135720308404666398)
-- **流水：**
-  - 真心打算是又得重头地学一下那些跳过的东西了，以及多点实例，不然每次到处搜也太狼狈了……
+<div class="h5">文章 | 文档</div>
 
-<br>
+[Node.js 的 fs 模块](https://juejin.cn/post/7039160563393363981)、 [path 模块](https://juejin.cn/post/6844903806107566094)、[Node.js 入门到](https://juejin.cn/column/7135720308404666398)
+
+<div class="h5">Logs</div>
+
+真心打算是又得重头地学一下那些跳过的东西了，以及多点实例，不然每次到处搜也太狼狈了……
+
+</article>
+
+<article>
 
 ### 10-02
 
-- **文章 | 文档：** <br> [20 年 JavaScript | JS 发展史](https://cn.history.js.org/) 、 [Element-Plus Vue3 框架](https://element-plus.gitee.io/zh-CN/)
-- **流水：**
-  - 嗨虽然就不该跳着做的，但还是用 el-vue3 整了个 [Hash 密码生成器](https://organicfish.top/HashPW/)，但也不大对，像是特殊字符大小写都没整上，没有浏览器推荐的有内味，但又想整出 Hash 的感觉……
-  - 那还是重新从 JavaScript 开始吧
+<div class="h5">wakaTime</div>
 
-<br>
+[20 年 JavaScript | JS 发展史](https://cn.history.js.org/) 、 [Element-Plus Vue3 框架](https://element-plus.gitee.io/zh-CN/)
+
+<div class="h5">文章 | 文档</div>
+
+<div class="h5">Logs</div>
+
+嗨虽然就不该跳着做的，但还是用 el-vue3 整了个 [Hash 密码生成器](https://organicfish.top/HashPW/)，但也不大对，像是特殊字符大小写都没整上，没有浏览器推荐的有内味，但又想整出 Hash 的感觉……
+
+那还是重新从 JavaScript 开始吧
+
+</article>
+
+<article>
 
 ### 10-045
 
-- **文章 | 文档：** <br> [localtunnel 内网穿透](https://github.com/localtunnel/localtunnel)
-- **流水：**
+<div class="h5">文章 | 文档</div>
 
-  - 内网穿透……如果早知道……但那时候连 Node 都还不知道吧……害，还得是先观望观望
-  <div class="img" align="center"><img src="./img/22-10-05-01.png"/><p>
+[localtunnel 内网穿透](https://github.com/localtunnel/localtunnel)
+
+<div class="h5">Logs</div>
+
+内网穿透……如果早知道……但那时候连 Node 都还不知道吧……害，还得是先观望观望
+
+  <div class="img" align="center"><img class="w20" src="./img/22-10-05-01.png"/><p>
    还得是GitHub
   </p></div>
 
-  - 但有个新发现诶，为什么 `live-server` 更胜一筹呢，那就得挖坑去看看网络 WiFi 方面了诶
+但有个新发现诶，为什么 `live-server` 更胜一筹呢，那就得挖坑去看看网络 WiFi 方面了诶
+
   <div class="img" align="center"><img src="./img/22-10-05-02.png"/><p>
-    <code>live-server</code>与<code>LanDrop</code>的对比
+     live-server 与 LanDrop 的对比
   </p></div>
 
-  - 感觉感觉……还是记不住啊
+感觉感觉……还是记不住啊
+
   <div class="img" align="center"><img src="./img/22-10-05.png"/><p>
     放语雀上了
   </p></div>
 
-  - 但又是摸了又摸……大都是在 _逛街_ 找找该怎么干上了，反正就是被一堆信息填满了
-  - 那就明天开始吧））
+但又是摸了又摸……大都是在 _逛街_ 找找该怎么干上了，反正就是被一堆信息填满了
 
-<br>
+那就明天开始吧））
+
+</article>
+
+<article>
 
 ### 10-06
 
-- **dashboard:** VsCode： `5h42m`
-- **文章 | 文档：** <br> [State of JS](https://2021.stateofjs.com/zh-Hans/)、 [Tailwind.css](https://tailwindcss.com/) 、[蓝湖](https://lanhuapp.com/)、 [Svelte.js](https://www.sveltejs.cn/)、 [Lodash.js](https://www.lodashjs.com/)、 [2015 年前端组件化框架之路](https://github.com/xufei/blog/issues/19)
-- **流水：**
-  - 噢噢补完了久仰大名的 **ReLIFE**，以及 **24 小时核酸常态化**，然后又只是在逛街了……
-  - 感觉还是好多东西，_Tailwind CSS_ 看着是有些强，但感觉现在还是先观望看看以及补完基础部分先，不着急……）是吧
-  - 果然是有从 _UI 设计图到代码_ 的工具 —— 蓝湖，但还是先收藏看看先把
-  - 突然又有一个前端的框架 —— `Svelte.js`，似乎挺受欢迎……？
+<div class="h5">wakaTime</div>
 
-<br>
+VsCode： `5h42m`
+
+<div class="h5">文章 | 文档</div>
+
+[State of JS](https://2021.stateofjs.com/zh-Hans/)、 [Tailwind.css](https://tailwindcss.com/) 、[蓝湖](https://lanhuapp.com/)、 [Svelte.js](https://www.sveltejs.cn/)、 [Lodash.js](https://www.lodashjs.com/)、 [2015 年前端组件化框架之路](https://github.com/xufei/blog/issues/19)
+
+<div class="h5">Logs</div>
+
+噢噢补完了久仰大名的 **ReLIFE**，以及 **24 小时核酸常态化**，然后又只是在逛街了……
+
+感觉还是好多东西，_Tailwind CSS_ 看着是有些强，但感觉现在还是先观望看看以及补完基础部分先，不着急……）是吧
+
+果然是有从 _UI 设计图到代码_ 的工具 —— 蓝湖，但还是先收藏看看先把
+
+突然又有一个前端的框架 —— `Svelte.js`，似乎挺受欢迎……？
+
+</article>
+
+<article>
 
 ### 10-07
 
-- **dashboard:** VsCode： `6h`
-- **文章 | 文档：** <br> [程沛权——用 vite2 重构了博客](https://chengpeiquan.com/article/rewrite-in-vite.html)、 [Vue3 入门指南到实战](https://vue3.chengpeiquan.com/)、 [Github 刷漆统计](https://github-contributions.vercel.app/)
-- **流水：**
-  - [程沛权](https://github.com/chengpeiquan) 的 Vue3 教程刚发了 [Release](https://github.com/chengpeiquan/learning-vue3/releases/tag/v1.0.0) 诶诶，那就……完结撒花？）虽然还没看完
-  - 然后就顺便翻到了他的重构博客的过程，感觉好多东西啊……
-  - 然后今天下来大都在重构下数据结构的知识体系之类的……
+<div class="h5">wakaTime</div>
 
-<br>
+VsCode： `6h`
+
+<div class="h5">文章 | 文档</div>
+
+[程沛权——用 vite2 重构了博客](https://chengpeiquan.com/article/rewrite-in-vite.html)、 [Vue3 入门指南到实战](https://vue3.chengpeiquan.com/)、 [Github 刷漆统计](https://github-contributions.vercel.app/)
+
+<div class="h5">Logs</div>
+
+[程沛权](https://github.com/chengpeiquan) 的 Vue3 教程刚发了 [Release](https://github.com/chengpeiquan/learning-vue3/releases/tag/v1.0.0) 诶诶，那就……完结撒花？）虽然还没看完
+
+然后就顺便翻到了他的重构博客的过程，感觉好多东西啊……
+
+然后今天下来大都在重构下数据结构的知识体系之类的……
+
+</article>
+
+<article>
 
 ### ~10-22
 
-- **文章 | 文档：** <br>
-- **流水：** 已经好久没有更新了诶……更主要还是在想着决策性的事情，以及还是那些的发呆了……
+<div class="h5">Logs</div>
 
-  - 浴中奇思……但还得先交吧，忙碌的线下……
+已经好久没有更新了诶……更主要还是在想着决策性的事情，以及还是那些的发呆了……
 
-    根据经典的阿基米德福利故事，伟大的思想总是在洗澡的时候突然蹦出的））
+浴中奇思……但还得先交吧，忙碌的线下……
 
-    第一个就是说，我觉得在观念上和以前最大的不同就在于，现在我会更倾向于是不再特别的在意评价
+根据经典的阿基米德福利故事，伟大的思想总是在洗澡的时候突然蹦出的））
 
-    之所以关了关注列表或是收藏夹，更多的原因是在被家访的时候被所想的“噢原来你看这些啊”、“原来你是这样成分的人啊”…… 但现在我觉得我可以比较轻松地回应 啊对我就是这样的人）类比于之前的在 215 的“我就是菜”，换做之前肯定会去回避
+第一个就是说，我觉得在观念上和以前最大的不同就在于，现在我会更倾向于是不再特别的在意评价
 
-    现在……？就是在广播着“快来看我……求收购……”））
+之所以关了关注列表或是收藏夹，更多的原因是在被家访的时候被所想的“噢原来你看这些啊”、“原来你是这样成分的人啊”…… 但现在我觉得我可以比较轻松地回应 啊对我就是这样的人）类比于之前的在 215 的“我就是菜”，换做之前肯定会去回避
 
-    第二个的话，就是之前谈到的 对于不同性别同学的题目提问，会采取不同的方式去解答 的这个问题，我想我大概知道原因了
+现在……？就是在广播着“快来看我……求收购……”））
 
-    最根本的在于我那个男生占 2/3 的班级里，与我有较为密切关系的大概就三四个，其他的全是标准的中学生及只是玩着游戏……）所以才说我的舍友简直让我梦回高中一般…… 所以是说一般都是和部分的或别班的女性交流比较多，所以就……？虽然到最后更多的还是我自己了）
+第二个的话，就是之前谈到的 对于不同性别同学的题目提问，会采取不同的方式去解答 的这个问题，我想我大概知道原因了
+
+最根本的在于我那个男生占 2/3 的班级里，与我有较为密切关系的大概就三四个，其他的全是标准的中学生及只是玩着游戏……）所以才说我的舍友简直让我梦回高中一般…… 所以是说一般都是和部分的或别班的女性交流比较多，所以就……？虽然到最后更多的还是我自己了）
 
 <!--
-
 所以又是一段的澡中妙想））
 
 话题是 **感觉还是得培养靠一手的官方文档来学习或是解决问题**。先套个盾：当然对于每个人来对于讲视频与纯文字的 _接受/上手_ 程度是不一样的，不强求只是发表观察出的观点
@@ -230,28 +340,39 @@ date: 2022-06-20
 但还是想说的是，感觉我们与他们那些 **输出者** 的区别也在这里了，
  -->
 
-<br>
+</article>
 
 ## 22-11
 
+<article>
+
 ### 11-01 -> 11-19
 
-- **文章 | 文档：** <br> [紫云飞\_知乎](https://zhihu.com/people/zi-yun-fei)、[V2ex.com](https://v2ex.com/)、[Zlib_mirror](https://node2.v4.zhelper.net/)、[电子元件和半导体数据表](https://alldatasheetcn.com/)、[table convert md](https://markdown-convert.com/en/tool/table)、[WSL 开发](https://dowww.spencerwoo.com)、[Linux 教程\_博客园](https://cnblogs.com/qinlulu/p/16217325.html)
-- **流水：** 蒜了，太久没写了，就不按顺序好了
-  - 升级了一大波编程软件工具什么的，还是新东西好玩，`GCC 12 & C++ 17`、`JDK 18 & JavaFX 19 & IDEA 2022.2`、`Python 3.11 & pip 22.3`、`PowerShell 7.3`……
-  - 貌似可以玩一下 Rust：[Rust 教程](https://bilibili.com/video/BV1hp4y1k7SV)，对标 C++的
-  - 进度缓慢的计网和数据结构，但这都是包袱了……
-  - 以及已经等不及下一集的 ぼっち・ざ・ろっく！了啊啊
+<div class="h5">文章 | 文档</div>
 
-<br>
+[紫云飞\_知乎](https://zhihu.com/people/zi-yun-fei)、[V2ex.com](https://v2ex.com/)、[Zlib_mirror](https://node2.v4.zhelper.net/)、[电子元件和半导体数据表](https://alldatasheetcn.com/)、[table convert md](https://markdown-convert.com/en/tool/table)、[WSL 开发](https://dowww.spencerwoo.com)、[Linux 教程\_博客园](https://cnblogs.com/qinlulu/p/16217325.html)
 
-### -> 11-30
+<div class="h5">Logs</div>
 
-<br>
+蒜了，太久没写了，就不按顺序好了
+
+升级了一大波编程软件工具什么的，还是新东西好玩，`GCC 12 & C++ 17`、`JDK 18 & JavaFX 19 & IDEA 2022.2`、`Python 3.11 & pip 22.3`、`PowerShell 7.3`……
+
+貌似可以玩一下 Rust：[Rust 教程](https://bilibili.com/video/BV1hp4y1k7SV)，对标 C++的
+
+进度缓慢的计网和数据结构，但这都是包袱了……
+
+以及已经等不及下一集的 ぼっち・ざ・ろっく！了啊啊
+
+</article>
 
 ## 22-12
 
+<article>
+
 ### 12-01
+
+<div class="h5">Logs</div>
 
 虽然是说，开发一个桌面端应用，但做些什么好呢啊……都不知道要干嘛的话，那怎么学啊……
 
@@ -269,9 +390,13 @@ Python 更多还是做做玩具之类的
 
 稍微了解了下 Flutter 和 Dart，虽然也能编译到安卓加桌面，但先按下吧
 
-<br>
+</article>
+
+<article>
 
 ### 12-04
+
+<div class="h5">Logs</div>
 
 快动不了了……一天搞定了 Java 期末…… java 真搞不来桌面端，缺太多东西了。但感受到了 **面向对象** 的一些概念了，感觉还蛮好玩的
 
@@ -279,40 +404,13 @@ Python 更多还是做做玩具之类的
   期末报告……
 </p></div>
 
-<br>
-
-<div class="h5">年末……想了想</div>
-
-- :white_check_mark: C / C++
-  - :white_check_mark: Basic
-  - :white_large_square: Complex Algorithm (Learning)
-  - :white_large_square: Desktop Application via QT (Not yet scheduled)
-- :white_check_mark: Web Stack
-  - :white_check_mark: HTML / CSS
-  - :white_check_mark: Basic JS / TS / Node.js
-  - :white_large_square: Vue.js (Learning)
-  - :white_large_square: React.js (Not yet scheduled)
-  - :white_large_square: Uniapp (NOT INTERESTED)
-  - :white_large_square: WeChat app (Not yet scheduled)
-- :white_large_square: C#
-  - :white_large_square: Basic (Scheduled)
-  - :white_large_square: WPF (Most interested, scheduled)
-  - :white_large_square: Unity (Interested)
-- :white_check_mark: Java
-  - :white_large_square: Basic (Learning)
-  - :white_large_square: Android (Most interested, scheduled)
-  - :white_check_mark: JavaFX (Learned for homework, not interested)
-  - :white_large_square: Backend (Not yet scheduled)
-- :white_large_square: Python
-  - :white_large_square: Basic (Learning)
-- :white_large_square: Rust (Scheduled)
-- :white_large_square: Dart
-  - :white_large_square: Flutter front-end (Interested)
-  - :white_large_square: Dart back-end
-
-<br>
+</article>
 
 ## All the End……
+
+<article>
+
+<div class="h5">Logs</div>
 
 想不出来了……先是期末提前二十天，然后冲复习的中途告知也要跟着遣返…意味着整整的一个学期完全又以一种方式废掉了，虽然很像大一下
 
@@ -351,3 +449,5 @@ Python 更多还是做做玩具之类的
 </p></div>
 
 这些便是新年前 12 月份的杂碎事了。总结什么的再想想吧
+
+</article>
