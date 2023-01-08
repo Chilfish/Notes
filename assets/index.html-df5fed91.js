@@ -1,0 +1,1 @@
+import{_ as o,V as a,W as l,X as e,Y as c,F as n}from"./framework-dc28d300.js";const s={};function r(i,d){const t=n("Sakana"),_=n("ClientOnly");return a(),l("div",null,[e(_,null,{default:c(()=>[e(t)]),_:1})])}const u=o(s,[["render",r],["__file","index.html.vue"]]);export{u as default};
