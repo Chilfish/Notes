@@ -8,12 +8,12 @@ footer: MIT Licensed | Copyright © 2022-present OrganicFish
 features:
   - title: 编程语言
     icon: code
-    details: 为什么我学了这么多语言啊……
+    details: 为什么我才学了这么点语言啊……
     link: Language/
 
   - title: 算法
     icon: ability
-    details: 以 C++ 为主的算法，ACM 时代的遗产……
+    details: 以 C++ 为主的算法
     link: Algorithm/
 
   - title: 前端技术
@@ -26,24 +26,23 @@ features:
     details: 又称 《计算机科学知识补全计划》 \doge
     link: CSBase/
 
-  - title: 日常？
+  - title: 博客日志
+    icon: blog
+    details: 一些日常的日志）到时候再分离出去
+    link: blogs/
+
+  - title: 其他一些
     icon: article
-    details: 算是日常吧，以及别的不好分类的东西
+    details: 以及别的不好分类的东西
     link: balabala/
 ---
-
-<br>
-
-:::tip
-不是教程…… 纯纯只是为了防忘写着玩的
-:::
 
 <ClientOnly>
   <Sakana/>
 </ClientOnly>
 
 <style lang="scss">
-.hero {
+.hero-info-wrapper {
   margin: 3rem auto;
   & > img {
   border-radius: 0.5rem;

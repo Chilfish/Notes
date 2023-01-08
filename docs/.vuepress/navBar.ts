@@ -71,11 +71,6 @@ export const navbarConfig = navbar([
         link: '',
       },
       {
-        text: 'DailySurfing',
-        icon: 'launch',
-        link: 'DailySurfing/',
-      },
-      {
         text: '其他一些知识',
         icon: 'engine',
         link: 'not_JustCode',
@@ -86,6 +81,11 @@ export const navbarConfig = navbar([
         link: 'TempCoder',
       },
     ],
+  },
+  {
+    text: '博客日志',
+    icon: 'blog',
+    link: '/blogs/',
   },
   {
     text: '计算机基础',

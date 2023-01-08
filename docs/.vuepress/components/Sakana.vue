@@ -31,8 +31,8 @@ onMounted(() => {
 <style scoped>
 #sakana {
   position: fixed;
-  right: 0rem;
-  bottom: 0.5rem;
+  right: 0;
+  bottom: -1.5rem;
   transform-origin: 100% 100%;
 }
 </style>

@@ -60,7 +60,7 @@ title: CSS | Scss
   - `ful-width` 全角
 - `write-mode` 文字书写方向
 
-  <div class="img" align="center"><img src="./img/CSS_write_mode.png"/><p>
+<div class="img" align="center"><img src="./img/CSS_write_mode.png"/><p>
   书写方向
 </p></div>
 
@@ -89,6 +89,7 @@ title: CSS | Scss
 
 - 绝对长度单位是固定的，用任何一个绝对长度表示的长度都将恰好显示为这个尺寸
 - 不建议在屏幕上使用绝对长度单位，因为屏幕尺寸变化很大。但是，如果已知输出介质，则可以使用它们，例如用于打印布局（print layout）
+
 <div class="tableBox">
 
 <span></span>
@@ -100,7 +101,7 @@ title: CSS | Scss
 | `px` | 像素 (1px = 1/96th of 1in) |
 | `pt` | 点 (1pt = 1/72 of 1in) |
 
-  </div>
+</div>
 
 - **像素（px）** 是相对于观看设备的。对于低 dpi 的设备，1px 是显示器的一个设备像素（点）。对于打印机和高分辨率屏幕，1px 表示多个设备像素
 
